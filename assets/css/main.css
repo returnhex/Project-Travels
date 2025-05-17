@@ -6,7 +6,9 @@
   font-weight: normal;
   src: url("../css/Font/Montserrat-Regular.ttf") format("truetype");
 }
-
+body {
+  font-family: "Montserrat", sans-serif;
+}
 @theme {
   --font-sans: "Montserrat";
 }

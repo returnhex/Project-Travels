@@ -1,3 +1,13 @@
+<script setup>
+definePageMeta({
+  layout: "default",
+});
+</script>
 <template>
-  <h1 class="text-red text-3xl">root home</h1>
+  <main>
+    <package />
+    <counter />
+    <test-monial />
+    <Blog />
+  </main>
 </template>

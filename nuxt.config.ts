@@ -14,5 +14,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     // "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
   ],
 });
