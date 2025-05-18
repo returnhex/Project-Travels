@@ -1,3 +1,5 @@
 <template>
-  <h1>contact us</h1>
+    <ContactUsBanner title="Contact Us"/>
+    <ContactUs/>
+    <YourDetails/>
 </template>
