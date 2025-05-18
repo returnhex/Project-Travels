@@ -1,3 +1,7 @@
 <template>
-    <h2>about</h2>
+    <ContactUsBanner title="About Us"/>
+    <AboutBgGio title="Get to Know Us"/>
+    <HowItWork/>
+    <VMG/>
+    <counter/>
 </template>
