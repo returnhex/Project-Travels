@@ -1,11 +1,11 @@
 <template>
   <section
-    class="bg-[url('/assets/image/counterbg.png')] bg-cover bg-center px-4 sm:px-8 md:px-16 lg:px-32 py-8 sm:py-12 md:py-16 rounded-3xl max-w-5xl mx-auto"
+    class="bg-[url('/assets/image/counterbg.png')] bg-cover bg-center  px-4 sm:px-8 md:px-16 lg:px-32 py-8 sm:py-10 md:py-16 rounded-3xl max-w-5xl mx-auto"
   >
     <!-- Headline & Subtext -->
     <div class="text-center sm:text-left mb-6 sm:mb-8">
       <h2
-        class="text-xl sm:text-3xl md:text-4xl lg:text-3xl sm:leading-normal md:leading-[60px] font-semibold text-white"
+        class="text-xl sm:text-xl md:text-2xl lg:text-2xl sm:leading-normal md:leading-extra-loose font-semibold text-white"
       >
         Get Updated with the Latest Newsletter
       </h2>

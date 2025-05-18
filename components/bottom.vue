@@ -20,9 +20,9 @@ import paymentMethodIcon4 from "/assets/image/icon/payment4.png";
 import paymentMethodIcon5 from "/assets/image/icon/payment5.png";
 import paymentMethodIcon6 from "/assets/image/icon/payment6.png";
 // grt in touch
-import phone from "/assets/image/icon/phone.png";
-import message from "/assets/image/icon/message.png";
 import location from "/assets/image/icon/location.png";
+import message from "/assets/image/icon/message.png";
+import phone from "/assets/image/icon/phone.png";
 
 const about = [
   {
@@ -75,11 +75,11 @@ const paymentMethodIcon = [
 </script>
 <template>
   <footer
-    class="bg-[#F7FDFC] w-full h-[1080px] sm:h-[900px] lg:h-[752px] items-center mt-48 justify-center flex flex-col mx-auto relative"
+    class="bg-[#F7FDFC] w-full h-[1030px] sm:h-[950px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
   >
     <news-letter class="absolute -top-44" />
     <div
-      class="container mx-auto px-6 mt-20 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      class="container mx-auto px-6 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
     >
       <!-- logo -->
       <div class="col-span-1">
