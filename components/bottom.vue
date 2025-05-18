@@ -75,14 +75,14 @@ const paymentMethodIcon = [
 </script>
 <template>
   <footer
-    class="bg-[#F7FDFC] w-full h-[1030px] sm:h-[950px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
+    class="bg-[#F7FDFC] w-full h-[1050px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
   >
-    <news-letter class="absolute -top-44" />
+    <news-letter class="absolute -top-25 md:-top-44" />
     <div
       class="container mx-auto px-6 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
     >
       <!-- logo -->
-      <div class="col-span-1">
+      <div class="">
         <img
           src="/assets/image/logo.png"
           alt="WINGS GLOBAL FREIGHT"
@@ -94,13 +94,13 @@ const paymentMethodIcon = [
           care of your trip.
         </p>
         <div class="flex gap-2">
-          <div v-for="(item, id) in icon" :key="id">
+          <div v-for="(item, id) in icon" :key="id" class="cursor-pointer">
             <img :src="item" alt="" />
           </div>
         </div>
       </div>
 
-      <div class="col-span-1 flex">
+      <div class="flex">
         <!-- about -->
 
         <div class="w-1/2">
@@ -135,13 +135,19 @@ const paymentMethodIcon = [
         </div>
       </div>
 
-      <div class="col-span-1">
-        <h2 class="font-bold text-navy text-xl leading-[32px] pb-4">
+      <div class="sm:w-full px-14">
+        <h2 class="font-bold text-navy text-xl leading-loose pb-4">
           Instagram Post
         </h2>
-        <div class="grid grid-cols-6 gap-1">
-          <div v-for="(item, id) in instagramPost" :key="id" class="col-span-2">
-            <img :src="item" alt="" />
+        <div
+          class="grid grid-cols-3 gap-x-2 sm:gap-x-1  gap-y-6 sm:px-12 place-items-center md:px-0"
+        >
+          <div
+            v-for="(item, id) in instagramPost"
+            :key="id"
+            class="cursor-pointer w-full"
+          >
+            <img :src="item" alt="" class="w-full" />
           </div>
         </div>
       </div>
@@ -169,7 +175,7 @@ const paymentMethodIcon = [
               <img
                 :src="item"
                 alt="Payment Method"
-                class="h-6 w-auto object-contain"
+                class="h-6 w-auto object-contain cursor-pointer"
               />
             </template>
           </div>

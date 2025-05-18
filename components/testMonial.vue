@@ -12,26 +12,24 @@
 
       <!-- Right: Testimonial Content -->
       <div class="">
-        <div class="border-1 border-green">
-          <div class="flex justify-start items-center gap-2">
-            <img src="/assets/image/Vector.png" alt="" />
-            <p class="text-green font-semibold text-xl leading-[32px] mb-1">
-              Testimonial
-            </p>
-          </div>
-          <h2
-            class="text-xl md:text-3xl leading-xl md:leading-[64px] text-gray font-bold mb-2"
-          >
-            Experiences Shared By Our Customers
-          </h2>
-          <p
-            class="text-gray text-base leading-relaxed font-medium mb-6 max-w-lg"
-          >
-            The statement implies a willingness to help someone escape their
-            daily routine by taking care of their travel plans. It suggests a
-            travel agency or similar service.
+        <div class="flex justify-start items-center gap-2">
+          <img src="/assets/image/Vector.png" alt="" />
+          <p class="text-green font-semibold text-xl leading-[32px] mb-1">
+            Testimonial
           </p>
         </div>
+        <h2
+          class="text-xl md:text-3xl leading-xl md:leading-[64px] text-dark-gray font-bold mb-2"
+        >
+          Experiences Shared By Our Customers
+        </h2>
+        <p
+          class="text-gray text-base leading-relaxed font-medium mb-6 max-w-lg"
+        >
+          The statement implies a willingness to help someone escape their daily
+          routine by taking care of their travel plans. It suggests a travel
+          agency or similar service.
+        </p>
 
         <div class="bg-[#F2F4F7] p-6 rounded-lg border-l-3 border-green">
           <p class="text-black font-medium text-xl leading-[32px] mb-4">
@@ -41,7 +39,7 @@
             unforgettable!"
           </p>
           <div>
-            <div class="flex items-center text-[#F4A004] text-sm mb-2">
+            <div class="flex items-center text-[#F4A004] text-lg mb-2 gap-1">
               <span v-for="n in 5" :key="n">★</span>
             </div>
 
@@ -56,7 +54,7 @@
 
         <div class="flex justify-between items-center mt-6 space-x-4">
           <button
-            class="flex items-center font-semibold text-base leading-relaxed text-red border-1 border-red rounded-lg px-4 py-2 gap-2"
+            class="flex items-center font-semibold text-base leading-relaxed text-red border-1 border-red rounded-lg px-4 py-2 gap-2 hover:shadow-lg cursor-pointer"
           >
             See All <img src="/assets/image/icon/rightarrow.png" alt="" />
           </button>

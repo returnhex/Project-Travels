@@ -32,7 +32,9 @@ const stats = [
 </script>
 
 <template>
-  <section class="bg-[url('/assets/image/counterbg.png')] py-16 px-4 md:px-12">
+  <section
+    class="bg-[url('/assets/image/counterbg.png')] py-16 px-4 md:px-12 bg-cover bg-no-repeat w-screen"
+  >
     <div
       class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
     >
