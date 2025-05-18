@@ -61,7 +61,7 @@ const cards = [
             <div class="flex justify-between items-center mb-3">
               <div class="flex items-center space-x-2 text-sm text-gray-600">
                 <img
-                  src="/assets/image/calendericon.png"
+                  src="/assets/image/icon/calendericon.png"
                   alt=""
                   class="h-4 w-4"
                 />
@@ -91,7 +91,7 @@ const cards = [
             <!-- Bottom Row -->
             <div class="flex justify-between items-center">
               <div class="flex items-center space-x-2 text-sm text-gray-600">
-                <img src="/assets/image/admin.png" alt="" class="h-4 w-4" />
+                <img src="/assets/image/icon/admin.png" alt="" class="h-4 w-4" />
                 <p class="font-medium text-base leading-relaxed text-dark-gray">
                   By Admin
                 </p>

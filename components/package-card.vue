@@ -28,7 +28,7 @@ defineProps({
 
       <div class="flex justify-between items-center mt-4 text-sm">
         <div class="flex gap-2">
-          <img src="/assets/image/clock.png" alt="" />
+          <img src="/assets/image/icon/clock.png" alt="" />
           <p class="text-dark-gray">6 Days, 5 Night</p>
         </div>
         <button
