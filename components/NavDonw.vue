@@ -7,11 +7,21 @@
           <img src="/logo.svg" class="w-[60px] h-[40px] md:w-[80px] md:h-[50px] cursor-pointer"/>
       </NuxtLink>
       <ul class="hidden md:flex gap-6 md:gap-8 lg:gap-12 text-[#1A2E46] font-medium text-[18px]">
-        <li>Home</li>
-        <li>About us</li>
-        <li>Destinations</li>
-        <li>Blog</li>
-        <li>Contact Us</li>
+        <NuxtLink to="/">
+          <li>Home</li>
+        </NuxtLink>
+       <NuxtLink to="/about-us">
+         <li>About us</li>
+       </NuxtLink>
+        <NuxtLink to="#destination">
+          <li>Destinations</li>
+        </NuxtLink>
+        <NuxtLink to="/blogs">
+          <li>Blog</li>
+        </NuxtLink>
+        <NuxtLink to="/contact-us">
+          <li>Contact Us</li>
+        </NuxtLink>
       </ul>
       <button
         class="flex justify-between text-white gap-[10px] items-center px-3 py-1 md:px-4 md:py-2  lg:px-6 lg:py-3 rounded-xl bg-[#EC1E24]"

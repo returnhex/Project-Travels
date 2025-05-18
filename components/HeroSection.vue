@@ -19,8 +19,8 @@
           <span class="text-white">Travel</span>
         </h1>
         <p class="text-sm sm:text-[18px] font-medium mb-6">
-          Thinking of taking a break from every day’s life? Don't worry, we take
-          care of your trip. Thinking of taking a break from every day’s life?
+          Thinking of taking a break from every day's life? Don't worry, we take
+          care of your trip. Thinking of taking a break from every day's life?
           Don't worry, we take care of your trip.
         </p>
         <button

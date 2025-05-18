@@ -1,5 +1,6 @@
 <template>
   <section
+    id="destination"
     class="relative bg-cover bg-center w-full h-auto py-16 flex flex-col justify-center items-center"
     style="background-image: url('/destination.png')"
   >

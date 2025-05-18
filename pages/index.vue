@@ -1,7 +1,16 @@
 <script setup>
+
+import { useHead } from '#app';
+
 definePageMeta({
   layout: "default",
+  key: route => route.fullPath,
 });
+
+useHead({
+  title: 'BdiGo',
+  meta: 'Traveling Service'
+})
 </script>
 <template>
   <main>

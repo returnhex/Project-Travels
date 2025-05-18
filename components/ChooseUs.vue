@@ -18,11 +18,9 @@
         >
           <img
             :src="item.icon"
-            class=
-            'w-[50px] h-[50px] 
+            class="w-[50px] h-[50px] 
             xl:w-[80px] xl:h-[80px] 
-            rounded-md flex items-center justify-center mb-4',
-            
+            rounded-md flex items-center justify-center mb-4"
           />
           <div class="flex flex-col items-start gap-1 lg:gap-2 xl:gap-3">
             <h1 class="font-bold text-lg lg-text-xl xl:text-2xl text-[#1A2E46]">{{ item.title }}</h1>
@@ -78,6 +76,4 @@ const features = [
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
 ];
-
-console.log(features);
 </script>

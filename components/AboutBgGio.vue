@@ -16,7 +16,7 @@ defineProps({
             src="/Case.png"
             alt="Travel Illustration"
             class="rounded-[40px] object-cover
-            w[300px] h-[400px]
+            w-[300px] h-[400px]
             md:h-full md:w-full"
           />
           <img class="absolute bottom-12 -left-10 -z-10 h-[100px] w-[144px]" src="/dot-dot.svg" />
@@ -32,7 +32,7 @@ defineProps({
           </p>
         </div>
         <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-5xl text-[#3C3C3C] font-bold leading-[extra-loose]">
-          Don’t just imagine it, make it happen. Travel
+          Don't just imagine it, make it happen. Travel
         </h2>
         <p class="text-[#3C3C3C] text-lg lg:text-[1rem] font-medium">
           The statement implies a willingness to help someone escape their daily
