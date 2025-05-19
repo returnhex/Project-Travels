@@ -16,7 +16,9 @@ const images = [packageImg1, packageImg2, packageImg3, packageImg4];
           Package Bundles
         </p>
       </div>
-      <h2 class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2">
+      <h2
+        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2"
+      >
         Our Package Bundles
       </h2>
       <p
