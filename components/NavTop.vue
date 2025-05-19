@@ -7,7 +7,11 @@
     >
       <div class="flex gap-1 items-center justify-between">
         <img src="/email.svg" class="w-6 h-6" />
-        <span class="text-sm md:text-[1rem] font-semibold">info@bdigo.com</span>
+        <a href="mailto:info@bdigo.com"
+          ><span class="text-sm md:text-[1rem] font-semibold"
+            >info@bdigo.com</span
+          ></a
+        >
       </div>
       <p class="font-medium text-[1.1rem] hidden lg:block">
         50% Off Your Next Trip. Hurry Up For your new Tour! Book Your Tour

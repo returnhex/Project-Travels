@@ -45,6 +45,7 @@ const getInTouch = [
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
         icon: location,
+        href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
       },
     ],
   },
@@ -126,7 +127,12 @@ const paymentMethodIcon = [
             <ul class="space-y-2 text-sm">
               <li v-for="(item, id) in getIn.items" :key="id" class="flex">
                 <img :src="item.icon" alt="icon" class="w-4 h-4" />
-                <span class="text-navy cursor-pointer">
+                <a v-if="item?.href" :href="item.href" target="_blank"
+                  ><span class="text-navy cursor-pointer">
+                    {{ item.text }}
+                  </span></a
+                >
+                <span v-else class="text-navy cursor-pointer">
                   {{ item.text }}
                 </span>
               </li>
