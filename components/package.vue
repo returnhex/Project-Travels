@@ -16,7 +16,7 @@ const images = [packageImg1, packageImg2, packageImg3, packageImg4];
           Package Bundles
         </p>
       </div>
-      <h2 class="text-3xl leading-[64px] text-gray font-bold mt-2">
+      <h2 class="text-3xl leading-[64px] text-dark-gray font-bold mt-2">
         Our Package Bundles
       </h2>
       <p
@@ -27,30 +27,26 @@ const images = [packageImg1, packageImg2, packageImg3, packageImg4];
         agency or similar service.
       </p>
     </div>
+
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-10"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 xl:gap-6 px-4 md:px-6 xl:px-6 py-8"
     >
       <package-card v-for="(img, index) in images" :key="index" :image="img" />
     </div>
 
-    <div
-      class="mt-10 w-full flex flex-col md:flex-row gap-4 items-center justify-between px-4 md:px-8"
-    >
-      <div class="flex justify-center">
-        <img
-          src="/assets/image/Slider.png"
-          alt="Slider"
-          class="h-auto max-w-full"
-        />
+    <div class="relative flex items-center px-3 md:px-0 w-full h-20">
+      <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-1">
+        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#2E8942] rounded-full" />
+        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
+        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
+        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
       </div>
 
-      <div class="flex justify-end">
-        <button
-          class="flex items-center font-semibold text-base leading-relaxed text-red border-1 border-red rounded-lg px-4 py-2 gap-2"
-        >
-          Explore More <img src="/assets/image/icon/rightarrow.png" alt="" />
-        </button>
-      </div>
+      <button
+        class="ml-auto flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
+      >
+        Explore Now <img src="/red-arrow.svg" />
+      </button>
     </div>
   </div>
 </template>

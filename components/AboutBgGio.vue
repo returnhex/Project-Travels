@@ -2,7 +2,7 @@
 defineProps({
   title: String,
   buttonText: String,
-})
+});
 </script>
 <template>
   <div class="max-w-[1440px] mx-auto">
@@ -15,23 +15,28 @@ defineProps({
           <img
             src="/Case.png"
             alt="Travel Illustration"
-            class="rounded-[40px] object-cover
-            w-[300px] h-[400px]
-            md:h-full md:w-full"
+            class="rounded-[40px] object-cover w-[300px] h-[400px] md:h-full md:w-full"
           />
-          <img class="absolute bottom-12 -left-10 -z-10 h-[100px] w-[144px]" src="/dot-dot.svg" />
+          <img
+            class="absolute bottom-12 -left-10 -z-10 h-[100px] w-[144px]"
+            src="/dot-dot.svg"
+          />
         </div>
       </div>
 
       <!-- Right Text Section -->
       <div class="w-full px-3 md:px-0 md:w-1/2 space-y-5">
         <div class="flex items-center gap-3">
-          <img src="/double-arrow.svg" class="h-5 w-5 md:h-8 md:w-8"/>
-          <p class="text-[#2E8942] text-lg md:text-xl xl:text-2xl font-semibold">
+          <img src="/double-arrow.svg" class="h-5 w-5 md:h-8 md:w-8" />
+          <p
+            class="text-[#2E8942] text-lg md:text-xl xl:text-2xl font-semibold"
+          >
             {{ title }}
           </p>
         </div>
-        <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-5xl text-[#3C3C3C] font-bold leading-[extra-loose]">
+        <h2
+          class="text-xl md:text-2xl lg:text-3xl xl:text-5xl text-[#3C3C3C] font-bold leading-[extra-loose]"
+        >
           Don't just imagine it, make it happen. Travel
         </h2>
         <p class="text-[#3C3C3C] text-lg lg:text-[1rem] font-medium">
@@ -51,20 +56,35 @@ defineProps({
 
         <ul class="flex flex-col gap-1 md:gap-3 lg:gap-4">
           <li class="flex items-center gap-1 md:gap-2 lg:gap-3">
-            <img src="/approved.svg" class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"/>
-            <span class="text-[#383838] text-lg  lg:text-xl xl:text-2xl font-semibold">
+            <img
+              src="/approved.svg"
+              class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
+            />
+            <span
+              class="text-[#383838] text-lg lg:text-xl xl:text-2xl font-semibold"
+            >
               Trusted, Local Travel Experts
             </span>
           </li>
           <li class="flex items-center gap-3">
-            <img src="/approved.svg" class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8" />
-            <span class="text-[#383838] text-lg  lg:text-xl xl:text-2xl font-semibold">
+            <img
+              src="/approved.svg"
+              class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
+            />
+            <span
+              class="text-[#383838] text-lg lg:text-xl xl:text-2xl font-semibold"
+            >
               Flexible, Hassle-Free Bookings
             </span>
           </li>
           <li class="flex items-center gap-3">
-            <img src="/approved.svg" class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8" />
-            <span class="text-[#383838] text-lg  lg:text-xl xl:text-2xl font-semibold">
+            <img
+              src="/approved.svg"
+              class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
+            />
+            <span
+              class="text-[#383838] text-lg lg:text-xl xl:text-2xl font-semibold"
+            >
               Real-Timing Itinerary Updates
             </span>
           </li>
@@ -72,9 +92,10 @@ defineProps({
 
         <div v-if="buttonText" class="flex items-center gap-4">
           <button
-            class="flex gap-2 bg-[#EC1E24] text-white px-4 py-2 lg:px-6 lg:py-3 rounded-xl text-[0.8rem] lg:text-[1rem] font-semibold hover:bg-red-700 transition"
+            class="flex gap-2 bg-red text-white px-4 py-2 lg:px-6 lg:py-3 rounded-xl text-[0.8rem] lg:text-[1rem] font-semibold hover:bg-red-600 transition cursor-pointer"
           >
-            <span>{{ buttonText }}</span> <img src="/arrowRight.svg" class="h-4 w-4 lg:h-6 lg:w-6"/>
+            <span>{{ buttonText }}</span>
+            <img src="/arrowRight.svg" class="h-4 w-4 lg:h-6 lg:w-6" />
           </button>
           <!-- Avatars -->
           <div class="">

@@ -24,7 +24,7 @@ const categories = ref([
     <div class="flex flex-col-reverse lg:flex-row gap-8">
       <!-- Blog Content Area -->
       <div class="w-full lg:w-8/12 px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-8 lg:gap-10">
           <div
             v-for="(image, index) in cards"
             :key="index"
@@ -39,7 +39,7 @@ const categories = ref([
 
             <!-- Blog Card -->
             <div
-              class="bg-[#F8F8F8] w-11/12 mt-[-60px] rounded-lg p-6 shadow-lg z-10 relative -mt-10"
+              class="bg-[#F8F8F8] w-11/12 mt-[-60px] rounded-lg p-6 shadow-lg z-10 relative"
             >
               <!-- Date + Tag -->
               <div class="flex justify-between items-center mb-4">
@@ -74,21 +74,32 @@ const categories = ref([
               </p>
 
               <!-- Footer -->
-              <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2 text-sm">
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center"
+              >
+                <div class="flex items-center space-x-2 text-sm text-gray-600">
                   <img
                     src="/assets/image/icon/admin.png"
-                    alt="admin"
+                    alt=""
                     class="h-4 w-4"
                   />
-                  <p class="text-dark-gray">By Admin</p>
+                  <p
+                    class="font-medium text-base leading-relaxed text-dark-gray"
+                  >
+                    By Admin
+                  </p>
                 </div>
-                <button
-                  class="flex items-center text-sm text-red border border-red rounded-md px-3 py-1 gap-2 hover:bg-red hover:text-white transition"
+                <NuxtLink
+                  to="/blog"
+                  class="flex items-center font-semibold text-base leading-relaxed text-red border-1 border-red rounded-lg px-2 md:px-4 py-2 gap-2 cursor-pointer hover:shadow-lg"
                 >
                   More Details
-                  <img src="/assets/image/icon/rightarrow.png" alt="arrow" />
-                </button>
+                  <img
+                    src="/assets/image/icon/rightarrow.png"
+                    class="bg-white text-white"
+                    alt=""
+                  />
+                </NuxtLink>
               </div>
             </div>
           </div>
