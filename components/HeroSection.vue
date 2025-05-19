@@ -5,7 +5,7 @@
     class="relative w-full mx-auto h-[820px] bg-cover bg-center"
     style="background-image: url('/heroImage.png')"
   >
-    <div class="absolute inset-0 bg-black opacity-40" />
+    <div class="absolute inset-0 bg-linear-to-r from-[#002D0A] to-[#040404] opacity-50" />
 
     <div
       class="relative max-w-[1440px] mx-auto z-10 flex items-center justify-start h-full"

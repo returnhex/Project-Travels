@@ -16,6 +16,6 @@ useHead({
   <HowItWork />
   <VMG />
   <counter />
-  <test-monial />
+  <Testimonial/>
   <Blog />
 </template>

@@ -20,7 +20,7 @@ useHead({
     <DestinationList />
     <package />
     <counter />
-    <test-monial />
+    <Testimonial/>
     <Blog />
   </main>
 </template>

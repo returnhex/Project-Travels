@@ -11,5 +11,5 @@ useHead({
 </script>
 
 <template>
-  <our-blog/>
+  <OurBlog/>
 </template>
