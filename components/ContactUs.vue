@@ -11,7 +11,7 @@
           <img src="/double-arrow.svg" height="32" width="32" />
           Contact Us
         </p>
-        <h2 class="text-2xl md:text-[48px] font-bold text-[#3C3C3C]">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#3C3C3C]">
           Contact Our Friendly Experts Team
         </h2>
         <p class="font-medium text-[1rem] text-[#3C3C3C]">
@@ -23,7 +23,6 @@
 
       <!-- Cards with Arrow Behind -->
       <div class="relative w-full flex justify-center">
-
         <!-- Step Cards -->
         <div
           class="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 w-full"
@@ -38,7 +37,7 @@
               :src="item.icon"
               class="w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] rounded-md mb-4 relative z-50"
             />
-            
+
             <!-- Text Content -->
             <div
               class="flex flex-col items-center gap-1 lg:gap-2 xl:gap-3 text-center"
@@ -60,10 +59,9 @@
 </template>
 
 <script setup>
-import mapsIcon from "~/assests/ContactUs/maps.svg";
 import mailIcon from "~/assests/ContactUs/mail.svg";
+import mapsIcon from "~/assests/ContactUs/maps.svg";
 import contactIcon from "~/assests/ContactUs/phone.svg";
-
 
 const features = [
   {

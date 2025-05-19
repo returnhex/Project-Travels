@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="max-w-[1440px] mx-auto py-5">
+  <div class="max-w-[1440px] mx-auto py-2 md:py-5">
     <div
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
     >
@@ -30,7 +30,7 @@
         </NuxtLink>
       </ul>
       <button
-        class="flex justify-between text-white gap-[10px] items-center px-3 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3 rounded-xl bg-red hover:bg-red-600 cursor-pointer"
+        class="flex justify-between text-white gap-[3px] sm:gap-[5px] md:gap-[10px] items-center px-2 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3 rounded-xl bg-red hover:bg-red-600 cursor-pointer"
       >
         <p class="text-sm md:text-[1rem]">Contact Us</p>
         <img src="/arrowRight.svg" class="h-3 w-3 md:h-6 md:w-6" />

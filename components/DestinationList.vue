@@ -11,21 +11,19 @@
         <p class="text-[#2E8942] font-semibold text-xl md:text-2xl flex gap-3">
           <img src="/double-arrow.svg" /> Destination List
         </p>
-        <h2
-          class="text-2xl mg:text-4xl lg:text-5xl text-center font-bold text-[#3C3C3C]"
-        >
+        <h2 class="text-2xl lg:text-3xl text-center font-bold text-[#3C3C3C]">
           Uncover Hidden Gems Around World
         </h2>
       </div>
 
       <div class="flex justify-center gap-4 mb-7 md:mb-10">
         <button
-          class="px-4 py-[6px] md:px-8 md:py-[10px] border border-green-600 text-[#2E8942] rounded-full font-medium text-sm md:text-xl cursor-pointer"
+          class="px-4 py-[6px] md:px-8 md:py-[10px] border border-green-600 text-[#2E8942] rounded-full font-medium text-sm md:text-xl cursor-pointer hover:bg-green-50"
         >
           Domestic
         </button>
         <button
-          class="px-4 py-[6px] md:px-8 md:py-[10px] bg-[#2E8942] text-white rounded-full font-medium text-sm md:text-xl cursor-pointer"
+          class="px-4 py-[6px] md:px-8 md:py-[10px] bg-[#2E8942] text-white rounded-full font-medium text-sm md:text-xl cursor-pointer hover:bg-green-700"
         >
           International
         </button>

@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-white w-full max-w-[380px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-0 py-2 sm:px-2"
+    class="bg-white w-full max-w-[380px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
   >
     <!-- Package Image -->
     <img

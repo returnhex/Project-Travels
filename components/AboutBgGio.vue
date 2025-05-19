@@ -26,7 +26,7 @@ defineProps({
 
       <!-- Right Text Section -->
       <div class="w-full px-3 md:px-0 md:w-1/2 space-y-5">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
           <img src="/double-arrow.svg" class="h-5 w-5 md:h-8 md:w-8" />
           <p
             class="text-[#2E8942] text-lg md:text-xl xl:text-2xl font-semibold"
@@ -35,7 +35,7 @@ defineProps({
           </p>
         </div>
         <h2
-          class="text-xl md:text-2xl lg:text-3xl xl:text-5xl text-[#3C3C3C] font-bold leading-[extra-loose]"
+          class="text-xl md:text-2xl lg:text-3xl xl:text-5xl text-[#3C3C3C] font-bold leading-extra-loose flex items-center justify-center sm:justify-start"
         >
           Don't just imagine it, make it happen. Travel
         </h2>

@@ -32,7 +32,7 @@
         </p>
 
         <div class="bg-[#F2F4F7] p-6 rounded-lg border-l-3 border-green">
-          <p class="text-black font-medium text-xl leading-[32px] mb-4">
+          <p class="text-black font-medium text-lg md:text-xl leading-[32px] mb-4">
             "Our family trip to the Maldives was magical! From the booking to
             the resort, everything was perfectly organized. The team even
             surprised us with a sunset dinner. Thank you for making this
@@ -43,7 +43,7 @@
               <span v-for="n in 5" :key="n">★</span>
             </div>
 
-            <p class="font-semibold text-black text-xl leading-[32px]">
+            <p class="font-semibold text-black text-lg sm:text-xl leading-[32px]">
               Sarah Karim
             </p>
             <p class="font-medium text-[20px] leading-[28px] text-black">

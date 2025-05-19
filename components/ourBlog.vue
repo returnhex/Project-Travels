@@ -75,7 +75,7 @@ const categories = ref([
 
               <!-- Footer -->
               <div
-                class="flex flex-col sm:flex-row justify-between items-center"
+                class="flex flex-col sm:flex-row justify-between items-center gap-6"
               >
                 <div class="flex items-center space-x-2 text-sm text-gray-600">
                   <img

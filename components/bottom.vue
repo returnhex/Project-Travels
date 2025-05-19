@@ -140,7 +140,7 @@ const paymentMethodIcon = [
           Instagram Post
         </h2>
         <div
-          class="grid grid-cols-3 gap-x-2 sm:gap-x-1  gap-y-6 sm:px-12 place-items-center md:px-0"
+          class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-y-4 sm:px-12 place-items-center md:px-0"
         >
           <div
             v-for="(item, id) in instagramPost"

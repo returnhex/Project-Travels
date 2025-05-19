@@ -11,13 +11,13 @@
       class="relative max-w-[1440px] mx-auto z-10 flex items-center justify-start h-full"
     >
       <div
-        class="max-w-[950px] px-4 lg:px-4 flex flex-col items-start justify-start text-white gap-8 md:gap-12"
+        class="max-w-[950px] px-4 lg:px-4 flex flex-col items-start justify-start text-white gap-0 sm:gap-4 md:gap-6"
       >
-        <p class="text-sm sm:text-lg md:text-[24px] font-bold mb-2">
+        <p class="text-sm sm:text-lg md:text-[24px] font-bold mb-2 sm:mb-0">
           Making Travel Easy
         </p>
         <h1
-          class="text-2xl ms:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold mb-4"
+          class="text-xl ms:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold mb-4 sm:mb-0"
         >
           Don't just imagine it, make it happen.
           <span class="text-white">Travel</span>

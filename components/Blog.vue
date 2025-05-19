@@ -34,7 +34,9 @@ const cards = [
         <img src="/assets/image/Vector.png" alt="" />
         <p class="text-green font-semibold leading-[32px] text-xl">Our Blogs</p>
       </div>
-      <h2 class="text-3xl leading-[64px] text-dark-gray font-bold mt-2">
+      <h2
+        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2"
+      >
         Our Latest Blog
       </h2>
 
@@ -77,7 +79,9 @@ const cards = [
             </div>
 
             <!-- Title -->
-            <h1 class="font-semibold text-xl text-start leading-[32px] py-4">
+            <h1
+              class="font-semibold text-lg sm:text-xl text-start leading-[32px] py-2 sm:py-4"
+            >
               {{ card.title }}
             </h1>
 
