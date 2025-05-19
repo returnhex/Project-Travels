@@ -75,11 +75,11 @@ const paymentMethodIcon = [
 </script>
 <template>
   <footer
-    class="bg-[#F7FDFC] w-full h-[1050px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
+    class="bg-[#F7FDFC] w-full h-[920px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
   >
-    <news-letter class="absolute -top-25 md:-top-44" />
+    <news-letter class="absolute -top-44" />
     <div
-      class="container mx-auto px-6 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      class="container mx-auto px-6 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mt-20 md:mt-0"
     >
       <!-- logo -->
       <div class="">
@@ -155,7 +155,7 @@ const paymentMethodIcon = [
 
     <!-- Bottom Line -->
     <div
-      class="container mx-auto px-4 sm:px-6 lg:px-20 py-6 border-t-2 border-gray absolute bottom-2"
+      class="container mx-auto px-4 sm:px-6 lg:px-20 py-6 border-t-2 border-gray absolute bottom-0 md:bottom-2"
     >
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-4">
         <!-- Left: Copyright -->
