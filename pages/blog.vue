@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { useHead } from '#app';
+import { useHead } from "#app";
 
 definePageMeta({
-  key: route => route.fullPath,
+  key: (route) => route.fullPath,
 });
 
 useHead({
-  title: 'Blog',
-})
+  title: "Blog",
+});
 </script>
 
 <template>
-  <BlogDetails/>
+  <section>
+    <ContactUsBanner title="Blog Details" sub-title="Our Blog " />
+    <BlogDetails />
+  </section>
 </template>
