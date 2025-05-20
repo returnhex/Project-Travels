@@ -2,13 +2,36 @@
 import packageImg1 from "@/assets/image/image1.png";
 import packageImg2 from "@/assets/image/image2.png";
 import packageImg3 from "@/assets/image/image3.png";
-import packageImg4 from "@/assets/image/image4.png";
+import {
+  default as packageImg4,
+  default as packageImg5,
+  default as packageImg6,
+  default as packageImg7,
+  default as packageImg8,
+} from "@/assets/image/image4.png";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "/assets/css/main.css";
+import "/assets/css/package-swiper.css";
+// import "/assets/css/package.css";
 
-const images = [packageImg1, packageImg2, packageImg3, packageImg4];
+const images = [
+  packageImg1,
+  packageImg2,
+  packageImg3,
+  packageImg4,
+  packageImg5,
+  packageImg6,
+  packageImg7,
+  packageImg8,
+];
 </script>
 
 <template>
-  <div class="container mx-auto py-8">
+  <div class="container mx-auto py-8 overflow-hidden">
     <div class="text-center mb-10">
       <div class="flex justify-center items-center mx-auto gap-2">
         <img src="/assets/image/Vector.png" alt="" />
@@ -30,20 +53,26 @@ const images = [packageImg1, packageImg2, packageImg3, packageImg4];
       </p>
     </div>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 xl:gap-6 px-4 md:px-6 xl:px-6 py-8"
+    <Swiper
+      :modules="[Navigation, Pagination, Keyboard]"
+      :slides-per-view="1"
+      :space-between="10"
+      :keyboard="{ enabled: true }"
+      :pagination="{ clickable: true }"
+      :breakpoints="{
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 4 },
+      }"
+      class="px-4 md:px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 swiper swiper--offset-small"
     >
-      <package-card v-for="(img, index) in images" :key="index" :image="img" />
-    </div>
+      <SwiperSlide v-for="(img, index) in images" :key="index">
+        <PackageCard :image="img" />
+      </SwiperSlide>
+    </Swiper>
 
-    <div class="relative flex items-center px-3 md:px-0 w-full h-20">
-      <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-1">
-        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#2E8942] rounded-full" />
-        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
-        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
-        <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
-      </div>
-
+    <div class="flex items-center px-3 md:px-0 w-full h-20">
       <button
         class="ml-auto flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
       >
@@ -52,3 +81,21 @@ const images = [packageImg1, packageImg2, packageImg3, packageImg4];
     </div>
   </div>
 </template>
+
+<style scoped>
+.swiper {
+  position: relative;
+  overflow: visible;
+}
+
+.swiper-pagination-bullet {
+  background-color: green;
+  /* bottom: -60px; */
+  width: 15px;
+  height: 15px;
+}
+.swiper-pagination {
+  bottom: -50px !important;
+  position: absolute !important;
+}
+</style>

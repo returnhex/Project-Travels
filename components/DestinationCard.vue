@@ -32,11 +32,12 @@ defineProps({
           <img src="/assets/image/icon/clock.png" class="w-6 h-6" alt="" />
           <p class="text-dark-gray">6 Days, 5 Night</p>
         </div>
-        <button
+        <NuxtLink
+          to="/destination"
           class="font-500 text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-4 py-2 rounded-lg cursor-pointer"
         >
           Explore Now
-        </button>
+        </NuxtLink>
       </div>
     </div>
   </div>

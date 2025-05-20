@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-white w-full max-w-[380px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
+    class="bg-white w-full max-w-[342px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
   >
     <!-- Package Image -->
     <img
@@ -22,14 +22,22 @@ defineProps({
         Asian Discovery: Temple Traditions, Tastings
       </h3>
       <div class="flex gap-2 pb-2 items-center">
-        <img src="/assets/image/location.png" class="w-5 h-4" alt="" />
+        <img
+          src="/assets/image/icon/map.png"
+          class="max-w-6 h-6 object-contain"
+          alt=""
+        />
         <p class="text-sm text-gray-500 mt-1">London, UK</p>
       </div>
       <div class="h-[1px] bg-[#D2D2D2]" />
 
       <div class="flex justify-between items-center mt-4 text-sm">
         <div class="flex gap-2">
-          <img src="/assets/image/icon/clock.png" alt="" />
+          <img
+            src="/assets/image/icon/clock.png"
+            class="max-w-6 h-6 object-contain"
+            alt=""
+          />
           <p class="text-dark-gray">6 Days, 5 Night</p>
         </div>
         <button

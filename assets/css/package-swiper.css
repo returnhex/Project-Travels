@@ -1,0 +1,33 @@
+.swiper {
+  position: relative;
+  overflow: visible;
+}
+
+.swiper-pagination-bullet {
+  background-color: green;
+  width: 15px;
+  height: 15px;
+}
+.swiper--offset-small .swiper-pagination {
+  bottom: -50px !important;
+  position: absolute !important;
+}
+.swiper--offset-large .swiper-pagination {
+  bottom: -150px !important;
+  position: absolute !important;
+}
+
+.custom-prev,
+.custom-next {
+  transition: background-color 0.3s, opacity 0.3s;
+}
+.custom-prev:not(.swiper-button-disabled),
+.custom-next:not(.swiper-button-disabled) {
+  /* background-color: rgb(173, 0, 0);  */
+  text-decoration: red;
+  opacity: 100;
+}
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
