@@ -1,3 +1,4 @@
+
 <template>
   <section class="bg-[#F2F2F2] py-6 md:py-12 lg:py-16 px-4">
     <div
@@ -23,7 +24,8 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mg:gap-4 lg:gap-6"
       >
-        <div
+        <motion.div
+          :while-hover="{ scale: 1.05 }"
           v-for="(item, index) in features"
           :key="index"
           class="flex gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-6 hover:shadow-md transition"
@@ -40,13 +42,14 @@
               {{ item.desc }}
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { motion } from "motion-v";
 import {
   booking,
   flight,

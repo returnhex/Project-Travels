@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from 'motion-v';
+
 defineProps({
   title: String,
   buttonText: String,
@@ -10,7 +12,11 @@ defineProps({
       class="flex flex-col md:flex-row items-center justify-center gap-4 px-4 lg:gap-10 py-16 lg:py-20"
     >
       <!-- Left Image Section -->
-      <div class="relative w-full md:w-1/2 flex justify-center">
+      <motion.div
+      :initial="{ x: -100}"
+      :while-in-view="{ x: 0 }"
+      :transition="{ ease: 'easeOut', duration: 1 }"
+      class="relative w-full md:w-1/2 flex justify-center">
         <div class="relative">
           <img
             src="/Case.png"
@@ -22,10 +28,14 @@ defineProps({
             src="/dot-dot.svg"
           />
         </div>
-      </div>
+      </motion.div>
 
       <!-- Right Text Section -->
-      <div class="w-full md:w-1/2 
+      <motion.div
+      :initial="{ x: 100 }"
+      :while-in-view="{ x: 0 }"
+      :transition="{ ease: 'easeOut', duration: 1 }" 
+       class="w-full md:w-1/2 
       space-y-2 
       md:space-y-3 lg:space-y-4 
       xl:space-y-5">
@@ -119,7 +129,7 @@ defineProps({
             > -->
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   </div>
 </template>
