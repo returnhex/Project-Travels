@@ -1,6 +1,7 @@
 <template>
   <section
-    class="bg-[url('/assets/image/counterbg.png')] bg-cover bg-center px-4 sm:px-8 md:px-16 lg:px-32 py-8 sm:py-10 md:py-16 rounded-3xl max-w-5xl mx-auto"
+    class="bg-[url('/assets/image/counterbg.png')] bg-cover bg-center mx-4 px-4 sm:px-8 md:px-16 lg:px-32 py-8 sm:py-10 md:py-16
+    rounded-xl md:rounded-3xl max-w-5xl md:mx-auto"
   >
     <!-- Headline & Subtext -->
     <div class="text-center sm:text-left mb-6 sm:mb-8">

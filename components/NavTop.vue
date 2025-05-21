@@ -3,7 +3,7 @@
 <template>
   <div class="bg-[#2E8942]">
     <div
-      class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between sm:px-3 md:px-5 py-3"
+      class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between px-4 md:px-5 py-3"
     >
       <div class="flex gap-1 items-center justify-between">
         <img src="/email.svg" class="w-6 h-6" />

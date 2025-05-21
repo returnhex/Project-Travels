@@ -1,12 +1,14 @@
 <template>
-  <section class="bg-[#F2F2F2] py-12 lg:py-16 px-6">
+  <section class="bg-[#F2F2F2] py-12 lg:py-16 px-4">
     <div
-      class="max-w-[1440px] min-h-[830px] mx-auto flex flex-col gap-10 justify-center items-center"
+      class="max-w-[1440px] 
+      min-h-[430px] sm:min-h-[530px] md:min-h-[630px] lg:min-h-[730px] xl:min-h-[830px]
+      mx-auto flex flex-col gap-10 justify-center items-center"
     >
       <!-- Header -->
-      <div class="flex flex-col gap-10 justify-center items-center">
+      <div class="flex flex-col gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 justify-center items-center">
         <p
-          class="text-[#2E8942] font-semibold text-xl md:text-2xl flex items-center gap-2"
+          class="text-[#2E8942] font-semibold text-lg mg:text-xl lg:text-2xl flex items-center gap-2"
         >
           <img src="/double-arrow.svg" height="32" width="32" />
           How It Work

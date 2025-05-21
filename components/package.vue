@@ -22,7 +22,7 @@ const images = [packageImg1, packageImg2, packageImg3, packageImg4];
         Our Package Bundles
       </h2>
       <p
-        class="text-gray font-medium text-base leading-relaxed mt-2 max-w-2xl mx-auto"
+        class="text-gray font-medium text-base leading-relaxed mt-2 max-w-2xl mx-auto px-4 md:px-0"
       >
         The statement implies a willingness to help someone escape their daily
         routine by taking care of their travel plans. It suggests a travel

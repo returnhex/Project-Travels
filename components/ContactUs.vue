@@ -1,10 +1,12 @@
 <template>
-  <section class="bg-white py-12 lg:py-0 px-6">
+  <section class="bg-white py-12 lg:py-0 px-4">
     <div
-      class="max-w-[1440px] min-h-[820px] mx-auto flex flex-col gap-10 justify-center items-center"
+      class="max-w-[1440px] 
+       min-h-[430px] sm:min-h-[530px] md:min-h-[630px] lg:min-h-[730px] xl:min-h-[830px] 
+      mx-auto flex flex-col gap-10 justify-center items-center"
     >
       <!-- Header -->
-      <div class="flex flex-col gap-10 justify-center items-center">
+      <div class="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center items-center">
         <p
           class="text-[#2E8942] font-semibold text-xl md:text-2xl flex items-center gap-2"
         >
