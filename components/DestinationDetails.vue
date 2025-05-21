@@ -1,26 +1,59 @@
+<script setup>
+// import slideImg2 from "@/assets/image/destination/overviewBg.png";
+import slideImg1 from "@/assets/image/destination/overviewBg.png";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "/assets/css/main.css";
+import "/assets/css/package-swiper.css";
+const images = [slideImg1, slideImg1];
+</script>
+
 <template>
   <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
     <!-- Header Image -->
-    <div class="relative">
-      <img
-        src="/assets/image/destination/overviewBg.png"
-        alt="Main Blog"
-        class="w-full h-auto rounded-xl object-cover relative"
-      />
-      <div
-        class="flex justify-center items-center space-x-4 absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-2 md:px-6 md:py-2 rounded-full shadow"
+    <div class="relative overflow-hidden">
+      <Swiper
+        :modules="[Navigation, Pagination, Keyboard]"
+        :slides-per-view="1"
+        :space-between="20"
+        :pagination="{
+          el: '.swiper-pagination',
+          clickable: true,
+        }"
+        :navigation="{
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev',
+        }"
+        :keyboard="{ enabled: true }"
+        class="w-full px-4 md:px-6 py-8"
       >
-        <img
-          src="/assets/image/leftarrow.png"
-          class="w-10 h-10 md:w-full md:h-full"
-          alt=""
-        />
-        <img
-          src="/assets/image/rightarrow.png"
-          class="w-10 h-10 md:w-full md:h-full"
-          alt=""
-        />
-      </div>
+        <SwiperSlide v-for="(slide, index) in images" :key="index">
+          <div class="relative">
+            <img
+              :src="slide"
+              alt=""
+              class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] rounded-xl object-cover"
+            />
+          </div>
+        </SwiperSlide>
+        <div
+          class="flex justify-center items-center absolute -bottom-6 left-1/2 mx-auto z-50 bg-white rounded-lg px-4 py-2 gap-2"
+        >
+          <img
+            src="/assets/image/leftarrowred.png"
+            class="swiper-next custom-next"
+            alt=""
+          />
+          <img
+            src="/assets/image/rightarrow.png"
+            class="swiper-prev custom-prev"
+            alt=""
+          />
+        </div>
+      </Swiper>
     </div>
     <div class="max-w-7xl mx-auto px-4 py-10">
       <div class="flex flex-col lg:flex-row gap-8">

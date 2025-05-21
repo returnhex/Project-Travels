@@ -34,7 +34,7 @@ defineProps({
         </div>
         <NuxtLink
           to="/destination"
-          class="font-500 text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-4 py-2 rounded-lg cursor-pointer"
+          class="font-500 text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-2 2xl:px-4 py-2 rounded-lg cursor-pointer"
         >
           Explore Now
         </NuxtLink>

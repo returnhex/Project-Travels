@@ -8,6 +8,10 @@
   width: 15px;
   height: 15px;
 }
+.swiper--offset-tosmall .swiper-pagination {
+  bottom: -80px !important;
+  position: absolute !important;
+}
 .swiper--offset-small .swiper-pagination {
   bottom: -50px !important;
   position: absolute !important;
@@ -25,9 +29,9 @@
 .custom-next:not(.swiper-button-disabled) {
   /* background-color: rgb(173, 0, 0);  */
   text-decoration: red;
-  opacity: 100;
+  opacity: 0.7;
 }
 .swiper-button-disabled {
-  opacity: 0.5;
+  opacity: 100;
   cursor: not-allowed;
 }

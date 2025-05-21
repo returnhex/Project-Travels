@@ -20,6 +20,42 @@ const images = [
   cardImg5,
   cardImg6,
   cardImg7,
+  // cardImg8,
+  cardImg1,
+  cardImg9,
+  cardImg2,
+  cardImg3,
+  cardImg4,
+  cardImg5,
+  cardImg6,
+  cardImg7,
+  cardImg8,
+  // cardImg1,
+  cardImg9,
+  cardImg2,
+  cardImg3,
+  cardImg4,
+  cardImg5,
+  cardImg6,
+  cardImg7,
+  cardImg8,
+  cardImg1,
+  cardImg9,
+  cardImg2,
+  cardImg3,
+  cardImg4,
+  // cardImg5,
+  cardImg6,
+  cardImg7,
+  cardImg8,
+  cardImg1,
+  cardImg9,
+  cardImg2,
+  cardImg3,
+  cardImg4,
+  // cardImg5,
+  cardImg6,
+  cardImg7,
   cardImg8,
 ];
 
@@ -43,6 +79,33 @@ const categories = ref([
   { name: "India", count: 21, checked: false },
   { name: "China", count: 21, checked: false },
 ]);
+
+const currentPage = ref(1);
+const itemsPerPage = 9; // Matches your 3x3 grid
+const totalItems = ref(100); // Fake total items count
+
+// Generate fake data for pagination demo
+const generateFakeData = () => {
+  const fakeImages = [];
+  for (let i = 1; i <= 100; i++) {
+    fakeImages.push(images[i % images.length]);
+  }
+  return fakeImages;
+};
+
+const allImages = generateFakeData();
+
+// Computed property for paginated images
+const paginatedImages = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  return allImages.slice(start, end);
+});
+
+// Handle page change
+const handlePageChange = (page) => {
+  currentPage.value = page;
+};
 </script>
 
 <template>
@@ -135,12 +198,48 @@ const categories = ref([
           class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 px-8 lg:gap-2"
         >
           <DestinationCard
-            v-for="(img, index) in images"
+            v-for="(img, index) in paginatedImages"
             :key="index"
             :image="img"
             class=""
           />
         </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-8 overflow-hidden">
+      <div class="flex items-center gap-2">
+        <!-- Previous Button -->
+        <button
+          :disabled="currentPage === 1"
+          class="px-3 py-1 rounded-md disabled:opacity-50"
+          @click="handlePageChange(currentPage - 1)"
+        >
+          <img src="/assets/image/leftarrowred.png" class="" alt="" />
+        </button>
+
+        <!-- Page Numbers -->
+        <template v-for="page in 10" :key="page">
+          <button
+            :class="{
+              'bg-red text-white': currentPage === page,
+              'hover:bg-gray-100': currentPage !== page,
+            }"
+            class="w-6 h-6 md:w-10 md:h-10 rounded-full flex items-center justify-center"
+            @click="handlePageChange(page)"
+          >
+            {{ page }}
+          </button>
+        </template>
+
+        <!-- Next Button -->
+        <button
+          :disabled="currentPage === 10"
+          class="px-3 py-1 rounded-md disabled:opacity-50"
+          @click="handlePageChange(currentPage + 1)"
+        >
+          <img src="/assets/image/rightarrow.png" class="" alt="" />
+        </button>
       </div>
     </div>
   </div>
