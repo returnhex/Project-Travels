@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps({
   title: String,
+  subTitle: String,
 });
 </script>
 
@@ -32,7 +33,7 @@ defineProps({
           :to="$route.path"
           class="font-medium text-sm md:text-md lg:text-lg xl:text-xl"
         >
-          {{ title }}
+          {{ subTitle }}
         </NuxtLink>
       </div>
     </div>

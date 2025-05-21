@@ -11,7 +11,7 @@ useHead({
 </script>
 
 <template>
-  <ContactUsBanner title="About Us" />
+  <ContactUsBanner title="About Us" sub-title="About Us"/>
   <AboutBgGio title="Get to Know Us" />
   <HowItWork />
   <VMG />
