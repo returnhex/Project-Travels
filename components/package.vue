@@ -12,7 +12,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
@@ -54,9 +54,7 @@ const images = [
     </div>
 
     <Swiper
-      :modules="[Navigation, Pagination, Keyboard, Autoplay]"
-          :autoplay="{ delay: 3000, disableOnInteraction: false}"
-          :loop="true"
+      :modules="[Navigation, Pagination, Keyboard]"
       :slides-per-view="1"
       :space-between="10"
       :keyboard="{ enabled: true }"
@@ -75,10 +73,10 @@ const images = [
     </Swiper>
 
     <div class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20">
-      <button
-        class="ml-auto flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
-      >
-        Explore Now <img src="/red-arrow.svg" />
+      
+      <button class="ml-auto">
+
+        <btn-5 title="Explore Now"/>
       </button>
     </div>
   </div>

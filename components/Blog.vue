@@ -6,7 +6,7 @@ import blogImg3 from "@/assets/image/blog3.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 // import "/assets/css/blog-swiper.css";
 const cards = [
@@ -50,21 +50,19 @@ const cards = [
 
 <template>
   <section class="bg-[url('/assets/image/blogbg.png')]">
-    <div class="text-center mb-10 container mx-auto px-4 py-20 overflow-hidden">
-      <div class="flex justify-center items-center mx-auto gap-2">
+    <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
+      <div class="flex justify-center items-center mx-auto gap-2 py-4">
         <img src="/assets/image/Vector.png" alt="" />
         <p class="text-green font-semibold leading-[32px] text-xl">Our Blogs</p>
       </div>
       <h2
-        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2"
+        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2 pb-8"
       >
         Our Latest Blog
       </h2>
 
       <Swiper
-        :modules="[Navigation, Pagination, Keyboard, Autoplay]"
-          :autoplay="{ delay: 3000, disableOnInteraction: false}"
-          :loop="true"
+        :modules="[Navigation, Pagination, Keyboard]"
         :slides-per-view="1"
         :space-between="20"
         :keyboard="{ enabled: true }"
@@ -93,7 +91,7 @@ const cards = [
 
             <!-- Content Card -->
             <div
-              class="bg-[#F8F8F8] w-[400px] md:h-[272px] rounded-lg p-6 py-2 absolute -bottom-20"
+              class="bg-[#F8F8F8] w-[400px] md:h-[272px] rounded-lg p-6 py-2 absolute -bottom-20 shadow-2xl"
             >
               <!-- Top Row -->
               <div class="flex justify-between items-center mb-3">
@@ -142,7 +140,7 @@ const cards = [
                   />
                   <p class="font-medium text-base text-dark-gray">By Admin</p>
                 </div>
-                <button
+                <!-- <button
                   class="flex items-center font-semibold text-base text-red border border-red rounded-lg px-2 md:px-4 py-2 gap-2 hover:shadow-lg"
                 >
                   More Details
@@ -151,20 +149,24 @@ const cards = [
                     alt="arrow"
                     class="max-w-4 h-4"
                   />
-                </button>
+                </button> -->
+                <NuxtLink to="/blogs">
+
+                  <btn-2 title="More Details"/>
+                </NuxtLink>
               </div>
             </div>
           </div>
         </SwiperSlide>
       </Swiper>
 
-      <div class="relative -bottom-6 flex items-center px-3 md:px-0 w-full h-20 mt-20">
-        <button
-          class="ml-auto flex items-center gap-1 md:gap-2 px-2 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg mt-4"
-        >
-          Explore Now <img src="/red-arrow.svg" />
-        </button>
-      </div>
+       <div class="relative -bottom-30  flex items-center px-3 md:px-0 w-full h-20">
+      
+      <button class="ml-auto">
+
+        <btn-5 title="Explore Now"/>
+      </button>
+    </div>
     </div>
   </section>
 </template>

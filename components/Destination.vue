@@ -11,7 +11,6 @@ import cardImg9 from "@/assets/image/destination/card9.png";
 import viewIcon1 from "@/assets/image/icon/viewIcon1.png";
 import viewIcon2 from "@/assets/image/icon/viewIcon2.png";
 
-
 const images = [
   cardImg1,
   cardImg9,
@@ -174,6 +173,12 @@ const handlePageChange = (page) => {
           </ul>
         </div>
       </aside>
+     
+
+     
+
+    
+
       <!-- Blog Content Area -->
       <div class="w-full px-4">
         <div class="flex justify-between pb-6">

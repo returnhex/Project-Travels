@@ -94,14 +94,9 @@ const categories = ref([
                 </div>
                 <NuxtLink
                   to="/blog"
-                  class="flex items-center font-semibold text-base leading-relaxed text-red border-1 border-red rounded-lg px-2 md:px-4 py-2 gap-2 cursor-pointer hover:shadow-lg"
+                 
                 >
-                  More Details
-                  <img
-                    src="/assets/image/icon/rightarrow.png"
-                    class="bg-white text-white"
-                    alt=""
-                  />
+                  <btn-2 title="More Details"/>
                 </NuxtLink>
               </div>
             </div>

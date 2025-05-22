@@ -9,7 +9,7 @@
     >
       <div class="flex gap-5 md:gap-10 flex-col items-center justify-center">
         <p class="text-[#2E8942] font-semibold text-xl md:text-2xl flex gap-3">
-          <img src="/double-arrow.svg" /> Destination List
+          <img src="/double-arrow.svg" > Destination List
         </p>
         <h2 class="text-2xl lg:text-3xl text-center font-bold text-[#3C3C3C]">
           Uncover Hidden Gems Around World
@@ -17,23 +17,15 @@
       </div>
 
       <div class="flex justify-center gap-4 mb-7 md:mb-10">
-        <button
-          class="px-4 py-[6px] md:px-8 md:py-[10px] border border-green-600 text-[#2E8942] rounded-full font-medium text-sm md:text-xl cursor-pointer hover:bg-green-50"
-        >
-          Domestic
-        </button>
-        <button
-          class="px-4 py-[6px] md:px-8 md:py-[10px] bg-[#2E8942] text-white rounded-full font-medium text-sm md:text-xl cursor-pointer hover:bg-green-700"
-        >
-          International
-        </button>
+         <btn-1 title="Domestic" />
+        <btn-4 title="International"/>
       </div>
       <section
         class="w-full px-4 md:px-6 lg:px-12 overflow-hidden swiper swiper--offset-tosmall"
       >
         <Swiper
           :modules="[Navigation, Pagination, Keyboard, Autoplay]"
-          :autoplay="{ delay: 3000, disableOnInteraction: false}"
+          :autoplay="{ delay: 3000, disableOnInteraction: false }"
           :loop="true"
           :slides-per-view="1"
           :space-between="20"
@@ -68,7 +60,7 @@
                     <img
                       src="/location.svg"
                       class="max-w-5 md:max-w-6 max-h-6"
-                    />
+                    >
                     <p
                       class="font-semibold text-sm md:text-[1rem] text-[#383838]"
                     >
@@ -90,12 +82,12 @@
                       Explore World & Get Relax
                     </p>
 
-                    <button
-                      class="flex justify-center items-center gap-2 px-2 py-1 md:px-5 md:py-2 rounded-lg border border-red text-red tex-sm md:text-lg xl:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
+                    <NuxtLink
+                      to="/destinations"
+                     
                     >
-                      Explore Now
-                      <img src="/red-arrow.svg" class="max-w-6 h-6" />
-                    </button>
+                      <btn-2 title="Explore Now"/>
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -104,21 +96,18 @@
         </Swiper>
       </section>
 
-      <div class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20">
-        <!-- <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-1">
-          <div class="w-2 h-2 md:w-3 md:h-3 bg-[#2E8942] rounded-full" />
-          <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
-          <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
-          <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
-        </div> -->
+      <div
+        class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20"
+      >
+        
 
-        <button
-          class="ml-auto flex items-center gap-1 md:gap-2 
-          px-2 py-1 md:px-3 md:py-2 lg:px-6 lg:py-3 
-          rounded-lg border border-red text-red text-sm md:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
+        <NuxtLink
+          to="/destinations"
+          class="ml-auto "
         >
-          Explore Now <img src="/red-arrow.svg" />
-        </button>
+        <btn-5 title="Explore More"/>
+         
+        </NuxtLink>
       </div>
     </div>
   </section>

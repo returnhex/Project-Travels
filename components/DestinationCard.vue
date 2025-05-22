@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 defineProps({
   image: {
     type: String,
@@ -9,8 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <motion.div
-    :while-hover="{scale: 1.02}"
+  <div
     class="bg-white w-full rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
   >
     <!-- Package Image -->
@@ -29,18 +27,18 @@ defineProps({
       </div>
       <div class="h-[1px] bg-[#D2D2D2]" />
 
-      <div class="flex justify-between items-center mt-4 text-sm">
-        <div class="flex gap-2">
-          <img src="/assets/image/icon/clock.png" class="w-6 h-6" alt="" />
-          <p class="text-dark-gray">6 Days, 5 Night</p>
+      <div class="flex justify-between items-center mt-4 text-sm gap-0">
+        <div class="flex gap-1">
+          <img src="/assets/image/icon/clock.png" class="w-4 h-4" alt="" />
+          <p class="text-dark-gray">6 Days,5 Night</p>
         </div>
         <NuxtLink
           to="/destination"
-          class="font-500 text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-2 2xl:px-4 py-2 rounded-lg cursor-pointer"
+          
         >
-          Explore Now
+          <btn-6 title=" Explore Now"/>
         </NuxtLink>
       </div>
     </div>
-  </motion.div>
+  </div>
 </template>

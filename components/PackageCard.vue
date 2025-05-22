@@ -40,11 +40,12 @@ defineProps({
           />
           <p class="text-dark-gray">6 Days, 5 Night</p>
         </div>
-        <button
+        <!-- <button
           class="font-medium text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-4 py-2 rounded-lg cursor-pointer"
         >
           Explore Now
-        </button>
+        </button> -->
+        <btn-6 title=" Explore Now"/>
       </div>
     </div>
   </div>

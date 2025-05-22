@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { motion } from 'motion-v';
+import { motion } from "motion-v";
 
 defineProps({
   title: String,
@@ -7,16 +7,17 @@ defineProps({
 });
 </script>
 <template>
-  <div class="max-w-[1440px] mx-auto">
+  <div class="container mx-auto overflow-hidden">
     <section
       class="flex flex-col md:flex-row items-center justify-center gap-4 px-4 lg:gap-10 py-16 lg:py-20"
     >
       <!-- Left Image Section -->
       <motion.div
-      :initial="{ x: -100}"
-      :while-in-view="{ x: 0 }"
-      :transition="{ ease: 'easeOut', duration: 1 }"
-      class="relative w-full md:w-1/2 flex justify-center">
+        :initial="{ x: -100 }"
+        :while-in-view="{ x: 0 }"
+        :transition="{ ease: 'easeOut', duration: 1 }"
+        class="relative w-full md:w-1/2 flex justify-center"
+      >
         <div class="relative">
           <img
             src="/Case.png"
@@ -32,13 +33,11 @@ defineProps({
 
       <!-- Right Text Section -->
       <motion.div
-      :initial="{ x: 100 }"
-      :while-in-view="{ x: 0 }"
-      :transition="{ ease: 'easeOut', duration: 1 }" 
-       class="w-full md:w-1/2 
-      space-y-2 
-      md:space-y-3 lg:space-y-4 
-      xl:space-y-5">
+        :initial="{ x: 100 }"
+        :while-in-view="{ x: 0 }"
+        :transition="{ ease: 'easeOut', duration: 1 }"
+        class="w-full md:w-1/2 space-y-2 md:space-y-3 lg:space-y-4 xl:space-y-5"
+      >
         <div class="flex items-center justify-center sm:justify-start gap-3">
           <img src="/double-arrow.svg" class="h-5 w-5 md:h-8 md:w-8" />
           <p
@@ -104,11 +103,10 @@ defineProps({
         </ul>
 
         <div v-if="buttonText" class="flex items-center gap-4">
-          <button
-            class="flex gap-2 bg-red text-white px-4 py-2 lg:px-6 lg:py-3 rounded-xl text-[0.8rem] lg:text-[1rem] font-semibold hover:bg-red-600 transition cursor-pointer"
-          >
-            <span>{{ buttonText }}</span>
-            <img src="/arrowRight.svg" class="h-4 w-4 lg:h-6 lg:w-6" />
+          <button>
+            <btn-3 title="More About Us" />
+            <!-- <span>{{ buttonText }}</span>
+            <img src="/arrowRight.svg" class="h-4 w-4 lg:h-6 lg:w-6" /> -->
           </button>
           <!-- Avatars -->
           <div class="">
