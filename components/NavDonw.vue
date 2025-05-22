@@ -28,20 +28,22 @@ const isMenuOpen = ref(false)
         'md:flex'
       ]"
       >
-        <div @click="isMenuOpen = !isMenuOpen" class="absolute right-2 top-2 font-bold cursor-pointer">X</div>
-        <NuxtLink to="/">
+        <div 
+        @click="isMenuOpen = !isMenuOpen" 
+        class="md:hidden absolute right-2 top-2 font-bold cursor-pointer">X</div>
+        <NuxtLink to="/" @click="isMenuOpen = !isMenuOpen">
           <li>Home</li>
         </NuxtLink>
-        <NuxtLink to="/about-us">
+        <NuxtLink to="/about-us" @click="isMenuOpen = !isMenuOpen">
           <li>About us</li>
         </NuxtLink>
-        <NuxtLink to="/destinations">
+        <NuxtLink to="/destinations" @click="isMenuOpen = !isMenuOpen">
           <li>Destinations</li>
         </NuxtLink>
-        <NuxtLink to="/blogs">
+        <NuxtLink to="/blogs" @click="isMenuOpen = !isMenuOpen">
           <li>Blog</li>
         </NuxtLink>
-        <NuxtLink to="/contact-us">
+        <NuxtLink to="/contact-us" @click="isMenuOpen = !isMenuOpen">
           <li>Contact Us</li>
         </NuxtLink>
       </ul>

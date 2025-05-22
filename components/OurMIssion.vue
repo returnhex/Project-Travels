@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { motion } from 'motion-v'
 defineProps({
     topImg: String,
     cardIcon: String,
@@ -9,7 +10,11 @@ defineProps({
 
 <template>
     <section class="max-w-[1440px] py-4 md:py-10 md:h-[870px] mx-auto">
-        <div class="relative flex flex-col gap-5 w-full h-full px-3 xxl:px-0">
+        <motion.div
+        :initial="{x: 100}"
+        :while-in-view="{x: 0}"
+        :transition="{duration: 1}" 
+        class="relative flex flex-col gap-5 w-full h-full px-3 xxl:px-0">
             <div class="block md:absolute left-0 -z-10 md:px-3 xxl:px-0">
                 <img class="rounded-3xl " :src="topImg"/>
             </div>
@@ -30,6 +35,6 @@ defineProps({
                     </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </section>
 </template>

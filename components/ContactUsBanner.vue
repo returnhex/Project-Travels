@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { motion } from 'motion-v';
 defineProps({
   title: String,
   subTitle: String,
@@ -12,7 +13,10 @@ defineProps({
     style="background-image: url('/ocean.png')"
   >
     <div class="absolute inset-0 bg-[#0D4E1B] opacity-50" />
-    <div
+    <motion.div
+      :initial="{ opacity: 0 }"
+      :while-in-view="{ opacity: 1 }"
+      :transition="{ duration: 2}"
       class="relative z-10 max-w-[952px] flex flex-col items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white"
     >
       <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-5xl font-bold">{{ title }}</h1>
@@ -47,6 +51,6 @@ defineProps({
           {{ moreTitle }}
         </NuxtLink>
       </div>
-    </div>
+    </motion.div>
   </section>
 </template>

@@ -3,32 +3,50 @@ import icon1 from "@/assets/image/icon/SafetyIcon1.png";
 import icon2 from "@/assets/image/icon/SafetyIcon2.png";
 import icon3 from "@/assets/image/icon/SafetyIcon3.png";
 import icon4 from "@/assets/image/icon/SafetyIcon4.png";
+
+import { ref, onMounted } from 'vue'
+import { animate } from 'motion-v'
+
 const stats = [
   {
     icon: icon1, // Replace with your icons
-    value: "76K+",
+    value: 76,
     label: "Satisfied Customer",
     bg: "bg-[#FBFBFB]",
   },
   {
     icon: icon2,
-    value: "14K+",
+    value: 14,
     label: "Active Members",
     bg: "bg-[#EDEDED]",
   },
   {
     icon: icon3,
-    value: "1K+",
+    value: 1,
     label: "Travels Destination",
     bg: "bg-[#FBFBFB]",
   },
   {
     icon: icon4,
-    value: "35+",
+    value: 35,
     label: "Travel Guides",
     bg: "bg-[#EDEDED]",
   },
 ];
+
+const animatedValues = ref(stats.map(() => 0))
+
+onMounted(() => {
+  stats.forEach((stat, i) => {
+    animate(0, stat.value, {
+      duration: 2,
+      onUpdate: latest => {
+        animatedValues.value[i] = Math.floor(latest)
+      }
+    })
+  })
+})
+
 </script>
 
 <template>
@@ -48,7 +66,7 @@ const stats = [
           <img :src="stat.icon" alt="icon" class="h-[64px] w-[64px]" />
         </div>
         <h3 class="text-3xl font-bold text-black leading-[64px]">
-          {{ stat.value }}
+          {{ animatedValues[index] }} K+
         </h3>
         <p class="text-[20px] font-medium text-[#383838] leading-[30px] mt-1">
           {{ stat.label }}

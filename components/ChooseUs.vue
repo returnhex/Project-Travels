@@ -28,7 +28,7 @@
           :while-hover="{ scale: 1.05 }"
           v-for="(item, index) in features"
           :key="index"
-          class="flex gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-6 hover:shadow-md transition"
+          class="flex gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-6 hover:shadow-md cursor-pointer"
         >
           <img
             :src="item.icon"

@@ -32,7 +32,9 @@
         class="w-full px-4 md:px-6 lg:px-12 overflow-hidden swiper swiper--offset-tosmall"
       >
         <Swiper
-          :modules="[Navigation, Pagination, Keyboard]"
+          :modules="[Navigation, Pagination, Keyboard, Autoplay]"
+          :autoplay="{ delay: 3000, disableOnInteraction: false}"
+          :loop="true"
           :slides-per-view="1"
           :space-between="20"
           :keyboard="{ enabled: true }"
@@ -126,7 +128,7 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { japan, spain, thailand } from "~/assests/DestinationList";
 import "~/assets/css/package-swiper.css";
