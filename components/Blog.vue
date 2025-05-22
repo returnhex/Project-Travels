@@ -156,7 +156,7 @@ const cards = [
         </SwiperSlide>
       </Swiper>
 
-      <div class="relative flex items-center px-3 md:px-0 w-full h-20 mt-20">
+      <div class="relative -bottom-6 flex items-center px-3 md:px-0 w-full h-20 mt-20">
         <button
           class="ml-auto flex items-center gap-1 md:gap-2 px-2 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg mt-4"
         >

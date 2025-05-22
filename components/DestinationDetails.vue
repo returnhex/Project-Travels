@@ -40,16 +40,16 @@ const images = [slideImg1, slideImg1];
           </div>
         </SwiperSlide>
         <div
-          class="flex justify-center items-center absolute -bottom-6 left-1/2 mx-auto z-50 bg-white rounded-lg px-4 py-2 gap-2"
+          class="flex justify-center items-center max-w-[220px] relative -top-11 mx-auto z-50 bg-white rounded-lg px-4 py-4 gap-2"
         >
           <img
             src="/assets/image/leftarrowred.png"
-            class="swiper-next custom-next"
+            class=" swiper-prev custom-prev"
             alt=""
           />
           <img
             src="/assets/image/rightarrow.png"
-            class="swiper-prev custom-prev"
+            class="swiper-next custom-next"
             alt=""
           />
         </div>

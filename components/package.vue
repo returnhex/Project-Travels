@@ -72,7 +72,7 @@ const images = [
       </SwiperSlide>
     </Swiper>
 
-    <div class="flex items-center px-3 md:px-0 w-full h-20">
+    <div class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20">
       <button
         class="ml-auto flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
       >

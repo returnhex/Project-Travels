@@ -1,7 +1,7 @@
 <template>
   <section
     id="destination"
-    class="relative bg-cover bg-center w-full h-auto py-16 flex flex-col justify-center items-center overflow-hidden"
+    class="relative bg-cover bg-center w-full h-auto py-3 md:py-10 lg:py-16 flex flex-col justify-center items-center overflow-hidden"
     style="background-image: url('/destination.png')"
   >
     <div
@@ -102,7 +102,7 @@
         </Swiper>
       </section>
 
-      <div class="relative flex items-center px-3 md:px-0 w-full h-20">
+      <div class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20">
         <!-- <div class="absolute left-1/2 transform -translate-x-1/2 flex gap-1">
           <div class="w-2 h-2 md:w-3 md:h-3 bg-[#2E8942] rounded-full" />
           <div class="w-2 h-2 md:w-3 md:h-3 bg-[#BDBDBD] rounded-full" />
@@ -111,7 +111,9 @@
         </div> -->
 
         <button
-          class="ml-auto flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-lg border border-red text-red text-sm mg:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
+          class="ml-auto flex items-center gap-1 md:gap-2 
+          px-2 py-1 md:px-3 md:py-2 lg:px-6 lg:py-3 
+          rounded-lg border border-red text-red text-sm md:text-[1rem] font-semibold cursor-pointer hover:shadow-lg"
         >
           Explore Now <img src="/red-arrow.svg" />
         </button>

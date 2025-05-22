@@ -2,6 +2,7 @@
 defineProps({
   title: String,
   subTitle: String,
+  moreTitle: String
 });
 </script>
 
@@ -14,7 +15,7 @@ defineProps({
     <div
       class="relative z-10 max-w-[952px] flex flex-col items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white"
     >
-      <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold">{{ title }}</h1>
+      <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-5xl font-bold">{{ title }}</h1>
       <div class="flex gap-1 items-center justify-center">
         <img
           src="/home-icon.svg"
@@ -34,6 +35,16 @@ defineProps({
           class="font-medium text-sm md:text-md lg:text-lg xl:text-xl"
         >
           {{ subTitle }}
+        </NuxtLink>
+        <img v-if="moreTitle"
+          src="/right-arrow-white.svg"
+          class="w-[28px] h-[28px] md:w-[38px] md:h-[38px]"
+        />
+        <NuxtLink v-if="moreTitle"
+          :to="$route.path"
+          class="font-medium text-sm md:text-md lg:text-lg xl:text-xl"
+        >
+          {{ moreTitle }}
         </NuxtLink>
       </div>
     </div>

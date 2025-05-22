@@ -3,11 +3,30 @@
   overflow: visible;
 }
 
+
 .swiper-pagination-bullet {
   background-color: green;
-  width: 15px;
-  height: 15px;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: -20px;
 }
+
+
+@media (min-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 .swiper--offset-tosmall .swiper-pagination {
   bottom: -80px !important;
   position: absolute !important;
