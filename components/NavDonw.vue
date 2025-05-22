@@ -35,7 +35,7 @@ const isMenuOpen = ref(false)
         <NuxtLink to="/about-us">
           <li>About us</li>
         </NuxtLink>
-        <NuxtLink to="#destination">
+        <NuxtLink to="/destinations">
           <li>Destinations</li>
         </NuxtLink>
         <NuxtLink to="/blogs">

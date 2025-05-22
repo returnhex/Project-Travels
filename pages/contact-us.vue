@@ -12,7 +12,7 @@ useHead({
 })
 </script>
 <template>
-    <ContactUsBanner title="Contact Us"/>
+    <ContactUsBanner title="Contact Us" sub-title="Contact Us"/>
     <ContactUs/>
     <YourDetails/>
 </template>
