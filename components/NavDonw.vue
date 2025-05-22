@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
+import {motion } from 'motion-v'
 
 const isMenuOpen = ref(false)
 
@@ -16,7 +17,10 @@ const isMenuOpen = ref(false)
           class="w-[60px] h-[40px] md:w-[80px] md:h-[50px] cursor-pointer"
         />
       </NuxtLink>
-      <ul
+      <motion.ul
+      :initial="{scale: 0}"
+    :whileInView="{scale: 1}"
+    :transition="{duration: 0.3}"
         :class="[
         'absolute right-0 top-12 z-50 md:static',
         'bg-[#2E8942] md:bg-white',
@@ -46,7 +50,7 @@ const isMenuOpen = ref(false)
         <NuxtLink to="/contact-us" @click="isMenuOpen = !isMenuOpen">
           <li>Contact Us</li>
         </NuxtLink>
-      </ul>
+      </motion.ul>
       <button
         class="hidden md:flex justify-between text-white gap-[3px] sm:gap-[5px] md:gap-[10px] items-center px-2 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3 rounded-xl bg-red hover:bg-red-600 cursor-pointer"
       >

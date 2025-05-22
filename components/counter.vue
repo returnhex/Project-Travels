@@ -4,40 +4,23 @@ import icon2 from "@/assets/image/icon/SafetyIcon2.png";
 import icon3 from "@/assets/image/icon/SafetyIcon3.png";
 import icon4 from "@/assets/image/icon/SafetyIcon4.png";
 
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { animate } from 'motion-v'
 
 const stats = [
-  {
-    icon: icon1, // Replace with your icons
-    value: 76,
-    label: "Satisfied Customer",
-    bg: "bg-[#FBFBFB]",
-  },
-  {
-    icon: icon2,
-    value: 14,
-    label: "Active Members",
-    bg: "bg-[#EDEDED]",
-  },
-  {
-    icon: icon3,
-    value: 1,
-    label: "Travels Destination",
-    bg: "bg-[#FBFBFB]",
-  },
-  {
-    icon: icon4,
-    value: 35,
-    label: "Travel Guides",
-    bg: "bg-[#EDEDED]",
-  },
-];
+  { icon: icon1, value: 76, label: "Satisfied Customer", bg: "bg-[#FBFBFB]" },
+  { icon: icon2, value: 14, label: "Active Members", bg: "bg-[#EDEDED]" },
+  { icon: icon3, value: 1, label: "Travels Destination", bg: "bg-[#FBFBFB]" },
+  { icon: icon4, value: 35, label: "Travel Guides", bg: "bg-[#EDEDED]" },
+]
 
 const animatedValues = ref(stats.map(() => 0))
+const sectionRef = ref(null)
+let observer = null
 
-onMounted(() => {
+const startCountAnimation = () => {
   stats.forEach((stat, i) => {
+    animatedValues.value[i] = 0
     animate(0, stat.value, {
       duration: 2,
       onUpdate: latest => {
@@ -45,17 +28,36 @@ onMounted(() => {
       }
     })
   })
+}
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        startCountAnimation()
+      }
+    },
+    { threshold: 0.4 }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
 })
 
+onBeforeUnmount(() => {
+  if (observer && sectionRef.value) {
+    observer.unobserve(sectionRef.value)
+  }
+})
 </script>
 
 <template>
   <section
+    ref="sectionRef"
     class="bg-[url('/assets/image/counterbg.png')] py-16 px-4 md:px-12 bg-cover bg-no-repeat w-full overflow-hidden"
   >
-    <div
-      class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
-    >
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       <div
         v-for="(stat, index) in stats"
         :key="index"
@@ -75,3 +77,4 @@ onMounted(() => {
     </div>
   </section>
 </template>
+

@@ -14,7 +14,7 @@ import { motion } from "motion-v";
     <motion.div
       :initial="{ opacity: 0 }"
       :while-in-view="{ opacity: 1 }"
-      :transition="{ ease: 'easeOut', duration: 1 }"
+      :transition="{ ease: 'easeOut', duration: 2 }"
       class="relative max-w-[1440px] mx-auto z-10 flex items-center justify-start h-full"
     >
       <div

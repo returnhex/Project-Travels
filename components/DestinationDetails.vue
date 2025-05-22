@@ -4,7 +4,7 @@ import slideImg1 from "@/assets/image/destination/overviewBg.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
@@ -16,7 +16,9 @@ const images = [slideImg1, slideImg1];
     <!-- Header Image -->
     <div class="relative overflow-hidden">
       <Swiper
-        :modules="[Navigation, Pagination, Keyboard]"
+        :modules="[Navigation, Pagination, Keyboard, Autoplay]"
+          :autoplay="{ delay: 3000, disableOnInteraction: false}"
+          :loop="true"
         :slides-per-view="1"
         :space-between="20"
         :pagination="{

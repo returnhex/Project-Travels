@@ -1,10 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import blogImg1 from "@/assets/image/blog1.png";
 import blogImg2 from "@/assets/image/blog2.png";
 import blogImg3 from "@/assets/image/blog3.png";
 import blogImg4 from "@/assets/image/blog4.png";
 import blogImg5 from "@/assets/image/blog5.png";
 import blogImg6 from "@/assets/image/blog6.png";
+import { motion } from "motion-v";
 const cards = [blogImg1, blogImg2, blogImg4, blogImg3, blogImg5, blogImg6];
 
 const categories = ref([
@@ -17,6 +18,7 @@ const categories = ref([
   { name: "Adventures", count: 21, checked: false },
   // ...add more if you like
 ]);
+
 </script>
 
 <template>
@@ -25,10 +27,11 @@ const categories = ref([
       <!-- Blog Content Area -->
       <div class="w-full lg:w-8/12 px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-8 lg:gap-10">
-          <div
+          <motion.div
+            :while-hover="{scale: 1.02}"
             v-for="(image, index) in cards"
             :key="index"
-            class="relative flex flex-col items-center w-full max-w-sm mx-auto"
+            class="relative flex flex-col items-center w-full max-w-sm mx-auto cursor-pointer"
           >
             <!-- Main Image -->
             <img
@@ -102,7 +105,7 @@ const categories = ref([
                 </NuxtLink>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <!-- Sidebar -->

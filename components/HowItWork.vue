@@ -31,10 +31,11 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 w-full"
         >
-          <div
+          <motion.div
+    :while-hover="{scale: 1.02}"
             v-for="(item, index) in features"
             :key="index"
-            class="flex flex-col items-center gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-12 hover:shadow-md transition mx-auto"
+            class="flex flex-col cursor-pointer items-center gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-12 hover:shadow-md transition mx-auto"
           >
             <!-- Icon -->
             <img
@@ -59,7 +60,7 @@
                 {{ item.desc }}
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -68,7 +69,7 @@
 
 <script setup>
 import icon from "~/assests/HowItWork/destination.svg";
-
+import { motion } from 'motion-v'
 const features = [
   {
     icon,

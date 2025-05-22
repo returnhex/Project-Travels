@@ -1,4 +1,5 @@
 <script setup>
+import { motion } from 'motion-v'
 defineProps({
   image: {
     type: String,
@@ -8,7 +9,8 @@ defineProps({
 </script>
 
 <template>
-  <div
+  <motion.div
+    :while-hover="{scale: 1.02}"
     class="bg-white w-full rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
   >
     <!-- Package Image -->
@@ -40,5 +42,5 @@ defineProps({
         </NuxtLink>
       </div>
     </div>
-  </div>
+  </motion.div>
 </template>

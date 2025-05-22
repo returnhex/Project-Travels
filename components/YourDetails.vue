@@ -1,9 +1,16 @@
+<script setup lang="ts">
+import { motion } from 'motion-v';
+</script>
+
 <template>
   <section class="bg-[#FBFBFB] py-16 md:py-24">
     <div
       class="max-w-[1440px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 px-4 2xl:px-0"
     >
-      <div
+      <motion.div
+        :initial="{x: -100}"
+        :while-in-view="{x: 0}"
+        :transition="{duration: 2}"
         class="h-[400px] md:h-[600px] w-full lg:w-[50%] rounded-3xl overflow-hidden"
       >
         <iframe
@@ -13,7 +20,7 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         />
-      </div>
+      </motion.div>
       <ContactForm />
     </div>
   </section>

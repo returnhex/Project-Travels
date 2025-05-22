@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive } from "vue";
+import { motion } from 'motion-v'
 const form = reactive<{
   name: string;
   email: string;
@@ -18,7 +19,10 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div
+  <motion.div
+  :initial="{x: 100}"
+        :while-in-view="{x: 0}"
+        :transition="{duration: 2}"
     class="bg-white p-2 sm:p-8 lg:p-12 w-full lg:w-[50%] h-[600px] grid grid-cols-1 place-items-center rounded-3xl overflow-hidden"
   >
     <form
@@ -89,5 +93,5 @@ const handleSubmit = () => {
         <img src="/arrowRight.svg" class="h-3 w-3 md:h-6 md:w-6" />
       </button>
     </form>
-  </div>
+  </motion.div>
 </template>
