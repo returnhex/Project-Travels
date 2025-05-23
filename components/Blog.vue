@@ -92,7 +92,7 @@ const cards = [
 
             <!-- Content Card -->
             <div
-              class="bg-[#F8F8F8] w-[400px] md:h-[272px] rounded-lg p-6 py-2 absolute -bottom-20 shadow-2xl"
+              class="bg-[#F8F8F8] max-w-[90%] md:h-[300px] lg:h-[275px] rounded-lg p-6 py-2 absolute -bottom-20 shadow-2xl overflow-visible"
             >
               <!-- Top Row -->
               <div class="flex justify-between items-center mb-3">
@@ -152,8 +152,7 @@ const cards = [
                   />
                 </button> -->
                 <NuxtLink to="/blogs">
-
-                  <Button2 title="More Details"/>
+                  <Button2 title="More Details" />
                 </NuxtLink>
               </div>
             </div>
@@ -161,13 +160,13 @@ const cards = [
         </SwiperSlide>
       </Swiper>
 
-       <div class="relative -bottom-30  flex items-center px-3 md:px-0 w-full h-20">
-      
-      <div class="ml-auto">
-
-        <Button5 title="Explore Now"/>
+      <div
+        class="relative -bottom-30 flex items-center px-3 md:px-0 w-full h-20"
+      >
+        <div class="ml-auto">
+          <Button5 title="Explore Now" />
+        </div>
       </div>
-    </div>
     </div>
   </section>
 </template>

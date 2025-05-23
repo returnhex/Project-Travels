@@ -31,7 +31,7 @@ const testimonials = [
     <!-- Fixed Header Section -->
     <div class="mb-8 lg:mb-12 flex flex-col justify-center">
       <div class="flex justify-center items-center gap-2">
-        <img src="/assets/image/Vector.png" alt="Testimonial icon" >
+        <img src="/assets/image/Vector.png" alt="Testimonial icon" />
         <p class="text-green font-semibold text-xl leading-[32px] mb-1">
           Testimonial
         </p>
@@ -83,7 +83,7 @@ const testimonials = [
                 :src="testimonial.image"
                 alt="Customer"
                 class="object-cover z-50 w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] md:max-h-[608px] rounded-full"
-              >
+              />
             </div>
 
             <!-- Content Section -->
@@ -118,19 +118,18 @@ const testimonials = [
           </div>
         </SwiperSlide>
 
-          
-          <div class="flex gap-2 justify-end ml-auto mr-0">
-            <img
-              src="/assets/image/leftarrowred.png"
-              class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
-              alt="Previous"
-            >
-            <img
-              src="/assets/image/rightarrow.png"
-              class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
-              alt="Next"
-            >
-          </div>
+        <div class="flex gap-2 justify-end ml-auto mr-0">
+          <img
+            src="/assets/image/leftarrowred.png"
+            class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
+            alt="Previous"
+          />
+          <img
+            src="/assets/image/rightarrow.png"
+            class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
+            alt="Next"
+          />
+        </div>
       </Swiper>
     </div>
   </section>
