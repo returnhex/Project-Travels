@@ -20,7 +20,7 @@ const testimonials = [
       "Booking through this travel site was the best decision we made! Our entire trip—from flights to local experiences—was seamless and thoughtfully planned. The accommodations were top-notch, and every destination felt like a dream. Truly an unforgettable journey!",
     rating: 5,
     name: "Abdul Ahad Linkon",
-    role: "CEO at Return Hex",
+    role: "Travel Blogger",
     image: img2,
   },
 ];
