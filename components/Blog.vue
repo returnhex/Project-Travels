@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import Button2 from "./Button2.vue";
 // import "/assets/css/blog-swiper.css";
 const cards = [
   {
@@ -152,7 +153,7 @@ const cards = [
                 </button> -->
                 <NuxtLink to="/blogs">
 
-                  <btn-2 title="More Details"/>
+                  <Button2 title="More Details"/>
                 </NuxtLink>
               </div>
             </div>
@@ -162,10 +163,10 @@ const cards = [
 
        <div class="relative -bottom-30  flex items-center px-3 md:px-0 w-full h-20">
       
-      <button class="ml-auto">
+      <div class="ml-auto">
 
-        <btn-5 title="Explore Now"/>
-      </button>
+        <Button5 title="Explore Now"/>
+      </div>
     </div>
     </div>
   </section>

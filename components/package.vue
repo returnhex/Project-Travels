@@ -74,10 +74,10 @@ const images = [
 
     <div class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20">
       
-      <button class="ml-auto">
+      <div class="ml-auto">
 
-        <btn-5 title="Explore Now"/>
-      </button>
+        <Button5 title="Explore Now"/>
+      </div>
     </div>
   </div>
 </template>

@@ -45,7 +45,7 @@ defineProps({
         >
           Explore Now
         </button> -->
-        <btn-6 title=" Explore Now"/>
+        <Button6 title=" Explore Now"/>
       </div>
     </div>
   </div>

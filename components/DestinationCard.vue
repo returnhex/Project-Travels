@@ -36,7 +36,7 @@ defineProps({
           to="/destination"
           
         >
-          <btn-6 title=" Explore Now"/>
+          <Button6 title=" Explore Now"/>
         </NuxtLink>
       </div>
     </div>

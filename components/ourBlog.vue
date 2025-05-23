@@ -96,7 +96,7 @@ const categories = ref([
                   to="/blog"
                  
                 >
-                  <btn-2 title="More Details"/>
+                  <Button2 title="More Details"/>
                 </NuxtLink>
               </div>
             </div>

@@ -35,7 +35,7 @@ import { motion } from "motion-v";
           Don't worry, we take care of your trip.
         </p>
         <NuxtLink to="/contact-us">
-          <btn-3 title="Contact Us" />
+          <Button3 title="Contact Us" />
         </NuxtLink>
       </div>
     </motion.div>

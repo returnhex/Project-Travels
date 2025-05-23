@@ -7,10 +7,10 @@ defineProps({
 <template>
   <!-- btn3 -->
   <button
-    class="group relative inline-flex h-12 items-center justify-center rounded-md bg-white hover:bg-red text-red border border-red px-6 text-sm md:text-[1rem] font-[600] hover:text-white gap-1 md:gap-2 px-2 py-1 md:px-3 md:py-2 lg:px-6 lg:py-3 cursor-pointer"
+    class="group relative inline-flex h-12 items-center justify-center rounded-md bg-white hover:bg-red text-red border border-red text-sm md:text-[1rem] font-[600] hover:text-white gap-1 md:gap-2 px-2 py-1 md:px-3 md:py-2 lg:px-6 lg:py-3 cursor-pointer"
   >
     <span>{{ title }}</span>
-    <button
+    <div
       class="group relative inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full font-medium"
     >
       <div class="translate-x-0 transition group-hover:translate-x-[300%]">
@@ -49,7 +49,7 @@ defineProps({
           />
         </svg>
       </div>
-    </button>
+    </div>
 
     <!-- <NuxtLink
           to="/destinations"

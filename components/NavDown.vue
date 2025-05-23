@@ -52,8 +52,8 @@ const isMenuOpen = ref(false);
           <li>Contact Us</li>
         </NuxtLink>
       </motion.ul>
-      <NuxtLink to="/contact-us">
-        <btn-3 title="Contact Us" />
+      <NuxtLink to="/contact-us" class="hidden md:block">
+        <Button3 title="Contact Us" />
       </NuxtLink>
 
       <!-- ham-menu -->

@@ -103,11 +103,11 @@ defineProps({
         </ul>
 
         <div v-if="buttonText" class="flex items-center gap-4">
-          <button>
-            <btn-3 title="More About Us" />
+          
+            <Button3 title="More About Us" />
             <!-- <span>{{ buttonText }}</span>
             <img src="/arrowRight.svg" class="h-4 w-4 lg:h-6 lg:w-6" /> -->
-          </button>
+          
           <!-- Avatars -->
           <div class="">
             <img

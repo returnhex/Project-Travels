@@ -17,8 +17,8 @@
       </div>
 
       <div class="flex justify-center gap-4 mb-7 md:mb-10">
-         <btn-1 title="Domestic" />
-        <btn-4 title="International"/>
+         <Button1 title="Domestic" />
+        <Button4 title="International"/>
       </div>
       <section
         class="w-full px-4 md:px-6 lg:px-12 overflow-hidden swiper swiper--offset-tosmall"
@@ -86,7 +86,7 @@
                       to="/destinations"
                      
                     >
-                      <btn-2 title="Explore Now"/>
+                      <Button2 title="Explore Now"/>
                     </NuxtLink>
                   </div>
                 </div>
@@ -105,7 +105,7 @@
           to="/destinations"
           class="ml-auto "
         >
-        <btn-5 title="Explore More"/>
+        <Button5 title="Explore More"/>
          
         </NuxtLink>
       </div>
@@ -149,21 +149,3 @@ const places = [
   },
 ];
 </script>
-
-<!-- <style scoped>
-.swiper {
-  position: relative;
-  overflow: visible;
-}
-
-.swiper-pagination-bullet {
-  background-color: green;
-  /* bottom: -60px; */
-  width: 15px;
-  height: 15px;
-}
-.swiper-pagination {
-  bottom: -20px !important;
-  position: absolute !important;
-}
-</style> -->
