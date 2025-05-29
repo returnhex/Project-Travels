@@ -1,6 +1,7 @@
 <script setup>
 // import slideImg2 from "@/assets/image/destination/overviewBg.png";
 import slideImg1 from "@/assets/image/destination/overviewBg.png";
+import slideImg2 from "@/assets/image/destination/overviewBg2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,7 +9,7 @@ import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
-const images = [slideImg1, slideImg1];
+const images = [slideImg1, slideImg2];
 </script>
 
 <template>
@@ -17,8 +18,8 @@ const images = [slideImg1, slideImg1];
     <div class="relative overflow-hidden">
       <Swiper
         :modules="[Navigation, Pagination, Keyboard, Autoplay]"
-          :autoplay="{ delay: 3000, disableOnInteraction: false}"
-          :loop="true"
+        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+        :loop="true"
         :slides-per-view="1"
         :space-between="20"
         :pagination="{
@@ -26,8 +27,8 @@ const images = [slideImg1, slideImg1];
           clickable: true,
         }"
         :navigation="{
-          nextEl: '.swiper-next',
-          prevEl: '.swiper-prev',
+          nextEl: '.swiper-prev',
+          prevEl: '.swiper-next ',
         }"
         :keyboard="{ enabled: true }"
         class="w-full px-4 md:px-6 py-8"
@@ -37,7 +38,7 @@ const images = [slideImg1, slideImg1];
             <img
               :src="slide"
               alt=""
-              class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] rounded-xl object-cover"
+              class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:max-h-[420px] rounded-xl object-cover"
             />
           </div>
         </SwiperSlide>
@@ -46,7 +47,7 @@ const images = [slideImg1, slideImg1];
         >
           <img
             src="/assets/image/leftarrowred.png"
-            class=" swiper-prev custom-prev"
+            class="swiper-prev custom-prev"
             alt=""
           />
           <img

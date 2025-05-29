@@ -18,7 +18,6 @@ const categories = ref([
   { name: "Adventures", count: 21, checked: false },
   // ...add more if you like
 ]);
-
 </script>
 
 <template>
@@ -28,9 +27,9 @@ const categories = ref([
       <div class="w-full lg:w-8/12 px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-8 lg:gap-10">
           <motion.div
-            :while-hover="{scale: 1.02}"
             v-for="(image, index) in cards"
             :key="index"
+            :while-hover="{ scale: 1.02 }"
             class="relative flex flex-col items-center w-full max-w-sm mx-auto cursor-pointer"
           >
             <!-- Main Image -->
@@ -89,14 +88,11 @@ const categories = ref([
                   <p
                     class="font-medium text-base leading-relaxed text-dark-gray"
                   >
-                    By Admin
+                    Admin
                   </p>
                 </div>
-                <NuxtLink
-                  to="/blog"
-                 
-                >
-                  <Button2 title="More Details"/>
+                <NuxtLink to="/blog">
+                  <Button7 title="More Details" />
                 </NuxtLink>
               </div>
             </div>

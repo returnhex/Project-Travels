@@ -6,13 +6,17 @@ defineProps({
 <template>
   <!-- btn2 -->
   <button
-    class="group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-whitegap-2 px-2 py-1 md:px-3 md:py-2 border border-red text-red tex-sm md:text-lg xl:text-[1rem] font-semibold cursor-pointer hover:text-white"
+    class="group relative inline-flex h-[calc(20px+8px)] lg:h-[calc(35px+8px)] 2xl:h-[calc(48px+8px)] items-center justify-center rounded-full bg-whitegap-2 px-[2px] py-1 md:px-1 md:py-1 lg:px-2 xl:px-2 md:py-1 border border-red text-red tex-sm md:text-md xl:text-[1rem] font-semibold cursor-pointer hover:text-white"
   >
-    <span class="z-10 pr-12">{{ title }}</span>
+    <span class="z-10 pr-8 xl:pr-12 text-sm md:text-md xl:text-lg">{{
+      title
+    }}</span>
     <div
-      class="absolute right-1 inline-flex h-12 w-12 items-center justify-end rounded-full bg-red-500 transition-[width] group-hover:w-[calc(100%-8px)]"
+      class="absolute right-1 inline-flex h-6 w-6 lg:w-8 lg:h-8 xl:h-9 xl:w-9 2xl:h-12 2xl:w-12 items-center justify-end rounded-full bg-red-500 transition-[width] group-hover:w-[calc(100%-8px)]"
     >
-      <div class="mr-3.5 flex items-center justify-center">
+      <div
+        class="mr-1 lg:mr-2 xl:mr-2.5 2xl:mr-3.5 flex items-center justify-center"
+      >
         <svg
           width="10"
           height="10"
