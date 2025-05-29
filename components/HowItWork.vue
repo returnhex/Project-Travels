@@ -1,7 +1,7 @@
 <template>
   <section class="bg-[#F2F2F2] py-12 lg:py-16 px-4">
     <div
-      class="max-w-[1440px] 
+      class="container
       min-h-[430px] sm:min-h-[530px] md:min-h-[630px] lg:min-h-[730px] xl:min-h-[830px]
       mx-auto flex flex-col gap-10 justify-center items-center"
     >
@@ -31,16 +31,18 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 w-full"
         >
-          <motion.div
-    :while-hover="{scale: 1.02}"
+          <div
+            
             v-for="(item, index) in features"
             :key="index"
-            class="flex flex-col cursor-pointer items-center gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-12 hover:shadow-md transition mx-auto"
+            class="flex flex-col cursor-pointer items-center gap-3
+             bg-white max-w-[464px] h-auto 
+             rounded-xl shadow-sm p-12 hover:shadow-md hover:scale-[1.02] transition mx-auto"
           >
             <!-- Icon -->
             <img
               :src="item.icon"
-              class="w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] rounded-md mb-4 relative z-50"
+              class="w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] rounded-md mb-4 relative z-30"
             />
             <img
               src="/dotter-curve-arrow.svg"
@@ -60,7 +62,7 @@
                 {{ item.desc }}
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
@@ -69,7 +71,6 @@
 
 <script setup>
 import icon from "~/assests/HowItWork/destination.svg";
-import { motion } from 'motion-v'
 const features = [
   {
     icon,

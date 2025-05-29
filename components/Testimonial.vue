@@ -32,12 +32,12 @@ const testimonials = [
     <div class="mb-8 lg:mb-12 flex flex-col justify-center">
       <div class="flex justify-center items-center gap-2">
         <img src="/assets/image/Vector.png" alt="Testimonial icon" >
-        <p class="text-green font-semibold text-xl leading-[32px] mb-1">
+        <p class="text-green font-semibold text-lg md:text-xl leading-[32px] mb-1">
           Testimonial
         </p>
       </div>
       <h2
-        class="text-xl md:text-3xl md:leading-[64px] text-dark-gray font-bold mb-2 text-center"
+        class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl leading-[50px] xl:leading-[64px] text-dark-gray font-bold mb-2 text-center"
       >
         Experiences Shared By Our Customers
       </h2>

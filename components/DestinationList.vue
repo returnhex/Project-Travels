@@ -7,16 +7,20 @@
     <div
       class="container mx-auto px-4 flex flex-col justify-center items-center gap-5 md:gap-10 overflow-hidden"
     >
-      <div class="flex gap-5 md:gap-10 flex-col items-center justify-center">
-        <p class="text-[#2E8942] font-semibold text-xl md:text-2xl flex gap-3">
+      <div class="flex 
+      gap-2 md:gap-3 lg:gap-5 xl:gap-7 2xl:gap-10 
+      flex-col items-center justify-center">
+        <p class="text-[#2E8942] font-semibold 
+        text-lg md:text-xl 
+        flex gap-3">
           <img src="/double-arrow.svg" > Destination List
         </p>
-        <h2 class="text-2xl lg:text-3xl text-center font-bold text-[#3C3C3C]">
+        <h2 class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl  text-center font-bold text-[#3C3C3C]">
           Uncover Hidden Gems Around World
         </h2>
       </div>
 
-      <div class="flex justify-center gap-4 mb-7 md:mb-10">
+      <div class="flex justify-center gap-4">
          <Button1 title="Domestic" />
         <Button4 title="International"/>
       </div>

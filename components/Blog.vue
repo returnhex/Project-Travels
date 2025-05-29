@@ -52,12 +52,13 @@ const cards = [
 <template>
   <section class="bg-[url('/assets/image/blogbg.png')]">
     <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
-      <div class="flex justify-center items-center mx-auto gap-2 py-4">
+      <div class="flex justify-center items-center mx-auto gap-2">
         <img src="/assets/image/Vector.png" alt="" />
-        <p class="text-green font-semibold leading-[32px] text-xl">Our Blogs</p>
+        <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">Our Blogs</p>
       </div>
       <h2
-        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2 pb-8"
+        class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl leading-[50px] xl:leading-[64px]
+        text-dark-gray font-bold pb-8"
       >
         Our Latest Blog
       </h2>
