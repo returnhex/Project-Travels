@@ -5,14 +5,18 @@ import { ref } from "vue";
 const isMenuOpen = ref(false);
 </script>
 <template>
-  <div class="max-w-[1440px] mx-auto py-2 md:py-5">
+  <div class="max-w-[1440px] mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
     <div
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
     >
       <NuxtLink to="/">
         <img
           src="/logo.svg"
-          class="w-[60px] h-[40px] md:w-[80px] md:h-[50px] cursor-pointer"
+          class="
+          
+          w-[70px] h-[40px] 
+          2xl:w-[80px] 2xl:h-[50px] 
+          cursor-pointer"
         />
       </NuxtLink>
       <motion.ul
@@ -25,7 +29,7 @@ const isMenuOpen = ref(false);
           'flex flex-col md:flex-row',
           'gap-6 md:gap-8 lg:gap-12',
           'p-10 md:p-0 rounded-bl-xl md:rounded-[0]',
-          'text-white md:text-[#1A2E46] font-medium text-[18px]',
+          'text-white md:text-[#1A2E46] font-medium text-[14px] xl:text-[16px] 2xl:text-[18px]',
           isMenuOpen ? 'block' : 'hidden',
           'md:flex',
         ]"
