@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/eslint",
-    // "@nuxt/icon",
+    "@nuxt/icon",
     // "@nuxt/image",
     // "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",

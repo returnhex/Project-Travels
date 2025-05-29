@@ -5,12 +5,6 @@ import instagramPostImg3 from "@/assets/image/footer/footer3.png";
 import instagramPostImg4 from "@/assets/image/footer/footer4.png";
 import instagramPostImg5 from "@/assets/image/footer/footer5.png";
 import instagramPostImg6 from "@/assets/image/footer/footer6.png";
-// social icon
-import iconFacebook from "/assets/image/icon/facebook.png";
-import iconInstagram from "/assets/image/icon/instagram.png";
-import iconLinkedin from "/assets/image/icon/linkedin.png";
-import iconTwitter from "/assets/image/icon/twitter.png";
-import iconYoutube from "/assets/image/icon/youtube.png";
 
 // payment method icon
 import paymentMethodIcon1 from "/assets/image/icon/payment1.png";
@@ -58,13 +52,7 @@ const instagramPost = [
   instagramPostImg5,
   instagramPostImg6,
 ];
-const icon = [
-  iconFacebook,
-  iconInstagram,
-  iconLinkedin,
-  iconTwitter,
-  iconYoutube,
-];
+
 const paymentMethodIcon = [
   paymentMethodIcon1,
   paymentMethodIcon2,
@@ -76,7 +64,7 @@ const paymentMethodIcon = [
 </script>
 <template>
   <footer
-    class="bg-[#F7FDFC] w-full h-[920px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative "
+    class="bg-[#F7FDFC] w-full h-[920px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
   >
     <NewsLetter class="absolute -top-44" />
     <div
@@ -95,9 +83,31 @@ const paymentMethodIcon = [
           care of your trip.
         </p>
         <div class="flex gap-2">
-          <div v-for="(item, id) in icon" :key="id" class="cursor-pointer">
-            <img :src="item" alt="" />
-          </div>
+          <Icon
+            name="mdi:facebook"
+            size="24"
+            class="text-gray-500 hover:text-[#1877F2] cursor-pointer"
+          />
+          <Icon
+            name="mdi:instagram"
+            size="24"
+            class="text-gray-500 hover:text-[#E4405F] cursor-pointer"
+          />
+          <Icon
+            name="mdi:linkedin"
+            size="24"
+            class="text-gray-500 hover:text-[#0077B5] cursor-pointer"
+          />
+          <Icon
+            name="mdi:twitter"
+            size="24"
+            class="text-gray-500 hover:text-[#1DA1F2] cursor-pointer"
+          />
+          <Icon
+            name="mdi:youtube"
+            size="24"
+            class="text-gray-500 hover:text-[#FF0000] cursor-pointer"
+          />
         </div>
       </div>
 

@@ -6,7 +6,7 @@ import blogImg3 from "@/assets/image/blog3.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import Button2 from "./Button2.vue";
 // import "/assets/css/package-swiper.css";
@@ -63,8 +63,10 @@ const cards = [
       </h2>
 
       <Swiper
-        :modules="[Navigation, Pagination, Keyboard]"
+        :modules="[Navigation, Pagination, Keyboard, Autoplay]"
         :slides-per-view="1"
+        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+        :loop="true"
         :space-between="20"
         :keyboard="{ enabled: true }"
         :pagination="{ clickable: true }"
