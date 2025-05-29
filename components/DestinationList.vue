@@ -9,7 +9,7 @@
     >
       <div class="flex gap-5 md:gap-10 flex-col items-center justify-center">
         <p class="text-[#2E8942] font-semibold text-xl md:text-2xl flex gap-3">
-          <img src="/double-arrow.svg" > Destination List
+          <img src="/double-arrow.svg" /> Destination List
         </p>
         <h2 class="text-2xl lg:text-3xl text-center font-bold text-[#3C3C3C]">
           Uncover Hidden Gems Around World
@@ -17,8 +17,8 @@
       </div>
 
       <div class="flex justify-center gap-4 mb-7 md:mb-10">
-         <Button1 title="Domestic" />
-        <Button4 title="International"/>
+        <Button1 title="Domestic" />
+        <Button4 title="International" />
       </div>
       <section
         class="w-full px-4 md:px-6 lg:px-12 overflow-hidden swiper swiper--offset-tosmall"
@@ -60,7 +60,7 @@
                     <img
                       src="/location.svg"
                       class="max-w-5 md:max-w-6 max-h-6"
-                    >
+                    />
                     <p
                       class="font-semibold text-sm md:text-[1rem] text-[#383838]"
                     >
@@ -82,11 +82,8 @@
                       Explore World & Get Relax
                     </p>
 
-                    <NuxtLink
-                      to="/destinations"
-                     
-                    >
-                      <Button2 title="Explore Now"/>
+                    <NuxtLink to="/destinations">
+                      <Button2 title="Explore Now" />
                     </NuxtLink>
                   </div>
                 </div>
@@ -99,14 +96,8 @@
       <div
         class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20"
       >
-        
-
-        <NuxtLink
-          to="/destinations"
-          class="ml-auto "
-        >
-        <Button5 title="Explore More"/>
-         
+        <NuxtLink to="/destinations" class="ml-auto">
+          <Button5 title="Explore More" />
         </NuxtLink>
       </div>
     </div>
@@ -149,3 +140,9 @@ const places = [
   },
 ];
 </script>
+<style scoped>
+.swiper {
+  position: relative;
+  overflow: visible;
+}
+</style>

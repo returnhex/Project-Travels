@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import Button2 from "./Button2.vue";
-// import "/assets/css/blog-swiper.css";
+// import "/assets/css/package-swiper.css";
 const cards = [
   {
     image: blogImg1,
@@ -73,7 +73,7 @@ const cards = [
           768: { slidesPerView: 2 },
           1280: { slidesPerView: 3 },
         }"
-        class="px-4 sm:px-12 xl:px-12 swiper swiper--offset-large"
+        class="px-4 sm:px-12 xl:px-0 swiper swiper--offset-large"
       >
         <SwiperSlide
           v-for="(card, index) in cards"
@@ -81,7 +81,7 @@ const cards = [
           class="flex justify-center"
         >
           <div
-            class="relative flex flex-col items-center mx-auto max-w-[464px] h-[624px]"
+            class="relative flex flex-col items-center mx-auto w-full h-[624px]"
           >
             <!-- Main Image -->
             <img
@@ -170,3 +170,34 @@ const cards = [
     </div>
   </section>
 </template>
+<style scoped>
+.swiper {
+  position: relative;
+  overflow: visible;
+}
+.swiper-pagination-bullet-active {
+  background-color: green !important;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: -10px;
+}
+
+.swiper--offset-large .swiper-pagination {
+  bottom: -150px !important;
+  position: absolute !important;
+}
+@media (min-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+</style>

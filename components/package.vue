@@ -16,7 +16,6 @@ import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
-// import "/assets/css/package.css";
 
 const images = [
   packageImg1,
@@ -72,11 +71,11 @@ const images = [
       </SwiperSlide>
     </Swiper>
 
-    <div class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20">
-      
+    <div
+      class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20"
+    >
       <div class="ml-auto">
-
-        <Button5 title="Explore Now"/>
+        <Button5 title="Explore Now" />
       </div>
     </div>
   </div>
@@ -88,14 +87,13 @@ const images = [
   overflow: visible;
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
   background-color: green;
-  /* bottom: -60px; */
   width: 15px;
   height: 15px;
 }
 .swiper-pagination {
   bottom: -50px !important;
   position: absolute !important;
-}
+} */
 </style>

@@ -5,22 +5,20 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg'}
-      ]
-    }
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
+    },
   },
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ["@/assets/css/main.css"],
+  css: ["@/assets/css/main.css", "/assets/css/package-swiper.css"],
 
   modules: [
     "@nuxt/eslint",
-    "@nuxt/icon",
-    "@nuxt/image",
+    // "@nuxt/icon",
+    // "@nuxt/image",
     // "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
-    'motion-v/nuxt'
+    "motion-v/nuxt",
   ],
 });
