@@ -16,6 +16,7 @@
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/svg-sprite": "^1.0.2",
     "@tailwindcss/vite": "^4.1.7",
+    "@vueuse/core": "^13.3.0",
     "css-select": "5.1.0",
     "eslint": "^9.27.0",
     "motion-v": "^1.1.0-alpha.1",

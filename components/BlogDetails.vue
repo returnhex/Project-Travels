@@ -100,10 +100,31 @@
       class="flex items-center gap-4 py-3 px-4 justify-end border border-gray-200 bg-gray-100"
     >
       <span class="text-gray-600 font-medium">Share:</span>
-      <img src="/assets/image/icon/facebook.png" alt="Facebook" class="" />
-      <img src="/assets/image/icon/twitter.png" alt="Twitter" class="" />
-      <img src="/assets/image/icon/linkedin.png" alt="LinkedIn" class="" />
-      <img src="/assets/image/icon/instagram.png" alt="Instagram" class="" />
+      <Icon
+        name="mdi:facebook"
+        size="24"
+        class="text-gray-500 hover:text-[#1877F2] cursor-pointer"
+      />
+      <Icon
+        name="mdi:instagram"
+        size="24"
+        class="text-gray-500 hover:text-[#E4405F] cursor-pointer"
+      />
+      <Icon
+        name="mdi:linkedin"
+        size="24"
+        class="text-gray-500 hover:text-[#0077B5] cursor-pointer"
+      />
+      <Icon
+        name="mdi:twitter"
+        size="24"
+        class="text-gray-500 hover:text-[#1DA1F2] cursor-pointer"
+      />
+      <Icon
+        name="mdi:youtube"
+        size="24"
+        class="text-gray-500 hover:text-[#FF0000] cursor-pointer"
+      />
     </div>
   </section>
 </template>
