@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const email = ref<string | ''>('')
 const message = ref<string | ''>('')
 
-const subscribe = async () => {
+const subscribe = async (e:Event) => {
   try {
     const res = await fetch('/api/subscribe', {
       method: 'POST',
@@ -43,7 +43,7 @@ const subscribe = async () => {
     </div>
 
     <!-- Input + Button -->
-    <form @submit.prevent="subscribe"
+    <form @submit="subscribe"
      class="w-full flex gap-4 relative justify-between items-center">
       <input
        v-model="email"
