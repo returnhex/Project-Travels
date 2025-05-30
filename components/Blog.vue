@@ -51,7 +51,9 @@ const cards = [
 
 <template>
   <section class="bg-[url('/assets/image/blogbg.png')]">
-    <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
+    <div
+      class="text-center mb-10 container mx-auto px-4 pt-20 pb-40 overflow-hidden"
+    >
       <div class="flex justify-center items-center mx-auto gap-2 py-4">
         <img src="/assets/image/Vector.png" alt="" />
         <p class="text-green font-semibold leading-[32px] text-xl">Our Blogs</p>
@@ -83,7 +85,7 @@ const cards = [
           class="flex justify-center"
         >
           <div
-            class="relative flex flex-col items-center mx-auto w-full h-[624px]"
+            class="relative flex flex-col items-center mx-auto w-full h-[350px] md:h-[450px] 2xl:h-[624px]"
           >
             <!-- Main Image -->
             <img
@@ -94,7 +96,7 @@ const cards = [
 
             <!-- Content Card -->
             <div
-              class="bg-[#F8F8F8] max-w-[90%] md:h-[300px] lg:h-[275px] rounded-lg p-6 py-2 absolute -bottom-20 shadow-2xl overflow-visible"
+              class="bg-[#F8F8F8] max-w-[90%] md:h-[300px] lg:h-[275px] rounded-lg px-6 py-2 absolute -bottom-20 shadow-2xl overflow-visible"
             >
               <!-- Top Row -->
               <div class="flex justify-between items-center mb-3">
@@ -133,7 +135,7 @@ const cards = [
 
               <!-- Bottom Row -->
               <div
-                class="flex flex-col sm:flex-row justify-between items-center"
+                class="flex flex-col gap-2 sm:flex-row justify-between items-center"
               >
                 <div class="flex items-center space-x-2 text-sm text-gray-600">
                   <img
@@ -141,7 +143,7 @@ const cards = [
                     alt="admin"
                     class="h-4 max-w-7"
                   />
-                  <p class="font-medium text-base text-dark-gray">By Admin</p>
+                  <p class="font-medium text-base text-dark-gray">Admin</p>
                 </div>
                 <!-- <button
                   class="flex items-center font-semibold text-base text-red border border-red rounded-lg px-2 md:px-4 py-2 gap-2 hover:shadow-lg"
@@ -154,7 +156,7 @@ const cards = [
                   />
                 </button> -->
                 <NuxtLink to="/blogs">
-                  <Button2 title="More Details" />
+                  <Button7 title="More Details" />
                 </NuxtLink>
               </div>
             </div>

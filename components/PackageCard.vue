@@ -15,7 +15,7 @@ defineProps({
     <img
       :src="image"
       alt="Package"
-      class="w-[360px] sm:w-[330px] h-[326px] object-cover rounded-lg"
+      class="w-[360px] sm:w-[330px] max-h-[250px] md:h-[326px] object-cover rounded-lg"
     />
     <div class="p-4">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
@@ -45,7 +45,9 @@ defineProps({
         >
           Explore Now
         </button> -->
-        <Button6 title=" Explore Now"/>
+        <NuxtLink to="/package">
+          <Button6 title=" Explore Now" />
+        </NuxtLink>
       </div>
     </div>
   </div>
