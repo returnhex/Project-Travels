@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
     class="bg-[url('/assets/image/counterbg.png')] py-16 px-4 md:px-12 bg-cover bg-no-repeat w-full overflow-hidden"
   >
     <div class="container mx-auto 
-    grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 
+    grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
     gap-6">
       <div
         v-for="(stat, index) in stats"

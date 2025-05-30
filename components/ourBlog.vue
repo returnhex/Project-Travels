@@ -100,7 +100,7 @@ const filteredBlogPosts = computed(() => {
             v-if="!filteredBlogPosts.length"
             class="font-semibold text-lg md:text-xl py-2 leading-snug text-center text-gray-700"
           >
-            No Blog found!
+            No Blogs found!
           </h1>
           <motion.div
             v-else
@@ -216,7 +216,7 @@ const filteredBlogPosts = computed(() => {
                 :id="`cat-${i}`"
                 v-model="cat.checked"
                 type="checkbox"
-                class="h-4 w-4 accent-red-500 focus:ring-red-400 border-gray-300 rounded"
+                class="h-4 w-4 accent-red-500 focus:ring-red-400 border-gray-300 rounded cursor-pointer"
               />
               <label :for="`cat-${i}`" class="text-base text-gray-700">
                 {{ cat.name }}
