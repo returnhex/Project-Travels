@@ -40,7 +40,7 @@ const getInTouch = [
   {
     title: "Get In Touch",
     items: [
-      { text: "+880 1855-255 342 ", icon: phone },
+      { text: "+880 1855-255 342", icon: phone, href: "https://wa.me/+880 1855-255 342"},
       { text: "Contact@bdigo.com", icon: message },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
@@ -85,9 +85,11 @@ const paymentMethodIcon = [
       <!-- logo -->
       <div class="">
         <img
-          src="/assets/image/logo.png"
+          src="/logo.svg"
           alt="WINGS GLOBAL FREIGHT"
-          class="w-[102px] h-[48px] py-2"
+          class="w-[70px] h-[40px] 
+          2xl:w-[90px] 2xl:h-[60px] 
+          cursor-pointer py-2"
         />
 
         <p class="text-lg text-navy font-medium leading-[28px]">
@@ -111,7 +113,10 @@ const paymentMethodIcon = [
             </h2>
             <ul class="space-y-2 text-sm">
               <li v-for="(item, idx) in items.items" :key="idx">
-                <span class="text-navy cursor-pointer">
+                <NuxtLink v-if="!idx" to="/about-us" class="cursor-pointer text-navy">
+                  {{ item }}
+                </NuxtLink>
+                <span v-else class="text-navy">
                   {{ item }}
                 </span>
               </li>

@@ -6,10 +6,63 @@ import blogImg4 from "@/assets/image/blog4.png";
 import blogImg5 from "@/assets/image/blog5.png";
 import blogImg6 from "@/assets/image/blog6.png";
 import { motion } from "motion-v";
-const cards = [blogImg1, blogImg2, blogImg4, blogImg3, blogImg5, blogImg6];
+import { ref, computed } from "vue";
+type TBlog = {
+  img: string;
+  date: string;
+  title: string;
+  subtitle: string;
+  category: string;
+};
+const blogPosts: TBlog[] = [
+  {
+    img: blogImg1,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    subtitle:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+    category: "Travel",
+  },
+  {
+    img: blogImg2,
+    date: "December 7, 2024",
+    title: "Top Hidden Spots in Great Places",
+    subtitle: "Explore the most beautiful places you’ve never heard of.",
+    category: "Great Places",
+  },
+  {
+    img: blogImg3,
+    date: "December 10, 2024",
+    title: "Why Tourists Love This Secret Beach",
+    subtitle: "Uncover what brings thousands of tourists here every year.",
+    category: "Tourists",
+  },
+  {
+    img: blogImg4,
+    date: "December 12, 2024",
+    title: "Sea Adventures You Must Experience",
+    subtitle: "From scuba diving to deep-sea surfing — live the thrill.",
+    category: "Sea",
+  },
+  {
+    img: blogImg5,
+    date: "December 15, 2024",
+    title: "Top 10 Dream Destinations for 2025",
+    subtitle: "Plan your next vacation with our curated travel guide.",
+    category: "Destinations",
+  },
+  {
+    img: blogImg6,
+    date: "December 18, 2024",
+    title: "Holidays Are Better in These Magical Places",
+    subtitle:
+      "Enjoy peaceful escapes and breathtaking views during your holidays.",
+    category: "Holidays",
+  },
+];
 
 const categories = ref([
-  { name: "Travel", count: 21, checked: true },
+  { name: "Travel", count: 21, checked: false },
   { name: "Great Places", count: 21, checked: false },
   { name: "Tourists", count: 21, checked: false },
   { name: "Sea", count: 21, checked: false },
@@ -19,6 +72,22 @@ const categories = ref([
   // ...add more if you like
 ]);
 
+const searchQuery = ref("");
+
+const filteredBlogPosts = computed(() => {
+  const selectedCategories = categories.value
+    .filter((cat) => cat.checked)
+    .map((cat) => cat.name);
+
+  return blogPosts.filter((post) => {
+   const matchesCategory =
+  selectedCategories.length === 0 || selectedCategories.includes(post.category);
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchQuery.value.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
+});
 </script>
 
 <template>
@@ -27,15 +96,22 @@ const categories = ref([
       <!-- Blog Content Area -->
       <div class="w-full lg:w-8/12 px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-8 lg:gap-10">
+          <h1
+            v-if="!filteredBlogPosts.length"
+            class="font-semibold text-lg md:text-xl py-2 leading-snug text-center text-gray-700"
+          >
+            No Blog found!
+          </h1>
           <motion.div
-            :while-hover="{scale: 1.02}"
-            v-for="(image, index) in cards"
+            v-else
+            :while-hover="{ scale: 1.02 }"
+            v-for="(blogPost, index) in filteredBlogPosts"
             :key="index"
             class="relative flex flex-col items-center w-full max-w-sm mx-auto cursor-pointer"
           >
             <!-- Main Image -->
             <img
-              :src="image"
+              :src="blogPost.img"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
             />
@@ -53,7 +129,7 @@ const categories = ref([
                     class="h-4 w-4"
                   />
                   <p class="font-medium text-base text-dark-gray">
-                    December 4, 2024
+                    {{ blogPost.date }}
                   </p>
                 </div>
                 <img
@@ -65,15 +141,14 @@ const categories = ref([
 
               <!-- Title -->
               <h2 class="font-semibold text-lg md:text-xl py-2 leading-snug">
-                The Surfing Man Will Blow Your Mind
+                {{ blogPost.title }}
               </h2>
 
               <!-- Description -->
               <p
                 class="text-sm md:text-base text-dark-gray leading-relaxed mb-4"
               >
-                Keeping the structure clear and focusing on what makes special,
-                travelers.
+                {{ blogPost.subtitle }}
               </p>
 
               <!-- Footer -->
@@ -92,11 +167,8 @@ const categories = ref([
                     By Admin
                   </p>
                 </div>
-                <NuxtLink
-                  to="/blog"
-                 
-                >
-                  <Button2 title="More Details"/>
+                <NuxtLink to="/blog">
+                  <Button2 title="More Details" />
                 </NuxtLink>
               </div>
             </div>
@@ -114,11 +186,14 @@ const categories = ref([
           </h3>
           <div class="relative flex pt-3">
             <input
+              v-model="searchQuery"
               type="text"
               placeholder="Search Blog"
               class="w-full pl-4 pr-10 py-4 rounded-lg bg-gray-100 focus:outline-none relative"
             />
-            <button class="absolute pt-3 inset-y-0 right-0 flex items-center">
+            <button
+              class="absolute pt-3 inset-y-0 right-0 flex items-center cursor-pointer"
+            >
               <img
                 src="/assets/image/icon/searchIcon.png"
                 class="border-black border-[1px] rounded-r-xl"
