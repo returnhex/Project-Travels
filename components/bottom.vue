@@ -166,7 +166,7 @@ const paymentMethodIcon = [
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-4">
         <!-- Left: Copyright -->
         <p class="text-center md:text-left text-base leading-relaxed text-navy">
-          &copy; 2025 BdiGo. All Rights Reserved.
+          &copy; {{ new Date().getFullYear() }} BdiGo. All Rights Reserved.
         </p>
 
         <!-- Right: Payment Methods -->

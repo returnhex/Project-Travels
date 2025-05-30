@@ -1,5 +1,6 @@
 <template>
-  <section class="py-12 md:py-24">
+  <section class=" flex flex-col
+   gap-6 py-12 md:py-24">
 <OurGoal
     :top-img="VGM.vision.topImg"
     :card-icon="VGM.vision.cardIcon"
