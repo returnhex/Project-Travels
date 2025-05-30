@@ -85,7 +85,7 @@ const cards = [
           class="flex justify-center"
         >
           <div
-            class="relative flex flex-col items-center mx-auto w-full h-[350px] md:h-[450px] xl:h-[624px]"
+            class="relative flex flex-col items-center mx-auto w-full h-[350px] md:h-[450px] 2xl:h-[624px]"
           >
             <!-- Main Image -->
             <img

@@ -8,7 +8,7 @@ defineProps({
   <button
     class="group relative inline-flex h-[calc(20px+8px)] lg:h-[calc(35px+8px)] 2xl:h-[calc(48px+8px)] items-center justify-center rounded-full bg-whitegap-2 px-[2px] py-1 md:px-1 md:py-1 lg:px-2 xl:px-2 md:py-1 border border-red text-red tex-sm md:text-md xl:text-[1rem] font-semibold cursor-pointer hover:text-white"
   >
-    <span class="z-10 pr-8 xl:pr-12 text-sm md:text-md xl:text-lg">{{
+    <span class="z-10 pr-8 xl:pr-12 text-sm md:text-md xl:text-lg font-[500]">{{
       title
     }}</span>
     <div

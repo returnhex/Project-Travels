@@ -53,11 +53,11 @@
               class="flex-shrink-0 flex max-w-[240px] md:max-w-[270px] lg:max-w-[320px] xl:max-w-[350px] 2xl:max-w-[464px] justify-center items-center overflow-hidden mx-auto"
             >
               <div
-                class="rounded-full h-[310px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[608px] w-[240px] md:min-w-[270px] lg:min-w-[320px] xl:w-[350px] 2xl:w-[464px] p-5 md:p-7 lg:p-10 bg-cover bg-center relative overflow-hidden"
+                class="rounded-full h-[310px] md:h-[350px] lg:h-[400px] xl:h-[450px] 2xl:h-[608px] w-[240px] md:min-w-[270px] lg:min-w-[320px] xl:w-[350px] 2xl:w-[464px] bg-cover bg-center relative overflow-hidden flex justify-center mx-auto"
                 :style="{ backgroundImage: `url(${place.image})` }"
               >
                 <div
-                  class="absolute flex flex-col items-center justify-center bottom-5 left-5 right-5 md:bottom-7 md:left-7 md:right-7 xl:bottom-10 xl:left-10 xl:right-10 w-[80%] h-[150px] md:h-[160px] xl:h-[210px] 2xl:h-[250px] px-3 py-3 md:px-6 md:py-6 bg-white rounded-b-full text-center"
+                  class="absolute flex flex-col items-center justify-center bottom-5 w-[85%] h-[150px] md:h-[160px] xl:h-[210px] 2xl:h-[250px] px-3 py-3 md:px-6 md:py-6 bg-white rounded-b-full text-center"
                 >
                   <div
                     class="absolute -top-5 md:-top-7 xl:-top-7 px-3 py-1 md:px-6 md:py-3 bg-white w-[162px] h-[30px] md:h-[40px] xl:h-[48px] flex items-center justify-center gap-2 rounded-lg"
@@ -73,13 +73,13 @@
                     </p>
                   </div>
                   <div
-                    class="flex flex-col gap-1 lg:gap-1 xl:gap-2 justify-center items-center"
+                    class="flex flex-col gap-1 lg:gap-1 xl:gap-1 2xl:gap-2 justify-center items-center"
                   >
                     <p class="text-[#2E8942] text-sm md:text-[1rem] font-[600]">
                       Place In
                     </p>
                     <h3
-                      class="text-sm md:text-lg xl:text-[2rem] font-bold text-[#383838]"
+                      class="text-sm md:text-lg xl:text-[2rem] font-[600] text-[#383838]"
                     >
                       {{ place.name }}
                     </h3>
