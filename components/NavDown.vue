@@ -1,18 +1,29 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
 import { ref } from "vue";
+import type { RouteRecordNameGeneric } from "vue-router";
 
-const isMenuOpen = ref(false);
+const route = useRoute();
+
+const isMenuOpen = ref<boolean>(false);
+
+const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : route.name);
+
+
 </script>
 <template>
-  <div class="max-w-[1440px] mx-auto py-2 md:py-5">
+  <div class="container mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
     <div
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
     >
       <NuxtLink to="/">
         <img
           src="/logo.svg"
-          class="w-[60px] h-[40px] md:w-[80px] md:h-[50px] cursor-pointer"
+          class="
+          
+          w-[70px] h-[40px] 
+          2xl:w-[80px] 2xl:h-[50px] 
+          cursor-pointer"
         />
       </NuxtLink>
       <motion.ul
@@ -20,14 +31,14 @@ const isMenuOpen = ref(false);
         :while-in-view="{ scale: 1 }"
         :transition="{ duration: 0.3 }"
         :class="[
-          'absolute right-0 top-12 z-50 md:static',
+          'absolute right-0 top-8 md:top-9 z-50 md:static',
           'bg-[#2E8942] md:bg-white',
           'flex flex-col md:flex-row',
           'gap-6 md:gap-8 lg:gap-12',
           'p-10 md:p-0 rounded-bl-xl md:rounded-[0]',
-          'text-white md:text-[#1A2E46] font-medium text-[18px]',
+          'text-white md:text-[#1A2E46] font-medium text-[14px] xl:text-[16px] 2xl:text-[18px]',
           isMenuOpen ? 'block' : 'hidden',
-          'md:flex',
+          'md:flex items-center',
         ]"
       >
         <div
@@ -36,19 +47,53 @@ const isMenuOpen = ref(false);
         >
           X
         </div>
-        <NuxtLink to="/" @click="isMenuOpen = !isMenuOpen">
+        <NuxtLink 
+          to="/" 
+          @click="{isMenuOpen = !isMenuOpen;
+            isActive = 'home'
+          }"
+          :class="`${isActive === 'home' ? 'bn5' : ''}`"
+        >
           <li>Home</li>
         </NuxtLink>
-        <NuxtLink to="/about-us" @click="isMenuOpen = !isMenuOpen">
+        <NuxtLink 
+          to="/about-us" 
+          @click="{
+            isMenuOpen = !isMenuOpen;
+            isActive = 'about-us'
+          }"
+          :class="`${isActive === 'about-us' ? 'bn5' : ''}`"
+          >
           <li>About us</li>
         </NuxtLink>
-        <NuxtLink to="/destinations" @click="isMenuOpen = !isMenuOpen">
+        <NuxtLink 
+          to="/destinations" 
+          @click="{
+            isMenuOpen = !isMenuOpen;
+            isActive = 'destinations'
+          }"
+          :class="`${isActive === 'destinations' ? 'bn5' : ''}`"
+          >
           <li>Destinations</li>
         </NuxtLink>
-        <NuxtLink to="/blogs" @click="isMenuOpen = !isMenuOpen">
+        <NuxtLink 
+        to="/blogs" 
+        @click="{
+            isMenuOpen = !isMenuOpen;
+            isActive = 'blogs'
+          }"
+        :class="`${isActive === 'blogs' ? 'bn5' : ''}`"
+        >
           <li>Blog</li>
         </NuxtLink>
-        <NuxtLink to="/contact-us" @click="isMenuOpen = !isMenuOpen">
+        <NuxtLink 
+        to="/contact-us" 
+        @click="{
+            isMenuOpen = !isMenuOpen;
+            isActive = 'contact-us'
+          }"
+        :class="`${isActive === 'contact-us' ? 'bn5' : ''}`"
+        >
           <li>Contact Us</li>
         </NuxtLink>
       </motion.ul>
@@ -73,3 +118,79 @@ const isMenuOpen = ref(false);
     </div>
   </div>
 </template>
+
+
+<style>
+
+.bn5 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #2E8942;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    
+    #48ff00,
+  
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: white;
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2E8942;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+</style>

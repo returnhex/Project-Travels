@@ -3,7 +3,7 @@
 <template>
   <div class="bg-[#2E8942]">
     <div
-      class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between px-4 md:px-5 py-3"
+      class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between px-4 md:px-5 py-1 xl:py-2 2xl:py-3"
     >
       <div class="flex gap-2 md:gap-4">
         <div class="flex gap-1 items-center justify-between">
@@ -23,9 +23,28 @@
           >
         </div>
       </div>
-      <p class="font-medium text-[1.1rem] hidden lg:block">
+     <div class="overflow-hidden whitespace-nowrap rounded-xl">
+       <p class="font-medium 
+     text-[0.9rem] 2xl:text-[1.1rem] 
+      hidden lg:block animate-marquee ">
         50% Off Your Next Trip. Hurry Up For your new Tour! Book Your Tour
       </p>
     </div>
   </div>
+  </div>
 </template>
+
+<style scoped>
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 12s linear infinite;
+}
+</style>

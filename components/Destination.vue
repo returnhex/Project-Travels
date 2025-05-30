@@ -6,7 +6,8 @@ import destinations from "../constant/index.ts"; // Your destination JSON
 
 // Pagination
 const currentPage = ref(1);
-const itemsPerPage = 9;
+const itemsPerPage = 9; // Matches your 3x3 grid
+const diplayCard = ref('grid')
 
 // Flatten all packages
 const flattenPackages = (destinations) => {
@@ -193,8 +194,12 @@ const clearAllFilters = () => {
         <div class="flex justify-between pb-6">
           <div class="flex justify-start items-center gap-2 py-2">
             <h1 class="text-gray text-base">View as :</h1>
-            <img :src="viewIcon1" class="cursor-pointer" alt="" />
-            <img :src="viewIcon2" class="cursor-pointer" alt="" />
+            <button @click="diplayCard = 'grid'">
+              <img :src="viewIcon1" class="cursor-pointer" alt="" />
+            </button>
+            <button @click="diplayCard = 'flex'">
+              <img :src="viewIcon2" class="cursor-pointer" alt="" />
+            </button>
           </div>
           <div class="flex">
             <h1
@@ -203,14 +208,15 @@ const clearAllFilters = () => {
               Sort By
             </h1>
             <h1
-              class="text-green flex border border-gray-300 px-4 py-2 gap-2 cursor-pointer"
+              :class="`text-green flex border border-gray-300 px-4 py-2 gap-2 cursor-pointer`"
             >
               Latest <img src="/assets/image/icon/downarrow.png" alt="" />
             </h1>
           </div>
         </div>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 px-8 lg:gap-2"
+          :class="`${diplayCard === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 px-8 lg:gap-2' :
+          'flex flex-col gap-5'}`"
         >
           <DestinationCard
             v-for="(data, index) in paginatedPackages"

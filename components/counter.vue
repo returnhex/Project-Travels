@@ -57,7 +57,9 @@ onBeforeUnmount(() => {
     ref="sectionRef"
     class="bg-[url('/assets/image/counterbg.png')] py-16 px-4 md:px-12 bg-cover bg-no-repeat w-full overflow-hidden"
   >
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="container mx-auto 
+    grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
+    gap-6">
       <div
         v-for="(stat, index) in stats"
         :key="index"
@@ -67,7 +69,7 @@ onBeforeUnmount(() => {
         <div class="flex justify-center items-center mb-2">
           <img :src="stat.icon" alt="icon" class="h-[64px] w-[64px]" />
         </div>
-        <h3 class="text-3xl font-bold text-black leading-[64px]">
+        <h3 class="text-2xl xl:text-3xl font-bold text-black leading-[64px]">
           {{ animatedValues[index] }} K+
         </h3>
         <p class="text-[20px] font-medium text-[#383838] leading-[30px] mt-1">

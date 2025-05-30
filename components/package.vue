@@ -34,17 +34,17 @@ const images = [
     <div class="text-center mb-10">
       <div class="flex justify-center items-center mx-auto gap-2">
         <img src="/assets/image/Vector.png" alt="" />
-        <p class="text-green font-semibold leading-[32px] text-xl">
+        <p class="text-green font-semibold leading-[32px] text-lg md:text-xl ">
           Package Bundles
         </p>
       </div>
       <h2
-        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2"
+        class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl leading-[50px] xl:leading-[64px] text-dark-gray font-bold"
       >
         Our Package Bundles
       </h2>
       <p
-        class="text-gray font-medium text-base leading-relaxed mt-2 max-w-2xl mx-auto px-4 md:px-0"
+        class="text-gray font-medium text-base leading-relaxed max-w-2xl mx-auto px-4 md:px-0"
       >
         The statement implies a willingness to help someone escape their daily
         routine by taking care of their travel plans. It suggests a travel

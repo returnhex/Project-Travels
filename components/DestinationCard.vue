@@ -18,7 +18,7 @@ const truncate = (text, length = 35) => {
     <img
       :src="datas.image"
       alt="Package"
-      class="w-full sm:w-[330px] xl:w-full h-[326px] object-cover rounded-lg"
+      class="w-full  h-[326px] object-cover rounded-lg"
     />
     <div class="p-4">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
