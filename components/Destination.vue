@@ -1,13 +1,12 @@
 <script setup>
-import viewIcon1 from "@/assets/image/icon/viewIcon1.png";
-import viewIcon2 from "@/assets/image/icon/viewIcon2.png";
 import { ref, computed, watch } from "vue";
-import destinations from "../constant/index.ts"; // Your destination JSON
+import destinations from "../constant/index.ts";
 
 // Pagination
 const currentPage = ref(1);
+const totalPage = ref(5);
 const itemsPerPage = 9; // Matches your 3x3 grid
-const diplayCard = ref('grid')
+const diplayCard = ref("grid");
 
 // Flatten all packages
 const flattenPackages = (destinations) => {
@@ -47,7 +46,7 @@ const sortedCategories = ref(
 
     return {
       country: country.country,
-      checked: false,
+      checked: true,
       count: children.length,
       children: children.sort((a, b) => a.name.localeCompare(b.name)),
     };
@@ -93,9 +92,12 @@ const paginatedPackages = computed(() => {
   return filteredPackages.value.slice(start, end);
 });
 
+// console.log("sort", filteredPackages.value);
 // Watch for filter change to reset page
-watch(filteredPackages, () => {
+watch(filteredPackages, (newVal) => {
   currentPage.value = 1;
+  totalPage.value = Math.ceil(newVal.length / itemsPerPage);
+  // console.log("Filtered packages updated:", newVal);
 });
 
 // Handle pagination
@@ -194,18 +196,29 @@ const clearAllFilters = () => {
         <div class="flex justify-between pb-6">
           <div class="flex justify-start items-center gap-2 py-2">
             <h1 class="text-gray text-base">View as :</h1>
-            <button @click="diplayCard = 'grid'" class="grid place-items-center">
-              
-              <Icon 
-              name="mdi:dots-grid" 
-              size="25"
-              :class="`cursor-pointer ${diplayCard === 'grid' ? 'text-green-400' : ''}`"/>
+            <button
+              class="grid place-items-center"
+              @click="diplayCard = 'grid'"
+            >
+              <Icon
+                name="mdi:dots-grid"
+                size="25"
+                :class="`cursor-pointer ${
+                  diplayCard === 'grid' ? 'text-green-400' : ''
+                }`"
+              />
             </button>
-            <button @click="diplayCard = 'flex'" class="grid place-items-center">
-              <Icon 
-              size="25"
-              name="mdi:format-list-bulleted-square" 
-              :class="`cursor-pointer ${diplayCard === 'flex' ? 'text-green-400' : ''}`"/>
+            <button
+              class="grid place-items-center"
+              @click="diplayCard = 'flex'"
+            >
+              <Icon
+                size="25"
+                name="mdi:format-list-bulleted-square"
+                :class="`cursor-pointer ${
+                  diplayCard === 'flex' ? 'text-green-400' : ''
+                }`"
+              />
             </button>
           </div>
           <div class="flex">
@@ -217,14 +230,19 @@ const clearAllFilters = () => {
             <select
               :class="`text-green outline-none flex border border-gray-300 px-4 py-2 gap-2 cursor-pointer`"
             >
-              <option name="" id="" class="bg-white hover:bg-green-400">Latest</option>
-               <option name="" id="" class="bg-white">Old</option>
+              <option id="" name="" class="bg-white hover:bg-green-400">
+                Latest
+              </option>
+              <option id="" name="" class="bg-white">Old</option>
             </select>
           </div>
         </div>
         <div
-          :class="`${diplayCard === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 px-8 lg:gap-2' :
-          'flex flex-col gap-5'}`"
+          :class="`${
+            diplayCard === 'grid'
+              ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 px-8 lg:gap-2'
+              : 'flex flex-col gap-5'
+          }`"
         >
           <DestinationCard
             v-for="(data, index) in paginatedPackages"
@@ -248,7 +266,7 @@ const clearAllFilters = () => {
         </button>
 
         <!-- Page Numbers -->
-        <template v-for="page in 5" :key="page">
+        <template v-for="page in totalPage" :key="page">
           <button
             :class="{
               'bg-red text-white': currentPage === page,
@@ -263,7 +281,7 @@ const clearAllFilters = () => {
 
         <!-- Next Button -->
         <button
-          :disabled="currentPage === 10"
+          :disabled="currentPage === 5"
           class="px-3 py-1 rounded-md disabled:opacity-50"
           @click="handlePageChange(currentPage + 1)"
         >
