@@ -194,11 +194,18 @@ const clearAllFilters = () => {
         <div class="flex justify-between pb-6">
           <div class="flex justify-start items-center gap-2 py-2">
             <h1 class="text-gray text-base">View as :</h1>
-            <button @click="diplayCard = 'grid'">
-              <img :src="viewIcon1" class="cursor-pointer" alt="" />
+            <button @click="diplayCard = 'grid'" class="grid place-items-center">
+              
+              <Icon 
+              name="mdi:dots-grid" 
+              size="25"
+              :class="`cursor-pointer ${diplayCard === 'grid' ? 'text-green-400' : ''}`"/>
             </button>
-            <button @click="diplayCard = 'flex'">
-              <img :src="viewIcon2" class="cursor-pointer" alt="" />
+            <button @click="diplayCard = 'flex'" class="grid place-items-center">
+              <Icon 
+              size="25"
+              name="mdi:format-list-bulleted-square" 
+              :class="`cursor-pointer ${diplayCard === 'flex' ? 'text-green-400' : ''}`"/>
             </button>
           </div>
           <div class="flex">
@@ -207,11 +214,12 @@ const clearAllFilters = () => {
             >
               Sort By
             </h1>
-            <h1
-              :class="`text-green flex border border-gray-300 px-4 py-2 gap-2 cursor-pointer`"
+            <select
+              :class="`text-green outline-none flex border border-gray-300 px-4 py-2 gap-2 cursor-pointer`"
             >
-              Latest <img src="/assets/image/icon/downarrow.png" alt="" />
-            </h1>
+              <option name="" id="" class="bg-white hover:bg-green-400">Latest</option>
+               <option name="" id="" class="bg-white">Old</option>
+            </select>
           </div>
         </div>
         <div

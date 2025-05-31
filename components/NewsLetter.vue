@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const email = ref<string | ''>('')
 const message = ref<string | ''>('')
 
-const subscribe = async (e:Event) => {
+const subscribe = async () => {
   try {
     const res = await fetch('/api/subscribe', {
       method: 'POST',
@@ -14,9 +14,9 @@ const subscribe = async (e:Event) => {
     const data = await res.json()
     message.value = data.message
     email.value = ''
-    console.log("Subscribed")
+    alert("Subscribed")
   } catch (err) {
-    message.value = 'Failed to subscribe.'
+    alert('Failed to subscribe.')
     console.error(err)
   }
 }
@@ -43,7 +43,7 @@ const subscribe = async (e:Event) => {
     </div>
 
     <!-- Input + Button -->
-    <form @submit="subscribe"
+    <form @submit.prevent="subscribe"
      class="w-full flex gap-4 relative justify-between items-center">
       <input
        v-model="email"

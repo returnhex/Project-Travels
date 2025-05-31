@@ -1,11 +1,16 @@
-<script setup>
-defineProps({
-  datas: {
-    type: String,
-    required: true,
-  },
-});
-const truncate = (text, length = 35) => {
+<script setup lang="ts">
+interface Destination {
+  title: string;
+  location: string;
+  duration: string;
+  image: string;
+  country: string;
+}
+
+const props = defineProps<{
+  datas: Destination;
+}>();
+const truncate = (text: string, length = 35) => {
   return text.length > length ? text.slice(0, length) + "..." : text;
 };
 </script>
@@ -20,7 +25,7 @@ const truncate = (text, length = 35) => {
       alt="Package"
       class="w-full  h-[326px] object-cover rounded-lg"
     />
-    <div class="p-4">
+    <div class="p-4 w-full">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
         {{ truncate(datas.title, 30) }}
       </h3>

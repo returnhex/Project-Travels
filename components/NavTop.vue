@@ -5,7 +5,7 @@
     <div
       class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between px-4 md:px-5 py-1 xl:py-2 2xl:py-3"
     >
-      <div class="flex gap-2 md:gap-4">
+      <div class="flex gap-2 md:gap-4 w-full justify-between lg:justify-start lg:w-fit">
         <div class="flex gap-1 items-center justify-between">
           <img src="/email.svg" class="w-6 h-6" />
           <a href="mailto:info@bdigo.com"
