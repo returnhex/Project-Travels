@@ -62,7 +62,7 @@ const images = [
         640: { slidesPerView: 2 },
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
-        1280: { slidesPerView: 4 },
+        1440: { slidesPerView: 4 },
       }"
       class="px-4 md:px-6 py-8 swiper swiper--offset-small"
     >

@@ -127,7 +127,7 @@ const paymentMethodIcon = [
                 <NuxtLink v-if="!idx" to="/about-us" class="cursor-pointer text-navy">
                   {{ item }}
                 </NuxtLink>
-                <span v-else class="text-navy">
+                <span v-else class="text-navy cursor-pointer">
                   {{ item }}
                 </span>
               </li>

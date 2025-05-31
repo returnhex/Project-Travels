@@ -236,7 +236,7 @@ const clearAllFilters = () => {
       </div>
     </div>
 
-    <div class="flex justify-center mt-8 overflow-hidden">
+    <div class="flex justify-center mt-8 md:ml-20 xl:ml-60 overflow-hidden">
       <div class="flex items-center gap-2">
         <!-- Previous Button -->
         <button
