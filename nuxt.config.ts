@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    build: {
+      sourcemap: false,
+    },
     plugins: [tailwindcss()],
   },
   css: ["@/assets/css/main.css", "/assets/css/package-swiper.css"],
@@ -18,7 +21,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     // "@nuxt/image",
     // "@nuxtjs/tailwindcss",
-    "@nuxtjs/google-fonts",
+    // "@nuxtjs/google-fonts",
     "motion-v/nuxt",
   ],
 });
