@@ -23,7 +23,8 @@ const truncate = (text: string, length = 35) => {
     <img
       :src="datas.image"
       alt="Package"
-      class="w-full  h-[326px] object-cover rounded-lg"
+      class="w-full h-[326px] object-cover rounded-lg"
+      loading="lazy"
     />
     <div class="p-4 w-full">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
