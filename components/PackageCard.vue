@@ -16,6 +16,7 @@ defineProps({
       :src="image"
       alt="Package"
       class="w-[360px] sm:w-[330px] max-h-[250px] md:h-[326px] object-cover rounded-lg"
+      loading="lazy"
     />
     <div class="p-4">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
@@ -26,6 +27,7 @@ defineProps({
           src="/assets/image/icon/map.png"
           class="max-w-6 h-6 object-contain"
           alt=""
+          loading="lazy"
         />
         <p class="text-sm text-gray-500 mt-1">London, UK</p>
       </div>
@@ -37,6 +39,7 @@ defineProps({
             src="/assets/image/icon/clock.png"
             class="max-w-6 h-6 object-contain"
             alt=""
+            loading="lazy"
           />
           <p class="text-dark-gray">6 Days, 5 Night</p>
         </div>

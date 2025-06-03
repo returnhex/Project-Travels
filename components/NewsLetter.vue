@@ -57,7 +57,12 @@ const subscribe = async () => {
         class="flex items-center absolute right-1 sm:right-2 font-semibold text-[10px] md:text-[16px] leading-[24px] text-white border-1 border-red bg-red rounded-lg px-2 py-1 sm:px-4 sm:py-2 gap-2 hover:bg-red-600 cursor-pointer"
       >
         Subscribe Now
-        <img src="/assets/image/icon/rightarrow2.png" class="" alt="" />
+        <img
+          src="/assets/image/icon/rightarrow2.png"
+          loading="lazy"
+          class=""
+          alt=""
+        />
       </button>
       <p v-if="message">{{ message }}</p>
     </form>

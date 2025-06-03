@@ -7,15 +7,15 @@
     <div
       class="container mx-auto px-4 flex flex-col justify-center items-center gap-2 md:gap-3 xl:gap-5 2xl:gap-10 overflow-hidden"
     >
-      <div class="flex 
-      gap-2 md:gap-3 lg:gap-5 xl:gap-7 2xl:gap-10 
-      flex-col items-center justify-center">
-        <p class="text-[#2E8942] font-semibold 
-        text-lg md:text-xl 
-        flex gap-3">
-          <img src="/double-arrow.svg" > Destination List
+      <div
+        class="flex gap-2 md:gap-3 lg:gap-5 xl:gap-7 2xl:gap-10 flex-col items-center justify-center"
+      >
+        <p class="text-[#2E8942] font-semibold text-lg md:text-xl flex gap-3">
+          <img src="/double-arrow.svg" loading="lazy" /> Destination List
         </p>
-        <h2 class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl  text-center font-bold text-[#3C3C3C]">
+        <h2
+          class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl text-center font-bold text-[#3C3C3C]"
+        >
           Uncover Hidden Gems Around World
         </h2>
       </div>
@@ -69,6 +69,7 @@
                     <img
                       src="/location.svg"
                       class="max-w-5 md:max-w-6 max-h-6"
+                      loading="lazy"
                     />
                     <p
                       class="font-semibold text-sm md:text-[1rem] text-[#383838]"

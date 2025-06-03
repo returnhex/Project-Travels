@@ -7,9 +7,9 @@ const route = useRoute();
 
 const isMenuOpen = ref<boolean>(false);
 
-const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : route.name);
-
-
+const isActive = ref<RouteRecordNameGeneric>(
+  route.name === "index" ? "home" : route.name
+);
 </script>
 <template>
   <div class="container mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
@@ -19,11 +19,8 @@ const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : r
       <NuxtLink to="/">
         <img
           src="/logo.svg"
-          class="
-          
-          w-[70px] h-[40px] 
-          2xl:w-[80px] 2xl:h-[50px] 
-          cursor-pointer"
+          class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
+          loading="lazy"
         />
       </NuxtLink>
       <motion.ul
@@ -47,52 +44,63 @@ const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : r
         >
           X
         </div>
-        <NuxtLink 
-          to="/" 
-          @click="{isMenuOpen = !isMenuOpen;
-            isActive = 'home'
-          }"
+        <NuxtLink
+          to="/"
           :class="`${isActive === 'home' ? 'bn5' : ''}`"
+          @click="
+            {
+              isMenuOpen = !isMenuOpen;
+              isActive = 'home';
+            }
+          "
         >
           <li>Home</li>
         </NuxtLink>
-        <NuxtLink 
-          to="/about-us" 
-          @click="{
-            isMenuOpen = !isMenuOpen;
-            isActive = 'about-us'
-          }"
+        <NuxtLink
+          to="/about-us"
           :class="`${isActive === 'about-us' ? 'bn5' : ''}`"
-          >
+          @click="
+            {
+              isMenuOpen = !isMenuOpen;
+              isActive = 'about-us';
+            }
+          "
+        >
           <li>About us</li>
         </NuxtLink>
-        <NuxtLink 
-          to="/destinations" 
-          @click="{
-            isMenuOpen = !isMenuOpen;
-            isActive = 'destinations'
-          }"
+        <NuxtLink
+          to="/destinations"
           :class="`${isActive === 'destinations' ? 'bn5' : ''}`"
-          >
+          @click="
+            {
+              isMenuOpen = !isMenuOpen;
+              isActive = 'destinations';
+            }
+          "
+        >
           <li>Destinations</li>
         </NuxtLink>
-        <NuxtLink 
-        to="/blogs" 
-        @click="{
-            isMenuOpen = !isMenuOpen;
-            isActive = 'blogs'
-          }"
-        :class="`${isActive === 'blogs' ? 'bn5' : ''}`"
+        <NuxtLink
+          to="/blogs"
+          :class="`${isActive === 'blogs' ? 'bn5' : ''}`"
+          @click="
+            {
+              isMenuOpen = !isMenuOpen;
+              isActive = 'blogs';
+            }
+          "
         >
           <li>Blog</li>
         </NuxtLink>
-        <NuxtLink 
-        to="/contact-us" 
-        @click="{
-            isMenuOpen = !isMenuOpen;
-            isActive = 'contact-us'
-          }"
-        :class="`${isActive === 'contact-us' ? 'bn5' : ''}`"
+        <NuxtLink
+          to="/contact-us"
+          :class="`${isActive === 'contact-us' ? 'bn5' : ''}`"
+          @click="
+            {
+              isMenuOpen = !isMenuOpen;
+              isActive = 'contact-us';
+            }
+          "
         >
           <li>Contact Us</li>
         </NuxtLink>
@@ -119,15 +127,13 @@ const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : r
   </div>
 </template>
 
-
 <style>
-
 .bn5 {
   padding: 0.6em 2em;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  background: #2E8942;
+  background: #2e8942;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -136,14 +142,7 @@ const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : r
 
 .bn5:before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    
-    #48ff00,
-  
-    #ff0000
-  );
+  background: linear-gradient(45deg, #ff0000, #48ff00, #ff0000);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -188,7 +187,7 @@ const isActive = ref<RouteRecordNameGeneric>(route.name === 'index' ? 'home' : r
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #2E8942;
+  background: #2e8942;
   left: 0;
   top: 0;
   border-radius: 10px;

@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { motion } from 'motion-v';
+import { motion } from "motion-v";
 </script>
 
 <template>
-  <section class="bg-[#FBFBFB] py-10 md:py-14 lg:py-16 xl:py-20 2xl:py-24">
+  <section
+    class="bg-[#FBFBFB] py-10 md:py-14 lg:py-16 xl:py-20 2xl:py-24 overflow-hidden"
+  >
     <div
-      class="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 px-4 2xl:px-0"
+      class="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 px-4 2xl:px-0 overflow-hidden"
     >
       <motion.div
-        :initial="{x: -100}"
-        :while-in-view="{x: 0}"
-        :transition="{duration: 1}"
+        :initial="{ x: -100 }"
+        :while-in-view="{ x: 0 }"
+        :transition="{ duration: 1 }"
         class="h-[400px] md:h-[600px] w-full lg:w-[50%] rounded-3xl overflow-hidden"
       >
         <iframe

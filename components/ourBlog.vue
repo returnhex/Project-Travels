@@ -80,10 +80,12 @@ const filteredBlogPosts = computed(() => {
     .map((cat) => cat.name);
 
   return blogPosts.filter((post) => {
-   const matchesCategory =
-  selectedCategories.length === 0 || selectedCategories.includes(post.category);
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.value.toLowerCase());
+    const matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(post.category);
+    const matchesSearch = post.title
+      .toLowerCase()
+      .includes(searchQuery.value.toLowerCase());
 
     return matchesCategory && matchesSearch;
   });
@@ -103,8 +105,8 @@ const filteredBlogPosts = computed(() => {
             No Blogs found!
           </h1>
           <motion.div
-            v-else
             v-for="(blogPost, index) in filteredBlogPosts"
+            v-else
             :key="index"
             :while-hover="{ scale: 1.02 }"
             class="relative flex flex-col items-center w-full max-w-sm mx-auto cursor-pointer"
@@ -114,6 +116,7 @@ const filteredBlogPosts = computed(() => {
               :src="blogPost.img"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
+              loading="lazy"
             />
 
             <!-- Blog Card -->
@@ -127,6 +130,7 @@ const filteredBlogPosts = computed(() => {
                     src="/assets/image/icon/calendericon.png"
                     alt="calendar"
                     class="h-4 w-4"
+                    loading="lazy"
                   />
                   <p class="font-medium text-base text-dark-gray">
                     {{ blogPost.date }}
@@ -136,6 +140,7 @@ const filteredBlogPosts = computed(() => {
                   src="/assets/image/travelbtn.png"
                   alt="travel tag"
                   class="h-5 w-auto"
+                  loading="lazy"
                 />
               </div>
 
@@ -160,6 +165,7 @@ const filteredBlogPosts = computed(() => {
                     src="/assets/image/icon/admin.png"
                     alt=""
                     class="h-4 w-4"
+                    loading="lazy"
                   />
                   <p
                     class="font-medium text-base leading-relaxed text-dark-gray"
@@ -198,6 +204,7 @@ const filteredBlogPosts = computed(() => {
                 src="/assets/image/icon/searchIcon.png"
                 class="border-black border-[1px] rounded-r-xl"
                 alt=""
+                loading="lazy"
               />
             </button>
           </div>

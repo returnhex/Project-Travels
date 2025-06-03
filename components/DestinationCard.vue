@@ -31,14 +31,24 @@ const truncate = (text: string, length = 35) => {
         {{ truncate(datas.title, 30) }}
       </h3>
       <div class="flex gap-2 pb-2 items-center">
-        <img src="/assets/image/location.png" class="w-5 h-4" alt="" />
+        <img
+          src="/assets/image/location.png"
+          loading="lazy"
+          class="w-5 h-4"
+          alt=""
+        />
         <p class="text-sm text-gray-500 mt-1">{{ datas.location }}</p>
       </div>
       <div class="h-[1px] bg-[#D2D2D2]" />
 
       <div class="flex justify-between items-center mt-4 text-sm gap-0">
         <div class="flex gap-1">
-          <img src="/assets/image/icon/clock.png" class="w-4 h-4" alt="" />
+          <img
+            src="/assets/image/icon/clock.png"
+            loading="lazy"
+            class="w-4 h-4"
+            alt=""
+          />
           <p class="text-dark-gray">{{ datas.duration }}</p>
         </div>
         <NuxtLink to="/destination">

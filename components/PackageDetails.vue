@@ -39,6 +39,7 @@ const images = [slideImg1, slideImg2];
               :src="slide"
               alt=""
               class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:max-h-[450px] rounded-xl object-cover"
+              loading="lazy"
             />
           </div>
         </SwiperSlide>
@@ -49,11 +50,13 @@ const images = [slideImg1, slideImg2];
             src="/assets/image/leftarrowred.png"
             class="swiper-prev custom-prev"
             alt=""
+            loading="lazy"
           />
           <img
             src="/assets/image/rightarrow.png"
             class="swiper-next custom-next"
             alt=""
+            loading="lazy"
           />
         </div>
       </Swiper>
@@ -115,6 +118,7 @@ const images = [slideImg1, slideImg2];
               src="/assets/image/package3.jpg"
               alt="Tour"
               class="w-full h-auto mt-4 rounded-lg object-cover"
+              loading="lazy"
             />
           </section>
 
@@ -134,6 +138,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Specialized Bilingual Guide
                 </li>
@@ -142,6 +147,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Private Transport
                 </li>
@@ -150,6 +156,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Entrance Fees, Snacks, and Mineral Water
                 </li>
@@ -158,6 +165,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Excursion Between Sylhet and Bichnakandi
                 </li>
@@ -168,6 +176,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Additional Services
                 </li>
@@ -176,6 +185,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Insurance
                 </li>
@@ -184,6 +194,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Personal expenses
                 </li>
@@ -192,6 +203,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
+                    loading="lazy"
                   />
                   Personal medicines
                 </li>
@@ -217,6 +229,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
+                    loading="lazy"
                   />
                   <span class="font-medium">Country:</span>
                 </div>
@@ -230,6 +243,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
+                    loading="lazy"
                   />
                   <span class="font-medium">Visa Requirements:</span>
                 </div>
@@ -243,6 +257,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
+                    loading="lazy"
                   />
                   <span class="font-medium">Time:</span>
                 </div>
@@ -256,6 +271,7 @@ const images = [slideImg1, slideImg2];
                     src="/assets/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
+                    loading="lazy"
                   />
                   <span class="font-medium">Language:</span>
                 </div>

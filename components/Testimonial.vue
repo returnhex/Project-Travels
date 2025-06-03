@@ -31,8 +31,14 @@ const testimonials = [
     <!-- Fixed Header Section -->
     <div class="mb-8 lg:mb-12 flex flex-col justify-center">
       <div class="flex justify-center items-center gap-2">
-        <img src="/assets/image/Vector.png" alt="Testimonial icon" >
-        <p class="text-green font-semibold text-lg md:text-xl leading-[32px] mb-1">
+        <img
+          src="/assets/image/Vector.png"
+          loading="lazy"
+          alt="Testimonial icon"
+        />
+        <p
+          class="text-green font-semibold text-lg md:text-xl leading-[32px] mb-1"
+        >
           Testimonial
         </p>
       </div>
@@ -78,21 +84,21 @@ const testimonials = [
             class="flex flex-col xl:flex-row gap-4 justify-center items-center overflow-hidden"
           >
             <!-- Image Section -->
-            <div class="w-[300px] flex-1 h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] xl:min-h-[608px] flex justify-center relative">
+            <div
+              class="w-[300px] flex-1 h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] xl:min-h-[608px] flex justify-center relative"
+            >
               <img
                 :src="testimonial.image"
                 alt="Customer"
-                class="object-cover z-50 
-                 h-full w-full
-                rounded-full"
+                class="object-cover z-50 h-full w-full rounded-full"
+                loading="lazy"
               />
             </div>
 
             <!-- Content Section -->
-            <div class=" px-2 flex justify-center">
+            <div class="px-2 flex justify-center">
               <div
-                class="bg-[#F2F4F7] p-4 md:p-6 rounded-lg border-l-3 border-green 
-                max-w-[500px] lg:max-w-[550px] xl:max-w-[756px] h-auto mx-auto lg:mx-0"
+                class="bg-[#F2F4F7] p-4 md:p-6 rounded-lg border-l-3 border-green max-w-[500px] lg:max-w-[550px] xl:max-w-[756px] h-auto mx-auto lg:mx-0"
               >
                 <p
                   class="text-black font-medium text-sm md:text-base xl:text-lg 2xl:text-xl leading-[28px] md:leading-[32px] mb-2 md:mb-4 text-start"
@@ -108,7 +114,7 @@ const testimonials = [
                   <p
                     class="font-semibold text-black text-base md:text-xl leading-[28px] md:leading-[32px] text-start"
                   >
-                    {{  testimonial.name }}
+                    {{ testimonial.name }}
                   </p>
                   <p
                     class="font-medium text-[18px] md:text-[20px] leading-[24px] md:leading-[28px] text-black text-start"
@@ -126,11 +132,13 @@ const testimonials = [
             src="/assets/image/leftarrowred.png"
             class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
             alt="Previous"
+            loading="lazy"
           />
           <img
             src="/assets/image/rightarrow.png"
             class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
             alt="Next"
+            loading="lazy"
           />
         </div>
       </Swiper>

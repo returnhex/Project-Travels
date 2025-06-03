@@ -3,11 +3,9 @@ import { motion } from "motion-v";
 </script>
 
 <template>
-  <!-- h-[350px] sm:h-[500px] md:h-[720px] lg:h-[820px] -->
+  <!-- h-[350px] sm:h-[500px] md:h-[720px] lg:h-[820px] h-[40vh] sm:h-[60vh] md:h-[70vh] lg:h-[82vh] xl:h-[92vh]  -->
   <section
-    class="relative w-full mx-auto
-    h-[40vh] sm:h-[60vh] md:h-[70vh] lg:h-[82vh] xl:h-[92vh]  
-    bg-cover bg-center"
+    class="relative w-full mx-auto h-[350px] sm:h-[500px] md:h-[720px] lg:h-[820px] bg-cover bg-center"
     style="background-image: url('/heroBg.png')"
   >
     <div
@@ -23,7 +21,9 @@ import { motion } from "motion-v";
       <div
         class="max-w-[1000px] px-4 lg:px-4 flex flex-col items-start justify-start text-white gap-0 sm:gap-4 md:gap-5 xl:gap-8 2xl:gap-10"
       >
-        <p class="text-sm md:text-lg lg:text-[20px] xl:text-[24px] font-bold mb-2 sm:mb-0">
+        <p
+          class="text-sm md:text-lg lg:text-[20px] xl:text-[24px] font-bold mb-2 sm:mb-0"
+        >
           Making Travel Easy
         </p>
         <h1
@@ -32,7 +32,9 @@ import { motion } from "motion-v";
           Don't just imagine it, make it happen.
           <span class="text-white">Travel</span>
         </h1>
-        <p class="text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] font-medium mb-6">
+        <p
+          class="text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] font-medium mb-6"
+        >
           Thinking of taking a break from every day's life? Don't worry, we take
           care of your trip. Thinking of taking a break from every day's life?
           Don't worry, we take care of your trip.

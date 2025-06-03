@@ -35,8 +35,16 @@ const getInTouch = [
   {
     title: "Get In Touch",
     items: [
-      { text: "+880 1855-255 342", icon: phone, href: "https://wa.me/+880 1855-255 342"},
-      { text: "Contact@bdigo.com", icon: message, href: 'mailto:Contact@bdigo.com' },
+      {
+        text: "+880 1855-255 342",
+        icon: phone,
+        href: "https://wa.me/+880 1855-255 342",
+      },
+      {
+        text: "Contact@bdigo.com",
+        icon: message,
+        href: "mailto:Contact@bdigo.com",
+      },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
         icon: location,
@@ -72,19 +80,20 @@ const paymentMethodIcon = [
       class="container mx-auto px-4 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mt-20 md:mt-0"
     >
       <!-- logo -->
-      <div class="">
-        <img
-          src="/logo.svg"
-          alt="WINGS GLOBAL FREIGHT"
-          class="w-[70px] h-[40px] 
-          2xl:w-[90px] 2xl:h-[60px] 
-          cursor-pointer py-2"
-        />
+      <div class="flex flex-col gap-8">
+        <div>
+          <img
+            src="/logo.svg"
+            alt="WINGS GLOBAL FREIGHT"
+            class="w-[70px] h-[40px] 2xl:w-[90px] 2xl:h-[60px] cursor-pointer py-2 2xl:-ml-1 -ml-2"
+            loading="lazy"
+          />
+          <p class="text-lg text-navy font-medium leading-[28px]">
+            Thinking of taking a break from every day’s life? Don't worry, we
+            take care of your trip.
+          </p>
+        </div>
 
-        <p class="text-lg text-navy font-medium leading-[28px]">
-          Thinking of taking a break from every day’s life? Don't worry, we take
-          care of your trip.
-        </p>
         <div class="flex gap-2">
           <Icon
             name="mdi:facebook"
@@ -124,7 +133,11 @@ const paymentMethodIcon = [
             </h2>
             <ul class="space-y-2 text-sm">
               <li v-for="(item, idx) in items.items" :key="idx">
-                <NuxtLink v-if="!idx" to="/about-us" class="cursor-pointer text-navy">
+                <NuxtLink
+                  v-if="!idx"
+                  to="/about-us"
+                  class="cursor-pointer text-navy"
+                >
                   {{ item }}
                 </NuxtLink>
                 <span v-else class="text-navy cursor-pointer">
@@ -142,7 +155,12 @@ const paymentMethodIcon = [
             </h2>
             <ul class="space-y-2 text-sm">
               <li v-for="(item, id) in getIn.items" :key="id" class="flex">
-                <img :src="item.icon" alt="icon" class="w-4 h-4" />
+                <img
+                  :src="item.icon"
+                  alt="icon"
+                  class="w-4 h-4"
+                  loading="lazy"
+                />
                 <a v-if="item?.href" :href="item.href" target="_blank"
                   ><span class="text-navy cursor-pointer">
                     {{ item.text }}
@@ -169,7 +187,7 @@ const paymentMethodIcon = [
             :key="id"
             class="cursor-pointer w-full"
           >
-            <img :src="item" alt="" class="w-full" />
+            <img :src="item" alt="" class="w-full" loading="lazy" />
           </div>
         </div>
       </div>
@@ -198,6 +216,7 @@ const paymentMethodIcon = [
                 :src="item"
                 alt="Payment Method"
                 class="h-6 w-auto object-contain cursor-pointer"
+                loading="lazy"
               />
             </template>
           </div>

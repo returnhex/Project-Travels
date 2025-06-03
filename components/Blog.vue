@@ -53,12 +53,13 @@ const cards = [
   <section class="bg-[url('/assets/image/blogbg.png')]">
     <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
       <div class="flex justify-center items-center mx-auto gap-2">
-        <img src="/assets/image/Vector.png" alt="" />
-        <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">Our Blogs</p>
+        <img src="/assets/image/Vector.png" alt="" loading="lazy" />
+        <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">
+          Our Blogs
+        </p>
       </div>
       <h2
-        class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl leading-[50px] xl:leading-[64px]
-        text-dark-gray font-bold pb-8"
+        class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl leading-[50px] xl:leading-[64px] text-dark-gray font-bold pb-8"
       >
         Our Latest Blog
       </h2>
@@ -91,6 +92,7 @@ const cards = [
               :src="card.image"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
+              loading="lazy"
             />
 
             <!-- Content Card -->
@@ -104,6 +106,7 @@ const cards = [
                     src="/assets/image/icon/calendericon.png"
                     alt=""
                     class="h-4 max-w-6"
+                    loading="lazy"
                   />
                   <p
                     class="font-medium text-base leading-relaxed text-dark-gray"
@@ -141,6 +144,7 @@ const cards = [
                     src="/assets/image/icon/admin.png"
                     alt="admin"
                     class="h-4 max-w-7"
+                    loading="lazy"
                   />
                   <p class="font-medium text-base text-dark-gray">Admin</p>
                 </div>

@@ -6,9 +6,9 @@ defineProps({
 <template>
   <!-- btn2 -->
   <button
-    class="group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-whitegap-2 px-2 py-1 md:px-3 md:py-2 border border-red text-red tex-sm md:text-lg xl:text-[1rem] font-semibold cursor-pointer hover:text-white"
+    class="group relative inline-flex h-[calc(45px+8px)] items-center justify-center rounded-full bg-whitegap-2 px-2 py-1 md:px-3 md:py-2 border border-red text-red tex-sm md:text-lg xl:text-[1rem] font-semibold cursor-pointer hover:text-white"
   >
-    <span class="z-10 pr-12 font-[500] text-lg">{{ title }}</span>
+    <span class="z-10 pr-12 font-[500] text-md md:text-lg">{{ title }}</span>
     <div
       class="absolute right-1 inline-flex h-12 w-12 items-center justify-end rounded-full bg-red-500 transition-[width] group-hover:w-[calc(100%-8px)]"
     >

@@ -262,7 +262,12 @@ const clearAllFilters = () => {
           class="px-3 py-1 rounded-md disabled:opacity-50"
           @click="handlePageChange(currentPage - 1)"
         >
-          <img src="/assets/image/leftarrowred.png" class="" alt="" />
+          <img
+            src="/assets/image/leftarrowred.png"
+            loading="lazy"
+            class=""
+            alt=""
+          />
         </button>
 
         <!-- Page Numbers -->
@@ -285,7 +290,12 @@ const clearAllFilters = () => {
           class="px-3 py-1 rounded-md disabled:opacity-50"
           @click="handlePageChange(currentPage + 1)"
         >
-          <img src="/assets/image/rightarrow.png" class="" alt="" />
+          <img
+            src="/assets/image/rightarrow.png"
+            loading="lazy"
+            class=""
+            alt=""
+          />
         </button>
       </div>
     </div>

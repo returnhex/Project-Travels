@@ -34,7 +34,7 @@ const images = [
     <div class="text-center mb-10">
       <div class="flex justify-center items-center mx-auto gap-2">
         <img src="/assets/image/Vector.png" alt="" />
-        <p class="text-green font-semibold leading-[32px] text-lg md:text-xl ">
+        <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">
           Package Bundles
         </p>
       </div>
