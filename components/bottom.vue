@@ -5,12 +5,6 @@ import instagramPostImg3 from "@/assets/image/footer/footer3.png";
 import instagramPostImg4 from "@/assets/image/footer/footer4.png";
 import instagramPostImg5 from "@/assets/image/footer/footer5.png";
 import instagramPostImg6 from "@/assets/image/footer/footer6.png";
-// social icon
-import iconFacebook from "/assets/image/icon/facebook.png";
-import iconInstagram from "/assets/image/icon/instagram.png";
-import iconLinkedin from "/assets/image/icon/linkedin.png";
-import iconTwitter from "/assets/image/icon/twitter.png";
-import iconYoutube from "/assets/image/icon/youtube.png";
 
 // payment method icon
 import paymentMethodIcon1 from "/assets/image/icon/payment1.png";
@@ -24,6 +18,7 @@ import location from "/assets/image/icon/location.png";
 import message from "/assets/image/icon/message.png";
 import phone from "/assets/image/icon/phone.png";
 
+const currentYear = new Date().getFullYear();
 const about = [
   {
     title: "About Us",
@@ -40,8 +35,16 @@ const getInTouch = [
   {
     title: "Get In Touch",
     items: [
-      { text: "+880 1855-255 342 ", icon: phone },
-      { text: "Contact@bdigo.com", icon: message },
+      {
+        text: "+880 1855-255 342",
+        icon: phone,
+        href: "https://wa.me/+880 1855-255 342",
+      },
+      {
+        text: "Contact@bdigo.com",
+        icon: message,
+        href: "mailto:Contact@bdigo.com",
+      },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
         icon: location,
@@ -58,13 +61,7 @@ const instagramPost = [
   instagramPostImg5,
   instagramPostImg6,
 ];
-const icon = [
-  iconFacebook,
-  iconInstagram,
-  iconLinkedin,
-  iconTwitter,
-  iconYoutube,
-];
+
 const paymentMethodIcon = [
   paymentMethodIcon1,
   paymentMethodIcon2,
@@ -76,28 +73,53 @@ const paymentMethodIcon = [
 </script>
 <template>
   <footer
-    class="bg-[#F7FDFC] w-full h-[920px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative "
+    class="bg-[#F7FDFC] w-full h-[920px] sm:h-[980px] md:h-[750px] lg:h-[552px] items-center mt-48 justify-center flex flex-col mx-auto relative"
   >
     <NewsLetter class="absolute -top-44" />
     <div
       class="container mx-auto px-4 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mt-20 md:mt-0"
     >
       <!-- logo -->
-      <div class="">
-        <img
-          src="/assets/image/logo.png"
-          alt="WINGS GLOBAL FREIGHT"
-          class="w-[102px] h-[48px] py-2"
-        />
+      <div class="flex flex-col gap-8">
+        <div>
+          <img
+            src="/logo.svg"
+            alt="WINGS GLOBAL FREIGHT"
+            class="w-[70px] h-[40px] 2xl:w-[90px] 2xl:h-[60px] cursor-pointer py-2 2xl:-ml-1 -ml-2"
+            loading="lazy"
+          />
+          <p class="text-lg text-navy font-medium leading-[28px]">
+            Thinking of taking a break from every day’s life? Don't worry, we
+            take care of your trip.
+          </p>
+        </div>
 
-        <p class="text-lg text-navy font-medium leading-[28px]">
-          Thinking of taking a break from every day’s life? Don't worry, we take
-          care of your trip.
-        </p>
         <div class="flex gap-2">
-          <div v-for="(item, id) in icon" :key="id" class="cursor-pointer">
-            <img :src="item" alt="" />
-          </div>
+          <Icon
+            name="mdi:facebook"
+            size="24"
+            class="text-gray-500 hover:text-[#1877F2] cursor-pointer"
+          />
+          <Icon
+            name="mdi:instagram"
+            size="24"
+            class="text-gray-500 hover:text-[#E4405F] cursor-pointer"
+          />
+          <Icon
+            name="mdi:linkedin"
+            size="24"
+            class="text-gray-500 hover:text-[#0077B5] cursor-pointer"
+          />
+          <Icon
+            name="mdi:twitter"
+            size="24"
+            class="text-gray-500 hover:text-[#1DA1F2] cursor-pointer"
+          />
+          <Icon
+            name="mdi:youtube"
+            size="24"
+            class="text-gray-500 hover:text-[#FF0000] cursor-pointer"
+          />
         </div>
       </div>
 
@@ -111,7 +133,14 @@ const paymentMethodIcon = [
             </h2>
             <ul class="space-y-2 text-sm">
               <li v-for="(item, idx) in items.items" :key="idx">
-                <span class="text-navy cursor-pointer">
+                <NuxtLink
+                  v-if="!idx"
+                  to="/about-us"
+                  class="cursor-pointer text-navy"
+                >
+                  {{ item }}
+                </NuxtLink>
+                <span v-else class="text-navy cursor-pointer">
                   {{ item }}
                 </span>
               </li>
@@ -126,7 +155,12 @@ const paymentMethodIcon = [
             </h2>
             <ul class="space-y-2 text-sm">
               <li v-for="(item, id) in getIn.items" :key="id" class="flex">
-                <img :src="item.icon" alt="icon" class="w-4 h-4" />
+                <img
+                  :src="item.icon"
+                  alt="icon"
+                  class="w-4 h-4"
+                  loading="lazy"
+                />
                 <a v-if="item?.href" :href="item.href" target="_blank"
                   ><span class="text-navy cursor-pointer">
                     {{ item.text }}
@@ -153,7 +187,7 @@ const paymentMethodIcon = [
             :key="id"
             class="cursor-pointer w-full"
           >
-            <img :src="item" alt="" class="w-full" />
+            <img :src="item" alt="" class="w-full" loading="lazy" />
           </div>
         </div>
       </div>
@@ -166,7 +200,7 @@ const paymentMethodIcon = [
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-4">
         <!-- Left: Copyright -->
         <p class="text-center md:text-left text-base leading-relaxed text-navy">
-          &copy; 2025 BdiGo. All Rights Reserved.
+          &copy; {{ currentYear }} BdiGo. All Rights Reserved.
         </p>
 
         <!-- Right: Payment Methods -->
@@ -182,6 +216,7 @@ const paymentMethodIcon = [
                 :src="item"
                 alt="Payment Method"
                 class="h-6 w-auto object-contain cursor-pointer"
+                loading="lazy"
               />
             </template>
           </div>
