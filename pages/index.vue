@@ -8,7 +8,7 @@ definePageMeta({
 
 useHead({
   title: "BdiGo",
-  meta: "Traveling Service",
+  meta: "Your Best Travelling service is here",
 });
 </script>
 <template>
