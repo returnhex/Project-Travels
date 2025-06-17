@@ -21,7 +21,7 @@ const hoveredPart = ref<null | "icon" | "title" | "desc">(null);
       <div
         class="block md:absolute right-0 -z-10 md:px-3 2xl:px-0 w-full lg:w-[70%] xl:w-[72%]"
       >
-        <img class="rounded-3xl" loading="lazy" :src="topImg" />
+        <img class="rounded-3xl h-full w-full" loading="lazy" :src="topImg" alt="VG-banner"/>
       </div>
       <div
         class="block md:absolute bottom-0 z-10 w-full mr-10 md:mr-0 md:w-[400px] xl:w-[600px] 2xl:w-[706px] px-6 xl:px-8 2xl:px-14 py-6 md:py-8 xl:py-12 2xl:py-20 bg-[#F2F2F2] rounded-3xl"
@@ -42,6 +42,7 @@ const hoveredPart = ref<null | "icon" | "title" | "desc">(null);
               :src="cardIcon"
               class="h-[50px] w-[50px] xl:h-[80px] xl:w-[80px] 2xl:h-[150px] 2xl:w-[150px] cursor-pointer"
               loading="lazy"
+              alt="vg-logo"
             />
           </div>
 

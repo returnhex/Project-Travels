@@ -2,7 +2,7 @@
 import { motion } from "motion-v";
 import { ref } from "vue";
 import type { RouteRecordNameGeneric } from "vue-router";
-
+import { navItems } from "~/constant";
 const route = useRoute();
 
 const isMenuOpen = ref<boolean>(false);
@@ -10,17 +10,23 @@ const isMenuOpen = ref<boolean>(false);
 const isActive = ref<RouteRecordNameGeneric>(
   route.name === "index" ? "home" : route.name
 );
+
+const getLinkClass = (name: string) => {
+  return `${isActive.value === name ? 'bn5' : ''}`
+}
+
 </script>
 <template>
   <div class="container mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
     <div
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
     >
-      <NuxtLink to="/">
+      <NuxtLink to="/" aria-label="go to home route or page">
         <img
           src="/logo.svg"
           class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
           loading="lazy"
+          alt="logo"
         />
       </NuxtLink>
       <motion.ul
@@ -44,66 +50,22 @@ const isActive = ref<RouteRecordNameGeneric>(
         >
           X
         </div>
-        <NuxtLink
-          to="/"
-          :class="`${isActive === 'home' ? 'bn5' : ''}`"
+        
+        <!-- nav-items -->
+        <li v-for="navItem in navItems">
+          <NuxtLink
+            :to="navItem.navigate"
+          :class="getLinkClass(navItem.activeClassName === 'home' ? navItem.activeClassName : navItem.navigate.slice(1))"
           @click="
             {
               isMenuOpen = !isMenuOpen;
-              isActive = 'home';
+              isActive = navItem.activeClassName === 'home' ? navItem.activeClassName : navItem.navigate.slice(1);
             }
           "
-        >
-          <li>Home</li>
-        </NuxtLink>
-        <NuxtLink
-          to="/about-us"
-          :class="`${isActive === 'about-us' ? 'bn5' : ''}`"
-          @click="
-            {
-              isMenuOpen = !isMenuOpen;
-              isActive = 'about-us';
-            }
-          "
-        >
-          <li>About us</li>
-        </NuxtLink>
-        <NuxtLink
-          to="/destinations"
-          :class="`${isActive === 'destinations' ? 'bn5' : ''}`"
-          @click="
-            {
-              isMenuOpen = !isMenuOpen;
-              isActive = 'destinations';
-            }
-          "
-        >
-          <li>Destinations</li>
-        </NuxtLink>
-        <NuxtLink
-          to="/blogs"
-          :class="`${isActive === 'blogs' ? 'bn5' : ''}`"
-          @click="
-            {
-              isMenuOpen = !isMenuOpen;
-              isActive = 'blogs';
-            }
-          "
-        >
-          <li>Blog</li>
-        </NuxtLink>
-        <NuxtLink
-          to="/contact-us"
-          :class="`${isActive === 'contact-us' ? 'bn5' : ''}`"
-          @click="
-            {
-              isMenuOpen = !isMenuOpen;
-              isActive = 'contact-us';
-            }
-          "
-        >
-          <li>Contact Us</li>
-        </NuxtLink>
+          >
+            {{ navItem.title }}
+          </NuxtLink>
+        </li>
       </motion.ul>
       <NuxtLink to="/contact-us" class="hidden md:block">
         <Button3 title="Contact Us" />

@@ -5,12 +5,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       link: [{ rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
     },
   },
   vite: {
     build: {
-      sourcemap: true,
+      sourcemap: true
     },
     plugins: [tailwindcss()],
   },
@@ -19,7 +22,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/eslint",
     "@nuxt/icon",
-    // "@nuxt/image",
+    "@nuxt/image",
     // "@nuxtjs/tailwindcss",
     // "@nuxtjs/google-fonts",
     "motion-v/nuxt",

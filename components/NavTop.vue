@@ -9,7 +9,7 @@
         class="flex gap-2 md:gap-4 w-full justify-between lg:justify-start lg:w-fit"
       >
         <div class="flex gap-1 items-center justify-between">
-          <img src="/email.svg" loading="lazy" class="w-6 h-6" />
+          <img src="/email.svg" loading="lazy" class="w-6 h-6" alt="icon-mail"/>
           <a href="mailto:info@bdigo.com"
             ><span class="text-sm md:text-[1rem] font-semibold"
               >info@bdigo.com</span
@@ -21,6 +21,7 @@
             src="/assets/image/icon/whatsappIcon.png"
             loading="lazy"
             class="w-6 h-6"
+            alt="icon-whatsapp"
           />
           <a href="https://wa.me/8801855255342" target="_blank"
             ><span class="text-sm md:text-[1rem] font-semibold"

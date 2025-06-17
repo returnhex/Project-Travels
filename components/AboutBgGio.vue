@@ -34,6 +34,7 @@ const aboutBdGioConstants = [
           class="absolute bottom-12 -left-0 -z-10 h-[100px] w-[144px]"
           src="/dot-dot.svg"
           loading="lazy"
+          alt="dotted-matrix"
         />
       </div>
     </motion.div>
@@ -51,6 +52,7 @@ const aboutBdGioConstants = [
             src="/double-arrow.svg"
             class="h-5 w-5 md:h-8 md:w-8"
             loading="lazy"
+            alt="icon-double-arrow"
           />
           <p
             class="text-[#2E8942] text-[1rem] lg:text-lg xl:text-xl 2xl:text-2xl font-semibold m-0"
@@ -88,6 +90,7 @@ const aboutBdGioConstants = [
             src="/approved.svg"
             class="w-4 h-4 xl:w-6 xl:h-6 2xl:w-8 2xl:h-8"
             loading="lazy"
+            alt="icon-checked-box"
           />
           <span
             class="text-[#383838] text-sm lg:text-lg xl:text-xl 2xl:text-2xl font-semibold"

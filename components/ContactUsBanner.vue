@@ -27,6 +27,7 @@ defineProps({
           src="/home-icon.svg"
           class="w-[15px] h-[15px] sm:w-[20px] sm:h-[20px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px]"
           loading="lazy"
+          alt="icon-home"
         />
         <NuxtLink
           to="/"
@@ -37,6 +38,7 @@ defineProps({
           src="/right-arrow-white.svg"
           class="w-[28px] h-[28px] md:w-[38px] md:h-[38px]"
           loading="lazy"
+          alt="icon-arrow-right"
         />
         <NuxtLink
           :to="$route.path"

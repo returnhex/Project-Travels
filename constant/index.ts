@@ -364,4 +364,32 @@ const destinations = [
   },
 ];
 
+export const navItems: {
+  title: string;
+  navigate: string;
+  activeClassName?: string;
+}[] = [
+  {
+    title: 'Home',
+    navigate: '/',
+    activeClassName: 'home'
+  },
+  {
+    title: 'About us',
+    navigate: '/about-us',
+  },
+  {
+    title: 'Destinations',
+    navigate: '/destinations'
+  },
+  {
+    title: 'Blog',
+    navigate: '/blogs'
+  },
+  {
+    title: 'Contact Us',
+    navigate: '/contact-us'
+  },
+]
+
 export default destinations;

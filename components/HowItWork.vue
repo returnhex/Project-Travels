@@ -12,7 +12,13 @@
         <p
           class="text-[#2E8942] font-semibold text-lg md:text-xl flex items-center gap-2"
         >
-          <img src="/double-arrow.svg" loading="lazy" height="32" width="32" />
+          <img 
+            src="/double-arrow.svg" 
+            loading="lazy" 
+            height="32" 
+            width="32"
+            alt="icon-double-arrow"
+          />
           How It Work
         </p>
         <h2 class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl font-bold text-[#3C3C3C]">
@@ -25,8 +31,8 @@
         <!-- Background Arrow Positioned Behind Cards -->
         <img
           src="/dotter-curve-arrow.svg"
-          alt="dotted arrow"
-          class="absolute hidden xl:block z-10 top-0 pointer-events-none"
+          alt="dotted-curve-arrow"
+          class="absolute hidden xl:block z-10 top-0 pointer-events-none w-full h-auto"
           loading="lazy"
         />
 
@@ -49,12 +55,15 @@
               :src="item.icon"
               class="w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] rounded-md mb-4 relative z-30"
               loading="lazy"
+              alt="icon-how-it-work"
+
             />
             <img
               src="/dotter-curve-arrow.svg"
-              alt="dotted arrow"
-              class="block xl:hidden"
+              alt="dotted-curve-arrow"
+              class="block xl:hidden h-auto w-auto"
               loading="lazy"
+              
             />
             <!-- Text Content -->
             <div

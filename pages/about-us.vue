@@ -7,6 +7,12 @@ definePageMeta({
 
 useHead({
   title: "About Us",
+  meta: [
+    {
+      name: 'about us',
+      content: 'Know more about us'
+    }
+  ]
 });
 </script>
 
