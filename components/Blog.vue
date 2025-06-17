@@ -1,46 +1,41 @@
 <script setup>
-import blogImg1 from "@/assets/image/blog1.png";
-import blogImg2 from "@/assets/image/blog2.png";
-import blogImg3 from "@/assets/image/blog3.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import Button2 from "./Button2.vue";
-// import "/assets/css/package-swiper.css";
 const cards = [
   {
-    image: blogImg1,
+    image: "/blog1.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: blogImg2,
+    image: "/blog2.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: blogImg3,
+    image: "/blog3.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: blogImg1,
+    image: "/blog1.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: blogImg2,
+    image: "/blog2.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
@@ -53,7 +48,7 @@ const cards = [
   <section class="bg-[url('/assets/image/blogbg.png')]">
     <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
       <div class="flex justify-center items-center mx-auto gap-2">
-        <img src="/assets/image/Vector.png" alt="" loading="lazy" />
+        <NuxtImg src="/Vector.png" alt="double-arrow" width="20" height="20" />
         <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">
           Our Blogs
         </p>
@@ -88,11 +83,12 @@ const cards = [
             class="relative flex flex-col items-center mx-auto w-full h-[350px] md:h-[450px] 2xl:h-[624px]"
           >
             <!-- Main Image -->
-            <img
+            <NuxtImg
               :src="card.image"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
-              loading="lazy"
+              width="200"
+              height="200"
             />
 
             <!-- Content Card -->
@@ -102,11 +98,12 @@ const cards = [
               <!-- Top Row -->
               <div class="flex justify-between items-center mb-3">
                 <div class="flex items-center space-x-2 text-sm text-gray">
-                  <img
-                    src="/assets/image/icon/calendericon.png"
-                    alt=""
+                  <NuxtImg
+                    src="/icon/calendericon.png"
+                    alt="calendericon"
                     class="h-4 max-w-6"
-                    loading="lazy"
+                    width="20"
+                    height="20"
                   />
                   <p
                     class="font-medium text-base leading-relaxed text-dark-gray"
@@ -140,24 +137,16 @@ const cards = [
                 class="flex flex-col gap-2 sm:flex-row justify-between items-center"
               >
                 <div class="flex items-center space-x-2 text-sm text-gray-600">
-                  <img
-                    src="/assets/image/icon/admin.png"
+                  <NuxtImg
+                    src="/icon/admin.png"
                     alt="admin"
                     class="h-4 max-w-7"
-                    loading="lazy"
+                    width="20"
+                    height="20"
                   />
                   <p class="font-medium text-base text-dark-gray">Admin</p>
                 </div>
-                <!-- <button
-                  class="flex items-center font-semibold text-base text-red border border-red rounded-lg px-2 md:px-4 py-2 gap-2 hover:shadow-lg"
-                >
-                  More Details
-                  <img
-                    src="/assets/image/icon/rightarrow.png"
-                    alt="arrow"
-                    class="max-w-4 h-4"
-                  />
-                </button> -->
+
                 <NuxtLink to="/blogs">
                   <Button7 title="More Details" />
                 </NuxtLink>

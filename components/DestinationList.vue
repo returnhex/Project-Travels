@@ -1,6 +1,5 @@
 <template>
   <section
-    id="destination"
     class="relative bg-cover bg-center w-full h-auto py-3 md:py-10 lg:py-16 flex flex-col justify-center items-center overflow-hidden"
     style="background-image: url('/destination.png')"
   >
@@ -11,7 +10,13 @@
         class="flex gap-2 md:gap-3 lg:gap-5 xl:gap-7 2xl:gap-10 flex-col items-center justify-center"
       >
         <p class="text-[#2E8942] font-semibold text-lg md:text-xl flex gap-3">
-          <img src="/double-arrow.svg" loading="lazy" /> Destination List
+          <NuxtImg
+            src="/double-arrow.svg"
+            alt="double-arrow"
+            width="30"
+            height="30"
+          />
+          Destination List
         </p>
         <h2
           class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl text-center font-bold text-[#3C3C3C]"
@@ -66,10 +71,12 @@
                   <div
                     class="absolute -top-5 md:-top-7 xl:-top-7 px-3 py-1 md:px-6 md:py-3 bg-white w-[162px] h-[30px] md:h-[40px] xl:h-[48px] flex items-center justify-center gap-2 rounded-lg"
                   >
-                    <img
+                    <NuxtImg
                       src="/location.svg"
                       class="max-w-5 md:max-w-6 max-h-6"
-                      loading="lazy"
+                      alt="loction"
+                      width="5"
+                      height="2"
                     />
                     <p
                       class="font-semibold text-sm md:text-[1rem] text-[#383838]"
@@ -123,16 +130,27 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
+// import {
+//   japan,
+//   spain,
+//   thailand,
+//   sylhetTea,
+//   sylhetSunamganj,
+//   sundorbon,
+//   saintMartin,
+// } from "/destination";
+
+import "~/assets/css/package-swiper.css";
+
 import {
   japan,
-  spain,
-  thailand,
-  sylhetTea,
-  sylhetSunamganj,
-  sundorbon,
   saintMartin,
-} from "~/assets/image/destination";
-import "~/assets/css/package-swiper.css";
+  spain,
+  sundorbon,
+  sylhetSunamganj,
+  sylhetTea,
+  thailand,
+} from "~/assets/image/destination/index";
 
 const places = [
   {

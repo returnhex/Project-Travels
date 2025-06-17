@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useHead } from "#app";
 
 definePageMeta({
@@ -17,7 +17,7 @@ useHead({
     <AboutBgGio title="About BdiGo Agency" button-text="More About Us" />
     <ChooseUs />
     <DestinationList />
-    <package />
+    <Package />
     <counter />
     <Testimonial />
     <Blog />

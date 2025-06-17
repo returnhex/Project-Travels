@@ -1,24 +1,8 @@
 <script setup>
-import instagramPostImg1 from "@/assets/image/footer/footer1.png";
-import instagramPostImg2 from "@/assets/image/footer/footer2.png";
-import instagramPostImg3 from "@/assets/image/footer/footer3.png";
-import instagramPostImg4 from "@/assets/image/footer/footer4.png";
-import instagramPostImg5 from "@/assets/image/footer/footer5.png";
-import instagramPostImg6 from "@/assets/image/footer/footer6.png";
-
-// payment method icon
-import paymentMethodIcon1 from "/assets/image/icon/payment1.png";
-import paymentMethodIcon2 from "/assets/image/icon/payment2.png";
-import paymentMethodIcon3 from "/assets/image/icon/payment3.png";
-import paymentMethodIcon4 from "/assets/image/icon/payment4.png";
-import paymentMethodIcon5 from "/assets/image/icon/payment5.png";
-import paymentMethodIcon6 from "/assets/image/icon/payment6.png";
-// grt in touch
-import location from "/assets/image/icon/location.png";
-import message from "/assets/image/icon/message.png";
-import phone from "/assets/image/icon/phone.png";
-
-const currentYear = new Date().getFullYear();
+const currentYear = ref(0);
+onMounted(() => {
+  currentYear.value = new Date().getFullYear();
+});
 const about = [
   {
     title: "About Us",
@@ -37,38 +21,38 @@ const getInTouch = [
     items: [
       {
         text: "+880 1855-255 342",
-        icon: phone,
+        icon: "/icon/location.png",
         href: "https://wa.me/+880 1855-255 342",
       },
       {
         text: "Contact@bdigo.com",
-        icon: message,
+        icon: "/icon/message.png",
         href: "mailto:Contact@bdigo.com",
       },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-        icon: location,
+        icon: "/icon/phone.png",
         href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
       },
     ],
   },
 ];
 const instagramPost = [
-  instagramPostImg1,
-  instagramPostImg2,
-  instagramPostImg3,
-  instagramPostImg4,
-  instagramPostImg5,
-  instagramPostImg6,
+  "/footer/footer1.png",
+  "/footer/footer2.png",
+  "/footer/footer3.png",
+  "/footer/footer4.png",
+  "/footer/footer5.png",
+  "/footer/footer6.png",
 ];
 
 const paymentMethodIcon = [
-  paymentMethodIcon1,
-  paymentMethodIcon2,
-  paymentMethodIcon3,
-  paymentMethodIcon4,
-  paymentMethodIcon5,
-  paymentMethodIcon6,
+  "/icon/payment1.png",
+  "/icon/payment2.png",
+  "/icon/payment3.png",
+  "/icon/payment4.png",
+  "/icon/payment5.png",
+  "/icon/payment6.png",
 ];
 </script>
 <template>
@@ -82,7 +66,7 @@ const paymentMethodIcon = [
       <!-- logo -->
       <div class="flex flex-col gap-8">
         <div>
-          <img
+          <NuxtImg
             src="/logo.svg"
             alt="WINGS GLOBAL FREIGHT"
             class="w-[70px] h-[40px] 2xl:w-[90px] 2xl:h-[60px] cursor-pointer py-2 2xl:-ml-1 -ml-2"
@@ -155,11 +139,12 @@ const paymentMethodIcon = [
             </h2>
             <ul class="space-y-2 text-sm">
               <li v-for="(item, id) in getIn.items" :key="id" class="flex">
-                <img
+                <NuxtImg
                   :src="item.icon"
                   alt="icon"
                   class="w-4 h-4"
-                  loading="lazy"
+                  width="20"
+                  height="20"
                 />
                 <a v-if="item?.href" :href="item.href" target="_blank"
                   ><span class="text-navy cursor-pointer">
@@ -187,7 +172,7 @@ const paymentMethodIcon = [
             :key="id"
             class="cursor-pointer w-full"
           >
-            <img :src="item" alt="" class="w-full" loading="lazy" />
+            <NuxtImg :src="item" alt="" class="w-full" loading="lazy" />
           </div>
         </div>
       </div>
@@ -212,11 +197,10 @@ const paymentMethodIcon = [
           </h3>
           <div class="flex space-x-3">
             <template v-for="(item, id) in paymentMethodIcon" :key="id">
-              <img
+              <NuxtImg
                 :src="item"
                 alt="Payment Method"
                 class="h-6 w-auto object-contain cursor-pointer"
-                loading="lazy"
               />
             </template>
           </div>

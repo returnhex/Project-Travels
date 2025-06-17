@@ -12,7 +12,13 @@
         <p
           class="text-[#2E8942] font-semibold text-lg xl:text-xl 2xl:text-2xl flex items-center gap-2"
         >
-          <img src="/double-arrow.svg" loading="lazy" height="32" width="32" />
+          <NuxtImg
+            alt="double-arrow"
+            src="/double-arrow.svg"
+            loading="lazy"
+            height="32"
+            width="32"
+          />
           Contact Us
         </p>
         <h2
@@ -40,10 +46,10 @@
             class="flex flex-col cursor-pointer items-center gap-3 bg-[#F2F2F2] w-full h-full rounded-xl shadow-sm p-6 xl:p-8 2xl:p-12 hover:shadow-md transition mx-auto"
           >
             <!-- Icon -->
-            <img
+            <NuxtImg
               :src="item.icon"
               class="w-[40px] h-[40px] xl:w-[50px] xl:h-[50px] 2xl:w-[80px] 2xl:h-[80px] rounded-md mb-4 relative z-50"
-              loading="lazy"
+              alt="icon"
             />
 
             <!-- Text Content -->
@@ -69,9 +75,9 @@
 </template>
 
 <script setup>
-import mailIcon from "~/assests/ContactUs/mail.svg";
-import mapsIcon from "~/assests/ContactUs/maps.svg";
-import contactIcon from "~/assests/ContactUs/phone.svg";
+import mailIcon from "../assets/image/assests/ContactUs/mail.svg";
+import mapsIcon from "../assets/image/assests/ContactUs/maps.svg";
+import contactIcon from "../assets/image/assests/ContactUs/phone.svg";
 import { motion } from "motion-v";
 
 const features = [

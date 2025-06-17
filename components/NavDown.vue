@@ -17,10 +17,10 @@ const isActive = ref<RouteRecordNameGeneric>(
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
     >
       <NuxtLink to="/">
-        <img
+        <NuxtImg
           src="/logo.svg"
+          alt="logo"
           class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
-          loading="lazy"
         />
       </NuxtLink>
       <motion.ul
