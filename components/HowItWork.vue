@@ -40,7 +40,7 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 w-full"
         >
           <div
-            v-for="(item, index) in features"
+            v-for="(item, index) in workFeatures"
             :key="index"
             class="flex flex-col cursor-pointer items-center gap-3 bg-white max-w-[464px] h-auto rounded-xl shadow-sm p-4 md:p-6 lg:p-8 xl:p-10 2xl:p-12 hover:shadow-xl transition mx-auto"
           >
@@ -81,22 +81,5 @@
 </template>
 
 <script setup>
-// import icon from "../assets/image/assests/HowItWork/destination.svg";
-const features = [
-  {
-    icon: "/assests/HowItWork/destination.svg",
-    title: "Select Destination",
-    desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
-  },
-  {
-    title: "Make An Appointments",
-    icon: "/assests/HowItWork/destination.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
-  },
-  {
-    title: "Enjoy Our Tour",
-    icon: "/assests/HowItWork/destination.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
-  },
-];
+import { workFeatures } from "../constant/index";
 </script>

@@ -19,7 +19,6 @@
         <div class="flex gap-1 items-center justify-between">
           <NuxtImg
             src="/icon/whatsappIcon.png"
-            alt="whatsapp"
             class="w-6 h-6"
             alt="icon-whatsapp"
           />

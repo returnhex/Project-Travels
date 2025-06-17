@@ -2,7 +2,7 @@
   <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
     <!-- Header Image -->
     <NuxtImg
-      src="/assets/image/blogdetails1.png"
+      src="/blogdetails1.png"
       alt="Main Blog"
       class="w-full h-auto rounded-xl object-cover"
       loading="lazy"
@@ -11,34 +11,19 @@
     <!-- Meta Info -->
     <div class="flex flex-wrap items-center text-gray-500 text-sm gap-4">
       <div class="flex items-center gap-2">
-        <NuxtImg
-          src="/assets/image/icon/calendericon.png"
-          loading="lazy"
-          class=""
-          alt=""
-        />
+        <NuxtImg src="/icon/calendericon.png" loading="lazy" class="" alt="" />
         <span class="font-medium text-base leading-relaxed text-gray"
           >December 4, 2024</span
         >
       </div>
       <div class="flex items-center gap-2">
-        <NuxtImg
-          src="/assets/image/icon/admin.png"
-          loading="lazy"
-          class=""
-          alt=""
-        />
+        <NuxtImg src="/icon/admin.png" loading="lazy" class="" alt="" />
         <span class="font-medium text-base leading-relaxed text-gray"
           >By Admin</span
         >
       </div>
       <div class="flex items-center gap-2">
-        <NuxtImg
-          src="/assets/image/icon/view.png"
-          loading="lazy"
-          class=""
-          alt=""
-        />
+        <NuxtImg src="/icon/view.png" loading="lazy" class="" alt="" />
         <span class="font-medium text-base leading-relaxed text-gray"
           >920 Views</span
         >
@@ -90,7 +75,7 @@
 
       <!-- Secondary Image -->
       <NuxtImg
-        src="/assets/image/blogdetails2.png"
+        src="/blogdetails2.png"
         alt="Blog Content"
         class="w-full h-auto rounded-lg object-cover"
         loading="lazy"

@@ -5,12 +5,6 @@ defineProps({
   title: String,
   buttonText: String,
 });
-
-const aboutBdGioConstants = [
-  "Trusted, Local Travel Experts",
-  "Flexible, Hassle-Free Bookings",
-  "Real-Timing Itinerary Updates",
-];
 </script>
 <template>
   <section

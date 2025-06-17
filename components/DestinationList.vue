@@ -130,65 +130,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-// import {
-//   japan,
-//   spain,
-//   thailand,
-//   sylhetTea,
-//   sylhetSunamganj,
-//   sundorbon,
-//   saintMartin,
-// } from "/destination";
 
 import "~/assets/css/package-swiper.css";
+import { places } from "../constant/index";
 
-import {
-  japan,
-  saintMartin,
-  spain,
-  sundorbon,
-  sylhetSunamganj,
-  sylhetTea,
-  thailand,
-} from "~/assets/image/destination/index";
-
-const places = [
-  {
-    name: "Japan",
-    image: japan,
-    category: "international",
-  },
-  {
-    name: "Saint Martin",
-    image: saintMartin,
-    category: "domestic",
-  },
-  {
-    name: "Thailand",
-    image: thailand,
-    category: "international",
-  },
-  {
-    name: "Sunamganj",
-    image: sylhetSunamganj,
-    category: "domestic",
-  },
-  {
-    name: "Spain",
-    image: spain,
-    category: "international",
-  },
-  {
-    name: "SreeMangal",
-    image: sylhetTea,
-    category: "domestic",
-  },
-  {
-    name: "Sundarbans",
-    image: sundorbon,
-    category: "domestic",
-  },
-];
 const selectedCategory = ref("all");
 
 // Filtered list based on selected category

@@ -8,7 +8,13 @@ definePageMeta({
 
 useHead({
   title: "BdiGo",
-  meta: "Your Best Travelling service is here",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover BdiGo – your premier travel service offering curated trips, unbeatable deals, and seamless bookings. Explore now and start your adventure!",
+    },
+  ],
 });
 </script>
 <template>

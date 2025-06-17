@@ -40,7 +40,7 @@
           class="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-3 gap-3 lg:gap-4 xl:gap-6 w-full"
         >
           <motion.div
-            v-for="(item, index) in features"
+            v-for="(item, index) in contactFeatures"
             :key="index"
             :while-hover="{ scale: 1.02 }"
             class="flex flex-col cursor-pointer items-center gap-3 bg-[#F2F2F2] w-full h-full rounded-xl shadow-sm p-6 xl:p-8 2xl:p-12 hover:shadow-md transition mx-auto"
@@ -75,26 +75,7 @@
 </template>
 
 <script setup>
-import mailIcon from "../assets/image/assests/ContactUs/mail.svg";
-import mapsIcon from "../assets/image/assests/ContactUs/maps.svg";
-import contactIcon from "../assets/image/assests/ContactUs/phone.svg";
 import { motion } from "motion-v";
 
-const features = [
-  {
-    icon: mapsIcon,
-    title: "Our Address",
-    desc: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-  },
-  {
-    icon: mailIcon,
-    title: "Contact@bdigo.com",
-    desc: "Email Us any time any kind of quety.",
-  },
-  {
-    icon: contactIcon,
-    title: "+880 1855-255 342",
-    desc: "Call Us any kind support. We will wait for it.",
-  },
-];
+import { contactFeatures } from "../constant/index";
 </script>

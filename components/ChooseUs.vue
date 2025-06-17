@@ -1,3 +1,8 @@
+<script setup>
+import { motion } from "motion-v";
+import { features } from "../constant/index";
+</script>
+
 <template>
   <section class="bg-[#F2F2F2] py-6 lg:-py-8 xl:py-12 2xl:py-16 px-4">
     <div
@@ -55,48 +60,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import { motion } from "motion-v";
-// import {
-//   booking,
-//   globe,
-//   guide,
-//   money,
-//   flight,
-//   team,
-// } from "../assets/image/assests/WhyChooseUs";
-
-const features = [
-  {
-    icon: "/assests/WhyChoseUs/globe.svg",
-    title: "Diverse Destinations",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
-  },
-  {
-    title: "Best Travel Guide",
-    icon: "/assests/WhyChoseUs/guide.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
-  },
-  {
-    title: "Easy Booking",
-    icon: "/assests/WhyChoseUs/booking.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
-  },
-  {
-    title: "Best Flight",
-    icon: "/assests/WhyChoseUs/flight.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
-  },
-  {
-    title: "Value for Money",
-    icon: "/assests/WhyChoseUs/money.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
-  },
-  {
-    title: "Support Team",
-    icon: "/assests/WhyChoseUs/team.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
-  },
-];
-</script>

@@ -5,43 +5,7 @@ import "swiper/css/pagination";
 import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import Button2 from "./Button2.vue";
-const cards = [
-  {
-    image: "/blog1.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "/blog2.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "/blog3.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "/blog1.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "/blog2.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-];
+import { cards } from "../constant/index";
 </script>
 
 <template>

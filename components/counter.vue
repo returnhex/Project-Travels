@@ -1,33 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { animate } from "motion-v";
-
-const stats = [
-  {
-    icon: "/icon/SafetyIcon1.png",
-    value: 76,
-    label: "Satisfied Customer",
-    bg: "bg-[#FBFBFB]",
-  },
-  {
-    icon: "/icon/SafetyIcon2.png",
-    value: 14,
-    label: "Active Members",
-    bg: "bg-[#EDEDED]",
-  },
-  {
-    icon: "/icon/SafetyIcon3.png",
-    value: 1,
-    label: "Travels Destination",
-    bg: "bg-[#FBFBFB]",
-  },
-  {
-    icon: "/icon/SafetyIcon4.png",
-    value: 35,
-    label: "Travel Guides",
-    bg: "bg-[#EDEDED]",
-  },
-];
+import { stats } from "../constant/index";
 
 const animatedValues = ref(stats.map(() => 0));
 const sectionRef = ref(null);

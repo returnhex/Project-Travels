@@ -46,6 +46,36 @@ import {
   zhangjiajieForest,
 } from "~/assets/image/destination";
 
+import mailIcon from "../assets/image/assests/ContactUs/mail.svg";
+import mapsIcon from "../assets/image/assests/ContactUs/maps.svg";
+import contactIcon from "../assets/image/assests/ContactUs/phone.svg";
+
+import {
+  japan,
+  saintMartin,
+  spain,
+  sundorbon,
+  sylhetSunamganj,
+  sylhetTea,
+  thailand,
+} from "~/assets/image/destination/index";
+// Blog Image
+import blogImg1 from "@/assets/image/blog1.png";
+import blogImg2 from "@/assets/image/blog2.png";
+import blogImg3 from "@/assets/image/blog3.png";
+import blogImg4 from "@/assets/image/blog4.png";
+import blogImg5 from "@/assets/image/blog5.png";
+import blogImg6 from "@/assets/image/blog6.png";
+// VGM Image
+import aimArrow from "../assets/image/assests/OutGoal/aim-arrow.svg";
+import aimBanner from "../assets/image/assests/OutGoal/aim-banner.png";
+
+import visionBanner from "../assets/image/assests/OurVission/vision-banner.png";
+import visionIcon from "../assets/image/assests/OurVission/vison-icon.svg";
+
+import missionBanner from "../assets/image/assests/OurMission/mission-banner.png";
+import missionIcon from "../assets/image/assests/OurMission/mission-icon.png";
+
 const destinations = [
   {
     country: "Bangladesh",
@@ -370,26 +400,312 @@ export const navItems: {
   activeClassName?: string;
 }[] = [
   {
-    title: 'Home',
-    navigate: '/',
-    activeClassName: 'home'
+    title: "Home",
+    navigate: "/",
+    activeClassName: "home",
   },
   {
-    title: 'About us',
-    navigate: '/about-us',
+    title: "About us",
+    navigate: "/about-us",
   },
   {
-    title: 'Destinations',
-    navigate: '/destinations'
+    title: "Destinations",
+    navigate: "/destinations",
   },
   {
-    title: 'Blog',
-    navigate: '/blogs'
+    title: "Blog",
+    navigate: "/blogs",
   },
   {
-    title: 'Contact Us',
-    navigate: '/contact-us'
+    title: "Contact Us",
+    navigate: "/contact-us",
   },
-]
+];
 
+export const aboutBdGioConstants = [
+  "Trusted, Local Travel Experts",
+  "Flexible, Hassle-Free Bookings",
+  "Real-Timing Itinerary Updates",
+];
+
+export const cards = [
+  {
+    image: "/blog1.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: "/blog2.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: "/blog3.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: "/blog1.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: "/blog2.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+];
+
+export const features = [
+  {
+    icon: "/assests/WhyChoseUs/globe.svg",
+    title: "Diverse Destinations",
+    desc: "This revision improves clarity and flow while maintaining your original message.",
+  },
+  {
+    title: "Best Travel Guide",
+    icon: "/assests/WhyChoseUs/guide.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message.",
+  },
+  {
+    title: "Easy Booking",
+    icon: "/assests/WhyChoseUs/booking.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message.",
+  },
+  {
+    title: "Best Flight",
+    icon: "/assests/WhyChoseUs/flight.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message.",
+  },
+  {
+    title: "Value for Money",
+    icon: "/assests/WhyChoseUs/money.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message.",
+  },
+  {
+    title: "Support Team",
+    icon: "/assests/WhyChoseUs/team.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message.",
+  },
+];
+
+export const contactFeatures = [
+  {
+    icon: mapsIcon,
+    title: "Our Address",
+    desc: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
+  },
+  {
+    icon: mailIcon,
+    title: "Contact@bdigo.com",
+    desc: "Email Us any time any kind of quety.",
+  },
+  {
+    icon: contactIcon,
+    title: "+880 1855-255 342",
+    desc: "Call Us any kind support. We will wait for it.",
+  },
+];
+
+export const stats = [
+  {
+    icon: "/icon/SafetyIcon1.png",
+    value: 76,
+    label: "Satisfied Customer",
+    bg: "bg-[#FBFBFB]",
+  },
+  {
+    icon: "/icon/SafetyIcon2.png",
+    value: 14,
+    label: "Active Members",
+    bg: "bg-[#EDEDED]",
+  },
+  {
+    icon: "/icon/SafetyIcon3.png",
+    value: 1,
+    label: "Travels Destination",
+    bg: "bg-[#FBFBFB]",
+  },
+  {
+    icon: "/icon/SafetyIcon4.png",
+    value: 35,
+    label: "Travel Guides",
+    bg: "bg-[#EDEDED]",
+  },
+];
+
+export const places = [
+  {
+    name: "Japan",
+    image: japan,
+    category: "international",
+  },
+  {
+    name: "Saint Martin",
+    image: saintMartin,
+    category: "domestic",
+  },
+  {
+    name: "Thailand",
+    image: thailand,
+    category: "international",
+  },
+  {
+    name: "Sunamganj",
+    image: sylhetSunamganj,
+    category: "domestic",
+  },
+  {
+    name: "Spain",
+    image: spain,
+    category: "international",
+  },
+  {
+    name: "SreeMangal",
+    image: sylhetTea,
+    category: "domestic",
+  },
+  {
+    name: "Sundarbans",
+    image: sundorbon,
+    category: "domestic",
+  },
+];
+
+export const workFeatures = [
+  {
+    icon: "/assests/HowItWork/destination.svg",
+    title: "Select Destination",
+    desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
+  },
+  {
+    title: "Make An Appointments",
+    icon: "/assests/HowItWork/destination.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
+  },
+  {
+    title: "Enjoy Our Tour",
+    icon: "/assests/HowItWork/destination.svg",
+    desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
+  },
+];
+
+type TBlog = {
+  img: string;
+  date: string;
+  title: string;
+  subtitle: string;
+  category: string;
+};
+export const blogPosts: TBlog[] = [
+  {
+    img: blogImg1,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    subtitle:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+    category: "Travel",
+  },
+  {
+    img: blogImg2,
+    date: "December 7, 2024",
+    title: "Top Hidden Spots in Great Places",
+    subtitle: "Explore the most beautiful places you’ve never heard of.",
+    category: "Great Places",
+  },
+  {
+    img: blogImg3,
+    date: "December 10, 2024",
+    title: "Why Tourists Love This Secret Beach",
+    subtitle: "Uncover what brings thousands of tourists here every year.",
+    category: "Tourists",
+  },
+  {
+    img: blogImg4,
+    date: "December 12, 2024",
+    title: "Sea Adventures You Must Experience",
+    subtitle: "From scuba diving to deep-sea surfing — live the thrill.",
+    category: "Sea",
+  },
+  {
+    img: blogImg5,
+    date: "December 15, 2024",
+    title: "Top 10 Dream Destinations for 2025",
+    subtitle: "Plan your next vacation with our curated travel guide.",
+    category: "Destinations",
+  },
+  {
+    img: blogImg6,
+    date: "December 18, 2024",
+    title: "Holidays Are Better in These Magical Places",
+    subtitle:
+      "Enjoy peaceful escapes and breathtaking views during your holidays.",
+    category: "Holidays",
+  },
+];
+
+export const packageImages = [
+  "/image1.png",
+  "/image2.png",
+  "/image3.png",
+  "/image4.png",
+  "/image2.png",
+  "/image3.png",
+];
+
+export const testimonials = [
+  {
+    quote:
+      "Our family trip to the Maldives was magical! From the booking to the resort, everything was perfectly organized. The team even surprised us with a sunset dinner. Thank you for making this unforgettable!",
+    rating: 5,
+    name: "Sarah Karim",
+    role: "Manager at Banoi LifeStyle",
+    image: "/testimonial1.png",
+  },
+  {
+    quote:
+      "Booking through this travel site was the best decision we made! Our entire trip—from flights to local experiences—was seamless and thoughtfully planned. The accommodations were top-notch, and every destination felt like a dream. Truly an unforgettable journey!",
+    rating: 5,
+    name: "Abdul Ahad Linkon",
+    role: "Travel Blogger",
+    image: "/testimonial2.jpg",
+  },
+];
+
+export const VGM = {
+  vision: {
+    topImg: visionBanner,
+    cardIcon: visionIcon,
+    carditle: "Our Vision",
+    cardDesc: ` The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service. The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service. The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service. The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service`,
+  },
+  mission: {
+    topImg: missionBanner,
+    cardIcon: missionIcon,
+    carditle: "Our Mission",
+    cardDesc: ` The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service. The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service. The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service. The statement implies a willingness to help someone escape their daily routine by taking care of their travel plans. It suggests a travel agency or similar service`,
+  },
+  goal: {
+    topImg: aimBanner,
+    cardIcon: aimArrow,
+    carditle: "Our Goal",
+    cardDesc: ` The statement implies a willingness to help someone escape their daily routine by taking care of
+                        their travel plans. It suggests a travel agency or similar service. The statement implies a
+                        willingness to help someone escape their daily routine by taking care of their travel plans. It
+                        suggests a travel agency or similar service. The statement implies a willingness to help someone
+                        escape their daily routine by taking care of their travel plans. It suggests a travel agency or
+                        similar service. The statement implies a willingness to help someone escape their daily routine
+                        by taking care of their travel plans. It suggests a travel agency or similar service`,
+  },
+};
 export default destinations;

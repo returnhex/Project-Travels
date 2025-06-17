@@ -6,15 +6,7 @@ import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
-
-const images = [
-  "/image1.png",
-  "/image2.png",
-  "/image3.png",
-  "/image4.png",
-  "/image2.png",
-  "/image3.png",
-];
+import { packageImages } from "../constant/index";
 </script>
 
 <template>
@@ -54,7 +46,7 @@ const images = [
       }"
       class="px-4 md:px-6 py-8 swiper swiper--offset-small"
     >
-      <SwiperSlide v-for="(img, index) in images" :key="index">
+      <SwiperSlide v-for="(img, index) in packageImages" :key="index">
         <PackageCard :image="img" />
       </SwiperSlide>
     </Swiper>

@@ -21,12 +21,10 @@ const getLinkClass = (name: string) => {
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
     >
       <NuxtLink to="/" aria-label="go to home route or page">
-        <img
+        <NuxtImg
           src="/logo.svg"
           alt="logo"
           class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
-          loading="lazy"
-          alt="logo"
         />
       </NuxtLink>
       <motion.ul

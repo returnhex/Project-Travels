@@ -1,65 +1,7 @@
 <script setup lang="ts">
-import blogImg1 from "@/assets/image/blog1.png";
-import blogImg2 from "@/assets/image/blog2.png";
-import blogImg3 from "@/assets/image/blog3.png";
-import blogImg4 from "@/assets/image/blog4.png";
-import blogImg5 from "@/assets/image/blog5.png";
-import blogImg6 from "@/assets/image/blog6.png";
 import { motion } from "motion-v";
 import { ref, computed } from "vue";
-type TBlog = {
-  img: string;
-  date: string;
-  title: string;
-  subtitle: string;
-  category: string;
-};
-const blogPosts: TBlog[] = [
-  {
-    img: blogImg1,
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    subtitle:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-    category: "Travel",
-  },
-  {
-    img: blogImg2,
-    date: "December 7, 2024",
-    title: "Top Hidden Spots in Great Places",
-    subtitle: "Explore the most beautiful places you’ve never heard of.",
-    category: "Great Places",
-  },
-  {
-    img: blogImg3,
-    date: "December 10, 2024",
-    title: "Why Tourists Love This Secret Beach",
-    subtitle: "Uncover what brings thousands of tourists here every year.",
-    category: "Tourists",
-  },
-  {
-    img: blogImg4,
-    date: "December 12, 2024",
-    title: "Sea Adventures You Must Experience",
-    subtitle: "From scuba diving to deep-sea surfing — live the thrill.",
-    category: "Sea",
-  },
-  {
-    img: blogImg5,
-    date: "December 15, 2024",
-    title: "Top 10 Dream Destinations for 2025",
-    subtitle: "Plan your next vacation with our curated travel guide.",
-    category: "Destinations",
-  },
-  {
-    img: blogImg6,
-    date: "December 18, 2024",
-    title: "Holidays Are Better in These Magical Places",
-    subtitle:
-      "Enjoy peaceful escapes and breathtaking views during your holidays.",
-    category: "Holidays",
-  },
-];
+import { blogPosts } from "../constant/index";
 
 const categories = ref([
   { name: "Travel", count: 21, checked: false },
@@ -69,7 +11,6 @@ const categories = ref([
   { name: "Destinations", count: 21, checked: false },
   { name: "Holidays", count: 21, checked: false },
   { name: "Adventures", count: 21, checked: false },
-  // ...add more if you like
 ]);
 
 const searchQuery = ref("");

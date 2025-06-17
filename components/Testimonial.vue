@@ -4,24 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-const testimonials = [
-  {
-    quote:
-      "Our family trip to the Maldives was magical! From the booking to the resort, everything was perfectly organized. The team even surprised us with a sunset dinner. Thank you for making this unforgettable!",
-    rating: 5,
-    name: "Sarah Karim",
-    role: "Manager at Banoi LifeStyle",
-    image: "/testimonial1.png",
-  },
-  {
-    quote:
-      "Booking through this travel site was the best decision we made! Our entire trip—from flights to local experiences—was seamless and thoughtfully planned. The accommodations were top-notch, and every destination felt like a dream. Truly an unforgettable journey!",
-    rating: 5,
-    name: "Abdul Ahad Linkon",
-    role: "Travel Blogger",
-    image: "/testimonial2.jpg",
-  },
-];
+import { testimonials } from "../constant/index";
 </script>
 
 <template>

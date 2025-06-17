@@ -10,7 +10,7 @@ defineProps({
 <template>
   <section
     class="relative w-full grid place-items-center mx-auto h-[300px] md:h-[382px] bg-cover bg-center"
-    style="background-image: url('/ocean.png')"
+    style="background-image: url('/ocean2.png')"
   >
     <div class="absolute inset-0 bg-[#0D4E1B] opacity-50" />
     <motion.div
