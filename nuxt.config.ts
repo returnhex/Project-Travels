@@ -24,7 +24,21 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     // "@nuxtjs/tailwindcss",
-    // "@nuxtjs/google-fonts",
+    "@nuxtjs/google-fonts",
     "motion-v/nuxt",
+    "nuxt-delay-hydration",
   ],
+  delayHydration: {
+    debug: process.env.NODE_ENV === "development",
+    mode: "init",
+  },
+  components: true,
+  ssr: true,
+
+  image: {
+    provider: "ipx",
+    dir: "assets/image",
+    quality: 100,
+    format: ["webp"],
+  },
 });

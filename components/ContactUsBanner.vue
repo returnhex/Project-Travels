@@ -23,22 +23,20 @@ defineProps({
         {{ title }}
       </h1>
       <div class="flex gap-1 items-center justify-center">
-        <img
+        <NuxtImg
           src="/home-icon.svg"
           class="w-[15px] h-[15px] sm:w-[20px] sm:h-[20px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px]"
-          loading="lazy"
-          alt="icon-home"
+          alt="home-icon"
         />
         <NuxtLink
           to="/"
           class="font-medium text-sm md:text-md lg:text-lg xl:text-xl"
           >Home</NuxtLink
         >
-        <img
+        <NuxtImg
           src="/right-arrow-white.svg"
           class="w-[28px] h-[28px] md:w-[38px] md:h-[38px]"
-          loading="lazy"
-          alt="icon-arrow-right"
+          alt="right-arrow"
         />
         <NuxtLink
           :to="$route.path"
@@ -46,11 +44,11 @@ defineProps({
         >
           {{ subTitle }}
         </NuxtLink>
-        <img
+        <NuxtImg
           v-if="moreTitle"
           src="/right-arrow-white.svg"
           class="w-[28px] h-[28px] md:w-[38px] md:h-[38px]"
-          loading="lazy"
+          alt="right-arrow"
         />
         <NuxtLink
           v-if="moreTitle"

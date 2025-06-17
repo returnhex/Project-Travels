@@ -12,9 +12,8 @@ const isActive = ref<RouteRecordNameGeneric>(
 );
 
 const getLinkClass = (name: string) => {
-  return `${isActive.value === name ? 'bn5' : ''}`
-}
-
+  return `${isActive.value === name ? "bn5" : ""}`;
+};
 </script>
 <template>
   <div class="container mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
@@ -24,6 +23,7 @@ const getLinkClass = (name: string) => {
       <NuxtLink to="/" aria-label="go to home route or page">
         <img
           src="/logo.svg"
+          alt="logo"
           class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
           loading="lazy"
           alt="logo"
@@ -50,18 +50,27 @@ const getLinkClass = (name: string) => {
         >
           X
         </div>
-        
+
         <!-- nav-items -->
         <li v-for="navItem in navItems">
           <NuxtLink
             :to="navItem.navigate"
-          :class="getLinkClass(navItem.activeClassName === 'home' ? navItem.activeClassName : navItem.navigate.slice(1))"
-          @click="
-            {
-              isMenuOpen = !isMenuOpen;
-              isActive = navItem.activeClassName === 'home' ? navItem.activeClassName : navItem.navigate.slice(1);
-            }
-          "
+            :class="
+              getLinkClass(
+                navItem.activeClassName === 'home'
+                  ? navItem.activeClassName
+                  : navItem.navigate.slice(1)
+              )
+            "
+            @click="
+              {
+                isMenuOpen = !isMenuOpen;
+                isActive =
+                  navItem.activeClassName === 'home'
+                    ? navItem.activeClassName
+                    : navItem.navigate.slice(1);
+              }
+            "
           >
             {{ navItem.title }}
           </NuxtLink>

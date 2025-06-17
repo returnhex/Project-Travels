@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import img1 from "@/assets/image/testimonial1.png";
-import img2 from "@/assets/image/testimonial2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,7 +11,7 @@ const testimonials = [
     rating: 5,
     name: "Sarah Karim",
     role: "Manager at Banoi LifeStyle",
-    image: img1,
+    image: "/testimonial1.png",
   },
   {
     quote:
@@ -21,7 +19,7 @@ const testimonials = [
     rating: 5,
     name: "Abdul Ahad Linkon",
     role: "Travel Blogger",
-    image: img2,
+    image: "/testimonial2.jpg",
   },
 ];
 </script>
@@ -31,10 +29,11 @@ const testimonials = [
     <!-- Fixed Header Section -->
     <div class="mb-8 lg:mb-12 flex flex-col justify-center">
       <div class="flex justify-center items-center gap-2">
-        <img
-          src="/assets/image/Vector.png"
-          loading="lazy"
+        <NuxtImg
+          src="/Vector.png"
           alt="Testimonial icon"
+          width="20"
+          height="20"
         />
         <p
           class="text-green font-semibold text-lg md:text-xl leading-[32px] mb-1"
@@ -87,11 +86,12 @@ const testimonials = [
             <div
               class="w-[300px] flex-1 h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] xl:min-h-[608px] flex justify-center relative"
             >
-              <img
+              <NuxtImg
                 :src="testimonial.image"
                 alt="Customer"
                 class="object-cover z-50 h-full w-full rounded-full"
-                loading="lazy"
+                height="260"
+                width="200"
               />
             </div>
 
@@ -132,13 +132,11 @@ const testimonials = [
             src="/assets/image/leftarrowred.png"
             class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
             alt="Previous"
-            loading="lazy"
           />
           <img
             src="/assets/image/rightarrow.png"
             class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
             alt="Next"
-            loading="lazy"
           />
         </div>
       </Swiper>

@@ -1,14 +1,4 @@
 <script setup lang="ts">
-import packageImg1 from "@/assets/image/image1.png";
-import packageImg2 from "@/assets/image/image2.png";
-import packageImg3 from "@/assets/image/image3.png";
-import {
-  default as packageImg4,
-  default as packageImg5,
-  default as packageImg6,
-  default as packageImg7,
-  default as packageImg8,
-} from "@/assets/image/image4.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,14 +8,12 @@ import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
 
 const images = [
-  packageImg1,
-  packageImg2,
-  packageImg3,
-  packageImg4,
-  packageImg5,
-  packageImg6,
-  packageImg7,
-  packageImg8,
+  "/image1.png",
+  "/image2.png",
+  "/image3.png",
+  "/image4.png",
+  "/image2.png",
+  "/image3.png",
 ];
 </script>
 
@@ -33,7 +21,7 @@ const images = [
   <div class="container mx-auto py-8 overflow-hidden">
     <div class="text-center mb-10">
       <div class="flex justify-center items-center mx-auto gap-2">
-        <img src="/assets/image/Vector.png" alt="" />
+        <NuxtImg src="/Vector.png" width="20" height="20" alt="vector" />
         <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">
           Package Bundles
         </p>

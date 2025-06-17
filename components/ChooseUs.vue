@@ -7,7 +7,12 @@
         class="flex flex-col gap-2 sm:gap-1 lg:gap-2 xl:gap-3 2xl:gap-6 justify-center items-center"
       >
         <p class="text-[#2E8942] font-semibold text-lg md:text-xl flex mr-5">
-          <img src="/double-arrow.svg" loading="lazy" height="32" width="32" />
+          <NuxtImg
+            src="/double-arrow.svg"
+            alt="double-arrow"
+            width="30"
+            height="30"
+          />
           Choose Us
         </p>
         <h2
@@ -26,10 +31,12 @@
           :while-hover="{ scale: 1.02 }"
           class="flex gap-3 bg-white w-full rounded-xl shadow-sm py-3 px-4 lg:p-3 xl:p-4 2xl:p-6 hover:shadow-md cursor-pointer"
         >
-          <img
+          <NuxtImg
             :src="item.icon"
+            alt="icon"
             class="w-[40px] h-[40px] xl:w-[65px] xl:h-[65px] 2xl:w-[80px] 2xl:h-[80px] rounded-md flex items-center justify-center mb-4"
-            loading="lazy"
+            width="600"
+            height="600"
           />
           <div class="flex flex-col items-start gap-1 lg:gap-2 xl:gap-3">
             <h1
@@ -51,44 +58,44 @@
 
 <script setup>
 import { motion } from "motion-v";
-import {
-  booking,
-  flight,
-  globe,
-  guide,
-  money,
-  team,
-} from "~/assests/WhyChoseUs";
+// import {
+//   booking,
+//   globe,
+//   guide,
+//   money,
+//   flight,
+//   team,
+// } from "../assets/image/assests/WhyChooseUs";
 
 const features = [
   {
-    icon: globe,
+    icon: "/assests/WhyChoseUs/globe.svg",
     title: "Diverse Destinations",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Best Travel Guide",
-    icon: guide,
+    icon: "/assests/WhyChoseUs/guide.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Easy Booking",
-    icon: booking,
+    icon: "/assests/WhyChoseUs/booking.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Best Flight",
-    icon: flight,
+    icon: "/assests/WhyChoseUs/flight.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Value for Money",
-    icon: money,
+    icon: "/assests/WhyChoseUs/money.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Support Team",
-    icon: team,
+    icon: "/assests/WhyChoseUs/team.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
 ];

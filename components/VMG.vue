@@ -28,14 +28,14 @@
 </template>
 
 <script setup lang="ts">
-import aimBanner from "../assests/OutGoal/aim-banner.png";
-import aimArrow from "../assests/OutGoal/aim-arrow.svg";
+import aimBanner from "../assets/image/assests/OutGoal/aim-banner.png";
+import aimArrow from "../assets/image/assests/OutGoal/aim-arrow.svg";
 
-import visionBanner from "../assests/OurVission/vision-banner.png";
-import visionIcon from "../assests/OurVission/vison-icon.svg";
+import visionBanner from "../assets/image/assests/OurVission/vision-banner.png";
+import visionIcon from "../assets/image/assests/OurVission/vison-icon.svg";
 
-import missionBanner from "../assests/OurMission/mission-banner.png";
-import missionIcon from "../assests/OurMission/mission-icon.png";
+import missionBanner from "../assets/image/assests/OurMission/mission-banner.png";
+import missionIcon from "../assets/image/assests/OurMission/mission-icon.png";
 
 const VGM = {
   vision: {

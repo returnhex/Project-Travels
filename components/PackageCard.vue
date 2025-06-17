@@ -12,19 +12,20 @@ defineProps({
     class="bg-white w-full max-w-[342px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
   >
     <!-- Package Image -->
-    <img
+    <NuxtImg
       :src="image"
       alt="Package"
       class="w-[360px] sm:w-[330px] max-h-[250px] md:h-[326px] object-cover rounded-lg"
-      loading="lazy"
+      width="200"
+      height="200"
     />
     <div class="p-4">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
         Asian Discovery: Temple Traditions, Tastings
       </h3>
       <div class="flex gap-2 pb-2 items-center">
-        <img
-          src="/assets/image/icon/map.png"
+        <NuxtImg
+          src="/icon/map.png"
           class="max-w-6 h-6 object-contain"
           alt=""
           loading="lazy"
@@ -35,8 +36,8 @@ defineProps({
 
       <div class="flex justify-between items-center mt-4 text-sm">
         <div class="flex gap-2">
-          <img
-            src="/assets/image/icon/clock.png"
+          <NuxtImg
+            src="/icon/clock.png"
             class="max-w-6 h-6 object-contain"
             alt=""
             loading="lazy"

@@ -66,7 +66,7 @@ const handleSubmit = () => {
         >
           <div class="flex gap-3 items-center">
             <p class="font-[400] text-sm lg:text-lg">US</p>
-            <img
+            <NuxtImg
               src="/down-arrow-gray.svg"
               loading="lazy"
               class="w-4 h-4 lg:w-5 lg:h-5"
@@ -94,7 +94,7 @@ const handleSubmit = () => {
         class="flex self-start justify-between text-white gap-[10px] items-center px-3 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3 rounded-xl bg-red hover:bg-red-600 cursor-pointer"
       >
         <p class="text-sm md:text-[1rem] font-semibold">Submit Now</p>
-        <img
+        <NuxtImg
           src="/arrowRight.svg"
           loading="lazy"
           class="h-3 w-3 md:h-6 md:w-6"

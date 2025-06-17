@@ -24,17 +24,19 @@ const aboutBdGioConstants = [
       class="relative w-full md:w-1/2 flex justify-center"
     >
       <div class="relative">
-        <img
+        <NuxtImg
           src="/travelCase.png"
           alt="Travel Illustration"
           class="rounded-[40px] object-cover h-full w-full"
-          loading="lazy"
+          width="600"
+          height="600"
         />
-        <img
+        <NuxtImg
           class="absolute bottom-12 -left-0 -z-10 h-[100px] w-[144px]"
           src="/dot-dot.svg"
-          loading="lazy"
-          alt="dotted-matrix"
+          width="600"
+          height="600"
+          alt="dot"
         />
       </div>
     </motion.div>
@@ -48,11 +50,12 @@ const aboutBdGioConstants = [
     >
       <div>
         <div class="flex items-center justify-start gap-3 m-0">
-          <img
+          <NuxtImg
             src="/double-arrow.svg"
             class="h-5 w-5 md:h-8 md:w-8"
-            loading="lazy"
-            alt="icon-double-arrow"
+            width="20"
+            height="20"
+            alt="double-arrow"
           />
           <p
             class="text-[#2E8942] text-[1rem] lg:text-lg xl:text-xl 2xl:text-2xl font-semibold m-0"
@@ -86,11 +89,12 @@ const aboutBdGioConstants = [
           v-for="title in aboutBdGioConstants"
           class="flex items-center gap-1 md:gap-2 lg:gap-3"
         >
-          <img
+          <NuxtImg
             src="/approved.svg"
             class="w-4 h-4 xl:w-6 xl:h-6 2xl:w-8 2xl:h-8"
-            loading="lazy"
-            alt="icon-checked-box"
+            width="20"
+            height="20"
+            alt="approved"
           />
           <span
             class="text-[#383838] text-sm lg:text-lg xl:text-xl 2xl:text-2xl font-semibold"
@@ -105,10 +109,10 @@ const aboutBdGioConstants = [
 
         <!-- Avatars -->
         <div class="">
-          <img
+          <NuxtImg
             src="/avatars.png"
+            alt="avatars"
             class="w-[140px] h-[40px] lg:w-[180px] lg:h-[48px] rounded-full border-2 border-white"
-            loading="lazy"
           />
         </div>
       </div>

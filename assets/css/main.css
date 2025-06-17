@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
-/* @font-face {
+@font-face {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: normal;
-  src: url("../css/Font/Montserrat-Regular.ttf") format("truetype");
-} */
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/montserrat@latest/latin-500-normal.woff2")
+    format("woff2");
+}
 body {
   font-family: "Montserrat", sans-serif;
+}
+hydration-status {
+  display: none;
 }
 @theme {
   --font-sans: "Montserrat";

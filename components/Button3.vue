@@ -8,13 +8,7 @@ defineProps({
   <!-- btn3 -->
   <div>
     <button
-      class="group relative 
-      inline-flex h-9 xl:h-11 2xl:h-12 items-center justify-center 
-      rounded-md
-     bg-red hover:bg-red-600 
-      px-3 lg:px-4 xl:px-5 2xl:px-6 
-      font-medium text-neutral-200 cursor-pointer 
-      text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem]"
+      class="group relative inline-flex h-9 xl:h-11 2xl:h-12 items-center justify-center rounded-md bg-red hover:bg-red-600 px-3 lg:px-4 xl:px-5 2xl:px-6 font-medium text-white cursor-pointer text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem]"
     >
       <span>{{ title }}</span>
       <div

@@ -1,17 +1,32 @@
 <script setup>
-import icon1 from "@/assets/image/icon/SafetyIcon1.png";
-import icon2 from "@/assets/image/icon/SafetyIcon2.png";
-import icon3 from "@/assets/image/icon/SafetyIcon3.png";
-import icon4 from "@/assets/image/icon/SafetyIcon4.png";
-
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { animate } from "motion-v";
 
 const stats = [
-  { icon: icon1, value: 76, label: "Satisfied Customer", bg: "bg-[#FBFBFB]" },
-  { icon: icon2, value: 14, label: "Active Members", bg: "bg-[#EDEDED]" },
-  { icon: icon3, value: 1, label: "Travels Destination", bg: "bg-[#FBFBFB]" },
-  { icon: icon4, value: 35, label: "Travel Guides", bg: "bg-[#EDEDED]" },
+  {
+    icon: "/icon/SafetyIcon1.png",
+    value: 76,
+    label: "Satisfied Customer",
+    bg: "bg-[#FBFBFB]",
+  },
+  {
+    icon: "/icon/SafetyIcon2.png",
+    value: 14,
+    label: "Active Members",
+    bg: "bg-[#EDEDED]",
+  },
+  {
+    icon: "/icon/SafetyIcon3.png",
+    value: 1,
+    label: "Travels Destination",
+    bg: "bg-[#FBFBFB]",
+  },
+  {
+    icon: "/icon/SafetyIcon4.png",
+    value: 35,
+    label: "Travel Guides",
+    bg: "bg-[#EDEDED]",
+  },
 ];
 
 const animatedValues = ref(stats.map(() => 0));
@@ -67,7 +82,7 @@ onBeforeUnmount(() => {
         :class="stat.bg"
       >
         <div class="flex justify-center items-center mb-2">
-          <img
+          <NuxtImg
             :src="stat.icon"
             loading="lazy"
             alt="icon"
