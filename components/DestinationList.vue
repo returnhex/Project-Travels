@@ -21,7 +21,7 @@
         <h2
           class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl text-center font-bold text-[#3C3C3C]"
         >
-          Uncover Hidden Gems Around World
+          ✈️ Travel with BdiGo – It's Always a Pleasant Journey
         </h2>
       </div>
 

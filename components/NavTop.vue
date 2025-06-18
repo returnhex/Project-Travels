@@ -9,22 +9,22 @@
         class="flex gap-2 md:gap-4 w-full justify-between lg:justify-start lg:w-fit"
       >
         <div class="flex gap-1 items-center justify-between">
-          <NuxtImg src="image/email.svg" alt="email" class="w-6 h-6" />
-          <a href="mailto:info@bdigo.com"
-            ><span class="text-sm md:text-[1rem] font-semibold"
-              >info@bdigo.com</span
+          <NuxtImg src="image/email.svg" alt="email" class="w-5 h-5 sm:w-6 sm:h-6" />
+          <a href="mailto:bdigotravels@gmail.com"
+            ><span class="text-xs sm:text-sm md:text-[1rem] font-semibold"
+              >bdigotravels@gmail.com</span
             ></a
           >
         </div>
         <div class="flex gap-1 items-center justify-between">
           <NuxtImg
             src="image/icon/whatsappIcon.png"
-            class="w-6 h-6"
+            class="w-5 h-5 sm:w-6 sm:h-6"
             alt="icon-whatsapp"
           />
-          <a href="https://wa.me/8801855255342" target="_blank"
-            ><span class="text-sm md:text-[1rem] font-semibold"
-              >+880 1855-255 342</span
+          <a href="https://wa.me/8801402914939" target="_blank"
+            ><span class="text-xs sm:text-sm md:text-[1rem] font-semibold"
+              >+880 1402-914939</span
             ></a
           >
         </div>

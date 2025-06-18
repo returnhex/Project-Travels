@@ -3,10 +3,10 @@
 <template>
   <div>
     <ContactUsBanner
-      title="Package "
+      title="Package"
       sub-title="Package"
       more-title="Package Details"
     />
-    <package-details />
+    <PackageDetails/>
   </div>
 </template>

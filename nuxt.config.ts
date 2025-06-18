@@ -35,10 +35,10 @@ export default defineNuxtConfig({
   components: true,
   ssr: true,
 
-  image: {
-    provider: "ipx",
-    dir: "public",
-    quality: 100,
-    format: ["webp"],
-  },
+  // image: {
+  //   provider: "ipx",
+  //   dir: "public",
+  //   quality: 100,
+  //   format: ["webp"],
+  // },
 });

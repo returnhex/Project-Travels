@@ -1,9 +1,13 @@
 <script setup>
 defineProps({
+  id: Number,
   image: {
     type: String,
     required: true,
   },
+  title: String,
+  duration: String,
+  location: String
 });
 </script>
 
@@ -21,7 +25,7 @@ defineProps({
     />
     <div class="p-4">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2">
-        Asian Discovery: Temple Traditions, Tastings
+        {{title}}
       </h3>
       <div class="flex gap-2 pb-2 items-center">
         <NuxtImg
@@ -29,7 +33,7 @@ defineProps({
           class="max-w-6 h-6 object-contain"
           alt=""
         />
-        <p class="text-sm text-gray-500 mt-1">London, UK</p>
+        <p class="text-sm text-gray-500 mt-1">{{location}}</p>
       </div>
       <div class="h-[1px] bg-[#D2D2D2]" />
 
@@ -40,14 +44,14 @@ defineProps({
             class="max-w-6 h-6 object-contain"
             alt="icon-clock"
           />
-          <p class="text-dark-gray">6 Days, 5 Night</p>
+          <p class="text-dark-gray">{{duration}}</p>
         </div>
         <!-- <button
           class="font-medium text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-4 py-2 rounded-lg cursor-pointer"
         >
           Explore Now
         </button> -->
-        <NuxtLink to="/package">
+        <NuxtLink :to="`/package?key=${id}&location=${location}`">
           <Button6 title=" Explore Now" />
         </NuxtLink>
       </div>

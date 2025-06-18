@@ -486,9 +486,9 @@ export const features = [
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
-    title: "Value for Money",
+    title: "Easy Refund Policy",
     icon: "image/assests/WhyChoseUs/money.svg",
-    desc: "This revision improves clarity and flow while maintaining your original message.",
+    desc: "Value for money to Easy return Policy.",
   },
   {
     title: "Support Team",
@@ -652,14 +652,118 @@ export const blogPosts: TBlog[] = [
   },
 ];
 
-export const packageImages = [
-  "image/image1.png",
-  "image/image2.png",
-  "image/image3.png",
-  "image/image4.png",
-  "image/image2.png",
-  "image/image3.png",
+export const packageCardInfo = [
+  {
+    id: 1,
+    title: "Mystic Mangrove Escape",
+    location: "Sundarban, Bangladesh",
+    country: 'Bangladesh',
+    language: 'Bangla',
+    overview: "The Sundarbans, the world’s largest mangrove forest, is home to the majestic Royal Bengal Tiger. This UNESCO World Heritage site offers a unique blend of biodiversity and raw, untouched nature.",
+    tourPackages: "Venture deep into the heart of the world’s largest mangrove forest with our Sundarban tour package. Spot wildlife like crocodiles and deer on serene boat rides, walk through forest trails, and enjoy authentic Bengali cuisine in eco-friendly lodges. This trip is a true nature lover’s dream.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204669.37105734987!2d89.07354159555966!3d21.94164281823489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a004caac2c7b315%3A0x4716abcfbb16c93c!2sSundarbans!5e0!3m2!1sen!2sbd!4v1750261855641!5m2!1sen!2sbd", 
+    duration: "6 Days, 5 Nights",
+    img: "image/sundarban.jpg"
+  },
+  {
+    id: 2,
+    title: "Serenity in the Hills",
+    location: "Sylhet, Bangladesh",
+    country: "Bangladesh",
+    language: "Bangla",
+    overview: "Sylhet is a land of rolling hills, lush tea gardens, and crystal-clear rivers. It's a serene escape rich in culture and natural beauty, offering spiritual sites and picturesque landscapes.",
+    tourPackages: "Explore the tranquil beauty of Sylhet with visits to the famous Ratargul Swamp Forest, Jaflong's stone beds, and the tea estates of Srimangal. This package blends nature, heritage, and local life into an unforgettable adventure.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.877738716187!2d91.87270927506167!3d24.467259300880447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37505543b5e280f9%3A0xb50ef02b6013b4ae!2sSylhet!5e0!3m2!1sen!2sbd!4v1750264569698!5m2!1sen!2sbd",
+    duration: "5 Days, 4 Nights",
+    img: "image/sylhet.jpg"
+  },
+  {
+    id: 3,
+    title: "Tropical Bliss Retreat",
+    location: "Bali, Indonesia",
+    country: "Indonesia",
+    language: "Indonesian",
+    overview: "Bali is a paradise island known for its pristine beaches, volcanic mountains, and vibrant culture. It’s a top destination for relaxation, surfing, and spiritual rejuvenation.",
+    tourPackages: "Discover Bali’s stunning beaches, ancient temples like Uluwatu, and lively markets. Unwind in beachfront resorts, join traditional Balinese ceremonies, and savor local delicacies on this tropical escape.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126763.54047042237!2d115.0920038772296!3d-8.340538114305265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd219d6be1f5a05%3A0x401576d14fed010!2sBali!5e0!3m2!1sen!2sbd!4v1750264705793!5m2!1sen!2sbd",
+    duration: "7 Days, 6 Nights",
+    img: "image/bali.jpg"
+  },
+  {
+    id: 4,
+    title: "Heavenly Himalayan Hideaway",
+    location: "Kashmir, India",
+    country: "India",
+    language: "Urdu, Hindi",
+    overview: "Kashmir, the 'Paradise on Earth', is famous for its snow-covered peaks, tranquil lakes, and enchanting valleys. A dream destination for nature and peace lovers.",
+    tourPackages: "Sail on a Shikara across Dal Lake, explore the Mughal gardens of Srinagar, and ski in Gulmarg. Our Kashmir tour is a scenic blend of adventure, serenity, and traditional hospitality.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333196.672920096!2d73.76405555804492!3d33.687253150237845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e209387af82e65%3A0x330f2a6aa5b1d3fc!2sKashmir!5e0!3m2!1sen!2sbd!4v1750264820494!5m2!1sen!2sbd",
+    duration: "6 Days, 5 Nights",
+    img: "image/kashmir.jpg"
+  },
+  {
+    id: 5,
+    title: "Incredible India Discovery",
+    location: "Delhi, India",
+    country: "India",
+    language: "Hindi, English",
+    overview: "Delhi, the vibrant capital of India, is a melting pot of ancient history, rich culture, and modern development. It’s a city of forts, food, and festivals.",
+    tourPackages: "Uncover the history of the Red Fort, experience the hustle of Chandni Chowk, and admire the beauty of Qutub Minar. This package connects you with the soul of India’s capital through heritage and cuisine.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112063.88484458062!2d77.10249027609315!3d28.613939149502664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26c3451f3fd%3A0x61d8c1d42b801fa6!2sDelhi!5e0!3m2!1sen!2sbd!4v1750264942152!5m2!1sen!2sbd",
+    duration: "8 Days, 7 Nights",
+    img: "image/india.jpg"
+  },
+  {
+    id: 6,
+    title: "Ancient Wonders Adventure",
+    location: "Beijing, China",
+    country: "China",
+    language: "Mandarin",
+    overview: "Beijing is the historic and cultural heart of China, home to architectural marvels like the Great Wall and the Forbidden City. It's a city where ancient dynasties meet modern progress.",
+    tourPackages: "Walk the Great Wall, explore the Forbidden City, and experience authentic Peking duck cuisine. Our Beijing package captures the soul of imperial China with modern comfort and flair.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32634662.98763578!2d93.54318848713262!3d35.86166026191248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296be5d0c35%3A0x96e01b1c2b38359b!2sBeijing%2C%20China!5e0!3m2!1sen!2sbd!4v1750265048476!5m2!1sen!2sbd",
+    duration: "7 Days, 6 Nights",
+    img: "image/china.jpg"
+  },
+  {
+    id: 7,
+    title: "Vibrant City Vibes",
+    location: "Bangkok, Thailand",
+    country: "Thailand",
+    language: "Thai",
+    overview: "Bangkok is a bustling metropolis known for its street life, vibrant markets, temples, and exciting nightlife. A perfect fusion of tradition and trend.",
+    tourPackages: "Visit the Grand Palace, cruise the Chao Phraya River, and enjoy shopping in Chatuchak Market. This tour offers the best of Thai culture, cuisine, and cosmopolitan life.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.747418128195!2d100.5231866750633!3d13.736717886689197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299704b702e07%3A0x40223bcbbcb1ca0!2sBangkok!5e0!3m2!1sen!2sbd!4v1750265149852!5m2!1sen!2sbd",
+    duration: "5 Days, 4 Nights",
+    img: "image/bangkok.jpg"
+  },
+  {
+    id: 8,
+    title: "Island Paradise Escape",
+    location: "Malé, Maldives",
+    country: "Maldives",
+    language: "Dhivehi",
+    overview: "Malé is the capital of the Maldives, a tropical paradise known for white-sand beaches, turquoise waters, and luxury overwater bungalows. Perfect for honeymooners and peace seekers.",
+    tourPackages: "Dive into coral reefs, relax in luxury water villas, and explore local island culture. This Maldives package is your ticket to tranquility and turquoise dreams.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253759.96995823493!2d73.41399975104856!3d4.175495937710051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2498fd4c26b62f6b%3A0xe6a5717c2e193d10!2sMal%C3%A9%2C%20Maldives!5e0!3m2!1sen!2sbd!4v1750265250489!5m2!1sen!2sbd",
+    duration: "6 Days, 5 Nights",
+    img: "image/maldiv.jpg"
+  },
+  {
+    id: 9,
+    title: "Pearl of the Indian Ocean",
+    location: "Colombo, Sri Lanka",
+    country: "Sri Lanka",
+    language: "Sinhala, Tamil",
+    overview: "Colombo, the bustling capital of Sri Lanka, offers a mix of colonial charm, coastal beauty, and vibrant culture. It's the gateway to Sri Lanka’s ancient ruins and lush landscapes.",
+    tourPackages: "Visit Galle Face Green, explore local temples, and enjoy Ceylon tea in the hills. Our Colombo tour balances history, beach vibes, and flavorful Sri Lankan experiences.",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253759.96995823493!2d79.83000793851853!3d6.927078499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25924050c6b1b%3A0x8f0f8e0cb2e4ce9e!2sColombo!5e0!3m2!1sen!2sbd!4v1750265360103!5m2!1sen!2sbd",
+    duration: "7 Days, 6 Nights",
+    img: "image/srilanka.jpg"
+  }
 ];
+
+
 
 export const testimonials = [
   {

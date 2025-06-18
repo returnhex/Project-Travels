@@ -9,7 +9,12 @@ import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
+import { packageCardInfo } from '../constant/index'
 const images = [slideImg1, slideImg2];
+
+const { query } = useRoute();
+
+
 </script>
 
 <template>
@@ -75,15 +80,7 @@ const images = [slideImg1, slideImg2];
             <p
               class="text-base md:text-lg text-gray leading-relaxed font-[400] mt-2"
             >
-              Discover unforgettable moments as you journey through breathtaking
-              landscapes, vibrant cultures, and unique local experiences. Our
-              packages are crafted to balance adventure and comfort, offering
-              you the perfect blend of exploration and relaxation. Whether
-              you're wandering through ancient cities, enjoying serene nature
-              escapes, or immersing yourself in local traditions, each
-              experience is designed to leave a lasting impression. With expert
-              planning and seamless service, your only job is to enjoy the
-              journey — we’ll handle the rest.
+              {{ packageCardInfo[query?.key - 1].overview}}
             </p>
           </section>
 
@@ -97,21 +94,7 @@ const images = [slideImg1, slideImg2];
             <p
               class="text-base md:text-lg text-gray font-[400] leading-relaxed mt-2"
             >
-              Picture a journey that blends adventure, culture, and serenity —
-              that’s the essence of our Tour Packages. These aren’t just trips;
-              they’re carefully crafted experiences designed to ignite your
-              wanderlust. From the snow-capped peaks of the Himalayas to the
-              sun-kissed shores of the Maldives, every destination promises
-              something unforgettable. What makes our packages special is the
-              seamless blend of comfort and exploration. Whether you’re trekking
-              through ancient trails, savoring local cuisine in hidden
-              alleyways, or relaxing in luxury stays with breathtaking views —
-              each moment is curated for magic. We believe travel should not
-              just be seen, but felt. That’s why our tours are led by passionate
-              guides, filled with hidden gems, and built for memories that last
-              a lifetime. Whether you crave adventure, romance, or peace, our
-              tour packages are your gateway to the extraordinary. Once you
-              experience the world this way, you’ll never travel the same again.
+              {{ packageCardInfo[query?.key - 1].tourPackages }}
             </p>
 
             <img
@@ -233,7 +216,7 @@ const images = [slideImg1, slideImg2];
                   />
                   <span class="font-medium">Country:</span>
                 </div>
-                <p class="font-semibold">Bangladesh</p>
+                <p class="font-semibold">{{ packageCardInfo[query?.key - 1].country }}</p>
               </li>
               <li
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
@@ -261,7 +244,7 @@ const images = [slideImg1, slideImg2];
                   />
                   <span class="font-medium">Time:</span>
                 </div>
-                <p class="font-semibold">2 Days, One Night</p>
+                <p class="font-semibold">{{ packageCardInfo[query?.key - 1].duration }}</p>
               </li>
               <li
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
@@ -275,7 +258,7 @@ const images = [slideImg1, slideImg2];
                   />
                   <span class="font-medium">Language:</span>
                 </div>
-                <p class="font-semibold">Bangla</p>
+                <p class="font-semibold">{{ packageCardInfo[query?.key - 1].language }}</p>
               </li>
             </ul>
           </div>
@@ -289,7 +272,7 @@ const images = [slideImg1, slideImg2];
             </h3>
             <div class="h-[400px] w-full rounded-3xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d344262.5602632301!2d91.61807996100777!3d22.346439620194765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd8a64095dfd3%3A0x5015cc5bcb6905d9!2sChattogram!5e0!3m2!1sen!2sbd!4v1747750566726!5m2!1sen!2sbd"
+                :src="packageCardInfo[query?.key - 1].map"
                 width="600"
                 height="450"
                 style="border: 0"

@@ -20,17 +20,17 @@ defineProps({
     >
       <div class="relative">
         <NuxtImg
-          src="image/travelCase.png"
+          src="travelCase.png"
           alt="Travel Illustration"
-          class="rounded-[40px] object-cover h-full w-full"
+          class="rounded-[40px] object-cover"
           width="600"
           height="600"
         />
         <NuxtImg
-          class="absolute bottom-12 -left-0 -z-10 h-[100px] w-[144px]"
+          class="absolute 
+          bottom-10 left-5 md:bottom-15 md:left-10 -z-10 
+          h-[100px] w-[144px]"
           src="image/dot-dot.svg"
-          width="600"
-          height="600"
           alt="dot"
         />
       </div>

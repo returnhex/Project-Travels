@@ -6,7 +6,7 @@ import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
-import { packageImages } from "../constant/index";
+import { packageCardInfo } from "../constant/index";
 </script>
 
 <template>
@@ -46,15 +46,21 @@ import { packageImages } from "../constant/index";
       }"
       class="px-4 md:px-6 py-8 swiper swiper--offset-small"
     >
-      <SwiperSlide v-for="(img, index) in packageImages" :key="index">
-        <PackageCard :image="img" />
+      <SwiperSlide v-for="(info, index) in packageCardInfo" :key="index">
+        <PackageCard 
+          :id="info.id"
+          :image="info.img"
+          :title="info.title"
+          :location="info.location" 
+          :duration="info.duration"
+        />
       </SwiperSlide>
     </Swiper>
 
     <div
       class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20"
     >
-      <div class="ml-auto">
+      <div class="mr-3 lg:ml-auto">
         <Button5 title="Explore Now" />
       </div>
     </div>
