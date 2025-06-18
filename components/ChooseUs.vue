@@ -50,7 +50,7 @@ import { features } from "../constant/index";
               {{ item.title }}
             </h1>
             <p
-              class="text-[#5B5B5B] text-sm xl:text-lg 2xl:text-xl font-medium text-left"
+              class="text-[#5B5B5B] text-sm xl:text-lg font-medium text-left"
             >
               {{ item.desc }}
             </p>

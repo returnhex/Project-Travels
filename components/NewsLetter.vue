@@ -3,20 +3,20 @@ import { ref } from "vue";
 const email = ref<string | "">("");
 const message = ref<string | "">("");
 
-const subscribe = async () => {
+const subscribe =  () => {
   try {
-    const res = await fetch("/api/subscribe", {
+    const res =  fetch("/api/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email.value }),
     });
 
-    const data = await res.json();
-    message.value = data.message;
+    // const data =  res.json();
+    // message.value = data.message;
     email.value = "";
-    alert("Subscribed");
+    // alert("Subscribed");
   } catch (err) {
-    alert("Failed to subscribe.");
+    // alert("Failed to subscribe.");
     console.error(err);
   }
 };
@@ -42,9 +42,8 @@ const subscribe = async () => {
     </div>
 
     <!-- Input + Button -->
-    <form
+    <div
       class="w-full flex gap-4 relative justify-between items-center"
-      @submit.prevent="subscribe"
     >
       <input
         v-model="email"
@@ -53,13 +52,14 @@ const subscribe = async () => {
         placeholder="Email Here"
       />
       <button
-        type="submit"
+        type="button"
+        @click="subscribe"
         class="flex items-center absolute right-1 sm:right-2 font-semibold text-[10px] md:text-[16px] leading-[24px] text-white border-1 border-red bg-red rounded-lg px-2 py-1 sm:px-4 sm:py-2 gap-2 hover:bg-red-600 cursor-pointer"
       >
         Subscribe Now
         <img src="/image/icon/rightarrow2.png" loading="lazy" class="" alt="" />
       </button>
       <p v-if="message">{{ message }}</p>
-    </form>
+    </div>
   </section>
 </template>
