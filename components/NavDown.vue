@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { motion } from "motion-v";
 import { ref } from "vue";
 import type { RouteRecordNameGeneric } from "vue-router";
 import { navItems } from "~/constant";
@@ -27,7 +26,7 @@ const getLinkClass = (name: string) => {
           class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
         />
       </NuxtLink>
-      <motion.ul
+      <ul
         :initial="{ scale: 0 }"
         :while-in-view="{ scale: 1 }"
         :transition="{ duration: 0.3 }"
@@ -73,7 +72,7 @@ const getLinkClass = (name: string) => {
             {{ navItem.title }}
           </NuxtLink>
         </li>
-      </motion.ul>
+      </ul>
       <NuxtLink to="/contact-us" class="hidden md:block">
         <Button3 title="Contact Us" />
       </NuxtLink>

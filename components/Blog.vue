@@ -128,9 +128,9 @@ import { cards } from "../constant/index";
       <div
         class="relative -bottom-30 flex items-center px-3 md:px-0 w-full h-20"
       >
-        <div class="ml-auto">
+        <NuxtLink to="/blogs" class="ml-auto">
           <Button5 title="Explore Now" />
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </section>

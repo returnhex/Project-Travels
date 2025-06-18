@@ -62,7 +62,7 @@
                 {{ item.title }}
               </h1>
               <p
-                class="text-[#5B5B5B] text-sm xl:text-lg 2xl:text-xl font-medium"
+                class="text-[#5B5B5B] text-sm md:text-lg font-medium"
               >
                 {{ item.desc }}
               </p>

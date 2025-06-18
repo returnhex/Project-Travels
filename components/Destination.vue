@@ -193,8 +193,8 @@ const clearAllFilters = () => {
 
       <!-- Blog Content Area -->
       <div class="w-full px-4">
-        <div class="flex justify-between pb-6">
-          <div class="flex justify-start items-center gap-2 py-2">
+        <div class="flex justify-between items-center pb-6">
+          <div class="flex justify-start items-center gap-1 md:gap-2 py-2">
             <h1 class="text-gray text-base">View as :</h1>
             <button
               class="grid place-items-center"
@@ -223,12 +223,12 @@ const clearAllFilters = () => {
           </div>
           <div class="flex">
             <h1
-              class="px-4 py-2 text-gray border border-gray-300 cursor-pointer"
+              class="px-3 py-1 md:px-4 md:py-2 text-gray border border-gray-300 cursor-pointer"
             >
               Sort By
             </h1>
             <select
-              :class="`text-green outline-none flex border border-gray-300 px-4 py-2 gap-2 cursor-pointer`"
+              :class="`text-green outline-none flex border border-gray-300 px-3 py-1 md:px-4 md:py-2 gap-1 md:gap-2 cursor-pointer`"
             >
               <option id="" name="" class="bg-white hover:bg-green-400">
                 Latest

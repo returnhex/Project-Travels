@@ -49,7 +49,7 @@ import { packageCardInfo } from "../constant/index";
       <SwiperSlide v-for="(info, index) in packageCardInfo" :key="index">
         <PackageCard 
           :id="info.id"
-          :image="info.img"
+          :image="info?.img"
           :title="info.title"
           :location="info.location" 
           :duration="info.duration"
@@ -60,9 +60,9 @@ import { packageCardInfo } from "../constant/index";
     <div
       class="relative -bottom-3.5 flex items-center px-3 md:px-0 w-full h-20"
     >
-      <div class="mr-3 lg:ml-auto">
+      <NuxtLink to="/destinations" class="mr-3 lg:ml-auto">
         <Button5 title="Explore Now" />
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
