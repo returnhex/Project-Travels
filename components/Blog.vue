@@ -9,10 +9,15 @@ import { cards } from "../constant/index";
 </script>
 
 <template>
-  <section class="bg-[url('/assets/image/blogbg.png')]">
+  <section class="bg-[url('/image/blogbg.png')]">
     <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
       <div class="flex justify-center items-center mx-auto gap-2">
-        <NuxtImg src="/Vector.png" alt="double-arrow" width="20" height="20" />
+        <NuxtImg
+          src="image/Vector.png"
+          alt="double-arrow"
+          width="20"
+          height="20"
+        />
         <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">
           Our Blogs
         </p>
@@ -57,13 +62,13 @@ import { cards } from "../constant/index";
 
             <!-- Content Card -->
             <div
-              class="bg-[#F8F8F8] max-w-[90%] md:h-[300px] lg:h-[275px] rounded-lg px-6 py-2 absolute -bottom-20 shadow-2xl overflow-visible"
+              class="bg-[#F8F8F8] max-w-[90%] md:h-[300px] lg:h-[290px] rounded-lg px-6 py-2 absolute -bottom-20 shadow-2xl overflow-visible"
             >
               <!-- Top Row -->
               <div class="flex justify-between items-center mb-3">
                 <div class="flex items-center space-x-2 text-sm text-gray">
                   <NuxtImg
-                    src="/icon/calendericon.png"
+                    src="image/icon/calendericon.png"
                     alt="calendericon"
                     class="h-4 max-w-6"
                     width="20"
@@ -102,7 +107,7 @@ import { cards } from "../constant/index";
               >
                 <div class="flex items-center space-x-2 text-sm text-gray-600">
                   <NuxtImg
-                    src="/icon/admin.png"
+                    src="image/icon/admin.png"
                     alt="admin"
                     class="h-4 max-w-7"
                     width="20"

@@ -44,7 +44,8 @@ onBeforeUnmount(() => {
 <template>
   <section
     ref="sectionRef"
-    class="bg-[url('/assets/image/counterbg.png')] py-16 px-4 md:px-12 bg-cover bg-no-repeat w-full overflow-hidden"
+    class="py-16 px-4 md:px-12 bg-cover bg-no-repeat w-full overflow-hidden"
+    style="background-image: url('image/counterbg.png')"
   >
     <div
       class="container mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"

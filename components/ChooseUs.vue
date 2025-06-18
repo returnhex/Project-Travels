@@ -13,7 +13,7 @@ import { features } from "../constant/index";
       >
         <p class="text-[#2E8942] font-semibold text-lg md:text-xl flex mr-5">
           <NuxtImg
-            src="/double-arrow.svg"
+            src="image/double-arrow.svg"
             alt="double-arrow"
             width="30"
             height="30"

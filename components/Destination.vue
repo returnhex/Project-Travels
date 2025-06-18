@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, watch } from "vue";
-import destinations from "../constant/index.ts";
+import { destinations } from "../constant/index";
 
 // Pagination
 const currentPage = ref(1);
@@ -262,12 +262,7 @@ const clearAllFilters = () => {
           class="px-3 py-1 rounded-md disabled:opacity-50"
           @click="handlePageChange(currentPage - 1)"
         >
-          <img
-            src="/assets/image/leftarrowred.png"
-            loading="lazy"
-            class=""
-            alt=""
-          />
+          <NuxtImg src="image/leftarrowred.png" class="" alt="icon-leftarrow" />
         </button>
 
         <!-- Page Numbers -->
@@ -290,12 +285,7 @@ const clearAllFilters = () => {
           class="px-3 py-1 rounded-md disabled:opacity-50"
           @click="handlePageChange(currentPage + 1)"
         >
-          <img
-            src="/assets/image/rightarrow.png"
-            loading="lazy"
-            class=""
-            alt=""
-          />
+          <NuxtImg src="image/rightarrow.png" class="" alt="icon-rightarrow" />
         </button>
       </div>
     </div>

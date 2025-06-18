@@ -1,59 +1,14 @@
 <script setup>
+import {
+  about,
+  paymentMethodIcon,
+  instagramPost,
+  getInTouch,
+} from "../constant/index";
 const currentYear = ref(0);
 onMounted(() => {
   currentYear.value = new Date().getFullYear();
 });
-const about = [
-  {
-    title: "About Us",
-    items: [
-      "About Us",
-      "Our Service",
-      "Tour Guide",
-      "Privacy Policy",
-      "Terms & Conditions",
-    ],
-  },
-];
-const getInTouch = [
-  {
-    title: "Get In Touch",
-    items: [
-      {
-        text: "+880 1855-255 342",
-        icon: "/icon/location.png",
-        href: "https://wa.me/+880 1855-255 342",
-      },
-      {
-        text: "Contact@bdigo.com",
-        icon: "/icon/message.png",
-        href: "mailto:Contact@bdigo.com",
-      },
-      {
-        text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-        icon: "/icon/phone.png",
-        href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
-      },
-    ],
-  },
-];
-const instagramPost = [
-  "/footer/footer1.png",
-  "/footer/footer2.png",
-  "/footer/footer3.png",
-  "/footer/footer4.png",
-  "/footer/footer5.png",
-  "/footer/footer6.png",
-];
-
-const paymentMethodIcon = [
-  "/icon/payment1.png",
-  "/icon/payment2.png",
-  "/icon/payment3.png",
-  "/icon/payment4.png",
-  "/icon/payment5.png",
-  "/icon/payment6.png",
-];
 </script>
 <template>
   <footer
@@ -67,7 +22,7 @@ const paymentMethodIcon = [
       <div class="flex flex-col gap-8">
         <div>
           <NuxtImg
-            src="/logo.svg"
+            src="image/logo.svg"
             alt="WINGS GLOBAL FREIGHT"
             class="w-[70px] h-[40px] 2xl:w-[90px] 2xl:h-[60px] cursor-pointer py-2 2xl:-ml-1 -ml-2"
             loading="lazy"

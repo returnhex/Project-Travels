@@ -14,7 +14,7 @@
         >
           <NuxtImg
             alt="double-arrow"
-            src="/double-arrow.svg"
+            src="image/double-arrow.svg"
             loading="lazy"
             height="32"
             width="32"

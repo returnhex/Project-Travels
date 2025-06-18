@@ -1,7 +1,7 @@
 <script setup>
-// import slideImg2 from "@/assets/image/destination/overviewBg.png";
-import slideImg1 from "@/assets/image/destination/overviewBg.png";
-import slideImg2 from "@/assets/image/destination/overviewBg2.jpg";
+// import slideImg2 from "@/image/destination/overviewBg.png";
+import slideImg1 from "/image/destination/overviewBg.png";
+import slideImg2 from "/image/destination/overviewBg2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -35,28 +35,25 @@ const images = [slideImg1, slideImg2];
       >
         <SwiperSlide v-for="(slide, index) in images" :key="index">
           <div class="relative">
-            <img
+            <NuxtImg
               :src="slide"
-              alt=""
+              alt="Destination-slider"
               class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:max-h-[420px] rounded-xl object-cover"
-              loading="lazy"
             />
           </div>
         </SwiperSlide>
         <div
           class="flex justify-center items-center max-w-[220px] relative -top-11 mx-auto z-50 bg-white rounded-lg px-4 py-4 gap-2"
         >
-          <img
-            src="/assets/image/leftarrowred.png"
+          <NuxtImg
+            src="image/leftarrowred.png"
             class="swiper-prev custom-prev"
-            alt=""
-            loading="lazy"
+            alt="icon-leftarrowred"
           />
-          <img
-            src="/assets/image/rightarrow.png"
+          <NuxtImg
+            src="image/rightarrow.png"
             class="swiper-next custom-next"
-            alt=""
-            loading="lazy"
+            alt="icon-rightarrow"
           />
         </div>
       </Swiper>
@@ -113,11 +110,10 @@ const images = [slideImg1, slideImg2];
               thing’s certain: once you watch the Surfing Man in action, you’ll
               never see the ocean the same way again.
             </p>
-            <img
-              src="/assets/image/destination/tourBg.png"
+            <NuxtImg
+              src="image/destination/tourBg.png"
               alt="Tour"
               class="w-full h-auto mt-4 rounded-lg object-cover"
-              loading="lazy"
             />
           </section>
 
@@ -133,76 +129,68 @@ const images = [slideImg1, slideImg2];
             >
               <ul class="space-y-2">
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-right"
                   />
                   Specialized Bilingual Guide
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-right"
                   />
                   Private Transport
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-right"
                   />
                   Entrance Fees, Snacks, and Mineral Water
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-right"
                   />
                   Excursion Between Sylhet and Bichnakandi
                 </li>
               </ul>
               <ul class="space-y-2">
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-cross"
                   />
                   Additional Services
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-cross"
                   />
                   Insurance
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-cross"
                   />
                   Personal expenses
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
-                    loading="lazy"
+                    alt="icon-cross"
                   />
                   Personal medicines
                 </li>
@@ -224,11 +212,10 @@ const images = [slideImg1, slideImg2];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
-                    loading="lazy"
                   />
                   <span class="font-medium">Country:</span>
                 </div>
@@ -238,11 +225,10 @@ const images = [slideImg1, slideImg2];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
-                    loading="lazy"
                   />
                   <span class="font-medium">Visa Requirements:</span>
                 </div>
@@ -252,11 +238,10 @@ const images = [slideImg1, slideImg2];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
-                    loading="lazy"
                   />
                   <span class="font-medium">Time:</span>
                 </div>
@@ -266,11 +251,10 @@ const images = [slideImg1, slideImg2];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
-                    loading="lazy"
                   />
                   <span class="font-medium">Language:</span>
                 </div>

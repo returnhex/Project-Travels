@@ -13,7 +13,7 @@ import { testimonials } from "../constant/index";
     <div class="mb-8 lg:mb-12 flex flex-col justify-center">
       <div class="flex justify-center items-center gap-2">
         <NuxtImg
-          src="/Vector.png"
+          src="image/Vector.png"
           alt="Testimonial icon"
           width="20"
           height="20"
@@ -112,12 +112,12 @@ import { testimonials } from "../constant/index";
 
         <div class="flex gap-2 justify-end ml-auto mr-0">
           <img
-            src="/assets/image/leftarrowred.png"
+            src="/image/leftarrowred.png"
             class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
             alt="Previous"
           />
           <img
-            src="/assets/image/rightarrow.png"
+            src="/image/rightarrow.png"
             class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
             alt="Next"
           />

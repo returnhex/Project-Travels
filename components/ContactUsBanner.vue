@@ -10,7 +10,7 @@ defineProps({
 <template>
   <section
     class="relative w-full grid place-items-center mx-auto h-[300px] md:h-[382px] bg-cover bg-center"
-    style="background-image: url('/ocean2.png')"
+    style="background-image: url('/ocean.png')"
   >
     <div class="absolute inset-0 bg-[#0D4E1B] opacity-50" />
     <motion.div
@@ -24,7 +24,7 @@ defineProps({
       </h1>
       <div class="flex gap-1 items-center justify-center">
         <NuxtImg
-          src="/home-icon.svg"
+          src="image/home-icon.svg"
           class="w-[15px] h-[15px] sm:w-[20px] sm:h-[20px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px]"
           alt="home-icon"
         />
@@ -34,7 +34,7 @@ defineProps({
           >Home</NuxtLink
         >
         <NuxtImg
-          src="/right-arrow-white.svg"
+          src="image/right-arrow-white.svg"
           class="w-[28px] h-[28px] md:w-[38px] md:h-[38px]"
           alt="right-arrow"
         />
@@ -46,7 +46,7 @@ defineProps({
         </NuxtLink>
         <NuxtImg
           v-if="moreTitle"
-          src="/right-arrow-white.svg"
+          src="image/right-arrow-white.svg"
           class="w-[28px] h-[28px] md:w-[38px] md:h-[38px]"
           alt="right-arrow"
         />

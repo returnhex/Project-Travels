@@ -16,6 +16,7 @@ import {
   guliakhaliBeach,
   guthiaMosque,
   jaflong,
+  japan,
   kashmir,
   kerala,
   kuakata,
@@ -33,50 +34,47 @@ import {
   Rajasthan,
   rajshahiUniversity,
   ratargul,
+  saintMartin,
   sanSebastian,
   shanghai,
   shimulBagan,
   sikkim,
   somapuraMahavihara,
   sondip,
-  sundarban,
-  tajMahal,
-  tanguarHaor,
-  teaGarden,
-  zhangjiajieForest,
-} from "~/assets/image/destination";
-
-import mailIcon from "../assets/image/assests/ContactUs/mail.svg";
-import mapsIcon from "../assets/image/assests/ContactUs/maps.svg";
-import contactIcon from "../assets/image/assests/ContactUs/phone.svg";
-
-import {
-  japan,
-  saintMartin,
   spain,
+  sundarban,
   sundorbon,
   sylhetSunamganj,
   sylhetTea,
+  tajMahal,
+  tanguarHaor,
+  teaGarden,
   thailand,
-} from "~/assets/image/destination/index";
+  zhangjiajieForest,
+} from "~/public/image/destination/index";
+
+import mailIcon from "/public/image/assests/ContactUs/mail.svg";
+import mapsIcon from "/public/image/assests/ContactUs/maps.svg";
+import contactIcon from "/public/image/assests/ContactUs/phone.svg";
+
 // Blog Image
-import blogImg1 from "@/assets/image/blog1.png";
-import blogImg2 from "@/assets/image/blog2.png";
-import blogImg3 from "@/assets/image/blog3.png";
-import blogImg4 from "@/assets/image/blog4.png";
-import blogImg5 from "@/assets/image/blog5.png";
-import blogImg6 from "@/assets/image/blog6.png";
+import blogImg1 from "/public/image/blog1.png";
+import blogImg2 from "/public/image/blog2.png";
+import blogImg3 from "/public/image/blog3.png";
+import blogImg4 from "/public/image/blog4.png";
+import blogImg5 from "/public/image/blog5.png";
+import blogImg6 from "/public/image/blog6.png";
 // VGM Image
-import aimArrow from "../assets/image/assests/OutGoal/aim-arrow.svg";
-import aimBanner from "../assets/image/assests/OutGoal/aim-banner.png";
+import aimArrow from "/public/image/assests/OutGoal/aim-arrow.svg";
+import aimBanner from "/public/image/assests/OutGoal/aim-banner.png";
 
-import visionBanner from "../assets/image/assests/OurVission/vision-banner.png";
-import visionIcon from "../assets/image/assests/OurVission/vison-icon.svg";
+import visionBanner from "/public/image/assests/OurVission/vision-banner.png";
+import visionIcon from "/public/image/assests/OurVission/vison-icon.svg";
 
-import missionBanner from "../assets/image/assests/OurMission/mission-banner.png";
-import missionIcon from "../assets/image/assests/OurMission/mission-icon.png";
+import missionBanner from "/public/image/assests/OurMission/mission-banner.png";
+import missionIcon from "/public/image/assests/OurMission/mission-icon.png";
 
-const destinations = [
+export const destinations = [
   {
     country: "Bangladesh",
     divisions: [
@@ -430,35 +428,35 @@ export const aboutBdGioConstants = [
 
 export const cards = [
   {
-    image: "/blog1.png",
+    image: "image/blog1.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: "/blog2.png",
+    image: "image/blog2.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: "/blog3.png",
+    image: "image/blog3.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: "/blog1.png",
+    image: "image/blog1.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: "/blog2.png",
+    image: "image/blog2.png",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
@@ -468,33 +466,33 @@ export const cards = [
 
 export const features = [
   {
-    icon: "/assests/WhyChoseUs/globe.svg",
+    icon: "image/assests/WhyChoseUs/globe.svg",
     title: "Diverse Destinations",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Best Travel Guide",
-    icon: "/assests/WhyChoseUs/guide.svg",
+    icon: "image/assests/WhyChoseUs/guide.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Easy Booking",
-    icon: "/assests/WhyChoseUs/booking.svg",
+    icon: "image/assests/WhyChoseUs/booking.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Best Flight",
-    icon: "/assests/WhyChoseUs/flight.svg",
+    icon: "image/assests/WhyChoseUs/flight.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Value for Money",
-    icon: "/assests/WhyChoseUs/money.svg",
+    icon: "image/assests/WhyChoseUs/money.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
   {
     title: "Support Team",
-    icon: "/assests/WhyChoseUs/team.svg",
+    icon: "image/assests/WhyChoseUs/team.svg",
     desc: "This revision improves clarity and flow while maintaining your original message.",
   },
 ];
@@ -519,25 +517,25 @@ export const contactFeatures = [
 
 export const stats = [
   {
-    icon: "/icon/SafetyIcon1.png",
+    icon: "image/icon/SafetyIcon1.png",
     value: 76,
     label: "Satisfied Customer",
     bg: "bg-[#FBFBFB]",
   },
   {
-    icon: "/icon/SafetyIcon2.png",
+    icon: "image/icon/SafetyIcon2.png",
     value: 14,
     label: "Active Members",
     bg: "bg-[#EDEDED]",
   },
   {
-    icon: "/icon/SafetyIcon3.png",
+    icon: "image/icon/SafetyIcon3.png",
     value: 1,
     label: "Travels Destination",
     bg: "bg-[#FBFBFB]",
   },
   {
-    icon: "/icon/SafetyIcon4.png",
+    icon: "image/icon/SafetyIcon4.png",
     value: 35,
     label: "Travel Guides",
     bg: "bg-[#EDEDED]",
@@ -584,18 +582,18 @@ export const places = [
 
 export const workFeatures = [
   {
-    icon: "/assests/HowItWork/destination.svg",
+    icon: "image/assests/HowItWork/destination.svg",
     title: "Select Destination",
     desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
   },
   {
     title: "Make An Appointments",
-    icon: "/assests/HowItWork/destination.svg",
+    icon: "image/assests/HowItWork/destination.svg",
     desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
   },
   {
     title: "Enjoy Our Tour",
-    icon: "/assests/HowItWork/destination.svg",
+    icon: "image/assests/HowItWork/destination.svg",
     desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
   },
 ];
@@ -655,12 +653,12 @@ export const blogPosts: TBlog[] = [
 ];
 
 export const packageImages = [
-  "/image1.png",
-  "/image2.png",
-  "/image3.png",
-  "/image4.png",
-  "/image2.png",
-  "/image3.png",
+  "image/image1.png",
+  "image/image2.png",
+  "image/image3.png",
+  "image/image4.png",
+  "image/image2.png",
+  "image/image3.png",
 ];
 
 export const testimonials = [
@@ -670,7 +668,7 @@ export const testimonials = [
     rating: 5,
     name: "Sarah Karim",
     role: "Manager at Banoi LifeStyle",
-    image: "/testimonial1.png",
+    image: "image/testimonial1.png",
   },
   {
     quote:
@@ -678,7 +676,7 @@ export const testimonials = [
     rating: 5,
     name: "Abdul Ahad Linkon",
     role: "Travel Blogger",
-    image: "/testimonial2.jpg",
+    image: "image/testimonial2.jpg",
   },
 ];
 
@@ -708,4 +706,58 @@ export const VGM = {
                         by taking care of their travel plans. It suggests a travel agency or similar service`,
   },
 };
+
+export const paymentMethodIcon = [
+  "image/icon/payment1.png",
+  "image/icon/payment2.png",
+  "image/icon/payment3.png",
+  "image/icon/payment4.png",
+  "image/icon/payment5.png",
+  "image/icon/payment6.png",
+];
+
+export const instagramPost = [
+  "image/footer/footer1.png",
+  "image/footer/footer2.png",
+  "image/footer/footer3.png",
+  "image/footer/footer4.png",
+  "image/footer/footer5.png",
+  "image/footer/footer6.png",
+];
+
+export const getInTouch = [
+  {
+    title: "Get In Touch",
+    items: [
+      {
+        text: "+880 1855-255 342",
+        icon: "image/icon/location.png",
+        href: "https://wa.me/+880 1855-255 342",
+      },
+      {
+        text: "Contact@bdigo.com",
+        icon: "image/icon/message.png",
+        href: "mailto:Contact@bdigo.com",
+      },
+      {
+        text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
+        icon: "image/icon/phone.png",
+        href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
+      },
+    ],
+  },
+];
+
+export const about = [
+  {
+    title: "About Us",
+    items: [
+      "About Us",
+      "Our Service",
+      "Tour Guide",
+      "Privacy Policy",
+      "Terms & Conditions",
+    ],
+  },
+];
 export default destinations;

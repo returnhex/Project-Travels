@@ -13,7 +13,7 @@ import { packageImages } from "../constant/index";
   <div class="container mx-auto py-8 overflow-hidden">
     <div class="text-center mb-10">
       <div class="flex justify-center items-center mx-auto gap-2">
-        <NuxtImg src="/Vector.png" width="20" height="20" alt="vector" />
+        <NuxtImg src="image/Vector.png" width="20" height="20" alt="vector" />
         <p class="text-green font-semibold leading-[32px] text-lg md:text-xl">
           Package Bundles
         </p>

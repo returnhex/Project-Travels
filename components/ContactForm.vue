@@ -67,7 +67,7 @@ const handleSubmit = () => {
           <div class="flex gap-3 items-center">
             <p class="font-[400] text-sm lg:text-lg">US</p>
             <NuxtImg
-              src="/down-arrow-gray.svg"
+              src="image/down-arrow-gray.svg"
               loading="lazy"
               class="w-4 h-4 lg:w-5 lg:h-5"
             />
@@ -95,7 +95,7 @@ const handleSubmit = () => {
       >
         <p class="text-sm md:text-[1rem] font-semibold">Submit Now</p>
         <NuxtImg
-          src="/arrowRight.svg"
+          src="image/arrowRight.svg"
           loading="lazy"
           class="h-3 w-3 md:h-6 md:w-6"
         />

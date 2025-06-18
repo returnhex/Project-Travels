@@ -11,7 +11,7 @@
       >
         <p class="text-[#2E8942] font-semibold text-lg md:text-xl flex gap-3">
           <NuxtImg
-            src="/double-arrow.svg"
+            src="image/double-arrow.svg"
             alt="double-arrow"
             width="30"
             height="30"
@@ -72,7 +72,7 @@
                     class="absolute -top-5 md:-top-7 xl:-top-7 px-3 py-1 md:px-6 md:py-3 bg-white w-[162px] h-[30px] md:h-[40px] xl:h-[48px] flex items-center justify-center gap-2 rounded-lg"
                   >
                     <NuxtImg
-                      src="/location.svg"
+                      src="image/location.svg"
                       class="max-w-5 md:max-w-6 max-h-6"
                       alt="loction"
                       width="5"

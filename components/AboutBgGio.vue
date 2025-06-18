@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
+import { aboutBdGioConstants } from "../constant/index";
 
 defineProps({
   title: String,
@@ -19,7 +20,7 @@ defineProps({
     >
       <div class="relative">
         <NuxtImg
-          src="/travelCase.png"
+          src="image/travelCase.png"
           alt="Travel Illustration"
           class="rounded-[40px] object-cover h-full w-full"
           width="600"
@@ -27,7 +28,7 @@ defineProps({
         />
         <NuxtImg
           class="absolute bottom-12 -left-0 -z-10 h-[100px] w-[144px]"
-          src="/dot-dot.svg"
+          src="image/dot-dot.svg"
           width="600"
           height="600"
           alt="dot"
@@ -45,7 +46,7 @@ defineProps({
       <div>
         <div class="flex items-center justify-start gap-3 m-0">
           <NuxtImg
-            src="/double-arrow.svg"
+            src="image/double-arrow.svg"
             class="h-5 w-5 md:h-8 md:w-8"
             width="20"
             height="20"
@@ -84,7 +85,7 @@ defineProps({
           class="flex items-center gap-1 md:gap-2 lg:gap-3"
         >
           <NuxtImg
-            src="/approved.svg"
+            src="image/approved.svg"
             class="w-4 h-4 xl:w-6 xl:h-6 2xl:w-8 2xl:h-8"
             width="20"
             height="20"
@@ -104,7 +105,7 @@ defineProps({
         <!-- Avatars -->
         <div class="">
           <NuxtImg
-            src="/avatars.png"
+            src="image/avatars.png"
             alt="avatars"
             class="w-[140px] h-[40px] lg:w-[180px] lg:h-[48px] rounded-full border-2 border-white"
           />

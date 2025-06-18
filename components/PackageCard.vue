@@ -25,10 +25,9 @@ defineProps({
       </h3>
       <div class="flex gap-2 pb-2 items-center">
         <NuxtImg
-          src="/icon/map.png"
+          src="image/icon/map.png"
           class="max-w-6 h-6 object-contain"
           alt=""
-          loading="lazy"
         />
         <p class="text-sm text-gray-500 mt-1">London, UK</p>
       </div>
@@ -37,10 +36,9 @@ defineProps({
       <div class="flex justify-between items-center mt-4 text-sm">
         <div class="flex gap-2">
           <NuxtImg
-            src="/icon/clock.png"
+            src="image/icon/clock.png"
             class="max-w-6 h-6 object-contain"
-            alt=""
-            loading="lazy"
+            alt="icon-clock"
           />
           <p class="text-dark-gray">6 Days, 5 Night</p>
         </div>

@@ -1,7 +1,7 @@
 <script setup>
-// import slideImg2 from "@/assets/image/destination/overviewBg.png";
-import slideImg1 from "@/assets/image/package1.jpg";
-import slideImg2 from "@/assets/image/package2.jpg";
+// import slideImg2 from "@/image/destination/overviewBg.png";
+import slideImg1 from "/image/package1.jpg";
+import slideImg2 from "/image/package2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -47,13 +47,13 @@ const images = [slideImg1, slideImg2];
           class="flex justify-center items-center max-w-[220px] relative -top-11 mx-auto z-50 bg-white rounded-lg px-4 py-4 gap-2"
         >
           <img
-            src="/assets/image/leftarrowred.png"
+            src="/image/leftarrowred.png"
             class="swiper-prev custom-prev"
             alt=""
             loading="lazy"
           />
           <img
-            src="/assets/image/rightarrow.png"
+            src="/image/rightarrow.png"
             class="swiper-next custom-next"
             alt=""
             loading="lazy"
@@ -115,7 +115,7 @@ const images = [slideImg1, slideImg2];
             </p>
 
             <img
-              src="/assets/image/package3.jpg"
+              src="/image/package3.jpg"
               alt="Tour"
               class="w-full h-auto mt-4 rounded-lg object-cover"
               loading="lazy"
@@ -135,7 +135,7 @@ const images = [slideImg1, slideImg2];
               <ul class="space-y-2">
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/right.png"
+                    src="/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -144,7 +144,7 @@ const images = [slideImg1, slideImg2];
                 </li>
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/right.png"
+                    src="/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -153,7 +153,7 @@ const images = [slideImg1, slideImg2];
                 </li>
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/right.png"
+                    src="/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -162,7 +162,7 @@ const images = [slideImg1, slideImg2];
                 </li>
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/right.png"
+                    src="/image/icon/right.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -173,7 +173,7 @@ const images = [slideImg1, slideImg2];
               <ul class="space-y-2">
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/cross.png"
+                    src="/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -182,7 +182,7 @@ const images = [slideImg1, slideImg2];
                 </li>
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/cross.png"
+                    src="/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -191,7 +191,7 @@ const images = [slideImg1, slideImg2];
                 </li>
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/cross.png"
+                    src="/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -200,7 +200,7 @@ const images = [slideImg1, slideImg2];
                 </li>
                 <li class="flex gap-3">
                   <img
-                    src="/assets/image/icon/cross.png"
+                    src="/image/icon/cross.png"
                     class="h-6 w-6"
                     alt=""
                     loading="lazy"
@@ -226,7 +226,7 @@ const images = [slideImg1, slideImg2];
               >
                 <div class="flex gap-2 items-center">
                   <img
-                    src="/assets/image/icon/rightSign.png"
+                    src="/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
                     loading="lazy"
@@ -240,7 +240,7 @@ const images = [slideImg1, slideImg2];
               >
                 <div class="flex gap-2 items-center">
                   <img
-                    src="/assets/image/icon/rightSign.png"
+                    src="/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
                     loading="lazy"
@@ -254,7 +254,7 @@ const images = [slideImg1, slideImg2];
               >
                 <div class="flex gap-2 items-center">
                   <img
-                    src="/assets/image/icon/rightSign.png"
+                    src="/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
                     loading="lazy"
@@ -268,7 +268,7 @@ const images = [slideImg1, slideImg2];
               >
                 <div class="flex gap-2 items-center">
                   <img
-                    src="/assets/image/icon/rightSign.png"
+                    src="/image/icon/rightSign.png"
                     alt=""
                     class="w-4 h-4"
                     loading="lazy"

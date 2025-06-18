@@ -10,12 +10,7 @@
         <p
           class="text-[#2E8942] font-semibold text-lg md:text-xl flex items-center gap-2"
         >
-          <NuxtImg
-            src="/double-arrow.svg"
-            loading="lazy"
-            height="32"
-            width="32"
-          />
+          <NuxtImg src="image/double-arrow.svg" height="32" width="32" />
           How It Work
         </p>
         <h2
@@ -29,10 +24,9 @@
       <div class="relative w-full flex justify-center">
         <!-- Background Arrow Positioned Behind Cards -->
         <NuxtImg
-          src="/dotter-curve-arrow.svg"
+          src="image/dotter-curve-arrow.svg"
           alt="dotted-curve-arrow"
           class="absolute hidden xl:block z-10 top-0 pointer-events-none w-full h-auto"
-          loading="lazy"
         />
 
         <!-- Step Cards -->
@@ -48,31 +42,28 @@
             <NuxtImg
               :src="item.icon"
               class="w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] rounded-md mb-4 relative z-30"
-              loading="lazy"
               alt="icon-how-it-work"
             />
             <NuxtImg
-              src="/dotter-curve-arrow.svg"
+              src="image/dotter-curve-arrow.svg"
               alt="dotted-curve-arrow"
               class="block xl:hidden h-auto w-auto"
-              loading="lazy"
+            />
+            <!-- Text Content -->
+            <div
+              class="flex flex-col items-center gap-1 lg:gap-2 xl:gap-3 text-center"
             >
-              <!-- Text Content -->
-              <div
-                class="flex flex-col items-center gap-1 lg:gap-2 xl:gap-3 text-center"
+              <h1
+                class="font-bold text-lg xl:text-xl 2xl:text-2xl text-[#1A2E46]"
               >
-                <h1
-                  class="font-bold text-lg xl:text-xl 2xl:text-2xl text-[#1A2E46]"
-                >
-                  {{ item.title }}
-                </h1>
-                <p
-                  class="text-[#5B5B5B] text-sm xl:text-lg 2xl:text-xl font-medium"
-                >
-                  {{ item.desc }}
-                </p>
-              </div>
-            </NuxtImg>
+                {{ item.title }}
+              </h1>
+              <p
+                class="text-[#5B5B5B] text-sm xl:text-lg 2xl:text-xl font-medium"
+              >
+                {{ item.desc }}
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -53,11 +53,10 @@ const filteredBlogPosts = computed(() => {
             class="relative flex flex-col items-center w-full max-w-sm mx-auto cursor-pointer"
           >
             <!-- Main Image -->
-            <img
+            <NuxtImg
               :src="blogPost.img"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
-              loading="lazy"
             />
 
             <!-- Blog Card -->
@@ -67,21 +66,19 @@ const filteredBlogPosts = computed(() => {
               <!-- Date + Tag -->
               <div class="flex justify-between items-center mb-4">
                 <div class="flex items-center space-x-2 text-sm text-gray-600">
-                  <img
-                    src="/assets/image/icon/calendericon.png"
+                  <NuxtImg
+                    src="image/icon/calendericon.png"
                     alt="calendar"
                     class="h-4 w-4"
-                    loading="lazy"
                   />
                   <p class="font-medium text-base text-dark-gray">
                     {{ blogPost.date }}
                   </p>
                 </div>
-                <img
-                  src="/assets/image/travelbtn.png"
+                <NuxtImg
+                  src="image/travelbtn.png"
                   alt="travel tag"
                   class="h-5 w-auto"
-                  loading="lazy"
                 />
               </div>
 
@@ -102,8 +99,8 @@ const filteredBlogPosts = computed(() => {
                 class="flex flex-col sm:flex-row justify-between items-center gap-6"
               >
                 <div class="flex items-center space-x-2 text-sm text-gray-600">
-                  <img
-                    src="/assets/image/icon/admin.png"
+                  <NuxtImg
+                    src="image/icon/admin.png"
                     alt=""
                     class="h-4 w-4"
                     loading="lazy"
@@ -141,11 +138,10 @@ const filteredBlogPosts = computed(() => {
             <button
               class="absolute pt-3 inset-y-0 right-0 flex items-center cursor-pointer"
             >
-              <img
-                src="/assets/image/icon/searchIcon.png"
+              <NuxtImg
+                src="image/icon/searchIcon.png"
                 class="border-black border-[1px] rounded-r-xl"
-                alt=""
-                loading="lazy"
+                alt="icon-search"
               />
             </button>
           </div>

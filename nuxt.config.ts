@@ -6,14 +6,14 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en',
+        lang: "en",
       },
       link: [{ rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
     },
   },
   vite: {
     build: {
-      sourcemap: true
+      sourcemap: true,
     },
     plugins: [tailwindcss()],
   },
@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 
   image: {
     provider: "ipx",
-    dir: "assets/image",
+    dir: "public",
     quality: 100,
     format: ["webp"],
   },
