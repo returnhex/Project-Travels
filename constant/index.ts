@@ -1144,14 +1144,14 @@ export const getInTouch = [
     title: "Get In Touch",
     items: [
       {
-        text: "+880 1855-255 342",
+        text: "+880 1402-914939",
         icon: "image/icon/location.png",
-        href: "https://wa.me/+880 1855-255 342",
+        href: "https://wa.me/8801402914939",
       },
       {
-        text: "Contact@bdigo.com",
+        text: "bdigotravels@gmail.com",
         icon: "image/icon/message.png",
-        href: "mailto:Contact@bdigo.com",
+        href: "mailto:bdigotravels@gmail.com",
       },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",

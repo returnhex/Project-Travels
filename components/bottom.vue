@@ -34,11 +34,13 @@ onMounted(() => {
         </div>
 
         <div class="flex gap-2">
-          <Icon
+          <NuxtLink to="https://www.facebook.com/share/1BYb3RaBaz/" target="_blank">
+            <Icon
             name="mdi:facebook"
             size="24"
             class="text-gray-500 hover:text-[#1877F2] cursor-pointer"
           />
+          </NuxtLink>
           <Icon
             name="mdi:instagram"
             size="24"
@@ -122,13 +124,13 @@ onMounted(() => {
         <div
           class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-y-4 sm:px-12 place-items-center md:px-0"
         >
-          <div
+          <NuxtLink to="/blogs"
             v-for="(item, id) in instagramPost"
             :key="id"
             class="cursor-pointer w-full"
           >
             <NuxtImg :src="item" alt="" class="w-full" loading="lazy" />
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
