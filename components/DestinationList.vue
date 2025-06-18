@@ -81,7 +81,7 @@
                     <p
                       class="font-semibold text-sm md:text-[1rem] text-[#383838]"
                     >
-                      36 Listing
+                      {{ place.listings }}
                     </p>
                   </div>
                   <div
@@ -98,7 +98,7 @@
                     <p
                       class="text-[#383838] text-sm md:text-[1rem] font-medium"
                     >
-                      Explore World & Get Relax
+                      {{ place.subtitle }}
                     </p>
 
                     <NuxtLink to="/destination">
