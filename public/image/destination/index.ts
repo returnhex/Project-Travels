@@ -7,6 +7,9 @@ import sylhetSunamganj from "./sylhetSunamganj.jpg";
 import sylhetTea from "./sylhetTea.jpg";
 import thailand from "./thailand.png";
 
+// Dhaka
+import ahsanManzil from "./dhaka/ahsanmanjil.jpg";
+
 //cox's Beach cards
 import beach1 from "./cox/card1.jpg";
 import beach2 from "./cox/card2.jpg";
@@ -42,6 +45,9 @@ import guthiaMosque from "./barisal/guthiaMosque.jpg";
 import kuakata from "./barisal/kuakata.jpg";
 import sundarban from "./barisal/sundarban.jpg";
 
+// Rangpur
+import kantajewTemple from "./rangpur/kantajewTemple.jpg";
+
 // Japan
 import bambooGrove from "./japan/bambooGrove.jpg";
 import fushimi from "./japan/fushimi.jpg";
@@ -75,10 +81,33 @@ import mallorca from "./spain/mallorca.jpg";
 import menorca from "./spain/menorca.jpg";
 import sanSebastian from "./spain/sanSebastian.jpg";
 
+// Singapore
+import changiAirport from "./singapore/changiAirport.jpg";
+import chinTown from "./singapore/chinaTown.jpg";
+import merlionPark from "./singapore/merlionPark.jpg";
+import spectraWater from "./singapore/spectraWater.jpg";
+
+// Thailand
+import bangkok from "./thailand/bangkok.jpg";
+import chiangMai from "./thailand/chiangMai.jpg";
+import chiangRai from "./thailand/chiangRai.jpg";
+import phuket from "./thailand/phuket.jpg";
+import udonThani from "./thailand/udonThani.jpg";
+
+// Maldives
+import adduCity from "./maldives/adduCity.jpg";
+import maafushi from "./maldives/maafushi.jpg";
+import male from "./maldives/male.jpg";
+import thinadhoo from "./maldives/thinadhoo.jpg";
+import veligandu from "./maldives/veligandu.jpg";
+
 // Export all
 export {
+  adduCity,
+  ahsanManzil,
   andaman,
   bambooGrove,
+  bangkok,
   barcelona,
   beach1,
   beach2,
@@ -86,6 +115,10 @@ export {
   beach4,
   beijingCity,
   ChandranathHill,
+  changiAirport,
+  chiangMai,
+  chiangRai,
+  chinTown,
   costaBrava,
   dighapatiaRajbari,
   floatingMarkets,
@@ -97,21 +130,26 @@ export {
   guthiaMosque,
   jaflong,
   japan,
+  kantajewTemple,
   kashmir,
   kerala,
   kuakata,
   ladakh,
   lalakal,
   lauachora,
+  maafushi,
   madrid,
+  male,
   mallorca,
   menorca,
+  merlionPark,
   mountFuji,
   mutianyuWall,
   naraPark,
   niladriLake,
   pangthumai,
   patangaBeach,
+  phuket,
   puthiaTemple,
   Rajasthan,
   rajshahiUniversity,
@@ -124,6 +162,7 @@ export {
   somapuraMahavihara,
   sondip,
   spain,
+  spectraWater,
   sundarban,
   sundorbon,
   sylhetSunamganj,
@@ -132,6 +171,9 @@ export {
   tanguarHaor,
   teaGarden,
   thailand,
+  thinadhoo,
   tokyoTower,
+  udonThani,
+  veligandu,
   zhangjiajieForest,
 };
