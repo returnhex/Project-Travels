@@ -637,12 +637,12 @@ export const contactFeatures = [
   },
   {
     icon: mailIcon,
-    title: "Contact@bdigo.com",
+    title: "bdigotravels@gmail.com",
     desc: "Email Us any time any kind of quety.",
   },
   {
     icon: contactIcon,
-    title: "+880 1855-255 342",
+    title: "+880 1402-914939",
     desc: "Call Us any kind support. We will wait for it.",
   },
 ];
