@@ -69,7 +69,7 @@ defineProps({
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  animation: typing 5.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
