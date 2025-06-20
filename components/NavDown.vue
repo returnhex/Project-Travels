@@ -15,6 +15,7 @@ const getLinkClass = (name: string) => {
   return `${isActive.value === name ? "bn5" : ""}`;
 };
 </script>
+
 <template>
   <div class="w-full bg-white mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
     <div

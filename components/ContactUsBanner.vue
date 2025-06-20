@@ -20,7 +20,9 @@ defineProps({
       class="relative z-10 max-w-[952px] flex flex-col items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white"
     >
       <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-5xl font-bold">
-        {{ title }}
+        <span class="typewriter">
+          {{ title }}
+        </span>
       </h1>
       <div class="flex gap-1 items-center justify-center">
         <NuxtImg
@@ -61,3 +63,31 @@ defineProps({
     </motion.div>
   </section>
 </template>
+<style>
+.typewriter {
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 5.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+</style>
