@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-[#2E8942]">
+  <div class="bg-[#2E8942] w-full">
     <div
       class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between px-4 md:px-5 py-1 xl:py-2 2xl:py-3"
     >
@@ -9,7 +9,11 @@
         class="flex gap-2 md:gap-4 w-full justify-between lg:justify-start lg:w-fit"
       >
         <div class="flex gap-1 items-center justify-between">
-          <NuxtImg src="image/email.svg" alt="email" class="w-5 h-5 sm:w-6 sm:h-6" />
+          <NuxtImg
+            src="image/email.svg"
+            alt="email"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
           <a href="mailto:bdigotravels@gmail.com"
             ><span class="text-xs sm:text-sm md:text-[1rem] font-semibold"
               >bdigotravels@gmail.com</span

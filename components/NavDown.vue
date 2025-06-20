@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { motion } from "motion-v";
 import { ref } from "vue";
 import type { RouteRecordNameGeneric } from "vue-router";
 import { navItems } from "~/constant";
@@ -15,9 +16,9 @@ const getLinkClass = (name: string) => {
 };
 </script>
 <template>
-  <div class="container mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
+  <div class="w-full bg-white mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
     <div
-      class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3"
+      class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3 container mx-auto"
     >
       <NuxtLink to="/" aria-label="go to home route or page">
         <NuxtImg
@@ -26,7 +27,7 @@ const getLinkClass = (name: string) => {
           class="w-[70px] h-[40px] 2xl:w-[80px] 2xl:h-[50px] cursor-pointer"
         />
       </NuxtLink>
-      <ul
+      <motion.ul
         :initial="{ scale: 0 }"
         :while-in-view="{ scale: 1 }"
         :transition="{ duration: 0.3 }"
@@ -72,7 +73,7 @@ const getLinkClass = (name: string) => {
             {{ navItem.title }}
           </NuxtLink>
         </li>
-      </ul>
+      </motion.ul>
       <NuxtLink to="/contact-us" class="hidden md:block">
         <Button3 title="Contact Us" />
       </NuxtLink>
