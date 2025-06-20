@@ -39,7 +39,7 @@ import { motion } from "motion-v";
           care of your trip. Thinking of taking a break from every day's life?
           Don't worry, we take care of your trip.
         </p>
-        <NuxtLink to="/contact-us">
+        <NuxtLink to="https://wa.me/8801402914939" target="_blank">
           <Button3 title="Let’s Talk" />
         </NuxtLink>
       </div>

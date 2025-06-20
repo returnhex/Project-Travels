@@ -30,7 +30,7 @@ import { testimonials } from "../constant/index";
         Experiences Shared By Our Customers
       </h2>
       <p
-        class="text-gray text-lg leading-relaxed font-medium mb-6 max-w-lg mx-auto text-center"
+        class="text-gray text-lg leading-relaxed font-medium mb-6 max-w-xl mx-auto text-center"
       >
         The statement implies a willingness to help someone escape their daily
         routine by taking care of their travel plans. It suggests a travel
