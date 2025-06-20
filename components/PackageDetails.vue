@@ -10,11 +10,12 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
 import { packageCardInfo } from '../constant/index'
-const images = [slideImg1, slideImg2];
-
 const { query } = useRoute();
 
-
+const images = [
+  packageCardInfo[query?.key - 1].img, 
+  packageCardInfo[query?.key - 1].img2
+];
 </script>
 
 <template>
@@ -98,7 +99,7 @@ const { query } = useRoute();
             </p>
 
             <img
-              src="/image/package3.jpg"
+              :src="packageCardInfo[query?.key - 1].img"
               alt="Tour"
               class="w-full h-auto mt-4 rounded-lg object-cover"
               loading="lazy"
@@ -150,7 +151,7 @@ const { query } = useRoute();
                     alt=""
                     loading="lazy"
                   />
-                  Excursion Between Sylhet and Bichnakandi
+                  Excursion Between two different places
                 </li>
               </ul>
               <ul class="space-y-2">

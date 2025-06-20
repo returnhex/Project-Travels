@@ -100,7 +100,9 @@ defineProps({
       </ul>
 
       <div v-if="buttonText" class="flex items-center gap-4">
-        <Button3 title="More About Us" />
+        <NuxtLink to="/about-us">
+          <Button3 title="More About Us" />
+        </NuxtLink>
 
         <!-- Avatars -->
         <div class="">

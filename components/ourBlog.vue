@@ -111,7 +111,7 @@ const filteredBlogPosts = computed(() => {
                     Admin
                   </p>
                 </div>
-                <NuxtLink to="/blog">
+                <NuxtLink :to="`/blog?id=${blogPost.id}&t=${blogPost.title}`">
                   <Button7 title="More Details" />
                 </NuxtLink>
               </div>

@@ -24,7 +24,7 @@ defineProps({
       height="200"
     />
     <div class="p-4">
-      <h3 class="text-xl font-semibold text-navy leading-loose py-2">
+      <h3 class="text-xl font-semibold text-navy leading-loose py-2 line-clamp-1">
         {{title}}
       </h3>
       <div class="flex gap-2 pb-2 items-center">
