@@ -101,7 +101,23 @@
                       {{ place.subtitle }}
                     </p>
 
-                    <NuxtLink to="/destination">
+                    <NuxtLink
+                      :to="{
+                        path: '/destination',
+                        query: {
+                          id: place.id,
+                          title: place.title,
+                          location: place.location,
+                          duration: place.duration,
+                          image: place.image,
+                          image2: place?.image2,
+                          country: place.country,
+                          overview: place.overview,
+                          tourPackages: place.tourPackages,
+                          map: place.map,
+                        },
+                      }"
+                    >
                       <Button2 title="Explore Now" />
                     </NuxtLink>
                   </div>

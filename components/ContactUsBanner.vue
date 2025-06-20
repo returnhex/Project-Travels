@@ -65,11 +65,11 @@ defineProps({
 </template>
 <style>
 .typewriter {
-  border-right: 2px solid white;
+  /* border-right: 2px solid white; */
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {

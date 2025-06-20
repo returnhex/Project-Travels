@@ -1,10 +1,15 @@
 <script setup lang="ts">
 interface Destination {
+  id: number;
   title: string;
   location: string;
   duration: string;
   image: string;
+  image2: string;
   country: string;
+  tourPackages: string;
+  overview: string;
+  map: string;
 }
 
 const props = defineProps<{
@@ -44,7 +49,23 @@ const truncate = (text: string, length = 35) => {
           />
           <p class="text-dark-gray">{{ datas.duration }}</p>
         </div>
-        <NuxtLink to="/destination">
+        <NuxtLink
+          :to="{
+            path: '/destination',
+            query: {
+              id: datas.id,
+              title: datas.title,
+              location: datas.location,
+              duration: datas.duration,
+              image: datas.image,
+              image2: datas.image2,
+              country: datas.country,
+              overview: datas.overview,
+              tourPackages: datas.tourPackages,
+              map: datas.map,
+            },
+          }"
+        >
           <Button6 title=" Explore Now" />
         </NuxtLink>
       </div>

@@ -9,13 +9,14 @@ import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
-import { packageCardInfo } from '../constant/index'
+import { packageCardInfo } from "../constant/index";
 const { query } = useRoute();
 
 const images = [
-  packageCardInfo[query?.key - 1].img, 
-  packageCardInfo[query?.key - 1].img2
+  packageCardInfo[query?.key - 1].img,
+  packageCardInfo[query?.key - 1].img2,
 ];
+console.log("img", images);
 </script>
 
 <template>
@@ -81,7 +82,7 @@ const images = [
             <p
               class="text-base md:text-lg text-gray leading-relaxed font-[400] mt-2"
             >
-              {{ packageCardInfo[query?.key - 1].overview}}
+              {{ packageCardInfo[query?.key - 1].overview }}
             </p>
           </section>
 
@@ -217,7 +218,9 @@ const images = [
                   />
                   <span class="font-medium">Country:</span>
                 </div>
-                <p class="font-semibold">{{ packageCardInfo[query?.key - 1].country }}</p>
+                <p class="font-semibold">
+                  {{ packageCardInfo[query?.key - 1].country }}
+                </p>
               </li>
               <li
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
@@ -245,7 +248,9 @@ const images = [
                   />
                   <span class="font-medium">Time:</span>
                 </div>
-                <p class="font-semibold">{{ packageCardInfo[query?.key - 1].duration }}</p>
+                <p class="font-semibold">
+                  {{ packageCardInfo[query?.key - 1].duration }}
+                </p>
               </li>
               <li
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
@@ -259,7 +264,9 @@ const images = [
                   />
                   <span class="font-medium">Language:</span>
                 </div>
-                <p class="font-semibold">{{ packageCardInfo[query?.key - 1].language }}</p>
+                <p class="font-semibold">
+                  {{ packageCardInfo[query?.key - 1].language }}
+                </p>
               </li>
             </ul>
           </div>
