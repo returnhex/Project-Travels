@@ -23,7 +23,7 @@ import { features } from "../constant/index";
         <h2
           class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl font-bold text-[#3C3C3C]"
         >
-          Why Choose Us
+          Why choose bdgo
         </h2>
       </div>
 
@@ -49,9 +49,7 @@ import { features } from "../constant/index";
             >
               {{ item.title }}
             </h1>
-            <p
-              class="text-[#5B5B5B] text-sm xl:text-lg font-medium text-left"
-            >
+            <p class="text-[#5B5B5B] text-sm xl:text-lg font-medium text-left">
               {{ item.desc }}
             </p>
           </div>

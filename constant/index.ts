@@ -74,18 +74,18 @@ import mapsIcon from "/public/image/assests/ContactUs/maps.svg";
 import contactIcon from "/public/image/assests/ContactUs/phone.svg";
 
 // Blog Image
-import blogImg1 from "/public/image/blog1.png";
 import blogImg1SufferMan from "/public/image/blog1-suffering-man.jpg";
+import blogImg1 from "/public/image/blog1.png";
+import blog2HiddenSpots from "/public/image/blog2-hidden-spots.jpg";
 import blogImg2 from "/public/image/blog2.png";
-import blog2HiddenSpots from '/public/image/blog2-hidden-spots.jpg'
-import blogImg3 from "/public/image/blog3.png";
 import blog3SecretBeach from "/public/image/blog3-secret-beach.jpg";
-import blogImg4 from "/public/image/blog4.png";
+import blogImg3 from "/public/image/blog3.png";
 import blog4SeaAdventure from "/public/image/blog4-sea-adventure.jpg";
-import blogImg5 from "/public/image/blog5.png";
+import blogImg4 from "/public/image/blog4.png";
 import blog5TopDestination from "/public/image/blog5-top-destination.jpg";
-import blogImg6 from "/public/image/blog6.png";
+import blogImg5 from "/public/image/blog5.png";
 import blog6MagicalPlace from "/public/image/blog6-magical-place.jpg";
+import blogImg6 from "/public/image/blog6.png";
 
 // VGM Image
 import aimArrow from "/public/image/assests/OutGoal/aim-arrow.svg";
@@ -840,7 +840,7 @@ export const blogPosts = [
     Every dawn, while most are asleep, he’s already out at sea, listening to the wind and reading the tide. 
     His lifestyle is one of patience, discipline, and reverence. It’s a reminder that true mastery takes time and humility. 
     He has no sponsors, no fanfare — just a deep love for the ocean. He surfs not for fame, but for freedom. 
-    And in doing so, he’s become a symbol for what it means to truly live.`
+    And in doing so, he’s become a symbol for what it means to truly live.`,
   },
   {
     id: 2,
@@ -858,7 +858,7 @@ export const blogPosts = [
     moreContent: `Take the Azores, for instance — volcanic islands in the middle of the Atlantic, where whales breach the surface beside your boat and hydrangeas bloom on every roadside. 
     Or the Faroe Islands, where emerald cliffs rise dramatically above wild seas, and sheep outnumber people. 
     In Japan’s Shikoku, you’ll find ancient pilgrim paths through misty forests, still traveled by monks in white robes. 
-    These aren’t just places — they’re sanctuaries. The world may not know them yet, but those who find them never forget them.`
+    These aren’t just places — they’re sanctuaries. The world may not know them yet, but those who find them never forget them.`,
   },
   {
     id: 3,
@@ -875,7 +875,7 @@ export const blogPosts = [
     quote: `Visitors say the peacefulness and natural beauty make it feel like a dream.`,
     moreContent: `But it’s not just the beauty that makes it special. There’s a story behind every rock and reef — of local fishermen who worship the sea, of turtles that lay eggs on its shores each season, of lovers who leave behind shells as tokens. 
     The sunset here paints the sky with colors no camera can capture. And when night falls, the stars reflect off the ocean like a mirror. 
-    This beach isn’t just a location — it’s an emotion. And for every traveler who finds it, it becomes a memory carved in salt and light.`
+    This beach isn’t just a location — it’s an emotion. And for every traveler who finds it, it becomes a memory carved in salt and light.`,
   },
   {
     id: 4,
@@ -892,7 +892,7 @@ export const blogPosts = [
     moreContent: `Swim with gentle giants in the Maldives, dive into cenotes in Mexico, or surf the roaring point breaks of Hawaii. 
     And then there’s night kayaking in bioluminescent bays, where every paddle stroke sets the water aglow. 
     These experiences aren’t about speed or competition — they’re about feeling small in the best way possible. 
-    When you connect with the ocean, you’re reminded of your place in the grand, beautiful rhythm of the planet.`
+    When you connect with the ocean, you’re reminded of your place in the grand, beautiful rhythm of the planet.`,
   },
   {
     id: 5,
@@ -909,7 +909,7 @@ export const blogPosts = [
     moreContent: `Imagine waking up in a glass cabin under the northern lights in Finland, or sipping mint tea while watching the sun rise over Sahara dunes. 
     Hike across the cliffs of Madeira, dance with locals at a Greek island festival, or meditate in a monastery in Bhutan. 
     These destinations aren’t just trends — they’re timeless. 
-    And as the world opens up again, they’re calling louder than ever for those ready to explore with intention.`
+    And as the world opens up again, they’re calling louder than ever for those ready to explore with intention.`,
   },
   {
     id: 6,
@@ -926,10 +926,9 @@ export const blogPosts = [
     quote: `Snowy chalets, tropical sunsets, cozy markets — these places make holidays magical.`,
     moreContent: `Wander through the wooden stalls of Prague’s Christmas market with hot cocoa in hand, or snorkel through reefs on Christmas morning in Bora Bora. 
     In Lapland, reindeer-drawn sleighs glide past forests lit by northern lights. In Bali, you can meditate as the New Year sun rises over the rice terraces. 
-    These aren’t just vacations — they’re portals to joy. They remind us what the holidays are truly about: wonder, connection, and presence.`
-  }
+    These aren’t just vacations — they’re portals to joy. They remind us what the holidays are truly about: wonder, connection, and presence.`,
+  },
 ];
-
 
 export const packageCardInfo = [
   {
@@ -945,8 +944,7 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204669.37105734987!2d89.07354159555966!3d21.94164281823489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a004caac2c7b315%3A0x4716abcfbb16c93c!2sSundarbans!5e0!3m2!1sen!2sbd!4v1750261855641!5m2!1sen!2sbd",
     duration: "6 Days, 5 Nights",
     img: "image/sundarban.jpg",
-    img2: "image/sundarban2.jpg"
-
+    img2: "image/sundarban2.jpg",
   },
   {
     id: 2,
@@ -962,7 +960,6 @@ export const packageCardInfo = [
     duration: "5 Days, 4 Nights",
     img: "image/sylhet.jpg",
     img2: "image/sylhet2.jpg",
-
   },
   {
     id: 3,
@@ -977,7 +974,7 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126763.54047042237!2d115.0920038772296!3d-8.340538114305265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd219d6be1f5a05%3A0x401576d14fed010!2sBali!5e0!3m2!1sen!2sbd!4v1750264705793!5m2!1sen!2sbd",
     duration: "7 Days, 6 Nights",
     img: "image/bali.jpg",
-    img2: "image/bali2.jpg"
+    img2: "image/bali2.jpg",
   },
   {
     id: 4,
@@ -993,7 +990,6 @@ export const packageCardInfo = [
     duration: "6 Days, 5 Nights",
     img: "image/kashmir.jpg",
     img2: "image/kashmir2.jpg",
-
   },
   {
     id: 5,
@@ -1008,8 +1004,7 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112063.88484458062!2d77.10249027609315!3d28.613939149502664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26c3451f3fd%3A0x61d8c1d42b801fa6!2sDelhi!5e0!3m2!1sen!2sbd!4v1750264942152!5m2!1sen!2sbd",
     duration: "8 Days, 7 Nights",
     img: "image/india.jpg",
-    img2: "image/india2.jpeg"
-
+    img2: "image/india2.jpeg",
   },
   {
     id: 6,
@@ -1024,8 +1019,7 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32634662.98763578!2d93.54318848713262!3d35.86166026191248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296be5d0c35%3A0x96e01b1c2b38359b!2sBeijing%2C%20China!5e0!3m2!1sen!2sbd!4v1750265048476!5m2!1sen!2sbd",
     duration: "7 Days, 6 Nights",
     img: "image/china.jpg",
-    img2: "image/china2.jpg"
-
+    img2: "image/china2.jpg",
   },
   {
     id: 7,
@@ -1041,7 +1035,6 @@ export const packageCardInfo = [
     duration: "5 Days, 4 Nights",
     img: "image/bangkok.jpg",
     img2: "image/bangkok2.jpg",
-
   },
   {
     id: 8,
@@ -1071,8 +1064,8 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253759.96995823493!2d79.83000793851853!3d6.927078499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25924050c6b1b%3A0x8f0f8e0cb2e4ce9e!2sColombo!5e0!3m2!1sen!2sbd!4v1750265360103!5m2!1sen!2sbd",
     duration: "7 Days, 6 Nights",
     img: "image/srilanka.jpg",
-    img2: "image/srilanka2.jpg"
-  }
+    img2: "image/srilanka2.jpg",
+  },
 ];
 
 export const testimonials = [
@@ -1141,11 +1134,11 @@ export const instagramPost = [
 
 export const getInTouch = [
   {
-    title: "Get In Touch",
+    title: "Get in Touch",
     items: [
       {
         text: "+880 1402-914939",
-        icon: "image/icon/location.png",
+        icon: "image/icon/phone.png",
         href: "https://wa.me/8801402914939",
       },
       {
@@ -1155,7 +1148,7 @@ export const getInTouch = [
       },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-        icon: "image/icon/phone.png",
+        icon: "image/icon/location.png",
         href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
       },
     ],
@@ -1166,11 +1159,26 @@ export const about = [
   {
     title: "About Us",
     items: [
-      "About Us",
-      "Our Service",
-      "Tour Guide",
-      "Privacy Policy",
-      "Terms & Conditions",
+      {
+        text: "About Us",
+        href: "/about-us",
+      },
+      {
+        text: "Our Service",
+        href: "/",
+      },
+      {
+        text: "Tour Guide",
+        href: "/",
+      },
+      {
+        text: "Privacy Policy",
+        href: "/",
+      },
+      {
+        text: "Terms & Conditions",
+        href: "/terms-and-condition",
+      },
     ],
   },
 ];
