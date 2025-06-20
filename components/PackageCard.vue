@@ -13,15 +13,14 @@ defineProps({
 
 <template>
   <div
-    class="bg-white w-full max-w-[342px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
+    class="bg-white max-w-[342px] rounded-xl border border-light-gray shadow hover:shadow-lg transition duration-300 overflow-hidden flex flex-col items-center mx-auto px-2 py-2"
   >
     <!-- Package Image -->
     <NuxtImg
       :src="image"
       alt="Package"
-      class="w-[360px] sm:w-[330px] max-h-[250px] md:h-[326px] object-cover rounded-lg"
-      width="200"
-      height="200"
+      class="w-[360px] sm:w-[330px] min-h-[250px] md:h-[326px] object-cover rounded-lg"
+     
     />
     <div class="p-4">
       <h3 class="text-xl font-semibold text-navy leading-loose py-2 line-clamp-1">

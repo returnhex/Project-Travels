@@ -73,8 +73,7 @@ import { testimonials } from "../constant/index";
                 :src="testimonial.image"
                 alt="Customer"
                 class="object-cover z-50 h-full w-full rounded-full"
-                height="260"
-                width="200"
+                
               />
             </div>
 

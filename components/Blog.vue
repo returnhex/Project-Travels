@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import Button2 from "./Button2.vue";
 import { cards } from "../constant/index";
 </script>
 
@@ -56,8 +55,7 @@ import { cards } from "../constant/index";
               :src="card.image"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
-              width="200"
-              height="200"
+             
             />
 
             <!-- Content Card -->
@@ -71,8 +69,6 @@ import { cards } from "../constant/index";
                     src="image/icon/calendericon.png"
                     alt="calendericon"
                     class="h-4 max-w-6"
-                    width="20"
-                    height="20"
                   />
                   <p
                     class="font-medium text-base leading-relaxed text-dark-gray"
@@ -110,8 +106,7 @@ import { cards } from "../constant/index";
                     src="image/icon/admin.png"
                     alt="admin"
                     class="h-4 max-w-7"
-                    width="20"
-                    height="20"
+                   
                   />
                   <p class="font-medium text-base text-dark-gray">Admin</p>
                 </div>

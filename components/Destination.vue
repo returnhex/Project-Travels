@@ -7,12 +7,25 @@ const currentPage = ref(1);
 const totalPage = ref(5);
 const itemsPerPage = 9; // Matches your 3x3 grid
 const diplayCard = ref("grid");
+const selectPlaceCategory = ref('')
+
+
+const getWindowWidht = () => {
+  return window.innerWidth >= 640
+}
+
+const filteredByType = computed(() => {
+  if (selectPlaceCategory.value === '') return destinations;
+
+  return destinations.filter(dest => dest.type === selectPlaceCategory.value);
+});
+
 
 // Flatten all packages
-const flattenPackages = (destinations) => {
+const flattenPackages = computed(() => {
   const result = [];
 
-  destinations.forEach((country) => {
+  filteredByType.value.forEach((country) => {
     if (country.divisions) {
       country.divisions.forEach((division) => {
         division.packages.forEach((pkg) => {
@@ -31,9 +44,9 @@ const flattenPackages = (destinations) => {
   });
 
   return result;
-};
+})
 
-const allPackages = flattenPackages(destinations);
+const allPackages = ref(flattenPackages.value);
 
 // Sorted and reactive category structure with checkboxes
 const sortedCategories = ref(
@@ -46,8 +59,8 @@ const sortedCategories = ref(
 
     return {
       country: country.country,
-      checked: true,
       count: children.length,
+      type: country.type,
       children: children.sort((a, b) => a.name.localeCompare(b.name)),
     };
   })
@@ -72,9 +85,9 @@ const filteredPackages = computed(() => {
   });
 
   // If nothing is selected, return all
-  if (selectedCities.length === 0) return allPackages;
+  if (selectedCities.length === 0) return allPackages.value;
 
-  return allPackages.filter((pkg) => {
+  return allPackages.value.filter((pkg) => {
     return selectedCities.some((selected) => {
       if (selected.city) {
         return pkg.country === selected.country && pkg.city === selected.city;
@@ -92,12 +105,10 @@ const paginatedPackages = computed(() => {
   return filteredPackages.value.slice(start, end);
 });
 
-// console.log("sort", filteredPackages.value);
 // Watch for filter change to reset page
 watch(filteredPackages, (newVal) => {
   currentPage.value = 1;
   totalPage.value = Math.ceil(newVal.length / itemsPerPage);
-  // console.log("Filtered packages updated:", newVal);
 });
 
 // Handle pagination
@@ -142,7 +153,9 @@ const clearAllFilters = () => {
           </h3>
           <ul class="space-y-3 mt-4">
             <li
-              v-for="(cat, i) in sortedCategories"
+              v-for="(cat, i) in selectPlaceCategory
+    ? sortedCategories.filter(cat => cat.type === selectPlaceCategory)
+    : sortedCategories"
               :key="`cat-${i}`"
               class="flex flex-col items-start gap-2"
             >
@@ -168,6 +181,7 @@ const clearAllFilters = () => {
               >
                 <li
                   v-for="(child, j) in cat.children"
+                  
                   :key="`child-${i}-${j}`"
                   class="flex gap-2"
                 >
@@ -193,8 +207,8 @@ const clearAllFilters = () => {
 
       <!-- Blog Content Area -->
       <div class="w-full px-4">
-        <div class="flex justify-between items-center pb-6">
-          <div class="flex justify-start items-center gap-1 md:gap-2 py-2">
+        <div class="flex flex-col sm:flex-row justify-between items-center pb-6">
+          <div class="hidden sm:flex justify-start items-center gap-1 md:gap-2 py-2">
             <h1 class="text-gray text-base">View as :</h1>
             <button
               class="grid place-items-center"
@@ -221,7 +235,26 @@ const clearAllFilters = () => {
               />
             </button>
           </div>
-          <div class="flex">
+          <div class="flex gap-2 text-lg text-gray items-center">
+            <Icon v-if="selectPlaceCategory === 'domestic'" name="material-symbols:location-on-rounded"
+              style="color: green;"
+              size="20"
+            />
+            <button @click="selectPlaceCategory = 'domestic'" :class="`cursor-pointer 
+            ${selectPlaceCategory === 'domestic' ? 'underline' : ''}`">
+              Domestic
+            </button>
+            |
+            <button @click="selectPlaceCategory = 'international'" :class="`cursor-pointer 
+            ${selectPlaceCategory === 'international' ? 'underline' : ''}`">
+              International
+            </button>
+            <Icon v-if="selectPlaceCategory === 'international'" name="material-symbols:location-on-rounded"
+              style="color: green;"
+              size="20"
+            />
+          </div>
+          <div class="flex mt-4 sm:mt-0">
             <h1
               class="px-3 py-1 md:px-4 md:py-2 text-gray border border-gray-300 cursor-pointer"
             >
@@ -239,7 +272,7 @@ const clearAllFilters = () => {
         </div>
         <div
           :class="`${
-            diplayCard === 'grid'
+            diplayCard === 'grid' || !getWindowWidht()
               ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 px-8 lg:gap-2'
               : 'flex flex-col gap-5'
           }`"

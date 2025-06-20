@@ -2,6 +2,7 @@
 import { motion } from "motion-v";
 defineProps({
   title: String,
+  necessaryTitle: String,
   subTitle: String,
   moreTitle: String,
 });
@@ -19,9 +20,14 @@ defineProps({
       :transition="{ duration: 2 }"
       class="relative z-10 max-w-[952px] flex flex-col items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white"
     >
-      <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-5xl font-bold">
+      <div class="flex flex-col gap-3 items-center">
+        <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-5xl font-bold">
         {{ title }}
       </h1>
+      <h2 class="text:sm md:text-lg font-bold">
+        {{ necessaryTitle }}
+      </h2>
+      </div>
       <div class="flex gap-1 items-center justify-center">
         <NuxtImg
           src="image/home-icon.svg"

@@ -277,6 +277,7 @@ export const destinations = [
         ],
       },
     ],
+    type: 'domestic'
   },
   {
     country: "India",
@@ -330,6 +331,7 @@ export const destinations = [
         image: tajMahal,
       },
     ],
+    type: 'international'
   },
   {
     country: "China",
@@ -365,6 +367,7 @@ export const destinations = [
         image: zhangjiajieForest,
       },
     ],
+    type: 'international'
   },
   {
     country: "Maldives",
@@ -410,6 +413,7 @@ export const destinations = [
           "Indulge in romantic overwater villas, private decks, and sunset cruises on Veligandu’s serene turquoise lagoon.",
       },
     ],
+    type: 'international'
   },
   {
     country: "Singapore",
@@ -439,6 +443,7 @@ export const destinations = [
         image: chinTown,
       },
     ],
+    type: 'international'
   },
   {
     country: "Thailand",
@@ -474,6 +479,7 @@ export const destinations = [
         image: udonThani,
       },
     ],
+    type: 'international'
   },
   {
     country: "Spain",
@@ -521,6 +527,7 @@ export const destinations = [
         image: sanSebastian,
       },
     ],
+    type: 'international'
   },
 ];
 
@@ -558,43 +565,7 @@ export const aboutBdGioConstants = [
   "Real-Timing Itinerary Updates",
 ];
 
-export const cards = [
-  {
-    image: "image/blog1.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "image/blog2.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "image/blog3.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "image/blog1.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-  {
-    image: "image/blog2.png",
-    date: "December 4, 2024",
-    title: "The Surfing Man Will Blow Your Mind",
-    description:
-      "Keeping the structure clear and focusing on what makes special, travelers.",
-  },
-];
+
 
 export const features = [
   {
@@ -811,6 +782,44 @@ export const workFeatures = [
     title: "Enjoy Our Tour",
     icon: "image/assests/HowItWork/destination.svg",
     desc: "This revision improves clarity and flow while maintaining your original message. This revision improves clarity .",
+  },
+];
+
+export const cards = [
+  {
+    image: "image/blog1.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: "image/blog2.png",
+    date: "December 7, 2024",
+    title: "Top Hidden Spots in Great Places",
+    description:
+      "Explore the most beautiful places you’ve never heard of.",
+  },
+  {
+    image: "image/blog3.png",
+    date: "December 10, 2024",
+    title: "Why Tourists Love This Secret Beach",
+    description:
+      "Uncover what brings thousands of tourists here every year.",
+  },
+  {
+    image: "image/blog1.png",
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: "image/blog2.png",
+    date: "December 7, 2024",
+    title: "Top Hidden Spots in Great Places",
+    description:
+      "Explore the most beautiful places you’ve never heard of.",
   },
 ];
 
@@ -1141,11 +1150,12 @@ export const instagramPost = [
 
 export const getInTouch = [
   {
-    title: "Get In Touch",
+    title: "Get in Touch",
     items: [
       {
         text: "+880 1402-914939",
-        icon: "image/icon/location.png",
+        
+        icon: "image/icon/phone.png",
         href: "https://wa.me/8801402914939",
       },
       {
@@ -1155,7 +1165,7 @@ export const getInTouch = [
       },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-        icon: "image/icon/phone.png",
+        icon: "image/icon/location.png",
         href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
       },
     ],
