@@ -7,9 +7,28 @@ const route = useRoute();
 
 const isMenuOpen = ref<boolean>(false);
 
-const isActive = ref<RouteRecordNameGeneric>(
-  route.name === "index" ? "home" : route.name
-);
+const mapRouteName = (name: string | null): string => {
+  if (!name) return '';
+  switch (name) {
+    case 'index':
+      return 'home';
+    case 'destination':
+    case 'package':
+    case 'packages':
+      return 'destinations';
+    case 'blog':
+      return 'blogs';
+    default:
+      return name;
+  }
+};
+
+const isActive = ref<RouteRecordNameGeneric>(mapRouteName(route.name as string));
+
+watch(() => route.name, (newName) => {
+  isActive.value = mapRouteName(newName as string);
+}, { immediate: true });
+
 
 const getLinkClass = (name: string) => {
   return `${isActive.value === name ? "bn5" : ""}`;

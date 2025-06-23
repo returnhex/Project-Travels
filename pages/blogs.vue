@@ -7,6 +7,13 @@ definePageMeta({
 
 useHead({
   title: "Blogs",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore engaging travel blogs from BdiGo. Discover destination guides, expert travel tips, and inspiring stories to plan your next adventure.",
+    },
+  ]
 });
 </script>
 

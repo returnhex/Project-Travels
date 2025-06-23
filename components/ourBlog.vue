@@ -55,7 +55,7 @@ const filteredBlogPosts = computed(() => {
             <!-- Main Image -->
             <NuxtImg
               :src="blogPost.img"
-              alt="Blog Image"
+              alt="Blog-Image"
               class="w-full h-auto rounded-lg object-cover"
             />
 

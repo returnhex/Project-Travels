@@ -12,7 +12,7 @@ useHead({
     {
       name: "description",
       content:
-        "Discover BdiGo – your premier travel service offering curated trips, unbeatable deals, and seamless bookings. Explore now and start your adventure!",
+        "Discover BdiGo - your premier travel service offering curated trips, unbeatable deals, and seamless bookings. Explore now and start your adventure!",
     },
   ],
 });

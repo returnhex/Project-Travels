@@ -2,6 +2,7 @@
 import { motion } from "motion-v";
 defineProps({
   title: String,
+  necessaryTitle: String,
   subTitle: String,
   moreTitle: String,
 });
@@ -24,6 +25,10 @@ defineProps({
           {{ title }}
         </span>
       </h1>
+      <h2 class="text:sm md:text-lg font-bold">
+        {{ necessaryTitle }}
+      </h2>
+      </div>
       <div class="flex gap-1 items-center justify-center">
         <NuxtImg
           src="image/home-icon.svg"

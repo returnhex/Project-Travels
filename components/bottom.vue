@@ -98,13 +98,11 @@ onMounted(() => {
               {{ getIn.title }}
             </h2>
             <ul class="space-y-2 text-sm">
-              <li v-for="(item, id) in getIn.items" :key="id" class="flex">
+              <li v-for="(item, id) in getIn.items" :key="id" class="flex items-center">
                 <NuxtImg
                   :src="item.icon"
                   alt="icon"
-                  class="w-4 h-4"
-                  width="20"
-                  height="20"
+                  class="w-6 h-6 md:w-7 md:h-7"
                 />
                 <a v-if="item?.href" :href="item.href" target="_blank"
                   ><span class="text-navy cursor-pointer">
@@ -161,7 +159,7 @@ onMounted(() => {
               <NuxtImg
                 :src="item"
                 alt="Payment Method"
-                class="h-6 w-auto object-contain cursor-pointer"
+                class="h-6 w-10 object-contain cursor-pointer"
               />
             </template>
           </div>

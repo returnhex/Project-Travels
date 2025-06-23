@@ -5,5 +5,7 @@
     <Navbar />
     <slot />
     <bottom />
+    <Chatbox/>
+    <GoToTop/>
   </div>
 </template>
