@@ -2,16 +2,26 @@
   position: relative;
   overflow: visible;
 }
-
+.swiper-slide {
+  background-color: transparent !important;
+  justify-content: center;
+}
 
 .swiper-pagination-bullet {
+  background-color: green !important;
+  width: 10px !important;
+  height: 10px !important;
+  position: relative;
+  top: 0px;
+}
+.swiper-pagination-bullet-active {
   background-color: green;
+  color: green;
   width: 8px;
   height: 8px;
   position: relative;
-  top: -20px;
+  top: 0px;
 }
-
 
 @media (min-width: 768px) {
   .swiper-pagination-bullet {
@@ -26,18 +36,56 @@
     height: 15px;
   }
 }
-
+/* tosmall  */
 .swiper--offset-tosmall .swiper-pagination {
-  bottom: -80px !important;
+  bottom: -30px !important;
   position: absolute !important;
 }
+@media (min-width: 480px) {
+  .swiper--offset-tosmall .swiper-pagination {
+    bottom: -80px !important;
+  }
+}
+@media (min-width: 1280px) {
+  .swiper--offset-tosmall .swiper-pagination {
+    bottom: -90px !important;
+  }
+}
+@media (min-width: 1540px) {
+  .swiper--offset-tosmall .swiper-pagination {
+    bottom: -105px !important;
+  }
+}
+/* small */
 .swiper--offset-small .swiper-pagination {
-  bottom: -50px !important;
+  bottom: -30px !important;
   position: absolute !important;
 }
+@media (min-width: 480px) {
+  .swiper--offset-small .swiper-pagination {
+    bottom: -65px !important;
+  }
+}
+/* @media (min-width: 1280px) {
+  .swiper--offset-small .swiper-pagination {
+    bottom: -65px !important;
+  }
+} */
+@media (min-width: 1540px) {
+  .swiper--offset-small .swiper-pagination {
+    bottom: -70px !important;
+  }
+}
+
+/* larger */
 .swiper--offset-large .swiper-pagination {
-  bottom: -150px !important;
+  bottom: -120px !important;
   position: absolute !important;
+}
+@media (min-width: 480px) {
+  .swiper--offset-large .swiper-pagination {
+    bottom: -170px !important;
+  }
 }
 
 .custom-prev,
@@ -46,11 +94,25 @@
 }
 .custom-prev:not(.swiper-button-disabled),
 .custom-next:not(.swiper-button-disabled) {
-  /* background-color: rgb(173, 0, 0);  */
   text-decoration: red;
   opacity: 0.7;
 }
 .swiper-button-disabled {
   opacity: 100;
   cursor: not-allowed;
+}
+
+.blog .swiper {
+  position: relative;
+  overflow: visible;
+}
+
+.blog .swiper-pagination-bullet {
+  background-color: green;
+  width: 15px;
+  height: 15px;
+}
+.blog .swiper-pagination {
+  bottom: -150px;
+  position: absolute !important;
 }

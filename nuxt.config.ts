@@ -5,15 +5,19 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg'}
-      ]
-    }
+      htmlAttrs: {
+        lang: "en",
+      },
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
+    },
   },
   vite: {
+    build: {
+      sourcemap: true,
+    },
     plugins: [tailwindcss()],
   },
-  css: ["@/assets/css/main.css"],
+  css: ["@/assets/css/main.css", "/assets/css/package-swiper.css"],
 
   modules: [
     "@nuxt/eslint",
@@ -21,6 +25,20 @@ export default defineNuxtConfig({
     "@nuxt/image",
     // "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
-    'motion-v/nuxt'
+    "motion-v/nuxt",
+    "nuxt-delay-hydration",
   ],
+  delayHydration: {
+    debug: process.env.NODE_ENV === "development",
+    mode: "init",
+  },
+  components: true,
+  ssr: true,
+
+  image: {
+    provider: "ipx",
+    dir: "public",
+    quality: 100,
+    format: ["webp"],
+  },
 });

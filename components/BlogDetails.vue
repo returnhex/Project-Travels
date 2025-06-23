@@ -1,28 +1,34 @@
 <template>
   <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
     <!-- Header Image -->
-    <img
-      src="/assets/image/blogdetails1.png"
+    <NuxtImg
+      src="image/blogdetails1.png"
       alt="Main Blog"
       class="w-full h-auto rounded-xl object-cover"
+      loading="lazy"
     />
 
     <!-- Meta Info -->
     <div class="flex flex-wrap items-center text-gray-500 text-sm gap-4">
       <div class="flex items-center gap-2">
-        <img src="/assets/image/icon/calendericon.png" class="" alt="" />
+        <NuxtImg
+          src="image/icon/calendericon.png"
+          loading="lazy"
+          class=""
+          alt=""
+        />
         <span class="font-medium text-base leading-relaxed text-gray"
           >December 4, 2024</span
         >
       </div>
       <div class="flex items-center gap-2">
-        <img src="/assets/image/icon/admin.png" class="" alt="" />
+        <NuxtImg src="image/icon/admin.png" loading="lazy" class="" alt="" />
         <span class="font-medium text-base leading-relaxed text-gray"
           >By Admin</span
         >
       </div>
       <div class="flex items-center gap-2">
-        <img src="/assets/image/icon/view.png" class="" alt="" />
+        <NuxtImg src="image/icon/view.png" loading="lazy" class="" alt="" />
         <span class="font-medium text-base leading-relaxed text-gray"
           >920 Views</span
         >
@@ -73,10 +79,11 @@
       </blockquote>
 
       <!-- Secondary Image -->
-      <img
-        src="/assets/image/blogdetails2.png"
+      <NuxtImg
+        src="image/blogdetails2.png"
         alt="Blog Content"
         class="w-full h-auto rounded-lg object-cover"
+        loading="lazy"
       />
 
       <p class="space-y-6 font-medium text-gray text-base leading-relaxed">
@@ -100,10 +107,31 @@
       class="flex items-center gap-4 py-3 px-4 justify-end border border-gray-200 bg-gray-100"
     >
       <span class="text-gray-600 font-medium">Share:</span>
-      <img src="/assets/image/icon/facebook.png" alt="Facebook" class="" />
-      <img src="/assets/image/icon/twitter.png" alt="Twitter" class="" />
-      <img src="/assets/image/icon/linkedin.png" alt="LinkedIn" class="" />
-      <img src="/assets/image/icon/instagram.png" alt="Instagram" class="" />
+      <Icon
+        name="mdi:facebook"
+        size="24"
+        class="text-gray-500 hover:text-[#1877F2] cursor-pointer"
+      />
+      <Icon
+        name="mdi:instagram"
+        size="24"
+        class="text-gray-500 hover:text-[#E4405F] cursor-pointer"
+      />
+      <Icon
+        name="mdi:linkedin"
+        size="24"
+        class="text-gray-500 hover:text-[#0077B5] cursor-pointer"
+      />
+      <Icon
+        name="mdi:twitter"
+        size="24"
+        class="text-gray-500 hover:text-[#1DA1F2] cursor-pointer"
+      />
+      <Icon
+        name="mdi:youtube"
+        size="24"
+        class="text-gray-500 hover:text-[#FF0000] cursor-pointer"
+      />
     </div>
   </section>
 </template>

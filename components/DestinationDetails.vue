@@ -1,6 +1,7 @@
 <script setup>
-// import slideImg2 from "@/assets/image/destination/overviewBg.png";
-import slideImg1 from "@/assets/image/destination/overviewBg.png";
+// import slideImg2 from "@/image/destination/overviewBg.png";
+import slideImg1 from "/image/destination/overviewBg.png";
+import slideImg2 from "/image/destination/overviewBg2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,7 +9,7 @@ import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
-const images = [slideImg1, slideImg1];
+const images = [slideImg1, slideImg2];
 </script>
 
 <template>
@@ -17,8 +18,8 @@ const images = [slideImg1, slideImg1];
     <div class="relative overflow-hidden">
       <Swiper
         :modules="[Navigation, Pagination, Keyboard, Autoplay]"
-          :autoplay="{ delay: 3000, disableOnInteraction: false}"
-          :loop="true"
+        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+        :loop="true"
         :slides-per-view="1"
         :space-between="20"
         :pagination="{
@@ -26,33 +27,33 @@ const images = [slideImg1, slideImg1];
           clickable: true,
         }"
         :navigation="{
-          nextEl: '.swiper-next',
-          prevEl: '.swiper-prev',
+          nextEl: '.swiper-prev',
+          prevEl: '.swiper-next ',
         }"
         :keyboard="{ enabled: true }"
         class="w-full px-4 md:px-6 py-8"
       >
         <SwiperSlide v-for="(slide, index) in images" :key="index">
           <div class="relative">
-            <img
+            <NuxtImg
               :src="slide"
-              alt=""
-              class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] rounded-xl object-cover"
+              alt="Destination-slider"
+              class="w-full min-h-[610px] sm:min-h-[300px] md:min-h-[400px] lg:max-h-[420px] rounded-xl object-cover"
             />
           </div>
         </SwiperSlide>
         <div
           class="flex justify-center items-center max-w-[220px] relative -top-11 mx-auto z-50 bg-white rounded-lg px-4 py-4 gap-2"
         >
-          <img
-            src="/assets/image/leftarrowred.png"
-            class=" swiper-prev custom-prev"
-            alt=""
+          <NuxtImg
+            src="image/leftarrowred.png"
+            class="swiper-prev custom-prev"
+            alt="icon-leftarrowred"
           />
-          <img
-            src="/assets/image/rightarrow.png"
+          <NuxtImg
+            src="image/rightarrow.png"
             class="swiper-next custom-next"
-            alt=""
+            alt="icon-rightarrow"
           />
         </div>
       </Swiper>
@@ -109,8 +110,8 @@ const images = [slideImg1, slideImg1];
               thing’s certain: once you watch the Surfing Man in action, you’ll
               never see the ocean the same way again.
             </p>
-            <img
-              src="/assets/image/destination/tourBg.png"
+            <NuxtImg
+              src="image/destination/tourBg.png"
               alt="Tour"
               class="w-full h-auto mt-4 rounded-lg object-cover"
             />
@@ -128,68 +129,68 @@ const images = [slideImg1, slideImg1];
             >
               <ul class="space-y-2">
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-right"
                   />
                   Specialized Bilingual Guide
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-right"
                   />
                   Private Transport
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-right"
                   />
                   Entrance Fees, Snacks, and Mineral Water
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/right.png"
+                  <NuxtImg
+                    src="image/icon/right.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-right"
                   />
                   Excursion Between Sylhet and Bichnakandi
                 </li>
               </ul>
               <ul class="space-y-2">
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-cross"
                   />
                   Additional Services
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-cross"
                   />
                   Insurance
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-cross"
                   />
                   Personal expenses
                 </li>
                 <li class="flex gap-3">
-                  <img
-                    src="/assets/image/icon/cross.png"
+                  <NuxtImg
+                    src="image/icon/cross.png"
                     class="h-6 w-6"
-                    alt=""
+                    alt="icon-cross"
                   />
                   Personal medicines
                 </li>
@@ -211,9 +212,9 @@ const images = [slideImg1, slideImg1];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
                   />
                   <span class="font-medium">Country:</span>
@@ -224,9 +225,9 @@ const images = [slideImg1, slideImg1];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
                   />
                   <span class="font-medium">Visa Requirements:</span>
@@ -237,9 +238,9 @@ const images = [slideImg1, slideImg1];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
                   />
                   <span class="font-medium">Time:</span>
@@ -250,9 +251,9 @@ const images = [slideImg1, slideImg1];
                 class="flex items-start justify-between border-b border-gray-200 pb-3"
               >
                 <div class="flex gap-2 items-center">
-                  <img
-                    src="/assets/image/icon/rightSign.png"
-                    alt=""
+                  <NuxtImg
+                    src="image/icon/rightSign.png"
+                    alt="icon-right"
                     class="w-4 h-4"
                   />
                   <span class="font-medium">Language:</span>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from "vue";
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 const form = reactive<{
   name: string;
   email: string;
@@ -20,9 +20,9 @@ const handleSubmit = () => {
 
 <template>
   <motion.div
-  :initial="{x: 100}"
-        :while-in-view="{x: 0}"
-        :transition="{duration: 2}"
+    :initial="{ x: 100 }"
+    :while-in-view="{ x: 0 }"
+    :transition="{ duration: 2 }"
     class="bg-white p-2 sm:p-8 lg:p-12 w-full lg:w-[50%] h-[600px] grid grid-cols-1 place-items-center rounded-3xl overflow-hidden"
   >
     <form
@@ -66,7 +66,11 @@ const handleSubmit = () => {
         >
           <div class="flex gap-3 items-center">
             <p class="font-[400] text-sm lg:text-lg">US</p>
-            <img src="/down-arrow-gray.svg" class="w-4 h-4 lg:w-5 lg:h-5" />
+            <NuxtImg
+              src="image/down-arrow-gray.svg"
+              loading="lazy"
+              class="w-4 h-4 lg:w-5 lg:h-5"
+            />
           </div>
           <input
             v-model="form.contact"
@@ -90,7 +94,11 @@ const handleSubmit = () => {
         class="flex self-start justify-between text-white gap-[10px] items-center px-3 py-1 md:px-4 md:py-2 lg:px-6 lg:py-3 rounded-xl bg-red hover:bg-red-600 cursor-pointer"
       >
         <p class="text-sm md:text-[1rem] font-semibold">Submit Now</p>
-        <img src="/arrowRight.svg" class="h-3 w-3 md:h-6 md:w-6" />
+        <NuxtImg
+          src="image/arrowRight.svg"
+          loading="lazy"
+          class="h-3 w-3 md:h-6 md:w-6"
+        />
       </button>
     </form>
   </motion.div>

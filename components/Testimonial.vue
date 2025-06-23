@@ -1,29 +1,10 @@
 <script setup lang="ts">
-import img1 from "@/assets/image/testimonial1.png";
-import img2 from "@/assets/image/testimonial2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-const testimonials = [
-  {
-    quote:
-      "Our family trip to the Maldives was magical! From the booking to the resort, everything was perfectly organized. The team even surprised us with a sunset dinner. Thank you for making this unforgettable!",
-    rating: 5,
-    name: "Sarah Karim",
-    role: "Manager at Banoi LifeStyle",
-    image: img1,
-  },
-  {
-    quote:
-      "Booking through this travel site was the best decision we made! Our entire trip—from flights to local experiences—was seamless and thoughtfully planned. The accommodations were top-notch, and every destination felt like a dream. Truly an unforgettable journey!",
-    rating: 5,
-    name: "Abdul Ahad Linkon",
-    role: "Travel Blogger",
-    image: img2,
-  },
-];
+import { testimonials } from "../constant/index";
 </script>
 
 <template>
@@ -31,13 +12,20 @@ const testimonials = [
     <!-- Fixed Header Section -->
     <div class="mb-8 lg:mb-12 flex flex-col justify-center">
       <div class="flex justify-center items-center gap-2">
-        <img src="/assets/image/Vector.png" alt="Testimonial icon" >
-        <p class="text-green font-semibold text-xl leading-[32px] mb-1">
+        <NuxtImg
+          src="image/Vector.png"
+          alt="Testimonial icon"
+          width="20"
+          height="20"
+        />
+        <p
+          class="text-green font-semibold text-lg md:text-xl leading-[32px] mb-1"
+        >
           Testimonial
         </p>
       </div>
       <h2
-        class="text-xl md:text-3xl md:leading-[64px] text-dark-gray font-bold mb-2 text-center"
+        class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl leading-[50px] xl:leading-[64px] text-dark-gray font-bold mb-2 text-center"
       >
         Experiences Shared By Our Customers
       </h2>
@@ -75,24 +63,28 @@ const testimonials = [
           class="overflow-hidden"
         >
           <div
-            class="flex flex-col xl:flex-row gap-0 md:gap-4 justify-center items-center overflow-hidden"
+            class="flex flex-col xl:flex-row gap-4 justify-center items-center overflow-hidden"
           >
             <!-- Image Section -->
-            <div class="w-full flex justify-center relative">
-              <img
+            <div
+              class="w-[300px] flex-1 h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] xl:min-h-[608px] flex justify-center relative"
+            >
+              <NuxtImg
                 :src="testimonial.image"
                 alt="Customer"
-                class="object-cover z-50 w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] md:max-h-[608px] rounded-full"
-              >
+                class="object-cover z-50 h-full w-full rounded-full"
+                height="260"
+                width="200"
+              />
             </div>
 
             <!-- Content Section -->
-            <div class="w-full px-2">
+            <div class="px-2 flex justify-center">
               <div
-                class="bg-[#F2F4F7] p-4 md:p-6 rounded-lg border-l-3 border-green max-w-[756px] h-[344px] mx-auto lg:mx-0"
+                class="bg-[#F2F4F7] p-4 md:p-6 rounded-lg border-l-3 border-green max-w-[500px] lg:max-w-[550px] xl:max-w-[756px] h-auto mx-auto lg:mx-0"
               >
                 <p
-                  class="text-black font-medium text-base md:text-xl leading-[28px] md:leading-[32px] mb-4 text-start"
+                  class="text-black font-medium text-sm md:text-base xl:text-lg 2xl:text-xl leading-[28px] md:leading-[32px] mb-2 md:mb-4 text-start"
                 >
                   {{ testimonial.quote }}
                 </p>
@@ -118,19 +110,18 @@ const testimonials = [
           </div>
         </SwiperSlide>
 
-          
-          <div class="flex gap-2 justify-end ml-auto mr-0">
-            <img
-              src="/assets/image/leftarrowred.png"
-              class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
-              alt="Previous"
-            >
-            <img
-              src="/assets/image/rightarrow.png"
-              class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
-              alt="Next"
-            >
-          </div>
+        <div class="flex gap-2 justify-end ml-auto mr-0">
+          <img
+            src="/image/leftarrowred.png"
+            class="swiper-next cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
+            alt="Previous"
+          />
+          <img
+            src="/image/rightarrow.png"
+            class="swiper-prev cursor-pointer w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity"
+            alt="Next"
+          />
+        </div>
       </Swiper>
     </div>
   </section>

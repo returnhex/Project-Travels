@@ -12,7 +12,9 @@ useHead({
 
 <template>
   <section>
-    <ContactUsBanner title="Our Blog" sub-title="Our Blog"/>
-    <OurBlog />
+    <ContactUsBanner title="Our Blog" sub-title="Our Blog" />
+    <delay-hydration>
+      <OurBlog />
+    </delay-hydration>
   </section>
 </template>

@@ -1,19 +1,29 @@
 <template>
-  <section class="bg-white py-12 lg:py-0 px-4">
-      <div
-      class="max-w-[1440px] 
-       min-h-[430px] sm:min-h-[530px] md:min-h-[630px] lg:min-h-[730px] xl:min-h-[830px] 
-      mx-auto flex flex-col gap-10 justify-center items-center"
+  <section
+    class="bg-white py-12 lg:py-0 px-4 container mx-auto overflow-hidden"
+  >
+    <div
+      class="container min-h-[430px] md:min-h-[530px] lg:min-h-[630px] xl:min-h-[730px] 2xl:min-h-[830px] mx-auto flex flex-col gap-10 justify-center items-center"
     >
       <!-- Header -->
-      <div class="flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center items-center">
+      <div
+        class="flex flex-col gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 justify-center items-center"
+      >
         <p
-          class="text-[#2E8942] font-semibold text-xl md:text-2xl flex items-center gap-2"
+          class="text-[#2E8942] font-semibold text-lg xl:text-xl 2xl:text-2xl flex items-center gap-2"
         >
-          <img src="/double-arrow.svg" height="32" width="32" />
+          <NuxtImg
+            alt="double-arrow"
+            src="image/double-arrow.svg"
+            loading="lazy"
+            height="32"
+            width="32"
+          />
           Contact Us
         </p>
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#3C3C3C]">
+        <h2
+          class="text-xl md:text-2xl xl:text-2xl 2xl:text-5xl font-bold text-[#3C3C3C]"
+        >
           Contact Our Friendly Experts Team
         </h2>
         <p class="font-medium text-[1rem] text-[#3C3C3C]">
@@ -27,18 +37,19 @@
       <div class="relative w-full flex justify-center">
         <!-- Step Cards -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 w-full"
+          class="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-3 gap-3 lg:gap-4 xl:gap-6 w-full"
         >
           <motion.div
-            :while-hover="{scale: 1.02}"
-            v-for="(item, index) in features"
+            v-for="(item, index) in contactFeatures"
             :key="index"
-            class="flex flex-col cursor-pointer items-center gap-3 bg-[#F2F2F2] w-full h-full rounded-xl shadow-sm p-8 md:p-12 hover:shadow-md transition mx-auto"
+            :while-hover="{ scale: 1.02 }"
+            class="flex flex-col cursor-pointer items-center gap-3 bg-[#F2F2F2] w-full h-full rounded-xl shadow-sm p-6 xl:p-8 2xl:p-12 hover:shadow-md transition mx-auto"
           >
             <!-- Icon -->
-            <img
+            <NuxtImg
               :src="item.icon"
-              class="w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] rounded-md mb-4 relative z-50"
+              class="w-[40px] h-[40px] xl:w-[50px] xl:h-[50px] 2xl:w-[80px] 2xl:h-[80px] rounded-md mb-4 relative z-50"
+              alt="icon"
             />
 
             <!-- Text Content -->
@@ -46,11 +57,13 @@
               class="flex flex-col items-center gap-1 lg:gap-2 xl:gap-3 text-center"
             >
               <h1
-                class="font-bold text-lg lg:text-xl xl:text-2xl text-[#1A2E46]"
+                class="font-bold text-lg xl:text-xl 2xl:text-2xl text-[#1A2E46]"
               >
                 {{ item.title }}
               </h1>
-              <p class="text-[#5B5B5B] text-lg xl:text-xl font-medium">
+              <p
+                class="text-[#5B5B5B] text-sm xl:text-lg 2xl:text-xl font-medium"
+              >
                 {{ item.desc }}
               </p>
             </div>
@@ -62,26 +75,7 @@
 </template>
 
 <script setup>
-import mailIcon from "~/assests/ContactUs/mail.svg";
-import mapsIcon from "~/assests/ContactUs/maps.svg";
-import contactIcon from "~/assests/ContactUs/phone.svg";
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
-const features = [
-  {
-    icon: mapsIcon,
-    title: "Our Address",
-    desc: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-  },
-  {
-    icon: mailIcon,
-    title: "Contact@bdigo.com",
-    desc: "Email Us any time any kind of quety.",
-  },
-  {
-    icon: contactIcon,
-    title: "+880 1855-255 342",
-    desc: "Call Us any kind support. We will wait for it.",
-  },
-];
+import { contactFeatures } from "../constant/index";
 </script>
