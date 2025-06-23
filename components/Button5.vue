@@ -9,7 +9,9 @@ defineProps({
   <button
     class="group relative inline-flex h-8 md:h-12 items-center justify-center rounded-md bg-white hover:bg-red text-red border border-red text-sm md:text-[1rem] font-[600] hover:text-white gap-1 md:gap-2 px-1 py-0 md:px-3 md:py-2 lg:px-6 lg:py-3 cursor-pointer"
   >
-    <span>{{ title }}</span>
+    <p class="pointer-events-none font-semibold hover:md:text-[1rem] text-sm">
+      {{ title }}
+    </p>
     <div
       class="group relative inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full font-medium"
     >
