@@ -100,8 +100,8 @@ defineProps({
       </ul>
 
       <div v-if="buttonText" class="flex items-center gap-4">
-        <NuxtLink to="/about-us">
-          <Button3 title="More About Us" />
+        <NuxtLink to="https://wa.me/8801402914939" target="_blank">
+          <Button3Wp title="More About Us" />
         </NuxtLink>
 
         <!-- Avatars -->
