@@ -1912,7 +1912,6 @@ export const instagramPost = [
 export const getInTouch = [
   {
     title: "Get in Touch",
-    title: "Get in Touch",
     items: [
       {
         text: "+880 1402-914939",
@@ -1926,7 +1925,6 @@ export const getInTouch = [
       },
       {
         text: "23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230",
-        icon: "image/icon/location.png",
         icon: "image/icon/location.png",
         href: `https://www.google.com/maps/search/?api=1&query=${"23, Tropical Akhand Tower (Level # 03-05),  Gareeb-e-Nawaz Ave, Sector # 11, Uttara,  Dhaka - 1230"}`,
       },
