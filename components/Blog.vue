@@ -1,0 +1,172 @@
+<script setup>
+import blogImg1 from "@/assets/image/blog1.png";
+import blogImg2 from "@/assets/image/blog2.png";
+import blogImg3 from "@/assets/image/blog3.png";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+// import "/assets/css/blog-swiper.css";
+const cards = [
+  {
+    image: blogImg1,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: blogImg2,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: blogImg3,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: blogImg1,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+  {
+    image: blogImg2,
+    date: "December 4, 2024",
+    title: "The Surfing Man Will Blow Your Mind",
+    description:
+      "Keeping the structure clear and focusing on what makes special, travelers.",
+  },
+];
+</script>
+
+<template>
+  <section class="bg-[url('/assets/image/blogbg.png')]">
+    <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
+      <div class="flex justify-center items-center mx-auto gap-2 py-4">
+        <img src="/assets/image/Vector.png" alt="" />
+        <p class="text-green font-semibold leading-[32px] text-xl">Our Blogs</p>
+      </div>
+      <h2
+        class="text-2xl md:text-3xl leading-[64px] text-dark-gray font-bold mt-2 pb-8"
+      >
+        Our Latest Blog
+      </h2>
+
+      <Swiper
+        :modules="[Navigation, Pagination, Keyboard]"
+        :slides-per-view="1"
+        :space-between="20"
+        :keyboard="{ enabled: true }"
+        :pagination="{ clickable: true }"
+        :breakpoints="{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1280: { slidesPerView: 3 },
+        }"
+        class="px-4 sm:px-12 xl:px-12 swiper swiper--offset-large"
+      >
+        <SwiperSlide
+          v-for="(card, index) in cards"
+          :key="index"
+          class="flex justify-center"
+        >
+          <div
+            class="relative flex flex-col items-center mx-auto max-w-[464px] h-[624px]"
+          >
+            <!-- Main Image -->
+            <img
+              :src="card.image"
+              alt="Blog Image"
+              class="w-full h-auto rounded-lg object-cover"
+            />
+
+            <!-- Content Card -->
+            <div
+              class="bg-[#F8F8F8] w-[400px] md:h-[272px] rounded-lg p-6 py-2 absolute -bottom-20 shadow-2xl"
+            >
+              <!-- Top Row -->
+              <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center space-x-2 text-sm text-gray">
+                  <img
+                    src="/assets/image/icon/calendericon.png"
+                    alt=""
+                    class="h-4 max-w-6"
+                  />
+                  <p
+                    class="font-medium text-base leading-relaxed text-dark-gray"
+                  >
+                    {{ card.date }}
+                  </p>
+                </div>
+                <button
+                  class="font-[500] text-base leading-relaxed text-dark-gray px-4 py-2 bg-[#DDDDDD] rounded-2xl"
+                >
+                  Travel
+                </button>
+              </div>
+
+              <!-- Title -->
+              <h1
+                class="font-semibold text-lg sm:text-xl leading-[32px] py-2 sm:py-4 text-start"
+              >
+                {{ card.title }}
+              </h1>
+
+              <!-- Description -->
+              <p
+                class="font-medium text-base text-dark-gray leading-relaxed pb-2 text-start"
+              >
+                {{ card.description }}
+              </p>
+
+              <!-- Bottom Row -->
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center"
+              >
+                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                  <img
+                    src="/assets/image/icon/admin.png"
+                    alt="admin"
+                    class="h-4 max-w-7"
+                  />
+                  <p class="font-medium text-base text-dark-gray">By Admin</p>
+                </div>
+                <!-- <button
+                  class="flex items-center font-semibold text-base text-red border border-red rounded-lg px-2 md:px-4 py-2 gap-2 hover:shadow-lg"
+                >
+                  More Details
+                  <img
+                    src="/assets/image/icon/rightarrow.png"
+                    alt="arrow"
+                    class="max-w-4 h-4"
+                  />
+                </button> -->
+                <NuxtLink to="/blogs">
+
+                  <btn-2 title="More Details"/>
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
+       <div class="relative -bottom-30  flex items-center px-3 md:px-0 w-full h-20">
+      
+      <button class="ml-auto">
+
+        <btn-5 title="Explore Now"/>
+      </button>
+    </div>
+    </div>
+  </section>
+</template>
