@@ -6,10 +6,13 @@
   font-weight: normal;
   src: url("../css/Font/Montserrat-Regular.ttf") format("truetype");
 }
-
+body {
+  font-family: "Montserrat", sans-serif;
+}
 @theme {
   --font-sans: "Montserrat";
 }
+
 @theme {
   --color-dark-gray: #3c3c3c;
   --color-green: #2e8942;
@@ -29,6 +32,7 @@
   --text-3xl: 48px;
   --text-4xl: 60px;
 }
+
 @theme {
   --leading-tight: 12px;
   --leading-normal: 16px;

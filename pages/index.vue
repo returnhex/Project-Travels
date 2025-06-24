@@ -1,3 +1,26 @@
+<script setup>
+
+import { useHead } from '#app';
+
+definePageMeta({
+  layout: "default",
+  key: route => route.fullPath,
+});
+
+useHead({
+  title: 'BdiGo',
+  meta: 'Traveling Service'
+})
+</script>
 <template>
-  <h1 class="text-red text-3xl">root home</h1>
+  <main>
+    <HeroSection />
+    <AboutBgGio title="About BdiGo Agency" button-text="More About Us"/>
+    <ChooseUs />
+    <DestinationList />
+    <package />
+    <counter />
+    <test-monial />
+    <Blog />
+  </main>
 </template>
