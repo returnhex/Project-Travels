@@ -1,0 +1,60 @@
+<script setup lang="ts"></script>
+
+<template>
+  <div class="bg-[#2E8942] w-full">
+    <div
+      class="max-w-[1740px] mx-auto text-[#FFFFFF] flex items-center justify-between px-4 md:px-5 py-1 xl:py-2 2xl:py-3"
+    >
+      <div
+        class="flex gap-2 md:gap-4 w-full justify-between lg:justify-start lg:w-fit"
+      >
+        <div class="flex gap-1 items-center justify-between">
+          <NuxtImg
+            src="image/email.svg"
+            alt="email"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+          <a href="mailto:bdigotravels@gmail.com"
+            ><span class="text-xs sm:text-sm md:text-[1rem] font-semibold"
+              >bdigotravels@gmail.com</span
+            ></a
+          >
+        </div>
+        <div class="flex gap-1 items-center justify-between">
+          <NuxtImg
+            src="image/icon/whatsappIcon.png"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+            alt="icon-whatsapp"
+          />
+          <a href="https://wa.me/8801402914939" target="_blank"
+            ><span class="text-xs sm:text-sm md:text-[1rem] font-semibold"
+              >+880 1402-914939</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="overflow-hidden whitespace-nowrap rounded-xl">
+        <p
+          class="font-medium text-[0.9rem] 2xl:text-[1.1rem] hidden lg:block animate-marquee"
+        >
+          50% Off Your Next Trip. Hurry Up For your new Tour! Book Your Tour
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 12s linear infinite;
+}
+</style>
