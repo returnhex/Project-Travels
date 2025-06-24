@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
-@font-face {
+/* @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
   src: url("../css/Font/Montserrat-Regular.ttf") format("truetype");
+} */
+body {
+  font-family: "Montserrat", sans-serif;
 }
-
 @theme {
   --font-sans: "Montserrat";
 }
+
 @theme {
   --color-dark-gray: #3c3c3c;
   --color-green: #2e8942;
@@ -29,10 +32,34 @@
   --text-3xl: 48px;
   --text-4xl: 60px;
 }
+
 @theme {
   --leading-tight: 12px;
   --leading-normal: 16px;
   --leading-relaxed: 24px;
   --leading-loose: 36px;
   --leading-extra-loose: 48px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
