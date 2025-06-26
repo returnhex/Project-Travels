@@ -1,9 +1,9 @@
 <script setup>
 import {
   about,
-  paymentMethodIcon,
-  instagramPost,
   getInTouch,
+  instagramPost,
+  paymentMethodIcon,
 } from "../constant/index";
 const currentYear = ref(0);
 onMounted(() => {
@@ -16,7 +16,7 @@ onMounted(() => {
   >
     <NewsLetter class="absolute -top-44" />
     <div
-      class="container mx-auto px-4 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mt-20 md:mt-0"
+      class="container mx-auto px-4 justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 -mt-10 sm:-mt-20 md:mt-32"
     >
       <!-- logo -->
       <div class="flex flex-col gap-8">
@@ -98,7 +98,11 @@ onMounted(() => {
               {{ getIn.title }}
             </h2>
             <ul class="space-y-2 text-sm">
-              <li v-for="(item, id) in getIn.items" :key="id" class="flex items-center">
+              <li
+                v-for="(item, id) in getIn.items"
+                :key="id"
+                class="flex items-center"
+              >
                 <NuxtImg
                   :src="item.icon"
                   alt="icon"
@@ -118,12 +122,12 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="sm:w-full px-14">
+      <div class="w-1/2 md:w-full md:px-8 lg:px-2 xl:px-6">
         <h2 class="font-bold text-navy text-xl leading-loose pb-4">
-          Instagram Post
+          Recent Blog Post
         </h2>
         <div
-          class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-y-4 sm:px-12 place-items-center md:px-0"
+          class="grid grid-cols-3 gap-x-1 gap-y-2 md:gap-y-4 sm:px-2 xl:px-10 place-items-center md:px-0"
         >
           <NuxtLink
             v-for="(item, id) in instagramPost"
@@ -139,7 +143,7 @@ onMounted(() => {
 
     <!-- Bottom Line -->
     <div
-      class="container mx-auto px-4 sm:px-6 lg:px-20 py-6 border-t-2 border-gray absolute bottom-0 md:bottom-2"
+      class="container mx-auto px-4 sm:px-6 lg:px-20 py-6 border-t-2 border-gray absolute bottom-6 md:-bottom-10 xl:-bottom-2"
     >
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-0 md:gap-4">
         <!-- Left: Copyright -->

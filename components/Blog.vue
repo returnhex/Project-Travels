@@ -2,14 +2,16 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { cards } from "../constant/index";
 </script>
 
 <template>
   <section class="bg-[url('/image/blogbg.png')]">
-    <div class="text-center mb-10 container mx-auto px-4 py-40 overflow-hidden">
+    <div
+      class="text-center mb-10 container mx-auto px-4 pt-20 pb-40 overflow-hidden"
+    >
       <div class="flex justify-center items-center mx-auto gap-2">
         <NuxtImg
           src="image/Vector.png"
@@ -55,7 +57,6 @@ import { cards } from "../constant/index";
               :src="card.image"
               alt="Blog Image"
               class="w-full h-auto rounded-lg object-cover"
-             
             />
 
             <!-- Content Card -->
@@ -106,7 +107,6 @@ import { cards } from "../constant/index";
                     src="image/icon/admin.png"
                     alt="admin"
                     class="h-4 max-w-7"
-                   
                   />
                   <p class="font-medium text-base text-dark-gray">Admin</p>
                 </div>
