@@ -67,13 +67,12 @@ import { testimonials } from "../constant/index";
           >
             <!-- Image Section -->
             <div
-              class="w-[300px] flex-1 h-[300px] sm:w-[350px] sm:h-[350px] md:max-w-[464px] xl:min-h-[608px] flex justify-center relative"
+              class="flex-1 w-[300px] sm:w-[350px] md:w-[464px] h-[350px] xl:h-[608px] flex justify-center relative"
             >
               <NuxtImg
                 :src="testimonial.image"
                 alt="Customer"
                 class="object-cover z-50 h-full w-full rounded-full"
-                
               />
             </div>
 
@@ -83,7 +82,7 @@ import { testimonials } from "../constant/index";
                 class="bg-[#F2F4F7] p-4 md:p-6 rounded-lg border-l-3 border-green max-w-[500px] lg:max-w-[550px] xl:max-w-[756px] h-auto mx-auto lg:mx-0"
               >
                 <p
-                  class="text-black font-medium text-sm md:text-base xl:text-lg 2xl:text-xl leading-[28px] md:leading-[32px] mb-2 md:mb-4 text-start"
+                  class="text-black font-medium text-sm md:text-base xl:text-lg 2xl:text-xl leading-[28px] md:leading-[32px] mb-2 md:mb-4 text-start line-clamp-4"
                 >
                   {{ testimonial.quote }}
                 </p>

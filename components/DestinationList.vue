@@ -26,9 +26,22 @@
       </div>
 
       <div class="flex justify-center gap-4 mb-2 xl:mb-5 2xl:mb-10">
-        <Button1 title="Domestic" @click="selectedCategory = 'domestic'" />
-        <Button4
+        <Button1
+          title="Domestic"
+          :btn-class="
+            selectedCategory === 'domestic'
+              ? 'bg-green-700 text-white'
+              : 'bg-neutral-50 text-green-700'
+          "
+          @click="selectedCategory = 'domestic'"
+        />
+        <Button1
           title="International"
+          :btn-class="
+            selectedCategory === 'international'
+              ? 'bg-green-700 text-white'
+              : 'bg-neutral-50 text-green-700'
+          "
           @click="selectedCategory = 'international'"
         />
       </div>
@@ -140,12 +153,12 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { computed, ref } from "vue";
 
 import "~/assets/css/package-swiper.css";
 import { places } from "../constant/index";
