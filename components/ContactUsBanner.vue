@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <section
-    class="relative w-full grid place-items-center mx-auto h-[300px] md:h-[382px] bg-cover bg-center"
+    class="relative w-full grid place-items-center mx-auto h-[300px] md:h-[382px] bg-cover bg-center pt-[40px]"
     style="background-image: url('/ocean.png')"
   >
     <div class="absolute inset-0 bg-[#0D4E1B] opacity-50" />
@@ -19,7 +19,7 @@ defineProps({
       :transition="{ duration: 2 }"
       class="relative z-10 max-w-[952px] flex flex-col items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white"
     >
-      <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-5xl font-bold">
+      <h1 class="text:xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
         <span class="typewriter">
           {{ title }}
         </span>

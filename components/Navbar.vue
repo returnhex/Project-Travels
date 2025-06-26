@@ -14,6 +14,7 @@ function handleScroll() {
 }
 
 onMounted(() => {
+  // lastScrollY = window.scrollY;
   window.addEventListener("scroll", handleScroll);
 });
 

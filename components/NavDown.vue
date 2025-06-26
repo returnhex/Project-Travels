@@ -8,27 +8,32 @@ const route = useRoute();
 const isMenuOpen = ref<boolean>(false);
 
 const mapRouteName = (name: string | null): string => {
-  if (!name) return '';
+  if (!name) return "";
   switch (name) {
-    case 'index':
-      return 'home';
-    case 'destination':
-    case 'package':
-    case 'packages':
-      return 'destinations';
-    case 'blog':
-      return 'blogs';
+    case "index":
+      return "home";
+    case "destination":
+    case "package":
+    case "packages":
+      return "destinations";
+    case "blog":
+      return "blogs";
     default:
       return name;
   }
 };
 
-const isActive = ref<RouteRecordNameGeneric>(mapRouteName(route.name as string));
+const isActive = ref<RouteRecordNameGeneric>(
+  mapRouteName(route.name as string)
+);
 
-watch(() => route.name, (newName) => {
-  isActive.value = mapRouteName(newName as string);
-}, { immediate: true });
-
+watch(
+  () => route.name,
+  (newName) => {
+    isActive.value = mapRouteName(newName as string);
+  },
+  { immediate: true }
+);
 
 const getLinkClass = (name: string) => {
   return `${isActive.value === name ? "bn5" : ""}`;
@@ -121,53 +126,19 @@ const getLinkClass = (name: string) => {
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
-  background: #2e8942;
+  color: green;
+  border-bottom: 2px green solid;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
-}
-
-.bn5:before {
-  content: "";
-  background: linear-gradient(45deg, #ff0000, #48ff00, #ff0000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowingbn5 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes glowingbn5 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+  transition: all 0.3s ease;
 }
 
 .bn5:active {
-  color: white;
-}
-
-.bn5:active:after {
-  background: transparent;
-}
-
-.bn5:hover:before {
-  opacity: 1;
+  color: rgba(0, 128, 0, 0.8);
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.6);
+  border-bottom: 2px solid green;
 }
 
 .bn5:after {
@@ -176,9 +147,16 @@ const getLinkClass = (name: string) => {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #2e8942;
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
 }
 </style>
