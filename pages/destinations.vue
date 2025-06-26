@@ -9,6 +9,9 @@ useHead({
     }
   ]
 });
+
+const selectPlaceCategory = useState('place-category', () => 'domestic');
+
 </script>
 
 <template>
@@ -16,7 +19,7 @@ useHead({
     <ContactUsBanner
       title="Destination Bangladesh"
       necessaryTitle="From Hills to Heritage"
-      subTitle="Domestic"
+      :subTitle="selectPlaceCategory[0].toUpperCase() + selectPlaceCategory.slice(1)"
       moreTitle="Destination Details"
     />
     <delay-hydration>

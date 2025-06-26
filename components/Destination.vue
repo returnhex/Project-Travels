@@ -7,7 +7,11 @@ const currentPage = ref(1);
 const totalPage = ref(5);
 const itemsPerPage = 9; // Matches your 3x3 grid
 const diplayCard = ref("grid");
-const selectPlaceCategory = ref("");
+const selectPlaceCategory = useState('place-category', () => 'domestic');
+
+const changeCategory = (newCategory) => {
+  selectPlaceCategory.value = newCategory
+}
 
 const getWindowWidht = () => {
   return window.innerWidth >= 640;
@@ -15,7 +19,6 @@ const getWindowWidht = () => {
 
 const filteredByType = computed(() => {
   if (selectPlaceCategory.value === "") return destinations;
-
   return destinations.filter((dest) => dest.type === selectPlaceCategory.value);
 });
 
@@ -64,14 +67,14 @@ const sortedCategories = ref(
   })
 );
 
-// Computed → Filter based on checked values
+
 const filteredPackages = computed(() => {
   const selectedCities = [];
 
   sortedCategories.value.forEach((cat) => {
     const checkedChildren = cat.children?.filter((child) => child.checked);
 
-    if (cat.checked || checkedChildren?.length) {
+    if (cat.checked || (checkedChildren && checkedChildren.length)) {
       if (checkedChildren.length) {
         checkedChildren.forEach((child) =>
           selectedCities.push({ country: cat.country, city: child.name })
@@ -82,10 +85,8 @@ const filteredPackages = computed(() => {
     }
   });
 
-  // If nothing is selected, return all
-  if (selectedCities.length === 0) return allPackages.value;
-
-  return allPackages.value.filter((pkg) => {
+  if (selectedCities.length === 0) return flattenPackages.value;
+  return flattenPackages.value.filter((pkg) => {
     return selectedCities.some((selected) => {
       if (selected.city) {
         return pkg.country === selected.country && pkg.city === selected.city;
@@ -95,6 +96,7 @@ const filteredPackages = computed(() => {
     });
   });
 });
+
 
 // Paginate filtered results
 const paginatedPackages = computed(() => {
@@ -246,7 +248,7 @@ const clearAllFilters = () => {
               size="20"
             />
             <button
-              @click="selectPlaceCategory = 'domestic'"
+              @click="changeCategory('domestic')"
               :class="`cursor-pointer 
             ${selectPlaceCategory === 'domestic' ? 'underline' : ''}`"
             >
@@ -254,7 +256,7 @@ const clearAllFilters = () => {
             </button>
             |
             <button
-              @click="selectPlaceCategory = 'international'"
+              @click="changeCategory('international')"
               :class="`cursor-pointer 
             ${selectPlaceCategory === 'international' ? 'underline' : ''}`"
             >

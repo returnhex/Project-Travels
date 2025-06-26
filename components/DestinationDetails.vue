@@ -1,7 +1,4 @@
 <script setup>
-// import slideImg2 from "@/image/destination/overviewBg.png";
-// import slideImg1 from "/image/destination/overviewBg.png";
-// import slideImg2 from "/image/destination/overviewBg2.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -11,14 +8,8 @@ import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
 
 import { destinations } from "../constant/index";
-// const images = [slideImg1, slideImg2];
-const { query } = useRoute();
+
 const route = useRoute();
-// const getInfo = destinations[query?.id - 1];
-// const images = [
-//   destinations[query?.key - 1].packages.,
-//   destinations[query?.key - 1].image2,
-// ];
 const data = {
   id: route.query.id,
   title: route.query.title,
@@ -33,7 +24,6 @@ const data = {
   tourPackages: route.query.tourPackages,
   map: route.query.map,
 };
-console.log("data", data);
 </script>
 
 <template>
@@ -282,7 +272,7 @@ console.log("data", data);
                   <span class="font-medium">Language:</span>
                 </div>
                 <p class="font-semibold">
-                  {{ data.language }}
+                  {{ data.language || 'N/A'}}
                 </p>
               </li>
             </ul>

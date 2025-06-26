@@ -10,11 +10,16 @@ useHead({
   ],
 });
 
+const selectPlaceCategory = useState('place-category', () => 'domestic');
+
 </script>
 
 <template>
   <div>
-    <ContactUsBanner title="Destination Bangladesh" sub-title="Domestic" more-title="Destination Details"/>
+    <ContactUsBanner 
+    title="Destination Bangladesh" 
+    :sub-title="selectPlaceCategory[0].toUpperCase() + selectPlaceCategory.slice(1)" 
+    more-title="Destination Details"/>
 
     <DestinationDetails />
   </div>
