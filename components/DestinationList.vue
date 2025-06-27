@@ -115,21 +115,7 @@
                     </p>
 
                     <NuxtLink
-                      :to="{
-                        path: '/destination',
-                        query: {
-                          id: place.id,
-                          title: place.title,
-                          location: place.location,
-                          duration: place.duration,
-                          image: place.image,
-                          image2: place?.image2,
-                          country: place.country,
-                          overview: place.overview,
-                          tourPackages: place.tourPackages,
-                          map: place.map,
-                        },
-                      }"
+                      :to="{ path: '/destination', query: { key: place.id } }"
                     >
                       <Button2 title="Explore Now" />
                     </NuxtLink>

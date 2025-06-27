@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { destinations } from "../constant/index";
 
 // Pagination
@@ -7,11 +7,11 @@ const currentPage = ref(1);
 const totalPage = ref(5);
 const itemsPerPage = 9; // Matches your 3x3 grid
 const diplayCard = ref("grid");
-const selectPlaceCategory = useState('place-category', () => 'domestic');
+const selectPlaceCategory = useState("place-category", () => "domestic");
 
 const changeCategory = (newCategory) => {
-  selectPlaceCategory.value = newCategory
-}
+  selectPlaceCategory.value = newCategory;
+};
 
 const getWindowWidht = () => {
   return window.innerWidth >= 640;
@@ -67,7 +67,6 @@ const sortedCategories = ref(
   })
 );
 
-
 const filteredPackages = computed(() => {
   const selectedCities = [];
 
@@ -97,7 +96,6 @@ const filteredPackages = computed(() => {
   });
 });
 
-
 // Paginate filtered results
 const paginatedPackages = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
@@ -106,9 +104,13 @@ const paginatedPackages = computed(() => {
 });
 
 // Watch for filter change to reset page
-watch(filteredPackages, (newVal) => {
+const stopWatcher = watch(filteredPackages, (newVal) => {
   currentPage.value = 1;
   totalPage.value = Math.ceil(newVal.length / itemsPerPage);
+});
+
+onBeforeMount(() => {
+  stopWatcher();
 });
 
 // Handle pagination
@@ -248,17 +250,17 @@ const clearAllFilters = () => {
               size="20"
             />
             <button
-              @click="changeCategory('domestic')"
               :class="`cursor-pointer 
             ${selectPlaceCategory === 'domestic' ? 'underline' : ''}`"
+              @click="changeCategory('domestic')"
             >
               Domestic
             </button>
             |
             <button
-              @click="changeCategory('international')"
               :class="`cursor-pointer 
             ${selectPlaceCategory === 'international' ? 'underline' : ''}`"
+              @click="changeCategory('international')"
             >
               International
             </button>
