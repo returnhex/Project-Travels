@@ -151,12 +151,12 @@ import blogImg6 from "/public/image/blog6.png";
 
 // VGM Image
 import aimArrow from "/public/image/assests/OutGoal/aim-arrow.svg";
-import aimBanner from "/public/image/assests/OutGoal/aim-banner.png";
+import aimBanner from "/public/image/assests/OutGoal/aim-banner.webp";
 
-import visionBanner from "/public/image/assests/OurVission/vision-banner.png";
+import visionBanner from "/public/image/assests/OurVission/vision-banner.webp";
 import visionIcon from "/public/image/assests/OurVission/vison-icon.svg";
 
-import missionBanner from "/public/image/assests/OurMission/mission-banner.png";
+import missionBanner from "/public/image/assests/OurMission/mission-banner.webp";
 import missionIcon from "/public/image/assests/OurMission/mission-icon.png";
 
 export const destinations = [
@@ -1901,12 +1901,12 @@ export const paymentMethodIcon = [
 ];
 
 export const instagramPost = [
-  "image/footer/footer1.png",
-  "image/footer/footer2.png",
-  "image/footer/footer3.png",
-  "image/footer/footer4.png",
-  "image/footer/footer5.png",
-  "image/footer/footer6.png",
+  "image/footer/footer1.webp",
+  "image/footer/footer2.webp",
+  "image/footer/footer3.webp",
+  "image/footer/footer4.webp",
+  "image/footer/footer5.webp",
+  "image/footer/footer6.webp",
 ];
 
 export const getInTouch = [
