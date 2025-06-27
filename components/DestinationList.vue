@@ -1,7 +1,33 @@
+<script setup>
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { computed, ref } from "vue";
+
+import "~/assets/css/package-swiper.css";
+import { places } from "../constant/index";
+
+const selectedCategory = ref("all");
+
+// Filtered list based on selected category
+const filteredPlaces = computed(() => {
+  if (selectedCategory.value === "all") return places;
+  return places.filter((place) => place.category === selectedCategory.value);
+});
+</script>
+<style scoped>
+.swiper {
+  position: relative;
+  overflow: visible;
+}
+</style>
+
 <template>
   <section
     class="relative bg-cover bg-center w-full h-auto py-3 md:py-10 lg:py-16 flex flex-col justify-center items-center overflow-hidden"
-    style="background-image: url('/destination.png')"
+    style="background-image: url('/destination.webp')"
   >
     <div
       class="container mx-auto px-4 flex flex-col justify-center items-center gap-2 md:gap-3 xl:gap-5 2xl:gap-10 overflow-hidden"
@@ -13,6 +39,7 @@
           <NuxtImg
             src="image/double-arrow.svg"
             alt="double-arrow"
+            format="webp"
             width="30"
             height="30"
           />
@@ -48,7 +75,8 @@
       <section
         class="w-full px-4 md:px-6 lg:px-12 overflow-hidden swiper swiper--offset-tosmall"
       >
-        <Swiper
+        <ClientOnly>
+          <Swiper
           :modules="[Navigation, Pagination, Keyboard, Autoplay]"
           :autoplay="{ delay: 3000, disableOnInteraction: false }"
           :loop="true"
@@ -88,8 +116,7 @@
                       src="image/location.svg"
                       class="max-w-5 md:max-w-6 max-h-6"
                       alt="loction"
-                      width="5"
-                      height="2"
+                      format="webp"
                     />
                     <p
                       class="font-semibold text-sm md:text-[1rem] text-[#383838]"
@@ -139,6 +166,7 @@
             </div>
           </SwiperSlide>
         </Swiper>
+        </ClientOnly>
       </section>
 
       <div
@@ -152,28 +180,4 @@
   </section>
 </template>
 
-<script setup>
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { computed, ref } from "vue";
 
-import "~/assets/css/package-swiper.css";
-import { places } from "../constant/index";
-
-const selectedCategory = ref("all");
-
-// Filtered list based on selected category
-const filteredPlaces = computed(() => {
-  if (selectedCategory.value === "all") return places;
-  return places.filter((place) => place.category === selectedCategory.value);
-});
-</script>
-<style scoped>
-.swiper {
-  position: relative;
-  overflow: visible;
-}
-</style>
