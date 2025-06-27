@@ -1,36 +1,36 @@
 // Main images
 import japan from "./japan.png";
-import saintMartin from "./saintMartin.jpg";
+import saintMartin from "./saintMartin.jpeg";
 import spain from "./spain.png";
-import sundorbon from "./sundorbon.jpg";
+import sundorbon from "./sundorbon.jpeg";
 import sylhetSunamganj from "./sylhetSunamganj.jpg";
-import sylhetTea from "./sylhetTea.jpg";
+import sylhetTea from "./sylhetTea.jpeg";
 import thailand from "./thailand.png";
 
 // Dhaka
 import ahsanManzil from "./dhaka/ahsanmanjil.jpg";
 
 //cox's Beach cards
-import beach1 from "./cox/card1.jpg";
-import beach2 from "./cox/card2.jpg";
+import beach1 from "./cox/card1.jpeg";
+import beach2 from "./cox/card2.jpeg";
 import beach3 from "./cox/card3.jpg";
 import beach4 from "./cox/card4.jpg";
 
 // Sylhet
-import jaflong from "./sylhet/jaflong.jpg";
+import jaflong from "./sylhet/jaflong.jpeg";
 import lalakal from "./sylhet/lalakal.jpg";
 import lauachora from "./sylhet/lauachora.jpg";
 import niladriLake from "./sylhet/niladriLake.jpg";
 import pangthumai from "./sylhet/pangthumai.jpg";
 import ratargul from "./sylhet/ratargul.jpg";
 import shimulBagan from "./sylhet/shimulBagan.jpg";
-import tanguarHaor from "./sylhet/tanguarHaor.jpg";
+import tanguarHaor from "./sylhet/tanguarHaor.jpeg";
 import teaGarden from "./sylhet/teaGarden.jpg";
 
 // Chittagong
-import ChandranathHill from "./chittagong/Chandranath-Hill.jpg";
+import ChandranathHill from "./chittagong/Chandranath-Hill.jpeg";
 import guliakhaliBeach from "./chittagong/guliakhali-beach.jpg";
-import patangaBeach from "./chittagong/patanga-beach.jpg";
+import patangaBeach from "./chittagong/patanga-beach.jpeg";
 import sondip from "./chittagong/sondip.jpg";
 
 // Rajshahi

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { VGM } from "../constant/index";
+</script>
+
 <template>
   <section
     class="flex flex-col gap-6 py-12 md:py-24 container mx-auto overflow-hidden"
@@ -26,7 +30,3 @@
     />
   </section>
 </template>
-
-<script setup lang="ts">
-import { VGM } from "../constant/index";
-</script>
