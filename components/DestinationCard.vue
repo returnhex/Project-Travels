@@ -49,23 +49,7 @@ const truncate = (text: string, length = 35) => {
           />
           <p class="text-dark-gray">{{ datas.duration }}</p>
         </div>
-        <NuxtLink
-          :to="{
-            path: '/destination',
-            query: {
-              id: datas.id,
-              title: datas.title,
-              location: datas.location,
-              duration: datas.duration,
-              image: datas.image,
-              image2: datas.image2,
-              country: datas.country,
-              overview: datas.overview,
-              tourPackages: datas.tourPackages,
-              map: datas.map,
-            },
-          }"
-        >
+        <NuxtLink :to="{ path: '/destination', query: { key: datas.id } }">
           <Button6 title=" Explore Now" />
         </NuxtLink>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-4xl mx-auto py-10 px-4 pt-24">
+  <section class="max-w-4xl mx-auto py-10 px-4 pt-24 lg:pt-40">
     <h1 class="text-3xl font-bold mb-6 text-center">Terms and Conditions</h1>
 
     <p class="mb-4 text-[#3C3C3C]">

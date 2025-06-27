@@ -28,14 +28,14 @@ onBeforeUnmount(() => {
     <nav>
       <NavTop
         :class="[
-          'fixed z-50 w-full transition-all duration-500',
-          scrolled ? 'hidden' : 'visible',
+          'fixed z-50 w-full transition-all duration-400',
+          scrolled ? '-top-12' : 'top-0',
         ]"
       />
       <NavDown
         :class="[
-          'fixed z-40 w-full transition-all duration-300',
-          scrolled ? 'top-0' : 'top-8',
+          'fixed z-40 w-full transition-all duration-400',
+          scrolled ? 'top-0' : 'top-8 xl:top-10',
         ]"
       />
     </nav>

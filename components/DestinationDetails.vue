@@ -1,29 +1,57 @@
-<script setup>
+<script setup lang="ts">
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { destinations } from "~/constant";
 import "/assets/css/main.css";
 import "/assets/css/package-swiper.css";
 
-import { destinations } from "../constant/index";
-
 const route = useRoute();
-const data = {
-  id: route.query.id,
-  title: route.query.title,
-  location: route.query.location,
-  duration: route.query.duration,
-  images: {
-    image: route.query.image,
-    image2: route.query.image2,
-  },
-  country: route.query.country,
-  overview: route.query.overview,
-  tourPackages: route.query.tourPackages,
-  map: route.query.map,
+const key = route.query.key as string | undefined;
+
+const id = key ? parseInt(key, 10) : NaN;
+
+if (isNaN(id)) {
+  navigateTo("/destinations");
+}
+
+const findTourById = (id: number) => {
+  for (const country of destinations) {
+    if (country.packages) {
+      const find = country.packages.find((p) => p.id === id);
+      if (find) return find;
+    }
+    if (country.divisions) {
+      for (const div of country.divisions) {
+        const find = div.packages.find((p) => p.id === id);
+        if (find) return find;
+      }
+    }
+  }
+  return null;
 };
+const tour = findTourById(id);
+
+const data = {
+  id: tour?.id,
+  title: tour?.title,
+  location: tour?.location,
+  duration: tour?.duration,
+  images: {
+    image: tour?.image,
+    image2: tour?.image2,
+  },
+  country: tour?.country,
+  overview: tour?.overview,
+  tourPackages: tour?.tourPackages,
+  map: tour?.map,
+};
+
+if (!tour) {
+  navigateTo("/");
+}
 </script>
 
 <template>
@@ -272,7 +300,7 @@ const data = {
                   <span class="font-medium">Language:</span>
                 </div>
                 <p class="font-semibold">
-                  {{ data.language || 'N/A'}}
+                  {{ data.language || "N/A" }}
                 </p>
               </li>
             </ul>

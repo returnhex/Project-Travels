@@ -41,7 +41,7 @@ const getLinkClass = (name: string) => {
 </script>
 
 <template>
-  <div class="w-full bg-white mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5">
+  <div class="w-full bg-white mx-auto py-1 lg:py-2 xl:py-3 2xl:py-5 shadow-md">
     <div
       class="flex justify-between items-center px-4 md:px-3 xl:px-2 2xl:px-3 container mx-auto"
     >
@@ -58,7 +58,7 @@ const getLinkClass = (name: string) => {
         :transition="{ duration: 0.3 }"
         :class="[
           'absolute right-0 top-8 md:top-9 z-50 md:static',
-          'bg-[#2E8942] md:bg-white',
+          'bg-[#2E8942] md:bg-white ',
           'flex flex-col md:flex-row',
           'gap-6 md:gap-8 lg:gap-12',
           'p-10 md:p-0 rounded-bl-xl md:rounded-[0]',
