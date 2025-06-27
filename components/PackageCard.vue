@@ -29,6 +29,7 @@ defineProps({
       <div class="flex gap-2 pb-2 items-center">
         <NuxtImg
           src="image/icon/map.png"
+          format="webp"
           class="max-w-6 h-6 object-contain"
           alt=""
         />
@@ -40,16 +41,12 @@ defineProps({
         <div class="flex gap-2">
           <NuxtImg
             src="image/icon/clock.png"
+            format="webp"
             class="max-w-6 h-6 object-contain"
             alt="icon-clock"
           />
           <p class="text-dark-gray">{{duration}}</p>
         </div>
-        <!-- <button
-          class="font-medium text-[14px] leading-[20px] bg-red hover:bg-white text-white hover:text-red hover:border-red hover:border-1 px-4 py-2 rounded-lg cursor-pointer"
-        >
-          Explore Now
-        </button> -->
         <NuxtLink :to="`/package?key=${id}&location=${location}`">
           <Button6 title=" Explore Now" />
         </NuxtLink>

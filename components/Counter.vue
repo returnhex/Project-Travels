@@ -7,7 +7,11 @@ const animatedValues = ref(stats.map(() => 0));
 const sectionRef = ref(null);
 let observer = null;
 
+const hasAnimated = ref(false);
+
 const startCountAnimation = () => {
+  if (hasAnimated.value) return;
+  hasAnimated.value = true;
   stats.forEach((stat, i) => {
     animatedValues.value[i] = 0;
     animate(0, stat.value, {
@@ -45,7 +49,7 @@ onBeforeUnmount(() => {
   <section
     ref="sectionRef"
     class="py-16 px-4 md:px-12 bg-cover bg-no-repeat w-full overflow-hidden"
-    style="background-image: url('image/counterbg.png')"
+    style="background-image: url('image/counterbg.webp')"
   >
     <div
       class="container mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
@@ -65,7 +69,7 @@ onBeforeUnmount(() => {
           />
         </div>
         <h3 class="text-2xl xl:text-3xl font-bold text-black leading-[64px]">
-          {{ animatedValues[index] }} K+
+          {{ animatedValues[index] || stat.value}} K+
         </h3>
         <p class="text-[20px] font-medium text-[#383838] leading-[30px] mt-1">
           {{ stat.label }}

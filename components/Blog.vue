@@ -8,13 +8,14 @@ import { cards } from "../constant/index";
 </script>
 
 <template>
-  <section class="bg-[url('/image/blogbg.png')]">
+  <section class="bg-[url('/image/blogbg.webp')]">
     <div
       class="text-center mb-10 container mx-auto px-4 pt-20 pb-40 overflow-hidden"
     >
       <div class="flex justify-center items-center mx-auto gap-2">
         <NuxtImg
           src="image/Vector.png"
+          format="webp"
           alt="double-arrow"
           width="20"
           height="20"
@@ -29,7 +30,8 @@ import { cards } from "../constant/index";
         Our Latest Blog
       </h2>
 
-      <Swiper
+     <ClientOnly>
+       <Swiper
         :modules="[Navigation, Pagination, Keyboard, Autoplay]"
         :slides-per-view="1"
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
@@ -119,6 +121,7 @@ import { cards } from "../constant/index";
           </div>
         </SwiperSlide>
       </Swiper>
+     </ClientOnly>
 
       <div
         class="relative -bottom-30 flex items-center px-3 md:px-0 w-full h-20"

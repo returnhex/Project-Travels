@@ -72,14 +72,4 @@ import { packageCardInfo } from "../constant/index";
   position: relative;
   overflow: visible;
 }
-
-/* .swiper-pagination-bullet {
-  background-color: green;
-  width: 15px;
-  height: 15px;
-}
-.swiper-pagination {
-  bottom: -50px !important;
-  position: absolute !important;
-} */
 </style>
