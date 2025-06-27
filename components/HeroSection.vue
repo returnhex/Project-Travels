@@ -3,7 +3,6 @@ import { motion } from "motion-v";
 </script>
 
 <template>
-  <!-- h-[350px] sm:h-[500px] md:h-[720px] lg:h-[820px] h-[40vh] sm:h-[60vh] md:h-[70vh] lg:h-[82vh] xl:h-[92vh]  -->
   <section
     class="relative w-full mx-auto h-[350px] sm:h-[500px] md:h-[720px] lg:h-[820px] bg-cover bg-center pt-[40px]"
     style="background-image: url('/hero-banner.jpg')"
@@ -12,7 +11,8 @@ import { motion } from "motion-v";
       class="absolute inset-0 bg-linear-to-r from-[#002D0A] to-[#040404]/0"
     />
 
-    <motion.div
+    <client-only>
+      <motion.div
       :initial="{ opacity: 0 }"
       :while-in-view="{ opacity: 1 }"
       :transition="{ ease: 'easeOut', duration: 0.5 }"
@@ -44,5 +44,6 @@ import { motion } from "motion-v";
         </NuxtLink>
       </div>
     </motion.div>
+    </client-only>
   </section>
 </template>
