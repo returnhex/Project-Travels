@@ -21,7 +21,7 @@ const DestinationList = defineAsyncComponent(
   () => import("~/components/DestinationList.vue")
 );
 const Package = defineAsyncComponent(() => import("~/components/Package.vue"));
-const Counter = defineAsyncComponent(() => import("~/components/counter.vue"));
+const Counter = defineAsyncComponent(() => import("~/components/Counter.vue"));
 const Testimonial = defineAsyncComponent(
   () => import("~/components/Testimonial.vue")
 );
