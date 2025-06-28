@@ -15,7 +15,7 @@ useHead({
   ],
 });
 const VMG = defineAsyncComponent(() => import("~/components/VMG.vue"));
-const Counter = defineAsyncComponent(() => import("~/components/Counter.vue"));
+const Counter = defineAsyncComponent(() => import("~/components/counter.vue"));
 const Testimonial = defineAsyncComponent(
   () => import("~/components/Testimonial.vue")
 );
