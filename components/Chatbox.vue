@@ -64,6 +64,14 @@ onBeforeUnmount(() => {
       class="bg-white text-left text-black w-full outline-none p-2 border border-slate-200 rounded"
       placeholder="Write your text here..."
     />
+    <a
+      href="https://wa.me/8801402914939"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-3 bg-green-500 rounded-full grid place-items-center shadow"
+    >
+      <Icon name="mdi:send" size="20" style="color: white" />
+    </a>
   </div>
 
   <!-- chat button -->
