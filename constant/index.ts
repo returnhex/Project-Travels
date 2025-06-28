@@ -136,18 +136,18 @@ import mapsIcon from "/public/image/assests/ContactUs/maps.svg";
 import contactIcon from "/public/image/assests/ContactUs/phone.svg";
 
 // Blog Image
-import blogImg1SufferMan from "/public/image/blog1-suffering-man.jpg";
-import blogImg1 from "/public/image/blog1.png";
-import blog2HiddenSpots from "/public/image/blog2-hidden-spots.jpg";
-import blogImg2 from "/public/image/blog2.png";
-import blog3SecretBeach from "/public/image/blog3-secret-beach.jpg";
-import blogImg3 from "/public/image/blog3.png";
-import blog4SeaAdventure from "/public/image/blog4-sea-adventure.jpg";
-import blogImg4 from "/public/image/blog4.png";
-import blog5TopDestination from "/public/image/blog5-top-destination.jpg";
-import blogImg5 from "/public/image/blog5.png";
-import blog6MagicalPlace from "/public/image/blog6-magical-place.jpg";
-import blogImg6 from "/public/image/blog6.png";
+import blogImg1SufferMan from "/public/image/blog1-suffering-man.webp";
+import blogImg1 from "/public/image/blog1.webp";
+import blog2HiddenSpots from "/public/image/blog2-hidden-spots.webp";
+import blogImg2 from "/public/image/blog2.webp";
+import blog3SecretBeach from "/public/image/blog3-secret-beach.webp";
+import blogImg3 from "/public/image/blog3.webp";
+import blog4SeaAdventure from "/public/image/blog4-sea-adventure.webp";
+import blogImg4 from "/public/image/blog4.webp";
+import blog5TopDestination from "/public/image/blog5-top-destination.webp";
+import blogImg5 from "/public/image/blog5.webp";
+import blog6MagicalPlace from "/public/image/blog6-magical-place.webp";
+import blogImg6 from "/public/image/blog6.webp";
 
 // VGM Image
 import aimArrow from "/public/image/assests/OutGoal/aim-arrow.svg";
@@ -1558,33 +1558,33 @@ export const workFeatures = [
 
 export const cards = [
   {
-    image: "image/blog1.png",
+    image: "image/blog1.webp",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: "image/blog2.png",
+    image: "image/blog2.webp",
     date: "December 7, 2024",
     title: "Top Hidden Spots in Great Places",
     description: "Explore the most beautiful places you’ve never heard of.",
   },
   {
-    image: "image/blog3.png",
+    image: "image/blog3.webp",
     date: "December 10, 2024",
     title: "Why Tourists Love This Secret Beach",
     description: "Uncover what brings thousands of tourists here every year.",
   },
   {
-    image: "image/blog1.png",
+    image: "image/blog1.webp",
     date: "December 4, 2024",
     title: "The Surfing Man Will Blow Your Mind",
     description:
       "Keeping the structure clear and focusing on what makes special, travelers.",
   },
   {
-    image: "image/blog2.png",
+    image: "image/blog2.webp",
     date: "December 7, 2024",
     title: "Top Hidden Spots in Great Places",
     description: "Explore the most beautiful places you’ve never heard of.",
@@ -1720,8 +1720,8 @@ export const packageCardInfo = [
       "Venture deep into the heart of the world’s largest mangrove forest with our Sundarban tour package. Spot wildlife like crocodiles and deer on serene boat rides, walk through forest trails, and enjoy authentic Bengali cuisine in eco-friendly lodges. This trip is a true nature lover’s dream.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204669.37105734987!2d89.07354159555966!3d21.94164281823489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a004caac2c7b315%3A0x4716abcfbb16c93c!2sSundarbans!5e0!3m2!1sen!2sbd!4v1750261855641!5m2!1sen!2sbd",
     duration: "6 Days, 5 Nights",
-    img: "image/sundarban.jpg",
-    img2: "image/sundarban2.jpg",
+    img: "image/sundarban.webp",
+    img2: "image/sundarban2.webp",
   },
   {
     id: 2,
@@ -1735,8 +1735,8 @@ export const packageCardInfo = [
       "Explore the tranquil beauty of Sylhet with visits to the famous Ratargul Swamp Forest, Jaflong's stone beds, and the tea estates of Srimangal. This package blends nature, heritage, and local life into an unforgettable adventure.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.877738716187!2d91.87270927506167!3d24.467259300880447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37505543b5e280f9%3A0xb50ef02b6013b4ae!2sSylhet!5e0!3m2!1sen!2sbd!4v1750264569698!5m2!1sen!2sbd",
     duration: "5 Days, 4 Nights",
-    img: "image/sylhet.jpg",
-    img2: "image/sylhet2.jpg",
+    img: "image/sylhet.webp",
+    img2: "image/sylhet2.webp",
   },
   {
     id: 3,
@@ -1750,8 +1750,8 @@ export const packageCardInfo = [
       "Discover Bali’s stunning beaches, ancient temples like Uluwatu, and lively markets. Unwind in beachfront resorts, join traditional Balinese ceremonies, and savor local delicacies on this tropical escape.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126763.54047042237!2d115.0920038772296!3d-8.340538114305265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd219d6be1f5a05%3A0x401576d14fed010!2sBali!5e0!3m2!1sen!2sbd!4v1750264705793!5m2!1sen!2sbd",
     duration: "7 Days, 6 Nights",
-    img: "image/bali.jpg",
-    img2: "image/bali2.jpg",
+    img: "image/bali.webp",
+    img2: "image/bali2.webp",
   },
   {
     id: 4,
@@ -1766,7 +1766,7 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333196.672920096!2d73.76405555804492!3d33.687253150237845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e209387af82e65%3A0x330f2a6aa5b1d3fc!2sKashmir!5e0!3m2!1sen!2sbd!4v1750264820494!5m2!1sen!2sbd",
     duration: "6 Days, 5 Nights",
     img: "image/kashmir.jpg",
-    img2: "image/kashmir2.jpg",
+    img2: "image/kashmir2.webp",
   },
   {
     id: 5,
@@ -1781,7 +1781,7 @@ export const packageCardInfo = [
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112063.88484458062!2d77.10249027609315!3d28.613939149502664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26c3451f3fd%3A0x61d8c1d42b801fa6!2sDelhi!5e0!3m2!1sen!2sbd!4v1750264942152!5m2!1sen!2sbd",
     duration: "8 Days, 7 Nights",
     img: "image/india.jpg",
-    img2: "image/india2.jpeg",
+    img2: "image/india2.webp",
   },
   {
     id: 6,
@@ -1795,8 +1795,8 @@ export const packageCardInfo = [
       "Walk the Great Wall, explore the Forbidden City, and experience authentic Peking duck cuisine. Our Beijing package captures the soul of imperial China with modern comfort and flair.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32634662.98763578!2d93.54318848713262!3d35.86166026191248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296be5d0c35%3A0x96e01b1c2b38359b!2sBeijing%2C%20China!5e0!3m2!1sen!2sbd!4v1750265048476!5m2!1sen!2sbd",
     duration: "7 Days, 6 Nights",
-    img: "image/china.jpg",
-    img2: "image/china2.jpg",
+    img: "image/china.webp",
+    img2: "image/china2.webp",
   },
   {
     id: 7,
@@ -1810,8 +1810,8 @@ export const packageCardInfo = [
       "Visit the Grand Palace, cruise the Chao Phraya River, and enjoy shopping in Chatuchak Market. This tour offers the best of Thai culture, cuisine, and cosmopolitan life.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.747418128195!2d100.5231866750633!3d13.736717886689197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299704b702e07%3A0x40223bcbbcb1ca0!2sBangkok!5e0!3m2!1sen!2sbd!4v1750265149852!5m2!1sen!2sbd",
     duration: "5 Days, 4 Nights",
-    img: "image/bangkok.jpg",
-    img2: "image/bangkok2.jpg",
+    img: "image/bangkok.webp",
+    img2: "image/bangkok2.webp",
   },
   {
     id: 8,
@@ -1825,8 +1825,8 @@ export const packageCardInfo = [
       "Dive into coral reefs, relax in luxury water villas, and explore local island culture. This Maldives package is your ticket to tranquility and turquoise dreams.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253759.96995823493!2d73.41399975104856!3d4.175495937710051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2498fd4c26b62f6b%3A0xe6a5717c2e193d10!2sMal%C3%A9%2C%20Maldives!5e0!3m2!1sen!2sbd!4v1750265250489!5m2!1sen!2sbd",
     duration: "6 Days, 5 Nights",
-    img: "image/maldiv.jpg",
-    img2: "image/maldiv2.jpg",
+    img: "image/maldiv.webp",
+    img2: "image/maldiv2.webp",
   },
   {
     id: 9,
@@ -1840,8 +1840,8 @@ export const packageCardInfo = [
       "Visit Galle Face Green, explore local temples, and enjoy Ceylon tea in the hills. Our Colombo tour balances history, beach vibes, and flavorful Sri Lankan experiences.",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253759.96995823493!2d79.83000793851853!3d6.927078499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25924050c6b1b%3A0x8f0f8e0cb2e4ce9e!2sColombo!5e0!3m2!1sen!2sbd!4v1750265360103!5m2!1sen!2sbd",
     duration: "7 Days, 6 Nights",
-    img: "image/srilanka.jpg",
-    img2: "image/srilanka2.jpg",
+    img: "image/srilanka.webp",
+    img2: "image/srilanka2.webp",
   },
 ];
 

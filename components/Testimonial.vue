@@ -40,7 +40,8 @@ import { testimonials } from "../constant/index";
 
     <div class="w-full overflow-hidden">
       <!-- Swiper with Responsive Breakpoints -->
-      <Swiper
+      <ClientOnly>
+        <Swiper
         :modules="[Navigation, Pagination, Keyboard, Autoplay]"
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
         :loop="true"
@@ -71,7 +72,7 @@ import { testimonials } from "../constant/index";
             >
               <NuxtImg
                 :src="testimonial.image"
-                alt="Customer"
+                :alt="`Photos of ${testimonial.name}`"
                 class="object-cover z-50 h-full w-full rounded-full"
               />
             </div>
@@ -121,6 +122,7 @@ import { testimonials } from "../constant/index";
           />
         </div>
       </Swiper>
+      </ClientOnly>
     </div>
   </section>
 </template>
