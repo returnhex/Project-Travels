@@ -1946,7 +1946,7 @@ export const about = [
       },
       {
         text: "Tour Guide",
-        href: "/",
+        href: "/tour-guide",
       },
       {
         text: "Privacy Policy",
