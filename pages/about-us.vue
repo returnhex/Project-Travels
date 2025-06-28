@@ -15,7 +15,7 @@ useHead({
   ],
 });
 const VMG = defineAsyncComponent(() => import("~/components/VMG.vue"));
-const Counter = defineAsyncComponent(() => import("~/components/counter.vue"));
+const Counter = defineAsyncComponent(() => import("~/components/Counter.vue"));
 const Testimonial = defineAsyncComponent(
   () => import("~/components/Testimonial.vue")
 );
@@ -27,7 +27,7 @@ const Blog = defineAsyncComponent(() => import("~/components/Blog.vue"));
   <AboutBgGio title="Get to Know Us" />
   <HowItWork />
   <VMG />
-  <counter />
+  <Counter />
   <Testimonial />
   <Blog />
 </template>
