@@ -13,8 +13,12 @@ useHead({
       content:
         "Read the latest travel stories, destination guides, and helpful tips from the experts at BdiGo. Stay inspired for your next adventure!",
     },
-  ]
+  ],
 });
+
+const BlogDetails = defineAsyncComponent(
+  () => import("~/components/BlogDetails.vue")
+);
 </script>
 
 <template>

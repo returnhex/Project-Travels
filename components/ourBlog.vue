@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
-import { ref, computed } from "vue";
+import { computed, ref } from "vue";
 import { blogPosts } from "../constant/index";
 
 const categories = ref([
@@ -89,7 +89,7 @@ const filteredBlogPosts = computed(() => {
 
               <!-- Description -->
               <p
-                class="text-sm md:text-base text-dark-gray leading-relaxed mb-4"
+                class="text-sm md:text-base text-dark-gray leading-relaxed mb-4 line-clamp-2"
               >
                 {{ blogPost.subtitle }}
               </p>
