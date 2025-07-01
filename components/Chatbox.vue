@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
-const isClicked = ref<boolean>(false);
+const isVisibleChatBox = ref<boolean>(false);
 
 const isScrolled = ref(false);
 
@@ -27,7 +27,7 @@ onBeforeUnmount(() => {
   <div
     :class="`fixed z-50  right-10 w-72  transition-all duration-700 ${
       isScrolled ? 'bottom-33' : 'bottom-22'
-    } ${isClicked ? 'flex' : 'hidden'} flex-col gap-3 h-auto p-4 bg-gray-200 
+    } ${isVisibleChatBox ? 'flex' : 'hidden'} flex-col gap-3 h-auto p-4 bg-gray-200 
     shadow-lg rounded-xl`"
   >
     <div class="flex gap-2">
@@ -79,11 +79,11 @@ onBeforeUnmount(() => {
     :class="`fixed grid place-items-center  right-10 rounded-full p-4 bg-green-500 shadow-lg cursor-pointer z-50 transition-all duration-700 ${
       isScrolled ? 'bottom-18' : 'bottom-8'
     }`"
-    @click="isClicked = !isClicked"
+    @click="isVisibleChatBox = !isVisibleChatBox"
   >
     <Icon
       :name="`${
-        !isClicked ? 'material-symbols:chat' : 'bitcoin-icons:cross-filled'
+        !isVisibleChatBox ? 'material-symbols:chat' : 'bitcoin-icons:cross-filled'
       }`"
       size="20"
       style="color: white"
