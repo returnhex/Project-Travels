@@ -1,3 +1,9 @@
+<script setup>
+import { motion } from "motion-v";
+
+import { contactFeatures } from "../constant/index";
+</script>
+
 <template>
   <section
     class="bg-white py-12 lg:py-0 px-4 container mx-auto overflow-hidden"
@@ -74,8 +80,4 @@
   </section>
 </template>
 
-<script setup>
-import { motion } from "motion-v";
 
-import { contactFeatures } from "../constant/index";
-</script>
